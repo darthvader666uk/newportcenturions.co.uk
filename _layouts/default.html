@@ -39,6 +39,12 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer">
 
+    <!-- Non-critical CSS -->
+    <link rel="preload" href="{{ '/assets/css/styles.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    </noscript>
+
     <!-- JSON-LD -->
     <script type="application/ld+json">
     {

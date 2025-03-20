@@ -1,0 +1,33 @@
+  .follow-header {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-block: var(--spacing);
+    font-weight: 600;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    padding: var(--spacing);
+  }
+
+  .social-link {
+    color: var(--primary-text);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    text-decoration: none;
+    padding: clamp(0.5rem, 2vw, 0.75rem);
+    transition: transform 0.3s ease;
+  }
+
+  @media (min-width: 768px) {
+    .social-link:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  @media print {
+    .social-links {
+      display: none;
+    }
+  }
+
