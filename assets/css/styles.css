@@ -1,53 +1,93 @@
-body {
+:root {
+    --primary-bg: #000000;
+    --primary-text: #ffffff;
+    --hover-color: #cccccc;
+    --spacing-unit: clamp(1rem, 2vw, 2rem);
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
+    display: grid;
+    place-items: center;
+    padding: var(--spacing-unit);
 }
 
 .container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
     text-align: center;
-    padding: 2rem;
 }
 
 .logo {
-    max-width: 400px;
+    width: min(80vw, 400px);
     height: auto;
-    margin-bottom: 2rem;
+    margin-block: var(--spacing-unit);
 }
 
 .follow-header {
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-    margin: 1.5rem 0;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-block: var(--spacing-unit);
 }
 
 .social-links {
-    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    flex-wrap: wrap;
+    padding: var(--spacing-unit);
 }
 
 .social-links a {
-    margin: 0 1rem;
-    font-size: 2.5rem;
-    color: #ffffff;
+    color: var(--primary-text);
+    font-size: clamp(2rem, 5vw, 2.5rem);
     text-decoration: none;
     transition: color 0.3s ease;
+    padding: 0.5rem;
 }
 
-.social-links a:hover {
-    color: #cccccc;
+/* Desktop hover effects */
+@media (hover: hover) {
+    .social-links a:hover {
+        color: var(--hover-color);
+        transform: scale(1.1);
+    }
 }
 
-.seo-title {
-    position: absolute;
-    color: #ffffff;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    text-align: center;
-    width: 100%;
+/* Mobile touch targets */
+@media (max-width: 768px) {
+    .social-links a {
+        padding: 0.75rem;
+    }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+    .container {
+        padding: calc(var(--spacing-unit) * 2);
+    }
+
+    .logo {
+        margin-block: calc(var(--spacing-unit) * 2);
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .social-links {
+        display: none;
+    }
 }
