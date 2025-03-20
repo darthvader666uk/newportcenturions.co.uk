@@ -37,23 +37,17 @@ description: Join Newport Centurions Korfball Club - South Wales' premier mixed-
 
 <main class="container" itemscope itemtype="https://schema.org/SportsTeam">
     <picture>
-        <source
-            srcset="images/newport-centurions-korfball-club-400.webp 400w,
-                    images/newport-centurions-korfball-club-800.webp 800w"
-            sizes="(max-width: 768px) 90vw, 400px"
-            type="image/webp">
+        <source srcset="images/newport-centurions-korfball-club.webp" type="image/webp">
         <img
-            src="images/newport-centurions-korfball-club-400.webp"
-            srcset="images/newport-centurions-korfball-club-400.webp 400w,
-                    images/newport-centurions-korfball-club-800.webp 800w"
-            sizes="(max-width: 768px) 90vw, 400px"
+            src="images/newport-centurions-korfball-club.png"
             alt="Newport Centurions Korfball Club - Welsh League Champions"
             class="logo"
             width="400"
             height="400"
             loading="eager"
             fetchpriority="high"
-            itemprop="logo">
+            itemprop="logo"
+        >
     </picture>
 
     <h1 class="visually-hidden" itemprop="name">Newport Centurions Korfball Club</h1>
