@@ -41,10 +41,28 @@ body {
 .social-links {
     display: flex;
     justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #cccccc;
+}
+
+/* .social-links {
+    display: flex;
+    justify-content: center;
     gap: clamp(1rem, 3vw, 2rem);
     flex-wrap: wrap;
     padding: var(--spacing-unit);
-}
+} */
 
 .social-links a {
     color: var(--primary-text);
@@ -87,7 +105,7 @@ body {
         color: black;
     }
 
-    .social-links {
+    /* .social-links {
         display: none;
-    }
+    } */
 }
