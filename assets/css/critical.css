@@ -1,0 +1,26 @@
+:root {
+    --primary-bg: #000000;
+    --primary-text: #ffffff;
+    --spacing: clamp(1rem, 2vw, 2rem);
+  }
+  
+  body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0;
+  }
+  
+  .container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+    text-align: center;
+  }
+  
+  .logo {
+    width: min(80vw, 400px);
+    height: auto;
+    margin-block: var(--spacing);
+  }

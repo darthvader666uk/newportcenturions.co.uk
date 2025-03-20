@@ -1,78 +1,39 @@
-:root {
-    --primary-bg: #000000;
-    --primary-text: #ffffff;
-    --spacing: clamp(1rem, 2vw, 2rem);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--primary-bg);
-    color: var(--primary-text);
-    font-family: system-ui, -apple-system, sans-serif;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-}
-
-.container {
-    width: min(90%, 1200px);
-    margin-inline: auto;
-    padding: var(--spacing);
-    text-align: center;
-}
-
-.logo {
-    width: min(80vw, 400px);
-    height: auto;
-    margin-block: var(--spacing);
-}
-
+/* Non-critical styles */
 .follow-header {
     font-size: clamp(1.5rem, 3vw, 2rem);
     margin-block: var(--spacing);
     font-weight: 600;
-}
+  }
 
-.social-links {
+  .social-links {
     display: flex;
     justify-content: center;
     gap: clamp(1rem, 3vw, 2rem);
     padding: var(--spacing);
-}
+  }
 
-.social-link {
+  .social-link {
     color: var(--primary-text);
     font-size: clamp(2rem, 5vw, 2.5rem);
     text-decoration: none;
     padding: 0.5rem;
     transition: transform 0.3s ease;
-}
+  }
 
-/* Desktop enhancements */
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
     .social-link:hover {
-        transform: scale(1.1);
+      transform: scale(1.1);
     }
+  }
 
-    .container {
-        padding: calc(var(--spacing) * 2);
-    }
-}
-
-/* Mobile optimizations */
-@media (max-width: 767px) {
+  @media (max-width: 767px) {
     .social-link {
-        padding: 0.75rem;
+      padding: 0.75rem;
     }
-}
+  }
 
-/* Print styles */
-@media print {
-    body { background: white; color: black; }
-    .social-links { display: none; }
-}
+  /* @media print {
+    .social-links {
+      display: none;
+    } */
+  }
