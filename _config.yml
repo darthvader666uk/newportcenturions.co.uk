@@ -1,7 +1,5 @@
 title: Newport Centurions Korfball
 description: THis is the site for Newport Centurions Korfball Based in South Wales
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
