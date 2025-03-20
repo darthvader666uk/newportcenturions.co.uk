@@ -1,6 +1,6 @@
 title: Newport Centurions Korfball
-description: THis is the site for Newport Centurions Korfball Based in South Wales
+description: Newport Centurions Korfball Club - South Wales
 
 # Build settings
 markdown: kramdown
-theme: minima # You can change this to another theme
+theme: null # Remove theme to use custom layout
