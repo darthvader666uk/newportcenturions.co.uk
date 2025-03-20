@@ -1,8 +1,7 @@
 :root {
     --primary-bg: #000000;
     --primary-text: #ffffff;
-    --hover-color: #cccccc;
-    --spacing-unit: clamp(1rem, 2vw, 2rem);
+    --spacing: clamp(1rem, 2vw, 2rem);
 }
 
 * {
@@ -14,98 +13,66 @@
 body {
     background-color: var(--primary-bg);
     color: var(--primary-text);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     display: grid;
     place-items: center;
-    padding: var(--spacing-unit);
 }
 
 .container {
     width: min(90%, 1200px);
     margin-inline: auto;
+    padding: var(--spacing);
     text-align: center;
 }
 
 .logo {
     width: min(80vw, 400px);
     height: auto;
-    margin-block: var(--spacing-unit);
+    margin-block: var(--spacing);
 }
 
 .follow-header {
     font-size: clamp(1.5rem, 3vw, 2rem);
-    margin-block: var(--spacing-unit);
+    margin-block: var(--spacing);
+    font-weight: 600;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
+    padding: var(--spacing);
 }
 
 .social-link {
-    color: #ffffff;
-    font-size: 2.5rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-link:hover {
-    color: #cccccc;
-}
-
-/* .social-links {
-    display: flex;
-    justify-content: center;
-    gap: clamp(1rem, 3vw, 2rem);
-    flex-wrap: wrap;
-    padding: var(--spacing-unit);
-} */
-
-.social-links a {
     color: var(--primary-text);
     font-size: clamp(2rem, 5vw, 2.5rem);
     text-decoration: none;
-    transition: color 0.3s ease;
     padding: 0.5rem;
-}
-
-/* Desktop hover effects */
-@media (hover: hover) {
-    .social-links a:hover {
-        color: var(--hover-color);
-        transform: scale(1.1);
-    }
-}
-
-/* Mobile touch targets */
-@media (max-width: 768px) {
-    .social-links a {
-        padding: 0.75rem;
-    }
+    transition: transform 0.3s ease;
 }
 
 /* Desktop enhancements */
-@media (min-width: 1024px) {
-    .container {
-        padding: calc(var(--spacing-unit) * 2);
+@media (min-width: 768px) {
+    .social-link:hover {
+        transform: scale(1.1);
     }
 
-    .logo {
-        margin-block: calc(var(--spacing-unit) * 2);
+    .container {
+        padding: calc(var(--spacing) * 2);
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+    .social-link {
+        padding: 0.75rem;
     }
 }
 
 /* Print styles */
 @media print {
-    body {
-        background: white;
-        color: black;
-    }
-
-    /* .social-links {
-        display: none;
-    } */
+    body { background: white; color: black; }
+    .social-links { display: none; }
 }

@@ -1,33 +1,25 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang }}" dir="ltr">
+<html lang="{{ site.lang }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="{{ page.description | default: site.description }}">
     <meta name="keywords" content="{{ site.keywords }}">
-    <meta name="author" content="{{ site.author }}">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-
     <!-- Open Graph -->
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta property="og:description" content="{{ page.description | default: site.description }}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
     <meta property="og:image" content="{{ site.url }}/images/newport-centurions-korfball-club.webp">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="{{ site.locale }}">
+    <meta property="og:url" content="{{ site.url }}">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
-    <meta name="twitter:image" content="{{ site.url }}/images/newport-centurions-korfball-club.webp">
+    <!-- Preload assets -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="images/newport-centurions-korfball-club.webp" as="image">
 
-    {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    {% seo %}
 </head>
 <body>
     {{ content }}
