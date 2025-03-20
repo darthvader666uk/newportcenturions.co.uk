@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<img src="images/newport-centurions-korfball-club.png" alt="Newport Centurions Korfball Club" class="logo">
+<img src="images/newport-centurions-korfball-club.webp" alt="Newport Centurions Korfball Club" class="logo">
+
+<h2 class="follow-header">Follow Us</h2>
 
 <div class="social-links">
     <a href="https://facebook.com/NewportCenturionsKorfball" target="_blank">
