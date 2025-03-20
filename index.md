@@ -35,25 +35,21 @@ description: Join Newport Centurions - South Wales' premier mixed-gender korfbal
 }
 </script>
 
-<main itemscope itemtype="https://schema.org/SportsTeam">
-    <picture>
-        <source srcset="images/newport-centurions-korfball-club.webp" type="image/webp">
-        <img
-            src="images/newport-centurions-korfball-club.png"
-            alt="Newport Centurions Korfball Club - Welsh League Champions"
-            class="logo"
-            width="400"
-            height="400"
-            loading="eager"
-            fetchpriority="high"
-            itemprop="logo"
-        >
-    </picture>
+<main class="container">
+    <img
+        src="images/newport-centurions-korfball-club.webp"
+        alt="Newport Centurions Korfball Club - Welsh League Champions"
+        class="logo"
+        width="400"
+        height="400"
+        loading="eager"
+        fetchpriority="high"
+    >
 
-    <h1 class="visually-hidden" itemprop="name">Newport Centurions Korfball Club</h1>
+    <h1 class="visually-hidden">Newport Centurions Korfball Club</h1>
     <h2 class="follow-header">Follow Us</h2>
 
-    <div class="social-links" aria-label="Social Media Links" itemprop="sameAs">
+    <div class="social-links">
         <a href="https://facebook.com/{{ site.social.facebook }}"
            aria-label="Follow us on Facebook"
            rel="noopener noreferrer"
@@ -80,3 +76,5 @@ description: Join Newport Centurions - South Wales' premier mixed-gender korfbal
         </a>
     </div>
 </main>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
