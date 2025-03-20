@@ -1,32 +1,62 @@
+# Site Settings
 title: Newport Centurions Korfball Club
 tagline: Welsh League Korfball Champions | Mixed Sport in South Wales
 description: Join Newport Centurions Korfball Club - South Wales' premier mixed-gender korfball team. Welsh League Champions 2022/2023 & 2025. Weekly training sessions at John Frost School, Newport.
 url: "https://newportcenturions.co.uk"
 enforce_ssl: newportcenturions.co.uk
+baseurl: ""
+
+# SEO Settings
 lang: en_GB
 locale: en_GB
 author: Newport Centurions Korfball Club
-keywords: korfball newport, mixed sports wales, welsh korfball league, newport sports club, mixed gender sports
+keywords: korfball newport, mixed sports wales, welsh korfball league, newport sports club, mixed gender sports, korfball club newport, welsh korfball, mixed team sports wales
 timezone: Europe/London
+logo: /images/newport-centurions-korfball-club.webp
 
+# Organization Info
+organization:
+  name: Newport Centurions Korfball Club
+  location: Newport, Wales
+  foundingDate: 2015
+
+# Social Media
 social:
   facebook: newportcenturions
   twitter: newportkorfball
   instagram: newportkorfball
   youtube: "@newportcenturionskorfball5878"
 
+# Plugin Settings
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# GitHub Pages settings
-lsi: false
+# Sitemap Settings
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /images/newport-centurions-korfball-club.webp
+
+# Build Settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 safe: true
-source: .
 incremental: false
 highlighter: rouge
 gist:
   noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+
+# Compression
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
