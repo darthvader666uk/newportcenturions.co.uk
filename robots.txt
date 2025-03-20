@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://newportcenturions.co.uk/sitemap.xml
