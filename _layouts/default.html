@@ -1,3 +1,4 @@
+/default.html
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -24,9 +25,6 @@
     <meta name="twitter:description" content="{{ page.description }}">
     <meta name="twitter:image" content="{{ site.url }}/images/newport-centurions-korfball-club.webp">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-
     <!-- Critical CSS -->
     <style>
       {% include_relative assets/css/critical.css %}
@@ -39,22 +37,6 @@
           crossorigin="anonymous"
           media="print"
           onload="this.media='all'">
-
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SportsTeam",
-      "name": "{{ site.title }}",
-      "description": "{{ site.description }}",
-      "url": "{{ site.url }}",
-      "logo": "{{ site.url }}/images/newport-centurions-korfball-club.webp",
-      "sport": {
-        "@type": "Sport",
-        "name": "Korfball"
-      }
-    }
-    </script>
 </head>
 <body>
     {{ content }}
