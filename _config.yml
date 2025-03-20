@@ -1,4 +1,8 @@
-theme: jekyll-theme-architect
+title: Newport Centurions Korfball
+description: THis is the site for Newport Centurions Korfball Based in South Wales
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
 
-plugins:
-  - jekyll-sitemap
+# Build settings
+markdown: kramdown
+theme: minima # You can change this to another theme

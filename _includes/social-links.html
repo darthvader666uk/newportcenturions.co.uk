@@ -1,0 +1,11 @@
+{% if site.data.social %}
+<div class="social-media-links">
+  {% for item in site.data.social %}
+    {% if item.href %}
+    <a href="{{ item.href }}" title="{{ item.title }}" target="_blank">
+      <i class="fa {{ item.fa-icon }}"></i>
+    </a>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}

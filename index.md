@@ -1,11 +1,21 @@
 ---
-title: Home
+layout: default
 ---
 
-## Welcome to Simplest Jekyll demo
+# Welcome to My One-Page Site
 
-This site is very stripped down to minimal content for GitHub Pages and is not suitable for local develpment - you'll typically add a `.gitignore` for example.
+This is a simple one-page Jekyll site with a logo and social media links.
 
-Source: [![MichaelCurrin - simplest-jekyll](https://img.shields.io/static/v1?label=MichaelCurrin&message=simplest-jekyll&color=blue&logo=github)](https://github.com/MichaelCurrin/simplest-jekyll)
+## About Me
 
-For a more useful template that includes setup instructions and notes throughout, see [![MichaelCurrin - jekyll-blog-demo](https://img.shields.io/static/v1?label=MichaelCurrin&message=jekyll-blog-demo&color=blue&logo=github)](https://github.com/MichaelCurrin/jekyll-blog-demo).
+Write some information about yourself or your project here.
+
+## My Projects
+
+- Project 1: Description of project 1
+- Project 2: Description of project 2
+- Project 3: Description of project 3
+
+## Contact
+
+Feel free to reach out to me through any of the social media links above!

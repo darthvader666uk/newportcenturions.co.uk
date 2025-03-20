@@ -1,0 +1,15 @@
+- title: github
+  href: https://github.com/YOUR-USERNAME
+  fa-icon: fa-github-square
+
+- title: twitter
+  href: https://twitter.com/YOUR-USERNAME
+  fa-icon: fa-twitter-square
+
+- title: linkedin
+  href: https://www.linkedin.com/in/YOUR-USERNAME
+  fa-icon: fa-linkedin-square
+
+- title: facebook
+  href: https://facebook.com/YOUR-USERNAME
+  fa-icon: fa-facebook-square
