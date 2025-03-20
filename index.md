@@ -53,7 +53,7 @@ description: Join Newport Centurions - South Wales' premier mixed-gender korfbal
     <h1 class="visually-hidden" itemprop="name">Newport Centurions Korfball Club</h1>
     <h2 class="follow-header">Follow Us</h2>
 
-    <nav class="social-links" aria-label="Social Media Links">
+    <div class="social-links" aria-label="Social Media Links" itemprop="sameAs">
         <a href="https://facebook.com/{{ site.social.facebook }}"
            aria-label="Follow us on Facebook"
            rel="noopener noreferrer"
@@ -78,5 +78,5 @@ description: Join Newport Centurions - South Wales' premier mixed-gender korfbal
            target="_blank">
             <i class="fab fa-youtube" aria-hidden="true"></i>
         </a>
-    </nav>
+    </div>
 </main>
