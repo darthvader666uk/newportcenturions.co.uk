@@ -36,48 +36,66 @@
     -webkit-font-smoothing: antialiased;
 }
 
-  /* Mobile optimizations */
-  @media (max-width: 768px) {
-    .social-link {
-      padding: 0.75rem;
-      font-size: clamp(1.75rem, 4vw, 2.25rem);
-    }
+/* Mobile optimizations */
+@media (max-width: 768px) {
+.social-link {
+    padding: 0.75rem;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
 
-    .social-links {
-      gap: 1rem;
-    }
-  }
-  /* Tablet optimizations */
-  @media (max-width: 1024px) {
-    .social-link {
-      padding: 0.75rem;
-      font-size: clamp(1.5rem, 4vw, 2rem);
-    }
+.social-links {
+    gap: 1rem;
+}
+}
+/* Tablet optimizations */
+@media (max-width: 1024px) {
+.social-link {
+    padding: 0.75rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
 
-    .social-links {
-      gap: 1.5rem;
-    }
-  }
+.social-links {
+    gap: 1.5rem;
+}
+}
 
-  /* Desktop optimizations */
-  @media (min-width: 1025px) {
-    .social-link {
-      padding: 0.5rem;
-      font-size: clamp(2rem, 3vw, 2.5rem);
-    }
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+.social-link {
+    padding: 0.5rem;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
 
-    .social-links {
-      gap: 2rem;
-    }
-  }.fundraising {
-    margin-top: 2rem;
+.social-links {
+    gap: 2rem;
+}
+}
+
+.fundraising {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: var(--spacing);
+    margin-top: 2rem;
+}
+
+.fundraising-link {
+    display: block;
+    text-align: center;
 }
 
 .fundraising-logo {
     max-width: 200px;
+    width: 100%;
     height: auto;
+    margin: 0 auto;
     transition: transform 0.3s ease;
+}
+
+.wrapper {
+    text-align: center;
+    margin-top: 1rem;
 }
 
 @media (hover: hover) {
