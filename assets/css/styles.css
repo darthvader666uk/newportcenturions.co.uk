@@ -76,16 +76,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     padding: var(--spacing);
-    margin-top: 2rem;
-}
-
-.fundraising-link {
-    display: block;
     text-align: center;
 }
 
+.fundraising-link {
+    display: inline-block;
+    margin: 0 auto;
+}
+
 .fundraising-logo {
+    display: block;
     max-width: 200px;
     width: 100%;
     height: auto;
@@ -94,14 +96,9 @@
 }
 
 .wrapper {
-    text-align: center;
     margin-top: 1rem;
-}
-
-@media (hover: hover) {
-    .fundraising-logo:hover {
-        transform: scale(1.05);
-    }
+    text-align: center;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
