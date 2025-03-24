@@ -10,9 +10,26 @@ baseurl: ""
 lang: en_GB
 locale: en_GB
 author: Newport Centurions Korfball Club
-keywords: korfball newport, mixed sports wales, welsh korfball league, newport sports club, mixed gender sports, korfball club newport, welsh korfball, mixed team sports wales
 timezone: Europe/London
 logo: /images/newport-centurions-korfball-club.webp
+
+# SEO Settings
+keywords: >-
+  korfball newport,
+  welsh korfball,
+  mixed sports wales,
+  korfball club wales,
+  newport sports club,
+  mixed gender sports,
+  welsh korfball league,
+  korfball training newport,
+  korfball john frost school,
+  sports club newport,
+  welsh league champions,
+  mixed team sports wales,
+  korfball south wales,
+  beginner korfball newport,
+  korfball club membership
 
 # Organization Info
 organization:
