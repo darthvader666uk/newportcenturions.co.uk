@@ -1,29 +1,31 @@
   .follow-header {
     font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--logo-primary-orange, #fbb304);
     margin-block: var(--spacing);
     font-weight: 600;
   }
 
+  /* Social Links - Mobile First */
   .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(1.5rem, 4vw, 2.5rem);
+    gap: 1rem; /* Mobile gap */
     margin-top: 2rem;
   }
 
   .social-link {
     color: var(--primary-text);
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(1.75rem, 4vw, 2.25rem); /* Mobile font size */
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0.75rem; /* Mobile padding */
     transition: transform 0.3s ease, color 0.3s ease;
   }
 
   .social-link:hover,
   .social-link:focus {
     transform: scale(1.1);
-    color: #cccccc;
+    color: var(--logo-primary-orange, #fbb304);
   }
 
   /* Ensure icons are visible */
@@ -34,41 +36,57 @@
     line-height: 1;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-}
+  }
 
-/* Mobile optimizations */
-@media (max-width: 768px) {
-.social-link {
-    padding: 0.75rem;
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
-}
-
-.social-links {
-    gap: 1rem;
-}
-}
-/* Tablet optimizations */
-@media (max-width: 1024px) {
-.social-link {
-    padding: 0.75rem;
-    font-size: clamp(1.5rem, 4vw, 2rem);
-}
-
-.social-links {
+/* Tablet and larger */
+@media (min-width: 769px) {
+  .social-links {
     gap: 1.5rem;
-}
+  }
+  .social-link {
+    font-size: clamp(1.75rem, 4.5vw, 2.25rem); /* Adjusted tablet/intermediate font size */
+    /* Padding can remain 0.75rem or be adjusted */
+  }
 }
 
-/* Desktop optimizations */
+/* Desktop */
 @media (min-width: 1025px) {
-.social-link {
-    padding: 0.5rem;
-    font-size: clamp(2rem, 3vw, 2.5rem);
+  .social-links {
+    gap: 2rem;
+  }
+  .social-link {
+    font-size: clamp(2rem, 3vw, 2.5rem); /* Desktop font size */
+    padding: 0.5rem; /* Desktop padding */
+  }
 }
 
-.social-links {
-    gap: 2rem;
+/* Homepage main container */
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers flex items (like the logo's <picture> tag, h2, nav) horizontally */
+  padding: 2rem 1rem; /* Consistent padding with other pages */
+  max-width: 800px;   /* Optional: Constrains width like .page-content */
+  margin: 0 auto;     /* Centers the container itself if max-width is set */
+  text-align: center; /* Fallback for text content or inline-block children */
 }
+
+/* General Page Content Styling */
+.page-content {
+  padding: 2rem 1rem; /* Add some padding to main content areas */
+  max-width: 800px; /* Constrain content width for readability */
+  margin: 0 auto; /* Center content */
+}
+/* General link styling within page content */
+.page-content a {
+  color: var(--accent-color, #fbb304);
+  text-decoration: underline;
+}
+
+.page-content a:hover,
+.page-content a:focus {
+  color: var(--accent-color-darker, #fb8404);
+  text-decoration: none;
 }
 
 .fundraising {
@@ -76,7 +94,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */ /* Let page-content handle width */
     padding: var(--spacing);
     text-align: center;
 }
@@ -85,6 +103,19 @@
     display: inline-block;
     margin: 0 auto;
 }
+.content-block {
+  background-color: var(--secondary-bg, #1a1a1a); /* Slightly lighter dark shade or a subtle contrast */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  /* text-align: left; /* Default alignment for content within the block */
+}
+
+/* Center align specific elements within the content block if needed */
+.content-block .centered-content {
+  text-align: center;
+}
+
 
 .fundraising-logo {
     display: block;
@@ -94,15 +125,254 @@
     margin: 0 auto;
     transition: transform 0.3s ease;
 }
+.fundraising-logo:hover {
+    transform: scale(1.05);
+}
 
-.wrapper {
+.content-block h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--logo-primary-orange, #fbb304);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.content-block h3 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: var(--logo-medium-orange, #fcc15c); /* Use brand color for h3 */
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.content-block p,
+.content-block li {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.7;
+  color: var(--secondary-text, #dddddd); /* Slightly softer white for paragraphs */
+  margin-bottom: 1rem;
+  text-align: left; /* Ensure paragraphs and list items are left-aligned */
+}
+
+/* Specific to OL on support page */
+.steps-list {
+  list-style-position: inside;
+  text-align: left;
+  margin-left: 1rem; /* Indent list slightly */
+}
+
+.steps-list li::marker {
+  font-weight: bold;
+  color: var(--logo-medium-orange, #fcc15c); /* Using a medium orange from your logo palette */
+}
+
+/* Styling for UL on join page */
+.content-block ul.benefits-list {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 0;
+  text-align: left;
+}
+
+.content-block ul.details-list {
+  list-style-type: disc; /* Explicitly set to disc, or use 'initial' or 'revert' */
+  padding-left: 40px;  /* Add padding for default bullets to show */
+  text-align: left;
+}
+
+.content-block ul.benefits-list li {
+  position: relative;
+  padding-left: 1.75em; /* Space for custom marker */
+  margin-bottom: 0.75rem;
+}
+
+.content-block ul.benefits-list li::before {
+  content: '✔'; /* Checkmark marker */
+  color: var(--logo-primary-orange, #fbb304);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.ef-link {
+  color: var(--accent-color, #fbb304);
+  text-decoration: underline;
+}
+
+.ef-link:hover {
+  text-decoration: none;
+}
+
+.fundraising-cta-link {
+  display: inline-flex; /* Align image and text */
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary-text, #ffffff);
+  margin-top: 1.5rem;
+  padding: 1rem;
+  /* border: 2px solid var(--accent-color, #00bfff); */ /* Removed border */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fundraising-cta-link:hover {
+  background-color: var(--accent-color-darker, #fb8404); /* Using a darker orange from your logo palette */
+  transform: translateY(-3px);
+}
+
+.fundraising-cta-link .fundraising-logo {
+  margin-bottom: 0.5rem;
+}
+
+.fundraising-cta-link span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Generic CTA Button for Join Page */
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color, #fbb304);
+  color: var(--primary-bg, #000000); /* Assuming black text on orange button */
+  padding: 0.85rem 1.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+  border: none;
+  font-size: 1.1rem;
+}
+.cta-button:hover, .cta-button:focus {
+  background-color: var(--accent-color-darker, #fb8404);
+  color: var(--primary-bg, #000000);
+  transform: translateY(-2px);
+}
+
+/* Scoped wrapper style for the footer */
+.site-footer .wrapper {
     margin-top: 1rem;
     text-align: center;
     width: 100%;
-}
+  }
 
 @media (max-width: 768px) {
     .fundraising-logo {
         max-width: 150px;
     }
+}
+
+/* Basic Site Header Styling */
+.site-header {
+    /* Use CSS variables from critical.css or fallback */
+    background-color: var(--primary-bg, #000000);
+    border-bottom: 1px solid #2a2a2a; /* Subtle border for separation */
+    min-height: 56px; /* Adjust as needed */
+    padding: 0 1rem; /* Add some padding */
+  }
+
+  .site-header .wrapper {
+    max-width: 960px; /* Adjust to your site's content width */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row; /* Align title and nav horizontally */
+    justify-content: space-between; /* Pushes title to left, nav to right */
+    align-items: center;
+  }
+
+  .site-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: normal; /* Adjust line height for stacked layout */
+    letter-spacing: -0.5px;
+    color: var(--primary-text, #ffffff); /* White text on dark bg */
+    text-decoration: none; /* Removed margin-bottom as it's no longer stacked */
+  }
+  .site-title:hover {
+    text-decoration: underline;
+    color: var(--logo-primary-orange, #fbb304); /* Use logo color for hover */
+  }
+
+  /* Navigation Menu Styling */
+  .site-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Horizontal layout */
+    align-items: center;
+  }
+
+  .site-nav li {
+    margin-left: 20px; /* Spacing between menu items */
+  }
+  .site-nav li:first-child {
+    margin-left: 0;
+  }
+
+  .site-nav a {
+    text-decoration: none;
+    color: var(--logo-medium-orange, #fcc15c); /* Use medium orange for idle links */
+    padding: 0.6rem 0.85rem; /* Slightly adjusted padding for larger font */
+    font-size: 1.1rem; /* Increased font size */
+    font-weight: 500;
+    line-height: normal; /* Adjust line height */
+    display: block;
+  }
+
+  .site-nav a:hover,
+  .site-nav a.active {
+    color: var(--logo-primary-orange, #fbb304); /* Use primary orange for hover/active state */
+    text-decoration: underline;
+  }
+
+  /* Responsive adjustments for smaller screens */
+  @media screen and (max-width: 600px) {
+    .site-header .wrapper {
+      flex-direction: column; /* Stack title and nav vertically on small screens */
+      padding: 0.5rem 0; /* Add some vertical padding for stacked layout */
+    }
+    .site-title {
+      /* font-size, font-weight, color, text-decoration are inherited */
+      line-height: normal;
+      padding: 0.25rem 0; /* Consistent with potential main rule padding */
+      /* margin-right: 15px; Removed as items are stacked */
+      margin-bottom: 0.25rem; /* Add back space below title for stacked mobile layout */
+    }
+    .site-nav ul {
+      /* display: flex; is inherited */
+      flex-wrap: wrap; /* Allow nav items to wrap */
+      justify-content: flex-start; /* Align wrapped items to the start */
+    }
+    .site-nav li {
+      margin-left: 0;
+      margin-right: 15px; /* Space between nav items */
+      margin-bottom: 5px; /* Space if items wrap to new line */
+    }
+    .site-nav li:last-child {
+      margin-right: 0;
+    }
+    .site-nav a {
+      /* color, font-weight are inherited */
+      padding: 0.5rem; /* Consistent padding for mobile */
+      line-height: normal;
+      /* Removed text-align: left and border-top from previous stacked version */
+    }
+  }
+
+/* Define CSS variables if not already in critical.css or elsewhere globally */
+:root {
+  --primary-text: #ffffff; /* Already in critical.css */
+  --secondary-text: #dddddd;
+  --secondary-bg: #1a1a1a; /* For content blocks on dark pages */
+
+  /* Logo Colors */
+  --logo-primary-orange: #fbb304;
+  --logo-secondary-orange: #fb8404;
+  --logo-light-orange: #fce3b2;
+  --logo-medium-orange: #fcc15c; /* Used for list markers */
+  /* --logo-other-orange: #fcd474; */ /* Available if needed */
+
+  /* General Accent Colors (now derived from logo) */
+  --accent-color: var(--logo-primary-orange);
+  --accent-color-darker: var(--logo-secondary-orange);
 }

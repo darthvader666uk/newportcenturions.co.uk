@@ -14,13 +14,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ page.description | default: site.description }}">
-    <meta name="keywords" content="{{ site.keywords }}">
-    <meta name="author" content="{{ site.author }}">
-    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#000000">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!-- SEO -->
+    {% seo %}
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
@@ -28,30 +25,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
     <link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:description" content="{{ page.description }}">
-    <meta property="og:image" content="{{ site.url }}/images/newport-centurions-korfball-club.webp">
-    <meta property="og:image:alt" content="Newport Centurions Korfball Club Logo">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:locale" content="en_GB">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@newportkorfball">
-    <meta name="twitter:title" content="{{ page.title }}">
-    <meta name="twitter:description" content="{{ page.description }}">
-    <meta name="twitter:image" content="{{ site.url }}/images/newport-centurions-korfball-club.webp">
-    <meta name="twitter:image:alt" content="Newport Centurions Korfball Club Logo">
-
-    <!-- Canonical -->
-    <link rel="canonical" href="{{ site.url }}{{ page.url | remove: 'index.html' }}">
-
     <!-- Critical CSS -->
     <style>
-        {% include_relative assets/css/critical.min.css %}
+        {% include_relative assets/css/critical.css %}
     </style>
 
     <!-- Preload Font Awesome -->
@@ -61,45 +37,23 @@
     </noscript>
 
     <!-- Non-critical CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | relative_url }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     </noscript>
 
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "SportsTeam",
-        "name": "{{ site.title }}",
-        "description": "{{ site.description }}",
-        "url": "{{ site.url }}",
-        "logo": "{{ site.url }}/images/newport-centurions-korfball-club.webp",
-        "sport": {
-            "@type": "Sport",
-            "name": "Korfball"
-        },
-        "location": {
-            "@type": "Place",
-            "name": "John Frost School",
-            "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Newport",
-            "addressRegion": "Wales",
-            "addressCountry": "GB"
-            }
-        },
-        "sameAs": [
-            "https://facebook.com/{{ site.social.facebook }}",
-            "https://twitter.com/{{ site.social.twitter }}",
-            "https://instagram.com/{{ site.social.instagram }}",
-            "https://youtube.com/{{ site.social.youtube }}"
-        ]
-        }
-        </script>
     </head>
     <body>
-        {{ content }}
+        <header class="site-header">
+          <div class="wrapper">
+            <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+            {% include navigation.html %}
+          </div>
+        </header>
+
+        <main class="page-content" aria-label="Content">
+            {{ content }}
+        </main>
         {% include footer.html %}
     </body>
 </html>

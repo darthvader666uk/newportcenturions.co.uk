@@ -19,24 +19,6 @@ author: Newport Centurions Korfball Club
 timezone: Europe/London
 logo: /images/newport-centurions-korfball-club.webp
 
-# SEO Settings
-keywords: >-
-  korfball newport,
-  welsh korfball,
-  mixed sports wales,
-  korfball club wales,
-  newport sports club,
-  mixed gender sports,
-  welsh korfball league,
-  korfball training newport,
-  korfball john frost school,
-  sports club newport,
-  welsh league champions,
-  mixed team sports wales,
-  korfball south wales,
-  beginner korfball newport,
-  korfball club membership
-
 # Organization Info
 organization:
   name: Newport Centurions Korfball Club
@@ -48,10 +30,13 @@ social:
   facebook: newportcenturions
   twitter: newportkorfball
   instagram: newportkorfball
-  youtube: "@newportcenturionskorfball5878"
+  youtube: "https://youtube.com/@newportcenturionskorfball5878"
 
 # Plugin Settings
 plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+whitelist:
   - jekyll-sitemap
   - jekyll-seo-tag
 
@@ -83,3 +68,12 @@ compress_html:
   blanklines: false
   ignore:
     envs: []
+
+# Navigation Menu
+navigation:
+  - title: About Us
+    url: /about/
+  - title: Join Us
+    url: /join-us/
+  - title: Support Us
+    url: /support/
