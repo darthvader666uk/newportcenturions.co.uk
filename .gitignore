@@ -1,11 +1,14 @@
-node_modules
-vendor
+_site/
+*.gem
+
+# Jekyll specific
+.jekyll-cache/
+.jekyll-metadata
+
+# Sass cache
+.sass-cache/
+
+# OS generated files
 .DS_Store
-.vscode
-logs/*
-*.Identifier
-.codegpt
-*.bak
-.codegpt
-.env
-composer.lock
+Thumbs.db
+.Identifier
