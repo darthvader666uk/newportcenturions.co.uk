@@ -3,11 +3,12 @@ layout: default
 title: Join Newport Centurions Korfball Club
 description: Become a part of Newport Centurions Korfball Club! Learn about our mixed-gender sport, training sessions in Newport, and how to join our friendly team.
 permalink: /join-us/
+keywords: join korfball, join newport centurions, korfball club newport, korfball training, korfball beginners, korfball south wales, korfball team, welsh korfball, about korfball
 ---
 
 <div class="page-content">
   <div class="content-block">
-    <h2>Join Newport Centurions Korfball Club</h2>
+    <h1>Join Newport Centurions Korfball Club</h1>
 
     <p><strong>Discover Korfball in Newport! Are you looking for a fun, social, and competitive mixed-gender sport in South Wales? You've found it with Newport Centurions.</strong></p>
 
@@ -41,7 +42,7 @@ permalink: /join-us/
     <p><em>Your first 2 sessions are free – it's the perfect opportunity to try korfball and meet the team!</em></p>
 
     <h3>Ready to Join or Want More Info?</h3>
-    <p>We're always excited to welcome new members to our korfball family in Newport! To find out more, express your interest, or if you have any questions, please send us a message on one of our <a href="{{ '/' | relative_url }}#follow-us">social media channels</a>.</p>
+    <p>We're always excited to welcome new members to our korfball family in Newport! To find out more, express your interest, or if you have any questions, please send us a message on one of our <a href="/support/">Support</a> or <a href="/about/">About</a> pages, or check <a href="/what-is-korfball/">What is Korfball?</a>. <a href="/">Back to homepage</a></p>
     <p style="text-align: center;">We look forward to seeing you on the korfball court at John Frost School!</p>
   </div>
 

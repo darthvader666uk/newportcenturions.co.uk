@@ -73,6 +73,8 @@ compress_html:
 navigation:
   - title: About Us
     url: /about/
+  - title: What is Korfball
+    url: /what-is-korfball/
   - title: Join Us
     url: /join-us/
   - title: Support Us

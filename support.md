@@ -4,11 +4,12 @@ title: Support Us - Newport Centurions Korfball Club
 description: Find out how you can support Newport Centurions Korfball Club, including through easyfundraising.
 type: ContactPage # Hint for jekyll-seo-tag (as it's a page for interaction/support)
 permalink: /support/
+keywords: support korfball, support newport centurions, korfball fundraising, easyfundraising, korfball club, korfball team, join korfball, about korfball
 ---
 
 <section class="fundraising">
     <div class="content-block">
-        <h2>Support Us Through Easyfundraising</h2>
+        <h1>Support Us Through Easyfundraising</h1>
         <p>Did you know that whenever you buy anything online – from your weekly shop to your annual holiday – you could be raising free donations for Newport Centurion Korfball with easyfundraising?</p>
         <p>There are over 8,000 retailers on board ready to make a donation – including eBay, Argos, John Lewis & Partners, ASOS, Booking.com and M&S – and it won’t cost you a penny extra to help us raise funds.</p>
 
@@ -40,5 +41,6 @@ permalink: /support/
                 <img src="{{ '/images/easyfundraising-websitesticker.png' | relative_url }}" alt="Support Newport Centurion Korfball through easyfundraising" class="fundraising-logo" width="200" height="200" loading="lazy">
             </a>
         </div>
+        <p style="margin-top:2rem;">Learn more <a href="/about/">about us</a>, <a href="/join-us/">join the club</a>, or <a href="/">return to the homepage</a>.</p>
     </div>
 </section>

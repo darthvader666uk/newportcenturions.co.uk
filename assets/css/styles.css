@@ -1,4 +1,4 @@
-  .follow-header {
+.follow-header {
     font-size: clamp(1.5rem, 3vw, 2rem);
     color: var(--logo-primary-orange, #fbb304);
     margin-block: var(--spacing);
@@ -62,13 +62,15 @@
 
 /* Homepage main container */
 main.container {
+  width: min(98vw, 600px);
+  margin-inline: auto;
+  text-align: center;
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers flex items (like the logo's <picture> tag, h2, nav) horizontally */
-  padding: 2rem 1rem; /* Consistent padding with other pages */
-  max-width: 800px;   /* Optional: Constrains width like .page-content */
-  margin: 0 auto;     /* Centers the container itself if max-width is set */
-  text-align: center; /* Fallback for text content or inline-block children */
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* General Page Content Styling */
@@ -375,4 +377,71 @@ main.container {
   /* General Accent Colors (now derived from logo) */
   --accent-color: var(--logo-primary-orange);
   --accent-color-darker: var(--logo-secondary-orange);
+}
+
+.training-info {
+  max-width: 420px;
+  margin: 1.2rem auto 1.5rem auto;
+  padding: 1.2rem 0.7rem;
+  background: #222;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  color: var(--primary-text, #fff);
+  text-align: center;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+.training-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #ffd700;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.training-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.3rem 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.training-info li {
+  margin-bottom: 0.3rem;
+}
+.training-info h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: #ffd700;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.training-info p {
+  margin: 0 0 0.7rem 0;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+.training-info a {
+  color: #ffd700;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.2s;
+  font-size: 1.08rem;
+}
+.training-info a:hover {
+  color: #fff200;
+}
+@media (max-width: 600px) {
+  .training-info {
+    padding: 1.2rem 0.5rem;
+    font-size: 1rem;
+  }
+  .training-info h2, .training-info h3 {
+    font-size: 1.1rem;
+  }
+}
+
+h1, .page-content h1 {
+  color: #ffd700; /* match h2 yellow */
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
