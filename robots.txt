@@ -1,6 +1,27 @@
 User-agent: *
 Allow: /
 
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Sitemaps
 Sitemap: {{ site.url }}/sitemap.xml
-# Disallow specific paths if needed, e.g.:
-# Disallow: /private/
+Sitemap: {{ site.url }}/feed.xml
+
+# Disallow unnecessary files
+Disallow: /assets/css/critical.css
+Disallow: /*.json$
+Disallow: /*?*
+Disallow: /404.html

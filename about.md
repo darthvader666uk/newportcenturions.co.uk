@@ -34,12 +34,11 @@ keywords: about korfball, about newport centurions, korfball club newport, welsh
     <h3>Our Achievements</h3>
     <p>We are incredibly proud of our team's dedication and success, highlighted by our achievements as:</p>
     <ul>
-      <li><strong>Welsh League Champions: 2021-2, 2022 & 2025-5</strong></li>
+      <li><strong>Welsh League Champions: 2021-2, 2022 & 2024-5</strong></li>
     </ul>
     <p>This success is a testament to the hard work of our players and the supportive spirit of our club.</p>
 
     <h3>Get Involved!</h3>
-    <p>Whether you're an experienced player or curious to try something new, we'd love to hear from you. Check out our <a href="/join-us/">Join Us page</a> for details on training times and how to become a Centurion, or connect with us on our <a href="/what-is-korfball/">What is Korfball?</a> page. <a href="/">Back to homepage</a></p>
-
+    <p>Whether you're an experienced player or curious to try something new, we'd love to hear from you. Check out our <a href="/join-us/">Join Us page</a> for details on training times and how to become a Centurion, or connect with us on our <a href="/what-is-korfball/">What is Korfball?</a> page.</p>
   </div>
 </div>

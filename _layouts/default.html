@@ -13,8 +13,41 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#fbb304">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="geo.region" content="GB-WLS">
+    <meta name="geo.placename" content="Newport, Wales">
+    <meta name="geo.position" content="51.5881;-2.9977">
+    <meta name="ICBM" content="51.5881, -2.9977">
+    
+    <!-- Open Graph Enhanced -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Newport Centurions Korfball Club">
+    {% if page.image %}
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+    {% endif %}
+    
+    <!-- Twitter Card Enhanced -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@newportkorfball">
+    <meta name="twitter:creator" content="@newportkorfball">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="application-name" content="Newport Centurions KC">
+    <meta name="msapplication-TileColor" content="#fbb304">
+    <meta name="msapplication-config" content="{{ '/assets/favicon/browserconfig.xml' | relative_url }}">
 
     <!-- SEO -->
     {% seo %}
@@ -35,25 +68,155 @@
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
+    </script>
 
-    <!-- Non-critical CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" media="print" onload="this.media='all'">
-    <noscript>
+    <!-- Enhanced Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "{{ site.url }}/#organization",
+          "name": "{{ site.title }}",
+          "url": "{{ site.url }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}/images/newport-centurions-korfball-club.webp",
+            "width": 400,
+            "height": 400
+          },
+          "sameAs": [
+            "https://facebook.com/newportcenturions",
+            "https://twitter.com/newportkorfball", 
+            "https://instagram.com/newportkorfball",
+            "https://youtube.com/@newportcenturionskorfball5878"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "English"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Newport",
+            "addressRegion": "Wales",
+            "addressCountry": "GB"
+          },
+          "sport": "Korfball",
+          "description": "{{ site.description }}"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "{{ site.url }}/#website",
+          "url": "{{ site.url }}",
+          "name": "{{ site.title }}",
+          "description": "{{ site.description }}",
+          "publisher": {
+            "@id": "{{ site.url }}/#organization"
+          },
+          "inLanguage": "en-GB"
+        }{% if page.url == '/' %},
+        {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}/#webpage",
+          "url": "{{ site.url }}",
+          "name": "{{ page.title | default: site.title }}",
+          "isPartOf": {
+            "@id": "{{ site.url }}/#website"
+          },
+          "about": {
+            "@id": "{{ site.url }}/#organization"
+          },
+          "description": "{{ page.description | default: site.description }}",
+          "inLanguage": "en-GB"
+        },
+        {
+          "@type": "SportsTeam",
+          "@id": "{{ site.url }}/#sportsteam",
+          "name": "{{ site.title }}",
+          "sport": {
+            "@type": "Sport",
+            "name": "Korfball"
+          },
+          "memberOf": {
+            "@type": "SportsOrganization",
+            "name": "Welsh Korfball Association"
+          },
+          "location": {
+            "@type": "Place",
+            "name": "John Frost School",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Newport",
+              "addressRegion": "Wales", 
+              "addressCountry": "GB"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "51.5881",
+              "longitude": "-2.9977"
+            }
+          },
+          "foundingDate": "2020",
+          "award": [
+            "Welsh League Champions 2022/2023",
+            "Welsh League Champions 2025"
+          ],
+          "description": "{{ site.description }}"
+        }{% endif %}
+      ]
+    }
+    </script>
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="{{ '/feed.xml' | relative_url }}">
+    
+    <!-- DNS Prefetch for Performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//facebook.com">
+    <link rel="dns-prefetch" href="//twitter.com">
+    <link rel="dns-prefetch" href="//instagram.com">
+    <link rel="dns-prefetch" href="//youtube.com">
+
+    <!-- Non-critical CSS - Temporarily loading directly for debugging -->
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <!-- <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" media="print" onload="this.media='all'"> -->
+    <!-- <noscript>
         <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-    </noscript>
+    </noscript> -->
 
     </head>
     <body>
-        <header class="site-header">
-          <div class="wrapper">
-            <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-            {% include navigation.html %}
-          </div>
-        </header>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <div class="site-wrapper">
+            <header class="site-header">
+              <div class="wrapper">
+                <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+                {% include navigation.html %}
+              </div>
+            </header>
 
-        <main class="page-content" aria-label="Content">
-            {{ content }}
-        </main>
-        {% include footer.html %}
+            <main id="main-content" class="page-content" aria-label="Content">
+                {{ content }}
+            </main>
+            {% include footer.html %}
+        </div>
     </body>
 </html>

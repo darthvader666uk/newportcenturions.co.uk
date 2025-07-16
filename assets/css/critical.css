@@ -2,31 +2,62 @@
     --primary-bg: #000000;
     --primary-text: #ffffff;
     --spacing: clamp(1rem, 2vw, 2rem);
+    --logo-primary-orange: #fbb304;
+    --logo-medium-orange: #fcc15c;
+    --secondary-text: #dddddd;
+    --secondary-bg: #1a1a1a;
+    --content-bg: #1a1a1a;
+    --border-color: #2a2a2a;
+    --accent-color: #fbb304;
+    --accent-color-darker: #fb8404;
+  }
+
+  /* Mobile-first base styles */
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
   
   body {
     background-color: var(--primary-bg);
     color: var(--primary-text);
     min-height: 100vh;
-    display: grid;
-    place-items: center;
     margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
   }
 
+  /* Mobile-optimized container */
   .container {
-    width: min(90%, 1200px);
+    width: min(95%, 1200px);
     margin-inline: auto;
     text-align: center;
+    padding: 0 0.5rem;
   }
 
+  /* Responsive logo */
   .logo {
-    width: min(80vw, 400px);
+    width: min(85vw, 400px);
     height: auto;
     margin-block: var(--spacing);
+    max-width: 100%;
+  }
+
+  /* Mobile-friendly images */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* Utility classes */
-.visually-hidden {
+  .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -34,4 +65,4 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
-}
+  }

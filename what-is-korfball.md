@@ -24,7 +24,6 @@ keywords: korfball, what is korfball, korfball rules, korfball sport, mixed gend
       </a>
       <p style="font-size:0.95em;color:#aaa;margin-top:0.5rem;">Watch: Newport Centurions Korfball Highlights (via Newport Centurions Korfball Channel)</p>
     </div>
-    <p>Interested in playing? <a href="/join-us/">Join Newport Centurions Korfball Club</a> today!<br>
-    <a href="/">Back to homepage</a></p>
+    <p>Interested in playing? <a href="/join-us/">Join Newport Centurions Korfball Club</a> today!<br></p>
   </div>
 </div>

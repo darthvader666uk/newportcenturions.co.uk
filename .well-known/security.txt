@@ -1,0 +1,26 @@
+Contact: mailto:info@newportcenturions.co.uk
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://newportcenturions.co.uk/.well-known/security.txt
+Policy: https://newportcenturions.co.uk/security-policy
+Acknowledgments: https://newportcenturions.co.uk/security-acknowledgments
+
+# Security Contact Information
+# Newport Centurions Korfball Club
+# For reporting security vulnerabilities or concerns
+# Please allow up to 48 hours for initial response
+# 
+# Scope: newportcenturions.co.uk and all subdomains
+# Out of scope: Social media accounts, third-party services
+#
+# Please provide:
+# - Detailed description of the vulnerability
+# - Steps to reproduce
+# - Potential impact assessment
+# - Any supporting evidence (screenshots, etc.)
+#
+# We are committed to:
+# - Acknowledging receipt within 48 hours
+# - Providing regular updates on progress
+# - Crediting researchers (if desired)
+# - Responsible disclosure practices

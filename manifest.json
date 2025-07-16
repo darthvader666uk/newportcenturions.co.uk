@@ -1,19 +1,43 @@
 {
     "name": "Newport Centurions Korfball Club",
     "short_name": "Newport Centurions",
+    "description": "Newport Centurions Korfball Club - Join Wales' premier korfball team based in Newport. Training, matches, and community events.",
+    "start_url": "/",
+    "scope": "/",
+    "orientation": "portrait-primary",
+    "lang": "en-GB",
+    "dir": "ltr",
     "icons": [
         {
             "src": "/assets/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "/assets/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/assets/favicon/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any"
         }
     ],
     "theme_color": "#000000",
-    "background_color": "#000000",
-    "display": "standalone"
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "categories": ["sports", "entertainment", "lifestyle"],
+    "prefer_related_applications": false,
+    "screenshots": [
+        {
+            "src": "/images/newport-centurions-korfball-club-800.webp",
+            "type": "image/webp",
+            "sizes": "800x600",
+            "form_factor": "wide"
+        }
+    ]
 }

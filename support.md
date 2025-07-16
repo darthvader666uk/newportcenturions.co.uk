@@ -41,6 +41,6 @@ keywords: support korfball, support newport centurions, korfball fundraising, ea
                 <img src="{{ '/images/easyfundraising-websitesticker.png' | relative_url }}" alt="Support Newport Centurion Korfball through easyfundraising" class="fundraising-logo" width="200" height="200" loading="lazy">
             </a>
         </div>
-        <p style="margin-top:2rem;">Learn more <a href="/about/">about us</a>, <a href="/join-us/">join the club</a>, or <a href="/">return to the homepage</a>.</p>
+        <p style="margin-top:2rem;">Learn more <a href="/about/">about us</a> or <a href="/join-us/">join the club</a>.</p>
     </div>
 </section>

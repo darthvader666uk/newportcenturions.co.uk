@@ -19,6 +19,45 @@ author: Newport Centurions Korfball Club
 timezone: Europe/London
 logo: /images/newport-centurions-korfball-club.webp
 
+# Enhanced SEO Configuration
+seo:
+  type: Organization
+  name: Newport Centurions Korfball Club
+  links:
+    - https://facebook.com/newportcenturions
+    - https://twitter.com/newportkorfball
+    - https://instagram.com/newportkorfball
+    - https://youtube.com/@newportcenturionskorfball5878
+
+# Organization Schema
+organization:
+  name: Newport Centurions Korfball Club
+  url: https://newportcenturions.co.uk
+  logo: https://newportcenturions.co.uk/images/newport-centurions-korfball-club.webp
+  sameAs:
+    - https://facebook.com/newportcenturions
+    - https://twitter.com/newportkorfball
+    - https://instagram.com/newportkorfball
+    - https://youtube.com/@newportcenturionskorfball5878
+  contactPoint:
+    - "@type": ContactPoint
+      contactType: customer service
+      availableLanguage: English
+  address:
+    "@type": PostalAddress
+    addressLocality: Newport
+    addressRegion: Wales
+    addressCountry: GB
+
+# Default SEO values
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      image: /images/newport-centurions-korfball-club-800.webp
+      author: Newport Centurions Korfball Club
+
 # Organization Info
 organization:
   name: Newport Centurions Korfball Club
@@ -79,3 +118,5 @@ navigation:
     url: /join-us/
   - title: Support Us
     url: /support/
+  - title: Contact Us
+    url: /contact/

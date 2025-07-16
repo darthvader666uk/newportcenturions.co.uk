@@ -42,7 +42,7 @@ keywords: join korfball, join newport centurions, korfball club newport, korfbal
     <p><em>Your first 2 sessions are free – it's the perfect opportunity to try korfball and meet the team!</em></p>
 
     <h3>Ready to Join or Want More Info?</h3>
-    <p>We're always excited to welcome new members to our korfball family in Newport! To find out more, express your interest, or if you have any questions, please send us a message on one of our <a href="/support/">Support</a> or <a href="/about/">About</a> pages, or check <a href="/what-is-korfball/">What is Korfball?</a>. <a href="/">Back to homepage</a></p>
+    <p>We're always excited to welcome new members to our korfball family in Newport! To find out more, express your interest, or if you have any questions, please <a href="/contact/">contact us</a> or email us at <a href="mailto:Newportkorfball@gmail.com">Newportkorfball@gmail.com</a>, or check <a href="/what-is-korfball/">What is Korfball?</a>.</p>
     <p style="text-align: center;">We look forward to seeing you on the korfball court at John Frost School!</p>
   </div>
 
