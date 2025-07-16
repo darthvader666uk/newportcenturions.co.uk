@@ -26,7 +26,7 @@ permalink: /contact/
             </div>
         </div>
 
-        <div class="contact-form-section" style="display:none;">
+        <div class="contact-form-section">
             <h2>Send Us a Message</h2>
             <p><strong>Option 1:</strong> Fill out the form below and we'll receive your message via email.</p>
             <form action="https://formsubmit.co/Newportkorfball@gmail.com" method="POST" class="contact-form" id="contact-form">

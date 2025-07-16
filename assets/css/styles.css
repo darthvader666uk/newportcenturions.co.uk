@@ -2459,3 +2459,13 @@ body .contact-form select#experience option {
   color: #ffffff !important;
   background-color: #535353 !important;
 }
+
+/* Force black heading for thank-you page */
+.force-black-heading h1, .force-black-heading h1 *, .force-black-heading h1 span {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  color: #000 !important;
+  text-shadow: none !important;
+}
