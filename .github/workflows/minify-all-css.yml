@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PAT }}
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -26,15 +28,9 @@ jobs:
             fi
           done
       - name: Push changes
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/darthvader666uk/newportcenturions.co.uk.git
           git add assets/css/*.min.css
           git commit -m 'Auto-minify all CSS files [skip ci]' || echo 'No changes to commit'
-          GIT_ASKPASS=$(mktemp)
-          echo "#!/bin/sh\necho $GH_PAT" > $GIT_ASKPASS
-          chmod +x $GIT_ASKPASS
-          GIT_ASKPASS=$GIT_ASKPASS git push origin master
+          git push
