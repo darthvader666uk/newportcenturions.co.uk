@@ -1,14 +1,26 @@
 ---
 layout: default
-title: Contact Us - Newport Centurions Korfball Club
+title: Contact Newport Centurions – Korfball Training & Welsh League
 description: Get in touch with Newport Centurions Korfball Club. Contact us about training sessions, joining the club, or general inquiries.
 permalink: /contact/
 ---
 
 <div class="contact-page">
     <div class="content-block">
-        <h1>Contact Newport Centurions</h1>
+                        <div style="display:none;">
+                            <h2>Quick Facts: Contact Newport Centurions</h2>
+                            <ul>
+                                <li><strong>Who:</strong> Newport Centurions Korfball Club – mixed gender sports team</li>
+                                <li><strong>Where:</strong> John Frost School, Newport, Wales</li>
+                                <li><strong>What:</strong> Korfball training sessions, Welsh Korfball League, beginners welcome</li>
+                                <li><strong>Contact:</strong> Newportkorfball@gmail.com</li>
+                            </ul>
+                        </div>
+        <h1>Contact Newport Centurions Korfball Club</h1>
         <p>Have questions about korfball or interested in joining our club? We'd love to hear from you!</p>
+        <p>We aim to respond to all inquiries within 48 hours. Whether you have questions about joining, training schedules, or korfball in general, our team is here to help. You can also reach us via social media or visit us at John Frost School, Newport, Wales.</p>
+
+        <p><strong>Contact Newport Centurions Korfball Club to learn more about mixed gender sports, korfball training in Newport, and the Welsh Korfball League. We are passionate about promoting welsh korfball in Wales.</strong></p>
 
         <!-- Success Message -->
         <div id="success-message" class="alert alert-success" style="display: none; background: linear-gradient(135deg, var(--logo-primary-orange, #fbb304), var(--logo-secondary-orange, #fb8404)); color: #000; padding: 1.5rem; border-radius: 12px; border: 2px solid rgba(251, 179, 4, 0.3); box-shadow: 0 4px 20px rgba(251, 179, 4, 0.2);">
@@ -32,7 +44,8 @@ permalink: /contact/
             <form action="https://formsubmit.co/Newportkorfball@gmail.com" method="POST" class="contact-form" id="contact-form">
                 <input type="hidden" name="_next" value="https://newportcenturions.co.uk/thank-you/">
                 <input type="hidden" name="_subject" value="New contact from Newport Centurions website">
-                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_honeypot" style="display:none">
 
                 <div class="form-group">
                     <label for="name">Name *</label>
@@ -108,6 +121,12 @@ permalink: /contact/
                 </a>
             </nav>
         </div>
+
+        <p style="margin-top: 2rem; text-align: center;">
+            <a href="/" class="back-home-link" style="color: var(--logo-primary-orange, #fbb304); text-decoration: none; font-weight: 500;">
+                ← Back to Home
+            </a>
+        </p>
 
     </div>
 </div>

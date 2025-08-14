@@ -1,0 +1,34 @@
+name: Minify All CSS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install clean-css-cli
+        run: npm install -g clean-css-cli
+      - name: Find and minify all CSS files
+        run: |
+          for f in assets/css/*.css; do
+            if [[ $f != *.min.css ]]; then
+              minf="${f%.css}.min.css"
+              cleancss -o "$minf" "$f"
+            fi
+          done
+      - name: Commit minified CSS
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add assets/css/*.min.css
+          git commit -m 'Auto-minify all CSS files [skip ci]' || echo 'No changes to commit'
+          git push

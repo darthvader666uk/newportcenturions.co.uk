@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About Newport Centurions Korfball Club
+title: About Newport Centurions – Welsh Korfball Club & Mixed Gender Sports
 description: Learn more about Newport Centurions, a friendly and competitive mixed-gender korfball club based in Newport, South Wales. Welsh League Champions.
 type: AboutPage # Hint for jekyll-seo-tag
 permalink: /about/
@@ -9,11 +9,22 @@ keywords: about korfball, about newport centurions, korfball club newport, welsh
 
 <div class="page-content">
   <div class="content-block">
-    <h1>About Newport Centurions Korfball Club</h1>
+  <div style="display:none;">
+    <h2>Quick Facts: Newport Centurions Korfball Club</h2>
+    <ul>
+      <li><strong>Who:</strong> Newport Centurions Korfball Club – mixed gender sports team</li>
+      <li><strong>Where:</strong> John Frost School, Newport, Wales</li>
+      <li><strong>What:</strong> Korfball training sessions, Welsh Korfball League, beginners welcome</li>
+      <li><strong>Contact:</strong> Newportkorfball@gmail.com</li>
+    </ul>
+  </div>
+  <h1>About Newport Centurions Korfball Club</h1>
 
-    <p>Welcome to Newport Centurions Korfball Club, South Wales' best mixed-gender korfball team! We are a friendly, inclusive, and competitive club based in Newport, with a passion for this unique and exciting sport.</p>
+  <p>Welcome to Newport Centurions Korfball Club, South Wales' best mixed-gender korfball team! We are a friendly, inclusive, and competitive club based in Newport, with a passion for this unique and exciting team sport. Our club brings together men and women, male and female players, to enjoy korfball as a true gender sport.</p>
 
-    <p>Founded in 2019, our club has grown to become a key part of the Welsh korfball scene. We proudly train at John Frost School in Newport and compete in the Welsh Korfball League and Western Regional League.</p>
+  <p>Founded in 2019, our club has grown to become a key part of the Welsh korfball scene. We proudly train at John Frost School in Newport, with regular training sessions for all abilities, and compete in the Welsh Korfball League and Western Regional League.</p>
+
+  <p><strong>We are proud to be part of the Welsh Korfball League and promote korfball in Wales as a leading mixed gender sports club. Our club supports the growth of Welsh korfball and provides korfball training sessions for all levels, welcoming both beginners and experienced players. As a regional league competitor, we champion mixed gender team sport and encourage everyone to try this unique sport.</strong></p>
 
     <h3>Our Teams </h3>
     <p>NCKC have over 30 members, playing across 3 teams:</p>
@@ -40,5 +51,7 @@ keywords: about korfball, about newport centurions, korfball club newport, welsh
 
     <h3>Get Involved!</h3>
     <p>Whether you're an experienced player or curious to try something new, we'd love to hear from you. Check out our <a href="/join-us/">Join Us page</a> for details on training times and how to become a Centurion, or connect with us on our <a href="/what-is-korfball/">What is Korfball?</a> page.</p>
+
+    <p><a href="/">Back to Home</a></p>
   </div>
 </div>

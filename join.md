@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Join Newport Centurions Korfball Club
+title: Join Newport Centurions Korfball Club – Mixed Gender Sport & Training in Newport
 description: Become a part of Newport Centurions Korfball Club! Learn about our mixed-gender sport, training sessions in Newport, and how to join our friendly team.
 permalink: /join-us/
 keywords: join korfball, join newport centurions, korfball club newport, korfball training, korfball beginners, korfball south wales, korfball team, welsh korfball, about korfball
@@ -8,9 +8,20 @@ keywords: join korfball, join newport centurions, korfball club newport, korfbal
 
 <div class="page-content">
   <div class="content-block">
-    <h1>Join Newport Centurions Korfball Club</h1>
+  <div style="display:none;">
+    <h2>Quick Facts: Joining Newport Centurions</h2>
+    <ul>
+      <li><strong>Who:</strong> Newport Centurions Korfball Club – mixed gender sports team</li>
+      <li><strong>Where:</strong> John Frost School, Newport, Wales</li>
+      <li><strong>What:</strong> Beginner-friendly korfball training sessions, Welsh Korfball League</li>
+      <li><strong>Contact:</strong> Newportkorfball@gmail.com</li>
+    </ul>
+  </div>
+  <h1>Join Newport Centurions Korfball Club</h1>
 
-    <p><strong>Discover Korfball in Newport! Are you looking for a fun, social, and competitive mixed-gender sport in South Wales? You've found it with Newport Centurions.</strong></p>
+  <p><strong>Discover Korfball in Newport! Are you looking for a fun, social, and competitive mixed-gender team sport in South Wales? You've found it with Newport Centurions, a club that welcomes men and women, male and female players of all abilities.</strong></p>
+
+  <p><strong>Join Newport Centurions Korfball Club and experience mixed gender sports in Wales. We offer korfball training sessions in Newport and are active members of the Welsh Korfball League and regional league competitions. Beginners and experienced players are welcome to join the Welsh korfball community.</strong></p>
 
     <p>Newport Centurions Korfball Club welcomes players aged 16 and over, of all abilities and experience levels. Whether you're a seasoned korfballer or completely new to the sport, we provide a friendly and successful team environment for everyone interested in korfball training in Newport.</p>
 
@@ -44,6 +55,8 @@ keywords: join korfball, join newport centurions, korfball club newport, korfbal
     <h3>Ready to Join or Want More Info?</h3>
     <p>We're always excited to welcome new members to our korfball family in Newport! To find out more, express your interest, or if you have any questions, please <a href="/contact/">contact us</a> or email us at <a href="mailto:Newportkorfball@gmail.com">Newportkorfball@gmail.com</a>, or check <a href="/what-is-korfball/">What is Korfball?</a>.</p>
     <p style="text-align: center;">We look forward to seeing you on the korfball court at John Frost School!</p>
+
+    <p><a href="/">Back to Home</a></p>
   </div>
 
 </div>

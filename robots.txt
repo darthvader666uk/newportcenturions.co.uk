@@ -17,8 +17,8 @@ User-agent: Twitterbot
 Allow: /
 
 # Sitemaps
-Sitemap: {{ site.url }}/sitemap.xml
-Sitemap: {{ site.url }}/feed.xml
+Sitemap: https://newportcenturions.co.uk/sitemap.xml
+Sitemap: https://newportcenturions.co.uk/feed.xml
 
 # Disallow unnecessary files
 Disallow: /assets/css/critical.css

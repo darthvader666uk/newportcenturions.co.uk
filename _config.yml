@@ -75,9 +75,11 @@ social:
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
 whitelist:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
 
 # Sitemap Settings
 defaults:

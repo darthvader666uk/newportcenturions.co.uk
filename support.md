@@ -1,19 +1,19 @@
 ---
 layout: default
-title: Support Us - Newport Centurions Korfball Club
-description: Find out how you can support Newport Centurions Korfball Club, including through easyfundraising.
-type: ContactPage # Hint for jekyll-seo-tag (as it's a page for interaction/support)
+title: Support Newport Centurions – Help Welsh Korfball Grow
+description: Find out how you can support Newport Centurions Korfball Club through volunteering, sponsorship, or donations.
 permalink: /support/
-keywords: support korfball, support newport centurions, korfball fundraising, easyfundraising, korfball club, korfball team, join korfball, about korfball
 ---
 
 <section class="fundraising">
     <div class="content-block">
-        <h1>Support Us Through Easyfundraising</h1>
+        <h1>Support Newport Centurions Korfball Club</h1>
         <p>Did you know that whenever you buy anything online – from your weekly shop to your annual holiday – you could be raising free donations for Newport Centurion Korfball with easyfundraising?</p>
         <p>There are over 8,000 retailers on board ready to make a donation – including eBay, Argos, John Lewis & Partners, ASOS, Booking.com and M&S – and it won’t cost you a penny extra to help us raise funds.</p>
 
         <h3>How it Works:</h3>
+    <h2>How Your Support Helps Korfball Training in Newport</h2>
+    <p>Your donations and sponsorship help us run korfball training sessions at John Frost School, Newport, and support our mixed gender team sport. We welcome men and women, male and female players, and encourage everyone to try beginner korfball in Newport.</p>
         <ol class="steps-list">
             <li>Go to <a href="https://www.easyfundraising.org.uk/support-a-good-cause/step-1/?char=360907&invite=eekd2u&referral-campaign=s2s&utm_campaign=web-referral" rel="noopener noreferrer" target="_blank" class="ef-link">easyfundraising.org.uk/causes/newport-centurion-korfball/</a> and join for free.</li>
             <li>Every time you shop online, go to easyfundraising first to find the site you want and start shopping.</li>
@@ -31,7 +31,7 @@ keywords: support korfball, support newport centurions, korfball fundraising, ea
         <p>The Donation Reminder browser extension will automatically pop up when you visit a retailer that donates through Easyfundraising, so you never miss a donation:</p>
         <ul>
             <li><a href="https://chrome.google.com/webstore/detail/easyfundraising-donation/ojplmecpdpgccookcobabopkggclagmc" target="_blank" rel="noopener noreferrer" class="ef-link">Get it for Google Chrome</a></li>
-            <li><a href="https://addons.mozilla.org/en-GB/firefox/addon/easyfundraising-donation/" target="_blank" rel="noopener noreferrer" class="ef-link">Get it for Mozilla Firefox</a></li>
+            <li><a href="https://addons.mozilla.org/en-GB/firefox/addon/donation-reminder/" target="_blank" rel="noopener noreferrer" class="ef-link">Get it for Mozilla Firefox</a></li>
             <li><a href="https://microsoftedge.microsoft.com/addons/detail/easyfundraising-donatio/cihphgohihndgjhbfkngopnblmpblddg" target="_blank" rel="noopener noreferrer" class="ef-link">Get it for Microsoft Edge</a></li>
             <li><a href="https://www.easyfundraising.org.uk/donation-reminder/" target="_blank" rel="noopener noreferrer" class="ef-link">Find out more for Safari & other browsers</a></li>
         </ul>
@@ -42,5 +42,6 @@ keywords: support korfball, support newport centurions, korfball fundraising, ea
             </a>
         </div>
         <p style="margin-top:2rem;">Learn more <a href="/about/">about us</a> or <a href="/join-us/">join the club</a>.</p>
+        <p><a href="/">Back to Home</a></p>
     </div>
 </section>
