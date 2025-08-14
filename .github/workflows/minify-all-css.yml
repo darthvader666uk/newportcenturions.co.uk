@@ -25,10 +25,13 @@ jobs:
               cleancss -o "$minf" "$f"
             fi
           done
-      - name: Commit minified CSS
+      - name: Push changes
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/darthvader666uk/newportcenturions.co.uk.git
           git add assets/css/*.min.css
           git commit -m 'Auto-minify all CSS files [skip ci]' || echo 'No changes to commit'
-          git push
+          git push origin master
