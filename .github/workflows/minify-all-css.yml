@@ -29,10 +29,12 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          # mmm
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/darthvader666uk/newportcenturions.co.uk.git
           git add assets/css/*.min.css
           git commit -m 'Auto-minify all CSS files [skip ci]' || echo 'No changes to commit'
-          git push origin master
+          GIT_ASKPASS=$(mktemp)
+          echo "#!/bin/sh\necho $GH_PAT" > $GIT_ASKPASS
+          chmod +x $GIT_ASKPASS
+          GIT_ASKPASS=$GIT_ASKPASS git push origin master
