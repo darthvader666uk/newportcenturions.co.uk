@@ -65,12 +65,6 @@ keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfba
 
     <div class="content-grid">
         <section class="training-info glass-morphism">
-          <h2>🚀 New Beginners Sessions</h2>
-          <ul>
-            <li>📅 Tuesday 26th August, 6pm</li>
-            <li>📅 Tuesday 2nd September, 6pm</li>
-            <li>📅 Tuesday 9th September, 6pm</li>
-          </ul>
           <h3>⏰ Regular Training Schedule</h3>
           <p>Tuesdays 6–8pm &amp; Thursdays 8–9pm</p>
           <h3>📍 Training Location</h3>
