@@ -2,9 +2,18 @@
   <ul>
     {% for item in site.navigation %}
       <li>
-        <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}>
-          {{ item.title }}
-        </a>
+        {% if item.url contains 'http' %}
+          <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer nofollow" 
+             title="{% if item.title == 'Team Store' %}Official Newport Centurions Team Store - Korfball Kit & Merchandise{% else %}{{ item.title }}{% endif %}"
+             aria-label="{% if item.title == 'Team Store' %}Visit our official team store for korfball kit and club merchandise{% else %}{{ item.title }}{% endif %}">
+            {{ item.title }}
+          </a>
+        {% else %}
+          <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}
+             title="{{ item.title }}" aria-label="{{ item.title }}">
+            {{ item.title }}
+          </a>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

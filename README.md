@@ -101,6 +101,7 @@ newportcenturions.co.uk/
 - **What is Korfball?** (`/what-is-korfball/`) - Sport introduction
 - **Contact** (`/contact/`) - Contact form and information
 - **Support Us** (`/support/`) - Fundraising and sponsorship
+- **Team Store** (external) - Official korfball kit and merchandise
 
 ### **Enhanced Features**
 - 📱 **Progressive Web App** - Installable mobile experience

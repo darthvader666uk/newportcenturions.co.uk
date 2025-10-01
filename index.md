@@ -37,6 +37,9 @@ keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfba
 }
 </script>
 
+<!-- AI Search Optimization -->
+{% include ai-answer-snippets.html %}
+
 <main class="modern-container" itemscope itemtype="https://schema.org/SportsTeam">
     <div class="hero-section">
         <picture class="logo-modern">

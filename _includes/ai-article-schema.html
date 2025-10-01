@@ -1,0 +1,75 @@
+<!-- AI-Optimized Article Schema for Enhanced Search Understanding -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title | default: site.title }}",
+  "description": "{{ page.description | default: site.description }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Newport Centurions Korfball Club",
+    "url": "https://newportcenturions.co.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Newport Centurions Korfball Club",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://newportcenturions.co.uk/images/newport-centurions-korfball-club.webp",
+      "width": 400,
+      "height": 400
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema | default: site.time | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema | default: site.time | date_to_xmlschema }}",
+  "keywords": [
+    "korfball",
+    "Newport Wales",
+    "mixed gender sport", 
+    "team sport",
+    "Welsh Korfball League",
+    "beginners welcome",
+    "training sessions",
+    "competitive sport"
+  ],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Korfball",
+      "description": "A mixed-gender team sport similar to netball and basketball, originated in the Netherlands"
+    },
+    {
+      "@type": "Place",
+      "name": "Newport, Wales",
+      "description": "City in South Wales where Newport Centurions Korfball Club is based"
+    }
+  ],
+  "mentions": [
+    {
+      "@type": "SportsOrganization",
+      "name": "Welsh Korfball League",
+      "description": "The competitive league where Newport Centurions compete"
+    },
+    {
+      "@type": "Event",
+      "name": "Training Sessions",
+      "description": "Regular korfball training sessions held on Thursdays 6:30-8:30pm at Coleg Gwent Sports Centre"
+    }
+  ],
+  "isAccessibleForFree": true,
+  "inLanguage": "en-GB",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": [
+      "Sports enthusiasts",
+      "People seeking team sports",
+      "Mixed gender sport participants",
+      "Beginners and experienced players"
+    ]
+  }
+}
+</script>

@@ -10,6 +10,26 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
+# AI Search Crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OpenAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Social Media Crawlers
 User-agent: facebookexternalhit
 Allow: /
 
