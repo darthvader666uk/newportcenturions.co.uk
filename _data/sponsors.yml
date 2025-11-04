@@ -1,0 +1,44 @@
+# Sponsors Data File
+# This file manages all sponsorship information with SEO and AI search optimization
+# Each sponsor can have associated media in sponsors/sponsor-slug/ folder
+
+sponsors:
+  - id: hazlewoods
+    name: "Hazlewoods"
+    slug: "hazlewoods"
+    category: "Official Partner"
+    website: "https://hazlewoods.co.uk"
+    logo: /assets/images/sponsors/hazlewoods-logo.png
+    logo_alt: "Hazlewoods - Newport Centurions Official Partner"
+    description: "Hazlewoods is a leading chartered accountancy and business advisory firm supporting Newport Centurions Korfball Club"
+    full_description: "Hazlewoods is proud to support Newport Centurions Korfball Club. As a professional services firm, they help us grow mixed-gender korfball in South Wales and develop our community initiatives."
+    image: /assets/images/sponsors/hazlewoods-featured.jpg
+    image_alt: "Hazlewoods sponsoring Newport Centurions Korfball Club"
+    established_year: 2025
+    support_type: "Official Partner"
+    featured: true
+    featured_on_homepage: true
+    # SEO Keywords for this sponsor
+    seo_keywords:
+      - "Hazlewoods accountancy"
+      - "chartered accountants Wales"
+      - "business advisory Newport"
+      - "Hazlewoods korfball sponsor"
+      - "professional services sponsorship"
+    # Sponsor highlights for AI
+    highlights:
+      - "Leading chartered accountancy firm"
+      - "Business advisory services"
+      - "Community sports partnership"
+      - "Professional excellence"
+    social_media:
+      website: "https://hazlewoods.co.uk"
+      facebook: "hazlewoods"
+      twitter: "hazlewoods"
+      instagram: "hazlewoods"
+    location: "UK"
+    contact_email: "info@hazlewoods.co.uk"
+    # Structured data enhancements
+    rating: 5
+    review_count: 1
+    years_as_sponsor: 1

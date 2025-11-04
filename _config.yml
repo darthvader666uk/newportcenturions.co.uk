@@ -100,6 +100,16 @@ highlighter: rouge
 gist:
   noscript: false
 
+# Exclude folders from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
 # Compression
 compress_html:
   clippings: all
@@ -118,6 +128,10 @@ navigation:
     url: /what-is-korfball/
   - title: Join Us
     url: /join-us/
+  - title: Sponsors
+    url: /sponsors/
+    description: Our valued sponsors and partnership opportunities
+    keywords: korfball sponsors, sports partnerships, team sponsors
   - title: Support Us
     url: /support/
   - title: Team Store
