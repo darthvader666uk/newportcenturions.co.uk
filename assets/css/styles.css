@@ -2038,6 +2038,25 @@ button {
   text-decoration: none;
 }
 
+/* FAQ Related Links */
+.faq-related {
+  color: var(--text-secondary, rgba(255, 255, 255, 0.7)) !important;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(251, 179, 4, 0.2);
+  text-align: left;
+}
+
+.faq-related a {
+  color: var(--logo-primary-orange, #fbb304);
+  margin: 0 0.25rem;
+}
+
+.faq-related a:hover {
+  color: var(--logo-medium-orange, #fcc15c);
+}
+
 /* Enhanced readability for longer content */
 .content-area {
   max-width: 65ch;

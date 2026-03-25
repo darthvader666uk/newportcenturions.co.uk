@@ -157,14 +157,16 @@ type: FAQPage
         <div class="faq-item">
           <h3>What is korfball?</h3>
           <p>Korfball is a fast-paced, mixed-gender team sport with similarities to netball and basketball. Teams of 8 (4 male, 4 female) throw a ball through a 3.5-meter high basket. It emphasizes teamwork, with no dribbling allowed and unique rules that ensure gender equality.</p>
+          <p class="faq-related"><strong>Related:</strong> <a href="#korfball-rules">See the basic korfball rules</a> • <a href="/glossary/">View the korfball glossary</a> • <a href="/what-is-korfball/">Full sport guide</a></p>
         </div>
 
         <div class="faq-item">
           <h3>How many players are in a korfball team?</h3>
           <p>A korfball team has 8 players on court: exactly 4 male and 4 female players. This creates true gender equality, with each player having equal impact on the game. Both genders participate equally throughout the match.</p>
+          <p class="faq-related"><strong>Related:</strong> <a href="#why-mixed-gender">Why is korfball mixed-gender?</a> • <a href="#korfball-different">How it differs from other sports</a></p>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="korfball-rules">
           <h3>What are the basic korfball rules?</h3>
           <p><strong>Key rules:</strong></p>
           <ul>
@@ -175,9 +177,10 @@ type: FAQPage
             <li><strong>Scoring:</strong> Each basket through the hoop scores 1 point</li>
           </ul>
           <p>For comprehensive rules, <a href="/what-is-korfball/">visit our What is Korfball page</a>.</p>
+          <p class="faq-related"><strong>Related:</strong> <a href="#why-mixed-gender">Mixed-gender advantages</a> • <a href="/glossary/">Learn the terminology</a></p>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="why-mixed-gender">
           <h3>Why is korfball a great mixed-gender sport?</h3>
           <p>Korfball is unique because it was designed for genuine gender equality from the start (invented 1902). Key features:</p>
           <ul>
@@ -187,9 +190,10 @@ type: FAQPage
             <li>Rules designed for partnership, not competition between genders</li>
             <li>Men and women have equal opportunities to score and play</li>
           </ul>
+          <p class="faq-related"><strong>Related:</strong> <a href="#how-many-players">How many players per team?</a> • <a href="#korfball-different">Comparison to other sports</a></p>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="korfball-different">
           <h3>How is korfball different from basketball and netball?</h3>
           <p><strong>vs Basketball:</strong> Korfball has no dribbling (only passing), is mixed-gender with 8v8, and emphasizes teamwork over individual athleticism.</p>
           <p><strong>vs Netball:</strong> Korfball is mixed-gender (netball is typically single-gender), allows more flexible movement, and has baskets at both ends of court.</p>
@@ -230,6 +234,7 @@ type: FAQPage
             <li><strong>Thursdays:</strong> 8:00 PM - 9:00 PM</li>
           </ul>
           <p>Check our <a href="/join-us/">Join Us page</a> for specific dates and any schedule changes.</p>
+          <p class="faq-related"><strong>Ready to join?</strong> <a href="/join-us/">See the membership process</a></p>
         </div>
 
         <div class="faq-item">

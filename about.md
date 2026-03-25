@@ -50,7 +50,12 @@ keywords: about korfball, about newport centurions, korfball club newport, welsh
     <p>This success is a testament to the hard work of our players and the supportive spirit of our club.</p>
 
     <h3>Get Involved!</h3>
-    <p>Whether you're an experienced player or curious to try something new, we'd love to hear from you. Check out our <a href="/join-us/">Join Us page</a> for details on training times and how to become a Centurion, or connect with us on our <a href="/what-is-korfball/">What is Korfball?</a> page.</p>
+    <p>Whether you're an experienced player or curious to try something new, we'd love to hear from you:</p>
+    <ul>
+      <li><strong><a href="/join-us/">Join Us</a></strong> — Training times and how to become a Centurion</li>
+      <li><strong><a href="/what-is-korfball/">What is Korfball?</a></strong> — Complete guide to the sport</li>
+      <li><strong><a href="/glossary/">Korfball Glossary</a></strong> — Learn terminology and definitions</li>
+    </ul>
 
     <p><a href="/">Back to Home</a></p>
   </div>

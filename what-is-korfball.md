@@ -106,6 +106,10 @@ type: Article
       <p style="font-size:0.95em;color:#aaa;margin-top:0.5rem;">Watch: Newport Centurions Korfball Highlights (via Newport Centurions Korfball Channel)</p>
     </div>
     <p>Interested in playing? <a href="/join-us/">Join Newport Centurions Korfball Club</a> today!<br></p>
+
+    <h3>Learn More</h3>
+    <p><strong>New to korfball terminology?</strong> Check out our <a href="/glossary/">Korfball Glossary</a> for detailed definitions of terms and concepts used in the sport.</p>
+
     <p><a href="/" class="back-to-home" style="display:inline-block;margin-top:2rem;font-weight:bold;color:#e62117;text-decoration:none;">Back to Home</a></p>
   </div>
 </div>
