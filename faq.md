@@ -364,11 +364,11 @@ type: FAQPage
       </section>
     </div>
 
-    <div class="cta-section" style="background: linear-gradient(135deg, #e62117 0%, #c41712 100%); padding: 2rem; border-radius: 8px; color: white; text-align: center; margin-top: 3rem;">
-      <h2 style="color: white; margin-top: 0;">Still have questions?</h2>
-      <p>Don't worry! Our friendly team is always happy to help.</p>
-      <a href="/contact/" class="modern-button" style="background: white; color: #e62117; font-weight: bold;">Contact Us Today</a>
-      <p style="margin-top: 1rem; font-size: 0.95em;">Or just turn up to a training session - that's the best way to experience Newport Centurions!</p>
+    <div class="cta-section" style="background: linear-gradient(135deg, rgba(251, 179, 4, 0.1) 0%, rgba(251, 132, 4, 0.05) 100%); padding: 2rem; border-radius: 8px; color: white; text-align: center; margin-top: 3rem; border-left: 4px solid var(--logo-primary-orange, #fbb304);">
+      <h2 style="color: var(--logo-primary-orange, #fbb304); margin-top: 0;">Still have questions?</h2>
+      <p style="color: rgba(255, 255, 255, 0.8);">Don't worry! Our friendly team is always happy to help.</p>
+      <a href="/contact/" class="modern-button" style="background: var(--logo-primary-orange, #fbb304); color: #000; font-weight: bold;">Contact Us Today</a>
+      <p style="margin-top: 1rem; font-size: 0.95em; color: rgba(255, 255, 255, 0.7);">Or just turn up to a training session - that's the best way to experience Newport Centurions!</p>
     </div>
 
   </div>
