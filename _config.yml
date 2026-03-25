@@ -109,6 +109,10 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - dev.sh
+  - build.sh
+  - ".vscode"
+  - "*.log"
 
 # Compression
 compress_html:
@@ -120,20 +124,30 @@ compress_html:
   ignore:
     envs: []
 
-# Navigation Menu
+# Navigation Menu - Organized with dropdowns
 navigation:
-  - title: About Us
-    url: /about/
-  - title: What is Korfball
-    url: /what-is-korfball/
+  - title: About
+    url: null
+    submenu:
+      - title: About Us
+        url: /about/
+      - title: What is Korfball
+        url: /what-is-korfball/
+      - title: FAQ
+        url: /faq/
+        description: Frequently Asked Questions about korfball and Newport Centurions
+        keywords: FAQ, korfball questions, how to join, training
   - title: Join Us
     url: /join-us/
-  - title: Sponsors
-    url: /sponsors/
-    description: Our valued sponsors and partnership opportunities
-    keywords: korfball sponsors, sports partnerships, team sponsors
-  - title: Support Us
-    url: /support/
+  - title: Get Involved
+    url: null
+    submenu:
+      - title: Sponsors
+        url: /sponsors/
+        description: Our valued sponsors and partnership opportunities
+        keywords: korfball sponsors, sports partnerships, team sponsors
+      - title: Support Us
+        url: /support/
   - title: Team Store
     url: https://rcs-teamwear.com/newport-centurions-korfball/
     description: Official Newport Centurions team store for korfball kit and club merchandise

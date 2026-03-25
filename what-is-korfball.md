@@ -1,10 +1,79 @@
 ---
 layout: default
-title: What is Korfball? – Discover Mixed Gender Sport in Wales
-description: Learn what korfball is, how it is played, and why it is a fantastic mixed-gender sport for all ages and abilities.
+title: What is Korfball? Complete Guide to Mixed Gender Sport
+description: Learn what korfball is, rules, how it's played, history, and why it's perfect for all ages. Discover a truly mixed-gender team sport in Wales.
 permalink: /what-is-korfball/
-keywords: korfball, what is korfball, korfball rules, korfball sport, mixed gender sport, korfball newport, korfball wales, korfball video, korfball highlights
+keywords: korfball, what is korfball, korfball rules, korfball sport, mixed gender sport, korfball history, korfball benefits, korfball welsh league, team sport, korfball training, korfball beginners
+type: Article
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What is Korfball? Complete Guide to Mixed Gender Sport",
+  "description": "Learn what korfball is, how it's played, the rules, its history, and why it's perfect for all ages and abilities.",
+  "datePublished": "2025-01-01",
+  "dateModified": "2026-03-20",
+  "author": {
+    "@type": "Organization",
+    "name": "Newport Centurions Korfball Club"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Newport Centurions Korfball Club",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://newportcenturions.co.uk/images/newport-centurions-korfball-club.webp"
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://newportcenturions.co.uk/images/newport-centurions-korfball-club-800.webp"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is korfball?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Korfball is a fast-paced, mixed-gender ball sport with similarities to netball and basketball. Players throw a ball through a bottomless basket mounted on a 3.5-meter high pole. Each team has 8 players: 4 female and 4 male, creating true gender equality in sport."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many players are on a korfball team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A korfball team consists of 8 players on court: 4 female players and 4 male players. This ensures equal participation and opportunities for all genders."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there basic korfball rules for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! In korfball, the main rules are: no dribbling (only passing), you can only defend opponents of your own gender, each team has a basket at both ends of the court, and teams switch directions halfway through. Newport Centurions coaches guide beginners through all the rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is korfball difficult to learn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No! Korfball is easy to learn and perfect for beginners. You don't need prior experience. The rules are straightforward, and our Newport Centurions coaches guide newcomers through everything you need to know."
+      }
+    }
+  ]
+}
+</script>
 
 <div class="page-content">
   <div class="content-block">

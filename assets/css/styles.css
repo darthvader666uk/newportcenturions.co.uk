@@ -2,6 +2,7 @@
 
 /* Advanced CSS Custom Properties for Dynamic Theming */
 :root {
+  color-scheme: dark;
   --primary-orange: #fbb304;
   --secondary-orange: #fb8404;
   --dark-surface: #0a0a0a;
@@ -22,11 +23,11 @@
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: light) {
+  /* Light mode disabled - keeping dark theme only */
   :root {
-    --dark-surface: #f8f9fa;
-    --glass-surface: rgba(255, 255, 255, 0.85);
-    --text-primary: #1a1a1a;
-    --text-secondary: rgba(26, 26, 26, 0.8);
+    /* Intentionally keeping dark colors */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
   }
 }
 
@@ -778,6 +779,116 @@ main.container {
   box-shadow: 0 4px 12px rgba(251, 179, 4, 0.2);
 }
 
+/* === DROPDOWN MENU STYLES === */
+
+.nav-dropdown {
+  position: relative;
+  display: block;
+}
+
+.nav-dropdown-toggle {
+  text-decoration: none;
+  color: var(--logo-medium-orange, #fcc15c);
+  padding: 0.7rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: rgba(251, 179, 4, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+  min-width: 100px;
+  justify-content: center;
+  width: 100%;
+}
+
+.dropdown-indicator {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.nav-dropdown-toggle:hover {
+  color: var(--logo-primary-orange, #fbb304);
+  background: rgba(251, 179, 4, 0.1);
+  border-color: rgba(251, 179, 4, 0.3);
+  box-shadow: 0 4px 12px rgba(251, 179, 4, 0.2);
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] {
+  color: var(--logo-primary-orange, #fbb304);
+  background: rgba(251, 179, 4, 0.15);
+  border-color: rgba(251, 179, 4, 0.4);
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] .dropdown-indicator {
+  transform: rotate(180deg);
+}
+
+.site-nav .nav-submenu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(26, 26, 26, 0.95) 100%);
+  border: 1px solid rgba(251, 179, 4, 0.3);
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+  flex-direction: column;
+}
+
+.nav-dropdown.active .nav-submenu {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.site-nav .nav-submenu li {
+  margin: 0;
+  display: block;
+}
+
+.site-nav .nav-submenu a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: var(--logo-medium-orange, #fcc15c);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  min-width: unset;
+  text-align: left;
+  white-space: normal;
+}
+
+.site-nav .nav-submenu a:hover {
+  color: var(--logo-primary-orange, #fbb304);
+  background: rgba(251, 179, 4, 0.1);
+  transform: translateX(4px);
+  box-shadow: none;
+}
+
 /* Enhanced footer consistency */
 .site-footer {
   background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
@@ -1166,7 +1277,7 @@ main.container {
 
 .hero-subtitle {
   font-size: var(--text-lg);
-  color: var(--text-secondary);
+  color: var(--logo-medium-orange, #fcc15c);
   font-weight: 500;
   margin-bottom: 3rem;
   opacity: 0.9;
@@ -1848,6 +1959,83 @@ button {
     margin: 0 !important;
     padding: 0 !important;
   }
+}
+
+/* === FAQ PAGE STYLING === */
+.faq-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faq-section {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.6) 0%, rgba(10, 10, 10, 0.8) 100%);
+  border: 1px solid rgba(251, 179, 4, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.faq-section h2 {
+  color: var(--logo-primary-orange, #fbb304);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  border-bottom: 2px solid rgba(251, 179, 4, 0.4);
+  padding-bottom: 1rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.5) 0%, rgba(20, 20, 20, 0.3) 100%) !important;
+  border-left: 4px solid rgba(251, 179, 4, 0.3) !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 0%, rgba(20, 20, 20, 0.5) 100%);
+  border-left-color: var(--logo-medium-orange, #fcc15c);
+}
+
+.faq-item h3 {
+  color: var(--logo-medium-orange, #fcc15c);
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.faq-item p {
+  color: var(--text-secondary, rgba(255, 255, 255, 0.8));
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.faq-item ul,
+.faq-item ol {
+  color: var(--text-secondary, rgba(255, 255, 255, 0.8));
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq-item ul li {
+  margin-bottom: 0.5rem;
+}
+
+.faq-item strong {
+  color: var(--logo-primary-orange, #fbb304);
+}
+
+.faq-item a {
+  color: var(--logo-primary-orange, #fbb304);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.faq-item a:hover {
+  color: var(--logo-medium-orange, #fcc15c);
+  text-decoration: none;
 }
 
 /* Enhanced readability for longer content */

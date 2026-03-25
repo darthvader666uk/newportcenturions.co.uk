@@ -214,6 +214,53 @@
     }
     </script>
 
+    <!-- BreadcrumbList Schema for Navigation & AI Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}/",
+          "image": "{{ site.url }}/images/newport-centurions-korfball-club.webp"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "{{ site.url }}/about/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Join Us",
+          "item": "{{ site.url }}/join-us/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "What is Korfball?",
+          "item": "{{ site.url }}/what-is-korfball/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Sponsors",
+          "item": "{{ site.url }}/sponsors/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Contact",
+          "item": "{{ site.url }}/contact/"
+        }
+      ]
+    }
+    </script>
+
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="{{ '/feed.xml' | relative_url }}">
 

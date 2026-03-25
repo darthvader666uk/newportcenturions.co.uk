@@ -1,20 +1,83 @@
 <nav class="site-nav" aria-label="Main navigation">
   <ul>
     {% for item in site.navigation %}
-      <li>
-        {% if item.url contains 'http' %}
-          <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer nofollow" 
-             title="{% if item.title == 'Team Store' %}Official Newport Centurions Team Store - Korfball Kit & Merchandise{% else %}{{ item.title }}{% endif %}"
-             aria-label="{% if item.title == 'Team Store' %}Visit our official team store for korfball kit and club merchandise{% else %}{{ item.title }}{% endif %}">
+      <li class="{% if item.submenu %}nav-dropdown{% endif %}">
+        {% if item.submenu %}
+          <!-- Dropdown Parent -->
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
             {{ item.title }}
-          </a>
-        {% else %}
-          <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}
-             title="{{ item.title }}" aria-label="{{ item.title }}">
-            {{ item.title }}
-          </a>
+            <span class="dropdown-indicator">▼</span>
+          </button>
+          <!-- Dropdown Menu -->
+          <ul class="nav-submenu" role="menu">
+            {% for subitem in item.submenu %}
+              <li role="none">
+                {% if subitem.url contains 'http' %}
+                  <a href="{{ subitem.url }}" role="menuitem" target="_blank" rel="noopener noreferrer nofollow"
+                     title="{{ subitem.title }}" aria-label="{{ subitem.title }}">
+                    {{ subitem.title }}
+                  </a>
+                {% else %}
+                  <a href="{{ subitem.url | relative_url }}" role="menuitem"
+                     title="{{ subitem.title }}" aria-label="{{ subitem.title }}">
+                    {{ subitem.title }}
+                  </a>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% elsif item.url %}
+          <!-- Regular Link -->
+          {% if item.url contains 'http' %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer nofollow" 
+               title="{{ item.title }}" aria-label="{{ item.title }}">
+              {{ item.title }}
+            </a>
+          {% else %}
+            <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}class="active"{% endif %}
+               title="{{ item.title }}" aria-label="{{ item.title }}">
+              {{ item.title }}
+            </a>
+          {% endif %}
         {% endif %}
       </li>
     {% endfor %}
   </ul>
 </nav>
+
+<script>
+  // Dropdown menu functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+    
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parent = this.parentElement;
+        const isOpen = this.getAttribute('aria-expanded') === 'true';
+        
+        // Close all other dropdowns
+        dropdownToggles.forEach(other => {
+          if (other !== this) {
+            other.setAttribute('aria-expanded', 'false');
+            other.parentElement.classList.remove('active');
+          }
+        });
+        
+        // Toggle current dropdown
+        this.setAttribute('aria-expanded', !isOpen);
+        parent.classList.toggle('active');
+      });
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        dropdownToggles.forEach(toggle => {
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.parentElement.classList.remove('active');
+        });
+      }
+    });
+  });
+</script>
