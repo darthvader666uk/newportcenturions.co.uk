@@ -13,7 +13,7 @@ type: Article
   "@type": "Article",
   "headline": "What is Korfball? Complete Guide to Mixed Gender Sport",
   "description": "Learn what korfball is, how it's played, the rules, its history, and why it's perfect for all ages and abilities.",
-  "datePublished": "2025-01-01",
+  "datePublished": "2024-01-01",
   "dateModified": "2026-03-20",
   "author": {
     "@type": "Organization",
