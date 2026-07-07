@@ -23,7 +23,7 @@ keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfba
             <div class="stat-divider"></div>
             <div class="stat"><span class="stat-number">3</span><span class="stat-label">Teams</span></div>
             <div class="stat-divider"></div>
-            <div class="stat"><span class="stat-number">2×</span><span class="stat-label">Champions</span></div>
+            <div class="stat">            <span class="stat-number">3×</span><span class="stat-label">Champions</span></div>
         </div>
     </section>
 

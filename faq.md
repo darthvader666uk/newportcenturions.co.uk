@@ -57,7 +57,7 @@ type: FAQPage
       "name": "Where is Newport Centurions located?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Newport Centurions trains at John Frost School in Newport, Wales. The address is: John Frost School, Newport, NP19 Postcode Area. You can find us on Google Maps or visit our Contact page for more details."
+        "text": "Newport Centurions trains at John Frost School in Newport, Wales. The address is: John Frost School, Duffryn, Newport NP10 8YD. You can find us on Google Maps or visit our Contact page for more details."
       }
     },
     {

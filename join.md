@@ -16,6 +16,11 @@ include_howto_schema: true
   <h1>Join Newport Centurions</h1>
   <p class="join-intro">Your first 2 sessions are free. No experience needed. Just turn up.</p>
 
+  <!-- Beginner sessions banner -->
+  <div class="beginner-banner">
+    <strong>Beginner Sessions:</strong> 8, 15 &amp; 22 September — perfect first session dates!
+  </div>
+
   <!-- Step by step -->
   <div class="join-steps">
     <div class="join-step">
