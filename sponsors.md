@@ -125,6 +125,7 @@ target_audience: "local-businesses,sponsors,korfball-community"
 
   </div>
 </section>
+</section>
 
   <div class="related-pages">
     <h2>Explore</h2>
