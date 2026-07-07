@@ -288,12 +288,9 @@
     <link rel="dns-prefetch" href="//instagram.com">
     <link rel="dns-prefetch" href="//youtube.com">
 
-    <!-- Non-critical CSS - Temporarily loading directly for debugging -->
-      <link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | relative_url }}">
-      <!-- <link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | relative_url }}" media="print" onload="this.media='all'"> -->
-      <!-- <noscript>
-        <link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | relative_url }}">
-      </noscript> -->
+    <!-- CSS -->
+      <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
 
       <!-- AI-Optimized FAQ Schema (FAQ page only) -->
     {% if page.faq_schema or page.url == '/faq/' %}
@@ -316,6 +313,13 @@
                 {% include navigation.html %}
               </div>
             </header>
+
+            <div class="announcement-bar">
+              <a href="/join-us/">
+                <span class="announce-next">Next Training:</span> Tuesday 6:00 PM — John Frost School
+                <span class="announce-cta">Join Free →</span>
+              </a>
+            </div>
 
             <main id="main-content" class="page-content" aria-label="Content">
                 {{ content }}

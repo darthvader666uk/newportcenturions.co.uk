@@ -13,55 +13,60 @@ include_howto_schema: true
 
 <div class="page-content">
   <div class="content-block">
-  <div style="display:none;">
-    <h2>Quick Facts: Joining Newport Centurions</h2>
-    <ul>
-      <li><strong>Who:</strong> Newport Centurions Korfball Club – mixed gender sports team</li>
-      <li><strong>Where:</strong> John Frost School, Newport, Wales</li>
-      <li><strong>What:</strong> Beginner-friendly korfball training sessions, Welsh Korfball League</li>
-      <li><strong>Contact:</strong> Newportkorfball@gmail.com</li>
-    </ul>
-  </div>
-  <h1>Join Newport Centurions Korfball Club</h1>
+  <h1>Join Newport Centurions</h1>
+  <p class="join-intro">Your first 2 sessions are free. No experience needed. Just turn up.</p>
 
-  <p><strong>Discover Korfball in Newport! Are you looking for a fun, social, and competitive mixed-gender team sport in South Wales? You've found it with Newport Centurions, a club that welcomes men and women, male and female players of all abilities.</strong></p>
-
-  <p><strong>Join Newport Centurions Korfball Club and experience mixed gender sports in Wales. We offer korfball training sessions in Newport and are active members of the Welsh Korfball League and regional league competitions. Beginners and experienced players are welcome to join the Welsh korfball community.</strong></p>
-
-    <p>Newport Centurions Korfball Club welcomes players aged 16 and over, of all abilities and experience levels. Whether you're a seasoned korfballer or completely new to the sport, we provide a friendly and successful team environment for everyone interested in korfball training in Newport.</p>
-
-    <h3>Why Join the Centurions?</h3>
-
-    <ul class="benefits-list">
-      <li><strong>Unique Mixed-Gender Sport:</strong> Experience the thrill of korfball, one of the world's few truly mixed-gender team sports. Men and women play together on an equal footing in a dynamic, fast-paced game that emphasizes teamwork.</li>
-      <li><strong>Friendly & Inclusive Club:</strong> We're more than just a team; we're a community. Expect a warm welcome, a supportive environment, and a great social scene on and off the court.</li>
-      <li><strong>Open to All Skill Levels (Beginners Welcome!):</strong> From complete beginners to experienced players, everyone is welcome at our Newport korfball club. If you're new, we'll teach you everything. For those seeking competitive play, we participate in the Welsh Korfball League.</li>
-      <li><strong>Boost Your Fitness:</strong> Korfball is an excellent way to improve your overall fitness, agility, and coordination in a fun and engaging way.</li>
-      <li><strong>Achieve with Us:</strong> Be part of a successful club with a passion for the game. We are proud Welsh League Champions (2022/2023 & 2025).</li>
-      <li><strong>Vibrant Social Scene:</strong> Beyond the court, we love to socialize! Join us for regular get-togethers, including our much-anticipated monthly "Payday Pub Day" at The Tiny Rebel (Wern Industrial Estate, Newport NP10 9FQ), usually held on the Tuesday after the month's end. It's a great way to unwind and connect with teammates.</li>
-      <li><strong>Convenient Location:</strong> Our training sessions are held at John Frost School in Newport, easily accessible for those in South Wales.</li>
-    </ul>
-
-    <h3>Training Sessions</h3>
-    <p>Our training sessions are designed to be fun, engaging, and help you develop your korfball skills. We typically cover:</p>
-    <ul class="details-list"> <!-- Can use default UL styling or a specific class if needed -->
-      <li>Basic skills (passing, shooting, movement)</li>
-      <li>Tactical understanding</li>
-      <li>Fitness drills</li>
-      <li>Match play</li>
-    </ul>
-    <p>
-      <strong>Venue:</strong> John Frost School, Newport<br>
-      <strong>Days & Times:</strong> Tuesdays, 6:00 PM - 8:00 PM & Thursdays, 8:00 PM - 9:00 PM<br>
-      <strong>What to bring:</strong> Comfortable sportswear, trainers, and a water bottle.
-    </p>
-    <p><em>Your first 2 sessions are free – it's the perfect opportunity to try korfball and meet the team!</em></p>
-
-    <h3>Ready to Join or Want More Info?</h3>
-    <p>We're always excited to welcome new members to our korfball family in Newport! To find out more, express your interest, or if you have any questions, please <a href="/contact/">contact us</a> or email us at <a href="mailto:Newportkorfball@gmail.com">Newportkorfball@gmail.com</a>, or check <a href="/what-is-korfball/">What is Korfball?</a>.</p>
-    <p style="text-align: center;">We look forward to seeing you on the korfball court at John Frost School!</p>
-
-    <p><a href="/">Back to Home</a></p>
+  <!-- Step by step -->
+  <div class="join-steps">
+    <div class="join-step">
+      <span class="step-number">1</span>
+      <h3 class="step-title">Show Up</h3>
+      <p class="step-desc">Come to a training session at John Frost School. No kit, no commitment — just you.</p>
+    </div>
+    <div class="join-step">
+      <span class="step-number">2</span>
+      <h3 class="step-title">Try It Out</h3>
+      <p class="step-desc">Your first 2 sessions are free. Learn the basics, meet the team, see if you like it.</p>
+    </div>
+    <div class="join-step">
+      <span class="step-number">3</span>
+      <h3 class="step-title">Join the Club</h3>
+      <p class="step-desc">If you enjoy it, complete membership and become a Centurion. That's it.</p>
+    </div>
   </div>
 
+  <!-- Training details -->
+  <div class="join-training-card">
+    <h2>Training Sessions</h2>
+    <div class="training-detail">
+      <span class="training-label">When</span>
+      <span class="training-value">Tuesdays 6–8pm &amp; Thursdays 8–9pm</span>
+    </div>
+    <div class="training-detail">
+      <span class="training-label">Where</span>
+      <span class="training-value">John Frost School, Newport</span>
+    </div>
+    <div class="training-detail">
+      <span class="training-label">Bring</span>
+      <span class="training-value">Sportswear, trainers, water bottle</span>
+    </div>
+    <a href="https://maps.app.goo.gl/csVguoRKVX1dXAYYA" target="_blank" rel="noopener noreferrer" class="modern-button">Get Directions</a>
+  </div>
+
+  <!-- Why join -->
+  <h2>Why Centurions?</h2>
+  <ul class="benefits-list">
+    <li><strong>Mixed-gender sport</strong> — Men and women play together on equal footing</li>
+    <li><strong>Welsh League Champions</strong> — 2022/23 &amp; 2025</li>
+    <li><strong>All skill levels</strong> — Beginners to competitive players welcome</li>
+    <li><strong>Social scene</strong> — Monthly pub nights, regular socials</li>
+    <li><strong>Great coaching</strong> — Professional guidance at every session</li>
+  </ul>
+
+  <!-- CTA -->
+  <div class="join-cta">
+    <p>Got questions? <a href="/contact/">Contact us</a> or email <a href="mailto:Newportkorfball@gmail.com">Newportkorfball@gmail.com</a></p>
+  </div>
+
+  </div>
 </div>

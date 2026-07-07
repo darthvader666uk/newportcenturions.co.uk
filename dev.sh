@@ -10,6 +10,9 @@ if [ ! -d "vendor" ]; then
     bundle install
 fi
 
+# Generate cache-bust timestamp
+export CACHE_BUST=$(date +%s)
+
 # Detect environment and print correct URL
 if grep -qi microsoft /proc/version 2>/dev/null; then
     WSL_IP=$(hostname -I | awk '{print $1}')
@@ -27,4 +30,4 @@ fi
 echo "Changes auto-reload. Press Ctrl+C to stop."
 echo ""
 
-bundle exec jekyll serve --host 0.0.0.0 --port 4000
+bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload --watch
