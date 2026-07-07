@@ -147,6 +147,7 @@ type: FAQPage
 <div class="page-content">
   <div class="content-block">
     <h1>Frequently Asked Questions</h1>
+    <p class="faq-author">Compiled by Newport Centurions Coaching Team · Last updated July 2026</p>
     <p class="intro">Have questions about korfball, Newport Centurions, or getting started? You'll likely find answers below. If not, feel free to <a href="/contact/">contact us directly</a>!</p>
 
     <div class="faq-sections">
@@ -408,6 +409,19 @@ type: FAQPage
           </div>
         </details>
       </section>
+      <!-- Crawlable FAQ content for AI search engines -->
+      <div class="sr-only" aria-hidden="false">
+        <h2>Korfball Frequently Asked Answers</h2>
+        <p>Korfball is a fast-paced, mixed-gender team sport with similarities to netball and basketball. Teams of 8 (4 male, 4 female) throw a ball through a 3.5-meter high basket. It emphasizes teamwork, with no dribbling allowed and players only defending their own gender.</p>
+        <p>A korfball team has 8 players on court: exactly 4 male and 4 female players. This creates true gender equality.</p>
+        <p>Key korfball rules: No dribbling (only passing), gender-specific defending, each team has a basket at both ends, teams switch sides halfway, each basket scores 1 point.</p>
+        <p>Korfball is unique because it was designed for genuine gender equality from the start (invented 1902). Equal numbers of males and females, players only defend their own gender, no dribbling emphasizes skill over physical attributes.</p>
+        <p>Newport Centurions is a mixed-gender korfball club based in Newport, South Wales. We compete in the Welsh Korfball League and Western Regional League. Welsh League Champions 2022, 2023 & 2025.</p>
+        <p>We train at The John Frost School, Duffryn, Newport NP10 8YD. Training sessions: Tuesdays 6:00 PM - 8:00 PM and Thursdays 8:00 PM - 9:00 PM. Season starts August 18th. Beginner sessions: 8 Sep, 15 Sep, 22 Sep 2026.</p>
+        <p>To join Newport Centurions, attend a training session. No experience needed. First 2 sessions free. Players aged 16 and over welcome. We welcome complete beginners.</p>
+        <p>Contact: Newportkorfball@gmail.com. Facebook: facebook.com/newportcenturions. Twitter: @newportkorfball. Instagram: @newportkorfball. YouTube: @newportcenturionskorfball5878.</p>
+        <p>Korfball is not currently an Olympic sport but is played in 69 countries worldwide. The IKF was recognized by the IOC in 1993.</p>
+      </div>
     </div>
 
     <div class="cta-section" style="background: linear-gradient(135deg, rgba(251, 179, 4, 0.1) 0%, rgba(251, 132, 4, 0.05) 100%); padding: 2rem; border-radius: 8px; color: white; text-align: center; margin-top: 3rem; border-left: 4px solid var(--logo-primary-orange, #fbb304);">
