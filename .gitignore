@@ -12,4 +12,20 @@ _site/
 .DS_Store
 Thumbs.db
 *.Identifier
+*.Zone.Identifier
+server.log
 .vscode
+# Local AI Unit test setup
+.claude
+.codegpt
+.agents
+.cursor
+.claude-config
+.wellread
+.ncp
+.mcp
+.github/copilot-instructions.md
+
+.clinerules
+.opencode
+.windsurf

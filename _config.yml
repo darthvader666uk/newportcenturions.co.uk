@@ -34,6 +34,8 @@ organization:
   name: Newport Centurions Korfball Club
   url: https://newportcenturions.co.uk
   logo: https://newportcenturions.co.uk/images/newport-centurions-korfball-club.webp
+  location: Newport, Wales
+  foundingDate: 2019
   sameAs:
     - https://facebook.com/newportcenturions
     - https://twitter.com/newportkorfball
@@ -53,16 +55,9 @@ organization:
 defaults:
   - scope:
       path: ""
-      type: pages
     values:
       image: /images/newport-centurions-korfball-club-800.webp
       author: Newport Centurions Korfball Club
-
-# Organization Info
-organization:
-  name: Newport Centurions Korfball Club
-  location: Newport, Wales
-  foundingDate: 2015
 
 # Social Media
 social:
@@ -80,14 +75,6 @@ whitelist:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
-
-# Sitemap Settings
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      image: /images/newport-centurions-korfball-club.webp
 
 # Build Settings
 markdown: kramdown

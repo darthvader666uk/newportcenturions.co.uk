@@ -6,37 +6,6 @@ seo_title: false # Tells jekyll-seo-tag to use the title above as-is
 keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfball club, korfball training, korfball wales, join korfball, korfball beginners, korfball south wales
 ---
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportsTeam",
-  "name": "Newport Centurions Korfball Club",
-  "description": "{{ site.description }}",
-  "url": "{{ site.url }}",
-  "logo": "{{ site.url }}/images/newport-centurions-korfball-club.webp",
-  "sport": {
-    "@type": "Sport",
-    "name": "Korfball"
-  },
-  "location": {
-    "@type": "Place",
-    "name": "John Frost School",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Newport",
-      "addressRegion": "Wales",
-      "addressCountry": "GB"
-    }
-  },
-  "sameAs": [
-    "https://facebook.com/newportcenturions",
-    "https://twitter.com/newportkorfball",
-    "https://instagram.com/newportkorfball",
-    "https://youtube.com/@newportcenturionskorfball5878"
-  ]
-}
-</script>
-
 <!-- AI Search Optimization -->
 {% include ai-answer-snippets.html %}
 
