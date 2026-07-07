@@ -2,7 +2,7 @@
 layout: default
 title: Newport Centurions Korfball Club | Welsh League Champions
 description: Join Newport Centurions Korfball Club - South Wales' premier mixed-gender korfball team. Weekly training at John Frost School. Welsh League Champions 2022/2023 & 2025.
-seo_title: false # Tells jekyll-seo-tag to use the title above as-is
+seo_title: false
 keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfball club, korfball training, korfball wales, join korfball, korfball beginners, korfball south wales
 ---
 
@@ -10,7 +10,9 @@ keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfba
 {% include ai-answer-snippets.html %}
 
 <main class="modern-container" itemscope itemtype="https://schema.org/SportsTeam">
-    <div class="hero-section">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
         <picture class="logo-modern">
             <source
                 srcset="images/newport-centurions-korfball-club-400.webp 400w,
@@ -31,23 +33,39 @@ keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfba
                 itemprop="logo">
         </picture>
 
-        <h1 class="hero-title" itemprop="name">Newport Centurions Korfball Club</h1>
-        <p class="hero-subtitle">Welsh League Champions | South Wales' best mixed-gender korfball team!</p>
-    </div>
+        <h1 class="hero-title" itemprop="name">Newport Centurions</h1>
+        <p class="hero-subtitle">Welsh League Champions | South Wales' premier mixed-gender korfball</p>
+
+        <!-- Achievement Badges -->
+        <div class="achievement-badges">
+            <span class="achievement-badge">Welsh League Champions 2022/23</span>
+            <span class="achievement-badge">Welsh League Champions 2025</span>
+            <span class="achievement-badge">30+ Members</span>
+        </div>
+    </section>
 
     <div class="content-grid">
+        <!-- Training Info -->
         <section class="training-info glass-morphism">
-          <h3>⏰ Regular Training Schedule</h3>
-          <p>Tuesdays 6–8pm &amp; Thursdays 8–9pm</p>
-          <h3>📍 Training Location</h3>
-          <a href="https://maps.app.goo.gl/csVguoRKVX1dXAYYA"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="modern-button">
-            🗺️ John Frost School
-          </a>
+            <h2>Training Schedule</h2>
+            <div class="training-sessions">
+                <div class="training-session upcoming">
+                    <strong>Tuesdays</strong> — 6:00 PM to 8:00 PM
+                </div>
+                <div class="training-session upcoming">
+                    <strong>Thursdays</strong> — 8:00 PM to 9:00 PM
+                </div>
+            </div>
+            <p class="training-venue">📍 John Frost School, Newport</p>
+            <a href="https://maps.app.goo.gl/csVguoRKVX1dXAYYA"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="modern-button">
+                🗺️ Get Directions
+            </a>
         </section>
 
+        <!-- Social Connect -->
         <section class="social-section">
             <h2 class="follow-header" id="follow-us">Connect With Us</h2>
             <nav class="social-links" aria-label="Social Media Links">
@@ -82,4 +100,5 @@ keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfba
             </nav>
         </section>
     </div>
+
 </main>

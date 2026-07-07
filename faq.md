@@ -347,7 +347,7 @@ type: FAQPage
 
         <div class="faq-item">
           <h3>Can I watch Newport Centurions play?</h3>
-          <p>Yes! We compete regularly in league matches. Check our <a href="/social/">social media channels</a> or <a href="/contact/">contact us</a> for match schedules and information about where to watch.</p>
+          <p>Yes! We compete regularly in league matches. Check our <a href="https://facebook.com/newportcenturions" target="_blank" rel="noopener">social media channels</a> or <a href="/contact/">contact us</a> for match schedules and information about where to watch.</p>
           <p>We also have highlights on our <a href="https://youtube.com/@newportcenturionskorfball5878" target="_blank" rel="noopener">YouTube channel</a>.</p>
         </div>
 

@@ -1,10 +1,10 @@
 // Service Worker for Offline Functionality and Caching
 // This will make your site work offline and load faster
 
-const CACHE_NAME = 'newport-centurions-v1.0.0';
+const CACHE_NAME = 'newport-centurions-v1.1.0';
 const urlsToCache = [
   '/',
-  '/assets/css/styles.css',
+  '/assets/css/styles.min.css',
   '/assets/css/critical.css',
   '/images/newport-centurions-korfball-club-400.webp',
   '/images/newport-centurions-korfball-club-800.webp',

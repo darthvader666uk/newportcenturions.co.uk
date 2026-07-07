@@ -1,5 +1,39 @@
 <footer class="site-footer">
     <div class="wrapper">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">
+                    <img src="{{ '/images/newport-centurions-korfball-club-400.webp' | relative_url }}" alt="Newport Centurions KC" width="50" height="50" loading="lazy">
+                </a>
+                <p class="footer-tagline">Newport Centurions Korfball Club</p>
+                <p class="footer-location">📍 John Frost School, Newport, Wales</p>
+            </div>
+
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/what-is-korfball/">What is Korfball?</a></li>
+                    <li><a href="/join-us/">Join Us</a></li>
+                    <li><a href="/faq/">FAQ</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="footer-social-links">
+                    <a href="https://facebook.com/newportcenturions" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/newportkorfball" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/newportkorfball" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://youtube.com/@newportcenturionskorfball5878" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                </div>
+                <p class="footer-email">📧 <a href="mailto:Newportkorfball@gmail.com">Newportkorfball@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Welsh League Champions 2022/23 &amp; 2025.</p>
+        </div>
     </div>
 </footer>

@@ -45,7 +45,7 @@ keywords: about korfball, about newport centurions, korfball club newport, welsh
     <h3>Our Achievements</h3>
     <p>We are incredibly proud of our team's dedication and success, highlighted by our achievements as:</p>
     <ul>
-      <li><strong>Welsh League Champions: 2021-2, 2022 & 2024-5</strong></li>
+      <li><strong>Welsh League Champions: 2022/2023 & 2025</strong></li>
     </ul>
     <p>This success is a testament to the hard work of our players and the supportive spirit of our club.</p>
 

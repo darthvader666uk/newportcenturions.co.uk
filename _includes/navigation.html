@@ -1,14 +1,16 @@
-<nav class="site-nav" aria-label="Main navigation">
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+  <span class="hamburger"></span>
+</button>
+
+<nav class="site-nav" id="main-nav" aria-label="Main navigation">
   <ul>
     {% for item in site.navigation %}
       <li class="{% if item.submenu %}nav-dropdown{% endif %}">
         {% if item.submenu %}
-          <!-- Dropdown Parent -->
           <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
             {{ item.title }}
             <span class="dropdown-indicator">▼</span>
           </button>
-          <!-- Dropdown Menu -->
           <ul class="nav-submenu" role="menu">
             {% for subitem in item.submenu %}
               <li role="none">
@@ -27,9 +29,8 @@
             {% endfor %}
           </ul>
         {% elsif item.url %}
-          <!-- Regular Link -->
           {% if item.url contains 'http' %}
-            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer nofollow" 
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer nofollow"
                title="{{ item.title }}" aria-label="{{ item.title }}">
               {{ item.title }}
             </a>
@@ -46,38 +47,55 @@
 </nav>
 
 <script>
-  // Dropdown menu functionality
   document.addEventListener('DOMContentLoaded', function() {
-    const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
-    
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', function(e) {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.site-nav');
+    var dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+
+    // Hamburger toggle
+    toggle.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('nav-open');
+      document.body.classList.toggle('nav-open');
+    });
+
+    // Dropdown toggles
+    dropdownToggles.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
         e.preventDefault();
-        const parent = this.parentElement;
-        const isOpen = this.getAttribute('aria-expanded') === 'true';
-        
-        // Close all other dropdowns
-        dropdownToggles.forEach(other => {
-          if (other !== this) {
+        var parent = this.parentElement;
+        var isOpen = this.getAttribute('aria-expanded') === 'true';
+
+        dropdownToggles.forEach(function(other) {
+          if (other !== btn) {
             other.setAttribute('aria-expanded', 'false');
             other.parentElement.classList.remove('active');
           }
         });
-        
-        // Toggle current dropdown
+
         this.setAttribute('aria-expanded', !isOpen);
         parent.classList.toggle('active');
       });
     });
-    
-    // Close dropdown when clicking outside
+
+    // Close on outside click
     document.addEventListener('click', function(e) {
-      if (!e.target.closest('.nav-dropdown')) {
-        dropdownToggles.forEach(toggle => {
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.parentElement.classList.remove('active');
+      if (!e.target.closest('.nav-dropdown') && !e.target.closest('.nav-toggle')) {
+        dropdownToggles.forEach(function(t) {
+          t.setAttribute('aria-expanded', 'false');
+          t.parentElement.classList.remove('active');
         });
       }
+    });
+
+    // Close mobile nav on link click
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggle.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('nav-open');
+        document.body.classList.remove('nav-open');
+      });
     });
   });
 </script>
