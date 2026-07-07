@@ -126,6 +126,8 @@ navigation:
         keywords: FAQ, korfball questions, how to join, training
   - title: Join Us
     url: /join-us/
+  - title: Events
+    url: /events/
   - title: Get Involved
     url: null
     submenu:
