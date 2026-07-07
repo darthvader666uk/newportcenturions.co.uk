@@ -893,6 +893,28 @@ a:hover { color: var(--secondary-orange); }
   background: none; -webkit-text-fill-color: var(--primary-orange); color: var(--primary-orange);
 }
 
+/* ─── Related Pages Links ─── */
+.related-pages {
+  margin-top: 2.5rem; padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08); text-align: center;
+}
+.related-pages h2 {
+  font-size: 1rem; color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.06em; margin: 0 0 1rem;
+  background: none; -webkit-text-fill-color: var(--text-muted);
+}
+.related-links {
+  display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;
+}
+.related-links a {
+  color: var(--primary-orange); text-decoration: none; font-size: 0.88rem;
+  padding: 0.4rem 0.8rem; border: 1px solid rgba(251,179,4,0.2);
+  border-radius: 50px; transition: all 0.2s ease;
+}
+.related-links a:hover {
+  background: rgba(251,179,4,0.1); border-color: var(--primary-orange);
+}
+
 /* ─── Animations ─── */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }

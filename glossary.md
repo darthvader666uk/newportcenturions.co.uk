@@ -223,6 +223,17 @@ permalink: /glossary/
       <p>Now that you understand korfball terminology, why not <a href="/join-us/">join Newport Centurions</a> and experience this amazing mixed-gender sport?</p>
       <a href="/join-us/" class="btn-primary" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--logo-primary-orange, #fbb304); color: #000; text-decoration: none; border-radius: 4px; font-weight: 600;">Join Our Training Sessions</a>
     </div>
+
+  <div class="related-pages">
+    <h2>Learn More</h2>
+    <div class="related-links">
+      <a href="/what-is-korfball/">What is Korfball?</a>
+      <a href="/about/">About Us</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/contact/">Contact Us</a>
+    </div>
+  </div>
+
   </div>
 </div>
 

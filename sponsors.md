@@ -124,7 +124,18 @@ target_audience: "local-businesses,sponsors,korfball-community"
     </div>
 
   </div>
-</section><!-- Structured Data for AI Search Engines -->
+</section>
+
+  <div class="related-pages">
+    <h2>Explore</h2>
+    <div class="related-links">
+      <a href="/join-us/">Join the Club</a>
+      <a href="/about/">About Us</a>
+      <a href="/contact/">Contact Us</a>
+    </div>
+  </div>
+
+<!-- Structured Data for AI Search Engines -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

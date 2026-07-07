@@ -9,6 +9,7 @@ include_howto_schema: true
 
 {% if page.include_howto_schema %}
 {% include ai-howto-schema.html %}
+{% include ai-event-schema.html %}
 {% endif %}
 
 <div class="page-content">
@@ -71,6 +72,11 @@ include_howto_schema: true
   <!-- CTA -->
   <div class="join-cta">
     <p>Got questions? <a href="/contact/">Contact us</a> or email <a href="mailto:Newportkorfball@gmail.com">Newportkorfball@gmail.com</a></p>
+    <div class="related-links" style="margin-top: 1rem;">
+      <a href="/what-is-korfball/">What is Korfball?</a>
+      <a href="/about/">About Us</a>
+      <a href="/faq/">FAQ</a>
+    </div>
   </div>
 
   </div>

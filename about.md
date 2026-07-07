@@ -96,5 +96,17 @@ keywords: about korfball, about newport centurions, korfball club newport, welsh
     </nav>
   </div>
 
+  <!-- Related Pages -->
+  <div class="related-pages">
+    <h2>Explore</h2>
+    <div class="related-links">
+      <a href="/join-us/">Join the Club</a>
+      <a href="/what-is-korfball/">What is Korfball?</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/glossary/">Korfball Glossary</a>
+      <a href="/contact/">Contact Us</a>
+    </div>
+  </div>
+
   </div>
 </div>

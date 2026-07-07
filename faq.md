@@ -33,7 +33,7 @@ type: FAQPage
       "name": "Do I need experience to join Newport Centurions?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No! We welcome complete beginners with no korfball experience needed. Our coaches guide new players through everything, and the inclusive club culture makes it easy to learn. Many of our players started as complete newcomers."
+        "text": "No! We welcome complete beginners with no korfball experience needed. We accept players aged 16 and over. Our coaches guide new players through everything, and the inclusive club culture makes it easy to learn. Many of our players started as complete newcomers."
       }
     },
     {
@@ -121,7 +121,7 @@ type: FAQPage
       "name": "Does Newport Centurions compete in leagues?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! Newport Centurions competes in:\n- Welsh Korfball League (multiple divisions)\n- Western Regional League (our 1st team)\n- Development leagues for growing players\nWe're proud Welsh League Champions in 2022/2023 and 2025!"
+        "text": "Yes! Newport Centurions competes in:\n- Welsh Korfball League (multiple divisions)\n- Western Regional League (our 1st team)\n- Development leagues for growing players\nWe're proud Welsh League Champions 2022, 2023 & 2025!"
       }
     },
     {
@@ -129,7 +129,7 @@ type: FAQPage
       "name": "How can I contact Newport Centurions?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can reach us by:\n- Email: Newportkorfball@gmail.com\n- Facebook: facebook.com/newportcenturions\n- Twitter: @newportkorfball\n- Instagram: @newportkorfball\n- Visit our Contact page for more options"
+        "text": "You can reach us by:\n- Email: Newportkorfball@gmail.com\n- Facebook: facebook.com/newportcenturions\n- Twitter: @newportkorfball\n- Instagram: @newportkorfball\n- YouTube: @newportcenturionskorfball5878\n- Visit our Contact page for more options"
       }
     },
     {
@@ -231,14 +231,14 @@ type: FAQPage
               <li><strong>2nd Team:</strong> Competes in top division of Welsh Korfball League</li>
               <li><strong>3rds Team:</strong> Development team in second division of Welsh League</li>
             </ul>
-            <p>We're proud <strong>Welsh League Champions 2022/2023 and 2025!</strong></p>
+            <p>We're proud <strong>Welsh League Champions 2022, 2023 & 2025!</strong></p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-question">Where is Newport Centurions located?</summary>
           <div class="faq-answer">
-            <p>We train at <strong>John Frost School, Newport, Wales</strong>. All training sessions and many matches are held at this location.</p>
+            <p>We train at <strong>The John Frost School, Duffryn, Newport NP10 8YD</strong>. All training sessions and many matches are held at this location.</p>
           </div>
         </details>
 

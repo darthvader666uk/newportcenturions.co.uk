@@ -82,6 +82,16 @@ permalink: /contact/
     </form>
   </div>
 
+  <div class="related-pages">
+    <h2>Quick Links</h2>
+    <div class="related-links">
+      <a href="/join-us/">Join the Club</a>
+      <a href="/about/">About Us</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/sponsors/">Sponsors</a>
+    </div>
+  </div>
+
   <!-- Social -->
   <div class="contact-social">
     <h2>Follow Us</h2>
