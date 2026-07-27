@@ -994,6 +994,210 @@ a:hover { color: var(--secondary-orange); }
   }
 }
 
+/* ─── Testimonials ─── */
+/* PDF-inspired design: black + wavy orange/gold bg, cream cards with orange pill banners */
+
+.testimonials-page {
+  max-width: 1500px !important;
+  padding: 2rem 1.5rem;
+}
+.testimonials-page .content-block {
+  max-width: 1500px !important;
+  width: 100% !important;
+}
+
+.testimonials-intro {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* ─── Grid: 2 cols desktop / 1 mobile ─── */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Card Outer (black bg + wavy orange pattern) ─── */
+.testimonial-card {
+  position: relative;
+  background: #0e0d11;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 2rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin: 1.5rem;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ─── Wavy Orange Pattern (behind cream card, on black bg) ─── */
+.card-waves {
+  position: absolute;
+  inset: -20px;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0;
+}
+
+.card-waves .blob {
+  position: absolute;
+}
+
+/* Large flowing orange shape — left side, peeking from behind card */
+.card-waves .blob-1 {
+  width: 60%;
+  height: 70%;
+  background: #F28C28;
+  top: -10%;
+  left: -15%;
+  border-radius: 60% 40% 55% 45% / 55% 45% 50% 50%;
+  opacity: 1;
+  transform: rotate(-12deg);
+}
+
+/* Large flowing orange shape — right side, peeking from behind card */
+.card-waves .blob-2 {
+  width: 50%;
+  height: 65%;
+  background: #F28C28;
+  bottom: -15%;
+  right: -12%;
+  border-radius: 45% 55% 40% 60% / 50% 60% 40% 50%;
+  opacity: 1;
+  transform: rotate(18deg);
+}
+
+/* Smaller accent blob — top right area */
+.card-waves .blob-3 {
+  width: 35%;
+  height: 40%;
+  background: #F5C518;
+  top: -8%;
+  right: 5%;
+  border-radius: 50% 50% 45% 55% / 55% 45% 55% 45%;
+  opacity: 0.8;
+  transform: rotate(-25deg);
+}
+
+/* ─── Card Inner (cream card) ─── */
+.card-inner {
+  position: relative;
+  z-index: 1;
+  background: #F5E6C8;
+  border: 1px solid #E0C9A0;
+  border-radius: 20px;
+  padding: 2rem 1.5rem 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ─── Banner (orange pill — inside cream card) ─── */
+.card-banner {
+  background: #F28C28;
+  border-radius: 35px;
+  padding: 0.75rem 2rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  width: 85%;
+}
+
+.card-name {
+  font-family: 'Rubik Distressed', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+
+.card-joined {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+
+/* ─── Card Text ─── */
+.card-text {
+  text-align: center;
+  padding: 0.25rem 0.5rem 1rem;
+}
+
+.card-text p {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1A1A1A;
+  line-height: 1.7;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ─── CTA Section ─── */
+.testimonials-cta {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: rgba(251, 179, 4, 0.05);
+  border: 1px solid rgba(251, 179, 4, 0.15);
+  border-radius: var(--radius-lg);
+  margin-top: 1rem;
+}
+
+.testimonials-cta h2 {
+  font-size: var(--text-2xl);
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 0.75rem;
+}
+
+.testimonials-cta p {
+  color: var(--text-secondary);
+  font-size: var(--text-lg);
+  margin: 0 0 1.5rem;
+}
+
+.testimonials-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .testimonials-cta { padding: 2rem 1rem; }
+}
+
 /* ─── Print ─── */
 @media print {
   .no-print, .social-links, .cta-button, .nav-toggle, .site-nav, .floating-cta { display: none !important; }

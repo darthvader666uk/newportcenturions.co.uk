@@ -120,6 +120,10 @@ navigation:
         url: /about/
       - title: What is Korfball
         url: /what-is-korfball/
+      - title: Testimonials
+        url: /testimonials/
+        description: Real stories from Newport Centurions members about their korfball experience
+        keywords: testimonials, member stories, reviews, experience
       - title: FAQ
         url: /faq/
         description: Frequently Asked Questions about korfball and Newport Centurions
