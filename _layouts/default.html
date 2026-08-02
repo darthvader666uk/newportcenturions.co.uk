@@ -67,11 +67,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
-    <link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}">
+    <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
 
     <!-- Critical CSS -->
     <style>
-        {% include_relative assets/css/critical.css %}
+        {% include_relative assets/css/critical.min.css %}
     </style>
 
     <!-- Preload Font Awesome CSS with font-display: swap -->
@@ -124,17 +124,12 @@
             "contactType": "customer service",
             "availableLanguage": "English"
           },
-          "speakable": {
-            "@type": "SpeakableSpecification",
-            "cssSelector": [".hero-headline", ".hero-subline"]
-          },
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Newport",
             "addressRegion": "Wales",
             "addressCountry": "GB"
           },
-          "sport": "Korfball",
           "description": "{{ site.description }}"
         },
         {
@@ -168,7 +163,11 @@
             "@id": "{{ site.url }}/#organization"
           },
           "description": "{{ page.description | default: site.description }}",
-          "inLanguage": "en-GB"
+          "inLanguage": "en-GB",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".hero-headline", ".hero-subline"]
+          }
         },
         {
           "@type": "SportsTeam",
@@ -225,8 +224,7 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "{{ site.url }}/",
-          "image": "{{ site.url }}/images/newport-centurions-korfball-club.webp"
+          "item": "{{ site.url }}/"
         }{% unless page.url == '/' %}{% if page.url == '/about/' %},
         {
           "@type": "ListItem",
@@ -293,8 +291,8 @@
     <link rel="dns-prefetch" href="//youtube.com">
 
     <!-- CSS -->
-      <link rel="preload" href="{{ '/assets/css/styles.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript><link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}"></noscript>
+      <link rel="preload" href="{{ '/assets/css/styles.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | relative_url }}"></noscript>
 
 
       <!-- AI-Optimized FAQ Schema (FAQ page only) -->

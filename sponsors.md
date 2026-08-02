@@ -1,5 +1,5 @@
 ---
-title: "Sponsors - Newport Centurions Korfball Club"
+title: Sponsors – Newport Centurions KC
 description: "Meet our valued sponsors supporting Newport Centurions Korfball Club. Discover sponsorship opportunities for sports partnerships in South Wales korfball."
 layout: default
 permalink: /sponsors/

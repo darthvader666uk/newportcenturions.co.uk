@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About Newport Centurions – Welsh Korfball Club & Mixed Gender Sports
+title: About Newport Centurions Korfball Club
 description: Learn more about Newport Centurions, a friendly and competitive mixed-gender korfball club based in Newport, South Wales. Welsh League Champions.
 type: AboutPage # Hint for jekyll-seo-tag
 permalink: /about/

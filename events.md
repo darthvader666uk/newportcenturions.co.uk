@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Events – Newport Centurions Korfball Club
+title: Events – Newport Centurions KC
 description: Upcoming events, training sessions, and beginner dates for Newport Centurions Korfball Club in Newport, Wales.
 permalink: /events/
 ---

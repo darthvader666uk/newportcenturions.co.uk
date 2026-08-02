@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Korfball FAQ – Common Questions About Newport Centurions
+title: Korfball FAQ – Newport Centurions
 description: Frequently asked questions about korfball, mixed-gender sports, Newport Centurions club, training, and how to join our team.
 permalink: /faq/
 keywords: korfball faq, frequently asked questions korfball, korfball rules questions, how to join korfball, korfball training, korfball beginners, newportcenturions faq

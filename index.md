@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Newport Centurions Korfball Club | Welsh League Champions
+title: Newport Centurions Korfball Club
 description: Join Newport Centurions Korfball Club - South Wales' premier mixed-gender korfball team. Weekly training at John Frost School. Welsh League Champions 2022/2023 & 2025.
 seo_title: false
 keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfball club, korfball training, korfball wales, join korfball, korfball beginners, korfball south wales

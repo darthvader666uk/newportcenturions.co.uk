@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Member Testimonials – What Our Players Say About Newport Centurions Korfball
+title: Member Testimonials – Newport Centurions
 description: Real stories from Newport Centurions members. Find out why players love our mixed-gender korfball club in Newport, South Wales. Beginner-friendly and welcoming.
 permalink: /testimonials/
 keywords: newport centurions testimonials, korfball member stories, korfball reviews, newport korfball experience, join korfball testimonials, mixed sport reviews

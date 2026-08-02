@@ -1,6 +1,6 @@
 ---
 layout: default
-title: What is Korfball? Complete Guide to Mixed Gender Sport
+title: What is Korfball? – Newport Centurions
 description: Learn what korfball is, rules, how it's played, history, and why it's perfect for all ages. Discover a truly mixed-gender team sport in Wales.
 permalink: /what-is-korfball/
 keywords: korfball, what is korfball, korfball rules, korfball sport, mixed gender sport, korfball history, korfball benefits, korfball welsh league, team sport, korfball training, korfball beginners

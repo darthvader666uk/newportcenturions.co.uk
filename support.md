@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Support Newport Centurions – Help Welsh Korfball Grow
+title: Support Newport Centurions KC
 description: Find out how you can support Newport Centurions Korfball Club through volunteering, sponsorship, or donations.
 permalink: /support/
 ---

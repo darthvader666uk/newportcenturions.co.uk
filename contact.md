@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contact Newport Centurions – Korfball Training & Welsh League
+title: Contact Newport Centurions Korfball Club
 description: Get in touch with Newport Centurions Korfball Club. Contact us about training sessions, joining the club, or general inquiries.
 permalink: /contact/
 ---
