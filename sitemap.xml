@@ -21,7 +21,7 @@ layout: null
   
   <!-- Static Pages -->
   {% for page in site.pages %}
-    {% unless page.url contains '/assets/' or page.url contains '/404.html' or page.url == '/sitemap.xml' or page.url == '/robots.txt' or page.url == '/feed.xml' %}
+    {% unless page.url contains '/assets/' or page.url contains '/404.html' or page.url == '/sitemap.xml' or page.url == '/robots.txt' or page.url == '/feed.xml' or page.url == '/' %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: 'index.html' }}</loc>
       {% if page.date %}
