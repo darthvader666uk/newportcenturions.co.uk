@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is Korfball? – Newport Centurions
-description: Learn what korfball is, rules, how it's played, history, and why it's perfect for all ages. Discover a truly mixed-gender team sport in Wales.
+description: Korfball is a mixed-gender team sport with 8 players (4 men, 4 women). No dribbling, pure teamwork. Learn the rules, history, and why 30+ players train weekly in Newport.
 permalink: /what-is-korfball/
 keywords: korfball, what is korfball, korfball rules, korfball sport, mixed gender sport, korfball history, korfball benefits, korfball welsh league, team sport, korfball training, korfball beginners
 type: Article
