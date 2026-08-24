@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Korfball Glossary - Terms & Definitions
-description: Learn korfball terminology and sport-specific definitions. Understand key terms used in mixed-gender korfball sport.
+description: Learn korfball terminology and sport-specific definitions. Understand key terms used in mixed-gender korfball, from shooting to defending.
 keywords: korfball glossary, korfball terms, korfball definitions, sports terminology, mixed-gender sport
 permalink: /glossary/
 ---
