@@ -100,16 +100,9 @@ exclude:
   - build.sh
   - ".vscode"
   - "*.log"
-
-# Compression
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: []
+  - README.md
+  - LICENSE
+  - CODEBASE-AUDIT.md
 
 # Navigation Menu - Organized with dropdowns
 navigation:
@@ -128,6 +121,10 @@ navigation:
         url: /faq/
         description: Frequently Asked Questions about korfball and Newport Centurions
         keywords: FAQ, korfball questions, how to join, training
+      - title: Glossary
+        url: /glossary/
+        description: Korfball terminology and definitions explained
+        keywords: korfball glossary, korfball terms, korfball definitions
   - title: Join Us
     url: /join-us/
   - title: Events

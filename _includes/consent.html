@@ -1,0 +1,100 @@
+{%- comment -%}
+  Cookie consent banner + gated Google Analytics loader.
+
+  GA4 previously loaded unconditionally as the first thing in <head>, which is
+  a UK GDPR / PECR problem. Nothing analytics-related now runs until the
+  visitor accepts. Self-hosted, no third-party CMP, ~2KB.
+
+  Set `analytics_id` below to disable/enable analytics entirely.
+{%- endcomment -%}
+{%- assign analytics_id = 'G-QGDV1647J9' -%}
+
+<div class="consent-banner" id="consent-banner" role="dialog" aria-modal="false"
+     aria-labelledby="consent-heading" aria-describedby="consent-text" hidden>
+  <div class="consent-inner">
+    <h2 class="consent-heading" id="consent-heading">Cookies</h2>
+    <p class="consent-text" id="consent-text">
+      We'd like to use Google Analytics to see how the site is used. It's optional &mdash;
+      the site works exactly the same either way. See our <a href="/privacy/">privacy policy</a>.
+    </p>
+    <div class="consent-actions">
+      <button type="button" class="consent-btn consent-accept" data-consent="accept">Accept</button>
+      <button type="button" class="consent-btn consent-decline" data-consent="decline">Decline</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var ID = {{ analytics_id | jsonify }};
+  var KEY = 'nc_consent';
+  var banner = document.getElementById('consent-banner');
+
+  function read() {
+    try {
+      var m = document.cookie.match(/(?:^|;\s*)nc_consent=([^;]*)/);
+      return m ? decodeURIComponent(m[1]) : null;
+    } catch (e) { return null; }
+  }
+
+  function write(value) {
+    var expires = new Date(Date.now() + 15552000000).toUTCString(); // ~6 months
+    document.cookie = KEY + '=' + encodeURIComponent(value) +
+      ';expires=' + expires + ';path=/;SameSite=Lax' +
+      (location.protocol === 'https:' ? ';Secure' : '');
+  }
+
+  function clearAnalyticsCookies() {
+    document.cookie.split(';').forEach(function (c) {
+      var name = c.split('=')[0].trim();
+      if (name.indexOf('_ga') === 0) {
+        var host = location.hostname.replace(/^www\./, '');
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.' + host;
+      }
+    });
+  }
+
+  var loaded = false;
+  function loadAnalytics() {
+    if (loaded || !ID) { return; }
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', ID, { anonymize_ip: true });
+  }
+
+  function show() { if (banner) { banner.hidden = false; } }
+  function hide() { if (banner) { banner.hidden = true; } }
+
+  // Decide on load.
+  var choice = read();
+  if (choice === 'accept') {
+    loadAnalytics();
+  } else if (choice !== 'decline') {
+    show();
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-consent]');
+    if (btn) {
+      var action = btn.getAttribute('data-consent');
+      write(action);
+      hide();
+      if (action === 'accept') { loadAnalytics(); } else { clearAnalyticsCookies(); }
+      return;
+    }
+    // "Change cookie preferences" link on the privacy page
+    if (e.target.closest('[data-consent-reopen]')) {
+      e.preventDefault();
+      show();
+      if (banner) { banner.querySelector('.consent-btn').focus(); }
+    }
+  });
+})();
+</script>

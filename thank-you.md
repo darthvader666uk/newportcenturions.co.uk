@@ -3,6 +3,8 @@ layout: default
 title: Thank You – Newport Centurions KC
 description: Thank you for contacting Newport Centurions Korfball Club. We'll get back to you soon.
 permalink: /thank-you/
+sitemap: false
+robots: "noindex, follow"
 ---
 
 <div class="contact-page">

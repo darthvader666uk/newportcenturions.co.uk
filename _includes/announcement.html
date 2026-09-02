@@ -1,0 +1,30 @@
+{%- comment -%}
+  Announcement bar. Beginner-session dates come from _data/club.yml and are
+  filtered to upcoming ones at build time, so a passed date drops off on the
+  next rebuild instead of sitting there advertising a date in the past.
+
+  Falls back to an evergreen message once the intake has finished.
+{%- endcomment -%}
+{%- assign today = 'now' | date: '%Y-%m-%d' -%}
+{%- assign upcoming = '' -%}
+{%- for session in site.data.club.season.beginner_sessions -%}
+  {%- assign session_date = session.date | date: '%Y-%m-%d' -%}
+  {%- if session_date >= today -%}
+    {%- capture label %}{{ session.date | date: '%-d %b' }}{% endcapture -%}
+    {%- assign upcoming = upcoming | append: label | append: '|' -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign upcoming_list = upcoming | split: '|' -%}
+
+<div class="announcement-bar">
+  <a href="/join-us/">
+    {%- if upcoming_list.size > 0 -%}
+      <span class="announce-next">Beginners welcome!</span>
+      Next sessions: {{ upcoming_list | join: ', ' }}
+    {%- else -%}
+      <span class="announce-next">Beginners welcome!</span>
+      Training {% for t in site.data.club.training %}{{ t.day }}s{% unless forloop.last %} &amp; {% endunless %}{% endfor %} &mdash; {{ site.data.club.free_sessions_text | downcase }}
+    {%- endif -%}
+    <span class="announce-cta">Join Free &rarr;</span>
+  </a>
+</div>

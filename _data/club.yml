@@ -1,0 +1,131 @@
+# =============================================================================
+# Newport Centurions Korfball Club — single source of truth for club facts.
+#
+# Training times, venue, dates and fees were previously hardcoded across 19
+# files (including the JSON-LD includes, where a missed edit goes unnoticed).
+# Change a fact HERE and it updates everywhere that reads site.data.club.
+#
+# NOTE: `season.beginner_sessions` is filtered to upcoming dates at BUILD time,
+# so a passed date only disappears on the next push/rebuild.
+# =============================================================================
+
+name: Newport Centurions Korfball Club
+short_name: Newport Centurions
+founded: 2019
+email: Newportkorfball@gmail.com
+
+# --- Membership -------------------------------------------------------------
+members: "30+"
+teams: 3
+min_age: 16
+free_sessions: 2
+free_sessions_text: "First 2 sessions free"
+
+# --- Venue ------------------------------------------------------------------
+venue:
+  name: The John Frost School
+  street: Duffryn
+  locality: Newport
+  region: Wales
+  postcode: NP10 8YD
+  country: GB
+  latitude: "51.5584"
+  longitude: "-3.0104"
+  maps_url: https://maps.app.goo.gl/csVguoRKVX1dXAYYA
+  short: "John Frost School, Duffryn, NP10 8YD"
+
+# --- Training ---------------------------------------------------------------
+# `schema_day` values must be schema.org DayOfWeek names.
+training:
+  - day: Tuesday
+    schema_day: Tuesday
+    start: "18:00"
+    end: "20:00"
+    display: "6:00 PM to 8:00 PM"
+  - day: Thursday
+    schema_day: Thursday
+    start: "20:00"
+    end: "21:00"
+    display: "8:00 PM to 9:00 PM"
+
+# --- Season -----------------------------------------------------------------
+# `events` drives /events/ (cards + Event schema + screen-reader list) and the
+# announcement bar. Add a date here and it appears in all four places.
+#   beginner: true  -> also advertised in the announcement bar
+# Descriptions are plain text: Liquid is NOT rendered inside _data files.
+season:
+  label: "2026/27"
+  start_date: 2026-08-18
+  events:
+    - date: 2026-08-18
+      title: "First Session Back"
+      tag: "Season Start"
+      tag_class: tag-season
+      card_class: event-highlight
+      beginner: false
+      start_time: "18:00"
+      end_time: "20:00"
+      time_display: "Tuesdays 6–8pm & Thursdays 8–9pm"
+      description: "The 2026/27 season kicks off. Regular training resumes."
+      schema_description: "First korfball training session of the 2026/27 season. Regular training resumes. Beginners welcome."
+    - date: 2026-09-08
+      title: "Beginner Session"
+      tag: "Beginners Welcome"
+      tag_class: tag-beginner
+      card_class: event-beginner
+      beginner: true
+      start_time: "18:00"
+      end_time: "20:00"
+      time_display: "6:00 PM – 8:00 PM"
+      description: "Never played korfball? This is your chance. Turn up, give it a go — no experience needed."
+      schema_description: "Beginner-friendly korfball session. No experience needed. Turn up in sportswear."
+    - date: 2026-09-15
+      title: "Beginner Session"
+      tag: "Beginners Welcome"
+      tag_class: tag-beginner
+      card_class: event-beginner
+      beginner: true
+      start_time: "18:00"
+      end_time: "20:00"
+      time_display: "6:00 PM – 8:00 PM"
+      description: "Another chance to try korfball. Come and see if it's for you."
+      schema_description: "Beginner-friendly korfball session. No experience needed. Turn up in sportswear."
+    - date: 2026-09-22
+      title: "Beginner Session"
+      tag: "Beginners Welcome"
+      tag_class: tag-beginner
+      card_class: event-beginner
+      beginner: true
+      start_time: "18:00"
+      end_time: "20:00"
+      time_display: "6:00 PM – 8:00 PM"
+      description: "Last beginner session of the intake. Don't miss your chance to join this season."
+      schema_description: "Final beginner korfball session of the intake. No experience needed."
+
+# --- Competition ------------------------------------------------------------
+leagues:
+  - Welsh Korfball League
+  - Western Regional League
+
+awards:
+  - "Welsh League Champions 2022/2023"
+  - "Welsh League Champions 2025"
+awards_short: "Welsh League Champions 2022/23 & 2025"
+titles_count: 3
+
+# --- Links ------------------------------------------------------------------
+store_url: https://rcs-teamwear.com/newport-centurions-korfball/
+
+social:
+  - name: Facebook
+    url: https://facebook.com/newportcenturions
+    icon: fa-facebook
+  - name: Twitter
+    url: https://twitter.com/newportkorfball
+    icon: fa-twitter
+  - name: Instagram
+    url: https://instagram.com/newportkorfball
+    icon: fa-instagram
+  - name: YouTube
+    url: https://youtube.com/@newportcenturionskorfball5878
+    icon: fa-youtube

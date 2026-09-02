@@ -1,43 +1,49 @@
+{%- comment -%}
+  Recurring training-session Event schema.
+  All facts come from _data/club.yml — do not hardcode them here.
+{%- endcomment -%}
+{%- assign club = site.data.club -%}
 <!-- Event Schema for Training Sessions -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": "Newport Centurions Korfball Training",
-  "description": "Regular korfball training sessions open to all abilities. Beginners welcome. First 2 sessions free.",
+  "name": "{{ club.short_name }} Korfball Training",
+  "description": "Regular korfball training sessions open to all abilities. Beginners welcome. {{ club.free_sessions_text }}.",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/ScheduledEvent",
   "location": {
     "@type": "Place",
-    "name": "The John Frost School",
+    "name": {{ club.venue.name | jsonify }},
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Newport",
-      "postalCode": "NP10 8YD",
-      "addressCountry": "GB"
+      "streetAddress": {{ club.venue.street | jsonify }},
+      "addressLocality": {{ club.venue.locality | jsonify }},
+      "postalCode": {{ club.venue.postcode | jsonify }},
+      "addressCountry": {{ club.venue.country | jsonify }}
     }
   },
   "organizer": {
     "@type": "SportsOrganization",
-    "name": "Newport Centurions Korfball Club",
-    "url": "https://newportcenturions.co.uk"
+    "name": {{ club.name | jsonify }},
+    "url": "{{ site.url }}"
   },
   "performer": {
     "@type": "SportsOrganization",
-    "name": "Newport Centurions Korfball Club"
+    "name": {{ club.name | jsonify }}
   },
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "GBP",
-    "description": "First 2 sessions free"
+    "description": {{ club.free_sessions_text | jsonify }}
   },
   "superEvent": {
     "@type": "Schedule",
     "repeatFrequency": "https://schema.org/Weekly",
-    "byDay": ["https://schema.org/Tuesday", "https://schema.org/Thursday"],
-    "startTime": "18:00",
-    "endTime": "20:00",
+    "byDay": [{% for session in club.training %}"https://schema.org/{{ session.schema_day }}"{% unless forloop.last %}, {% endunless %}{% endfor %}],
+    "startTime": "{{ club.training[0].start }}",
+    "endTime": "{{ club.training[0].end }}",
     "timeZone": "Europe/London"
   }
 }

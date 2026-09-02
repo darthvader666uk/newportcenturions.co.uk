@@ -2,16 +2,6 @@
 <html lang="en-GB">
 <head>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QGDV1647J9"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-QGDV1647J9');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#fbb304">
@@ -21,9 +11,10 @@
     <meta name="format-detection" content="telephone=no">
 
     <!-- Enhanced SEO Meta Tags -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    {% assign robots_directive = page.robots | default: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" %}
+    <meta name="robots" content="{{ robots_directive }}">
+    <meta name="googlebot" content="{{ robots_directive }}">
+    <meta name="bingbot" content="{{ robots_directive }}">
 
     <!-- AI Search Optimization -->
     <meta name="citation_title" content="{{ page.title | default: site.title }}">
@@ -142,15 +133,7 @@
           "publisher": {
             "@id": "{{ site.url }}/#organization"
           },
-          "inLanguage": "en-GB",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "{{ site.url }}/search?q={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
+          "inLanguage": "en-GB"
         }{% if page.url == '/' %},
         {
           "@type": "WebPage",
@@ -215,7 +198,8 @@
     </script>
 
 
-    <!-- BreadcrumbList Schema for Navigation & AI Search -->
+    <!-- BreadcrumbList Schema — driven by page.breadcrumb front matter -->
+    {% if page.breadcrumb %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -226,81 +210,36 @@
           "position": 1,
           "name": "Home",
           "item": "{{ site.url }}/"
-        }{% unless page.url == '/' %}{% if page.url == '/about/' %},
+        },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "About",
-          "item": "{{ site.url }}/about/"
-        }{% elsif page.url == '/what-is-korfball/' %},
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "What is Korfball?",
-          "item": "{{ site.url }}/what-is-korfball/"
-        }{% elsif page.url == '/faq/' %},
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "FAQ",
-          "item": "{{ site.url }}/faq/"
-        }{% elsif page.url == '/join-us/' %},
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Join Us",
-          "item": "{{ site.url }}/join-us/"
-        }{% elsif page.url == '/sponsors/' %},
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Sponsors",
-          "item": "{{ site.url }}/sponsors/"
-        }{% elsif page.url == '/contact/' %},
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Contact",
-          "item": "{{ site.url }}/contact/"
-        }{% elsif page.url == '/support/' %},
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "{{ site.url }}/support/"
-        }{% elsif page.url == '/glossary/' %},
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Glossary",
-          "item": "{{ site.url }}/glossary/"
-        }{% endif %}{% endunless %}
+          "name": {{ page.breadcrumb | jsonify }},
+          "item": "{{ site.url }}{{ page.url }}"
+        }
       ]
     }
     </script>
+    {% endif %}
 
     <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="{{ '/feed.xml' | relative_url }}">
 
-    <!-- DNS Prefetch for Performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <link rel="dns-prefetch" href="//facebook.com">
-    <link rel="dns-prefetch" href="//twitter.com">
-    <link rel="dns-prefetch" href="//instagram.com">
-    <link rel="dns-prefetch" href="//youtube.com">
+    <!-- DNS Prefetch: only for origins we actually fetch from.
+         Social domains are link targets, never fetched; analytics is
+         consent-gated; Google Fonts is used on /testimonials/ only, which
+         declares its own preconnect. -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- CSS -->
       <link rel="preload" href="{{ '/assets/css/styles.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript><link rel="stylesheet" href="{{ '/assets/css/styles.min.css' | relative_url }}"></noscript>
 
 
-      <!-- AI-Optimized FAQ Schema (FAQ page only) -->
-    {% if page.faq_schema or page.url == '/faq/' %}
-    {% include ai-faq-schema.html %}
-    {% endif %}
+    <!-- LocalBusiness schema: content pages only, not 404 / form confirmations -->
+    {% unless page.url == '/404.html' or page.url == '/thank-you/' %}
     {% include ai-local-business-schema.html %}
+    {% endunless %}
     <!-- AI Search Optimization Schemas -->
     {% if page.type == 'Article' or page.url == '/what-is-korfball/' %}
     {% include ai-article-schema.html %}
@@ -319,17 +258,13 @@
               </div>
             </header>
 
-            <div class="announcement-bar">
-              <a href="/join-us/">
-                <span class="announce-next">Season Back Aug 18!</span> Beginners: 8, 15 &amp; 22 Sep
-                <span class="announce-cta">Join Free →</span>
-              </a>
-            </div>
+            {% include announcement.html %}
 
             <main id="main-content" class="page-content" aria-label="Content">
                 {{ content }}
             </main>
             {% include footer.html %}
         </div>
+        {% include consent.html %}
     </body>
 </html>

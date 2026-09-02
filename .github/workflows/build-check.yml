@@ -1,0 +1,55 @@
+name: Build Check
+
+# Verifies the site actually builds and that no internal links, images or
+# scripts are broken, before GitHub Pages publishes it. Runs on PRs and on
+# pushes to master.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build --trace
+
+      - name: Validate JSON-LD structured data
+        run: |
+          python3 - <<'PY'
+          import json, re, glob, sys
+          bad = 0
+          total = 0
+          for path in glob.glob('_site/**/*.html', recursive=True):
+              html = open(path, encoding='utf-8').read()
+              for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
+                  total += 1
+                  try:
+                      json.loads(m.group(1))
+                  except Exception as e:
+                      bad += 1
+                      print(f"::error file={path}::Invalid JSON-LD: {e}")
+          print(f"Checked {total} JSON-LD blocks, {bad} invalid")
+          sys.exit(1 if bad else 0)
+          PY
+
+      - name: Check for broken internal links and images
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: ./_site
+          arguments: >-
+            --disable-external
+            --allow-hash-href
+            --ignore-urls "/^#/"
+            --no-enforce-https

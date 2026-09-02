@@ -1,45 +1,45 @@
+{%- comment -%}
+  LocalBusiness / SportsActivityLocation schema for local SEO.
+  All facts come from _data/club.yml — do not hardcode them here.
+{%- endcomment -%}
+{%- assign club = site.data.club -%}
 <!-- LocalBusiness Schema for Local SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SportsActivityLocation",
-  "name": "Newport Centurions Korfball Club",
-  "image": "https://newportcenturions.co.uk/images/newport-centurions-korfball-club.webp",
-  "url": "https://newportcenturions.co.uk",
-  "telephone": "",
-  "email": "Newportkorfball@gmail.com",
+  "name": {{ club.name | jsonify }},
+  "image": "{{ site.url }}/images/newport-centurions-korfball-club.webp",
+  "url": "{{ site.url }}",
+  "email": {{ club.email | jsonify }},
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Newport",
-    "addressRegion": "Wales",
-    "postalCode": "NP10 8YD",
-    "addressCountry": "GB"
+    "streetAddress": {{ club.venue.street | jsonify }},
+    "addressLocality": {{ club.venue.locality | jsonify }},
+    "addressRegion": {{ club.venue.region | jsonify }},
+    "postalCode": {{ club.venue.postcode | jsonify }},
+    "addressCountry": {{ club.venue.country | jsonify }}
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 51.5584,
-    "longitude": -3.0104
+    "latitude": {{ club.venue.latitude }},
+    "longitude": {{ club.venue.longitude }}
   },
   "openingHoursSpecification": [
+    {%- for session in club.training %}
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["https://schema.org/Tuesday"],
-      "opens": "18:00",
-      "closes": "20:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["https://schema.org/Thursday"],
-      "opens": "20:00",
-      "closes": "21:00"
-    }
+      "dayOfWeek": ["https://schema.org/{{ session.schema_day }}"],
+      "opens": "{{ session.start }}",
+      "closes": "{{ session.end }}"
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
   ],
-  "description": "Mixed-gender korfball club. Welsh League Champions 2022, 2023 & 2025. Beginners welcome, first 2 sessions free.",
+  "description": "Mixed-gender korfball club. {{ club.awards_short }}. Beginners welcome, {{ club.free_sessions_text | downcase }}.",
   "sameAs": [
-    "https://facebook.com/newportcenturions",
-    "https://twitter.com/newportkorfball",
-    "https://instagram.com/newportkorfball",
-    "https://youtube.com/@newportcenturionskorfball5878"
+    {%- for link in club.social %}
+    {{ link.url | jsonify }}{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
   ]
 }
 </script>

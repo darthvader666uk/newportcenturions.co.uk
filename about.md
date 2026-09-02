@@ -4,6 +4,7 @@ title: About Newport Centurions Korfball Club
 description: Newport Centurions — Welsh League Champions 3 times. Mixed-gender korfball for all ages & abilities. Beginners welcome, first 2 sessions free.
 type: AboutPage # Hint for jekyll-seo-tag
 permalink: /about/
+breadcrumb: "About"
 keywords: about korfball, about newport centurions, korfball club newport, welsh korfball, korfball team, korfball south wales, korfball history, join korfball, what is korfball
 ---
 

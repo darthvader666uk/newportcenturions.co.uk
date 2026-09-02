@@ -3,6 +3,7 @@ layout: default
 title: Contact Newport Centurions Korfball Club
 description: Get in touch with Newport Centurions Korfball Club. Contact us about training sessions, joining the club, or general inquiries.
 permalink: /contact/
+breadcrumb: "Contact"
 ---
 
 <div class="page-content">

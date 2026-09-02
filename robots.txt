@@ -4,7 +4,3 @@ Allow: /
 # Sitemaps
 Sitemap: https://newportcenturions.co.uk/sitemap.xml
 Sitemap: https://newportcenturions.co.uk/feed.xml
-
-# Disallow unnecessary files
-Disallow: /assets/css/critical.css
-Disallow: /404.html

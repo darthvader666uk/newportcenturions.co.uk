@@ -3,6 +3,7 @@ layout: default
 title: What is Korfball? – Newport Centurions
 description: Korfball is a mixed-gender team sport with 8 players (4 men, 4 women). No dribbling, pure teamwork. Learn the rules and history of korfball.
 permalink: /what-is-korfball/
+breadcrumb: "What is Korfball?"
 keywords: korfball, what is korfball, korfball rules, korfball sport, mixed gender sport, korfball history, korfball benefits, korfball welsh league, team sport, korfball training, korfball beginners
 type: Article
 ---

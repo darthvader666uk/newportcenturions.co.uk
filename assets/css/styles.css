@@ -1204,3 +1204,159 @@ a:hover { color: var(--secondary-orange); }
   body { background: #fff; color: #000; font-size: 12pt; }
   h1, h2, h3 { color: #000 !important; -webkit-text-fill-color: #000 !important; background: none !important; }
 }
+
+/* ==========================================================================
+   Cookie consent banner
+   ========================================================================== */
+
+.consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: var(--glass-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-3);
+  padding: 1rem var(--spacing);
+  animation: consent-rise 0.28s ease-out;
+}
+
+.consent-banner[hidden] { display: none; }
+
+@keyframes consent-rise {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .consent-banner { animation: none; }
+}
+
+.consent-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.consent-heading {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--primary-orange);
+  flex-shrink: 0;
+}
+
+.consent-text {
+  margin: 0;
+  flex: 1 1 320px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.consent-text a { color: var(--primary-orange); }
+
+.consent-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.consent-btn {
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-hover);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.consent-btn:hover { transform: translateY(-1px); }
+
+.consent-btn:focus-visible {
+  outline: 3px solid var(--primary-orange);
+  outline-offset: 2px;
+}
+
+.consent-accept {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: #000;
+  border-color: transparent;
+}
+
+.consent-accept:hover { box-shadow: var(--shadow-orange); }
+
+.consent-decline {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.consent-decline:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .consent-inner { gap: 0.75rem; }
+  .consent-actions { width: 100%; }
+  .consent-btn { flex: 1; }
+}
+
+/* ==========================================================================
+   Privacy policy cookie table
+   ========================================================================== */
+
+.privacy-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+
+.privacy-table th,
+.privacy-table td {
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+
+.privacy-table th {
+  color: var(--primary-orange);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.privacy-table td code {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 0.15rem 0.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.86em;
+}
+
+@media (max-width: 640px) {
+  .privacy-table,
+  .privacy-table thead,
+  .privacy-table tbody,
+  .privacy-table tr,
+  .privacy-table th,
+  .privacy-table td { display: block; }
+
+  .privacy-table thead { display: none; }
+
+  .privacy-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem;
+  }
+
+  .privacy-table td { border-bottom: none; padding: 0.35rem 0.5rem; }
+}

@@ -3,6 +3,7 @@ title: Sponsors – Newport Centurions KC
 description: "Meet our valued sponsors supporting Newport Centurions Korfball Club. Discover sponsorship opportunities for sports partnerships in South Wales korfball."
 layout: default
 permalink: /sponsors/
+breadcrumb: "Sponsors"
 canonical_url: "https://newportcenturions.co.uk/sponsors/"
 image: /assets/images/sponsors/hazlewoods-logo.png
 image_alt: "Newport Centurions Korfball Club sponsors and partners"
@@ -182,28 +183,6 @@ target_audience: "local-businesses,sponsors,korfball-community"
     "https://facebook.com/newportcenturions",
     "https://twitter.com/newportkorfball",
     "https://instagram.com/newportkorfball"
-  ]
-}
-</script>
-
-<!-- Breadcrumb Schema for AI Navigation -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://newportcenturions.co.uk"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Sponsors",
-      "item": "https://newportcenturions.co.uk/sponsors/"
-    }
   ]
 }
 </script>

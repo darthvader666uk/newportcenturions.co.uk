@@ -3,6 +3,7 @@ layout: default
 title: Join Newport Centurions Korfball Club
 description: Become a part of Newport Centurions Korfball Club! Learn about our mixed-gender sport, training sessions in Newport, and how to join our friendly team.
 permalink: /join-us/
+breadcrumb: "Join Us"
 keywords: join korfball, join newport centurions, korfball club newport, korfball training, korfball beginners, korfball south wales, korfball team, welsh korfball, about korfball
 include_howto_schema: true
 ---

@@ -1,39 +1,45 @@
-# Newport Centurions Korfball Club
+---
+layout: null
+sitemap: false
+---
+{%- assign club = site.data.club -%}
+# {{ club.name }}
 
-> Mixed-gender korfball club in Newport, Wales. Welsh League Champions 2022, 2023 & 2025. Beginners welcome, first 2 sessions free.
+> Mixed-gender korfball club in Newport, Wales. {{ club.awards_short }}. Beginners welcome, {{ club.free_sessions_text | downcase }}.
 
 ## Key Information
 - Sport: Korfball (Dutch mixed-gender team sport, 4 male + 4 female per team)
-- Location: The John Frost School, Duffryn, Newport NP10 8YD, Wales
-- Training: Tuesdays 6:00-8:00 PM, Thursdays 8:00-9:00 PM
-- Season starts: August 18th, 2026
-- Beginner sessions: 8 Sep, 15 Sep, 22 Sep 2026
-- Founded: 2019
-- Members: 30+ across 3 competitive teams
+- Location: {{ club.venue.name }}, {{ club.venue.street }}, {{ club.venue.locality }} {{ club.venue.postcode }}, {{ club.venue.region }}
+- Training: {% for t in club.training %}{{ t.day }}s {{ t.display }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+- Season {{ club.season.label }} started: {{ club.season.start_date | date: "%-d %B %Y" }}
+- Beginner sessions: {% for s in club.season.beginner_sessions %}{{ s.date | date: "%-d %b %Y" }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+- Founded: {{ club.founded }}
+- Members: {{ club.members }} across {{ club.teams }} competitive teams
+- Minimum age: {{ club.min_age }}
 
 ## Pages
 - [/](https://newportcenturions.co.uk/) - Homepage with training schedule and overview
 - [/about/](https://newportcenturions.co.uk/about/) - Club history, timeline, teams, and mission
 - [/what-is-korfball/](https://newportcenturions.co.uk/what-is-korfball/) - Sport definition, rules, history, and benefits
-- [/faq/](https://newportcenturions.co.uk/faq/) - 16 comprehensive FAQ items about korfball and joining
+- [/faq/](https://newportcenturions.co.uk/faq/) - Comprehensive FAQ about korfball and joining
 - [/join-us/](https://newportcenturions.co.uk/join-us/) - How to join, step-by-step process, beginner sessions
-- [/sponsors/](https://newportcenturions.co.uk/sponsors/) - Club sponsors and sponsorship opportunities
-- [/contact/](https://newportcenturions.co.uk/contact/) - Contact form, map, email, and social links
-- [/support/](https://newportcenturions.co.uk/support/) - Easyfundraising and ways to support the club
-- [/glossary/](https://newportcenturions.co.uk/glossary/) - Korfball terminology and definitions
 - [/events/](https://newportcenturions.co.uk/events/) - Upcoming events and training dates
+- [/glossary/](https://newportcenturions.co.uk/glossary/) - Korfball terminology and definitions
 - [/testimonials/](https://newportcenturions.co.uk/testimonials/) - Member stories and experiences
+- [/sponsors/](https://newportcenturions.co.uk/sponsors/) - Club sponsors and sponsorship opportunities
+- [/support/](https://newportcenturions.co.uk/support/) - Easyfundraising and ways to support the club
+- [/contact/](https://newportcenturions.co.uk/contact/) - Contact form, map, email, and social links
+- [/privacy/](https://newportcenturions.co.uk/privacy/) - Privacy policy and cookie information
 
 ## About Korfball
 - Mixed-gender sport: 4 male, 4 female per team
 - No dribbling - emphasis on teamwork and passing
 - Open to all ages and fitness levels
-- Competing in Welsh League and Western Regional League
+- Competing in {% for l in club.leagues %}{{ l }}{% unless forloop.last %} and {% endunless %}{% endfor %}
 - Monthly social events including Payday Pub Day at The Tiny Rebel
 
 ## Contact
-- Email: Newportkorfball@gmail.com
-- Facebook: https://facebook.com/newportcenturions
-- Twitter: https://twitter.com/newportkorfball
-- Instagram: https://instagram.com/newportkorfball
-- YouTube: https://youtube.com/@newportcenturionskorfball5878
+- Email: {{ club.email }}
+{%- for link in club.social %}
+- {{ link.name }}: {{ link.url }}
+{%- endfor %}

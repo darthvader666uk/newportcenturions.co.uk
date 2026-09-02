@@ -8,7 +8,7 @@ keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfba
 
 {% include ai-answer-snippets.html %}
 
-<main class="modern-container" itemscope itemtype="https://schema.org/SportsTeam">
+<div class="modern-container" itemscope itemtype="https://schema.org/SportsTeam">
 
     <!-- Hero: Bold headline + stats strip -->
     <section class="hero-section">
@@ -19,11 +19,11 @@ keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfba
         <h1 class="hero-headline" itemprop="name">Play Mixed-Gender Korfball in Newport</h1>
         <p class="hero-subline">South Wales' premier korfball club. Beginners welcome.</p>
         <div class="stats-strip">
-            <div class="stat"><span class="stat-number">30+</span><span class="stat-label">Members</span></div>
+            <div class="stat"><span class="stat-number">{{ site.data.club.members }}</span><span class="stat-label">Members</span></div>
             <div class="stat-divider"></div>
-            <div class="stat"><span class="stat-number">3</span><span class="stat-label">Teams</span></div>
+            <div class="stat"><span class="stat-number">{{ site.data.club.teams }}</span><span class="stat-label">Teams</span></div>
             <div class="stat-divider"></div>
-            <div class="stat">            <span class="stat-number">3×</span><span class="stat-label">Champions</span></div>
+            <div class="stat"><span class="stat-number">{{ site.data.club.titles_count }}×</span><span class="stat-label">Champions</span></div>
         </div>
     </section>
 
@@ -34,26 +34,24 @@ keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfba
         <section class="training-info glass-morphism">
             <h2>Next Training</h2>
             <div class="training-sessions">
+                {%- for session in site.data.club.training %}
                 <div class="training-session upcoming">
-                    <strong>Tuesdays</strong> — 6:00 PM to 8:00 PM
+                    <strong>{{ session.day }}s</strong> — {{ session.display }}
                 </div>
-                <div class="training-session upcoming">
-                    <strong>Thursdays</strong> — 8:00 PM to 9:00 PM
-                </div>
+                {%- endfor %}
             </div>
-            <p class="training-venue">John Frost School, Newport</p>
-            <a href="https://maps.app.goo.gl/csVguoRKVX1dXAYYA" target="_blank" rel="noopener noreferrer" class="modern-button">Get Directions</a>
+            <p class="training-venue">{{ site.data.club.venue.name }}, {{ site.data.club.venue.locality }}</p>
+            <a href="{{ site.data.club.venue.maps_url }}" target="_blank" rel="noopener noreferrer" class="modern-button">Get Directions</a>
         </section>
 
         <section class="social-section">
             <h2 class="follow-header" id="follow-us">Connect With Us</h2>
             <nav class="social-links" aria-label="Social Media Links">
-                <a href="https://facebook.com/newportcenturions" class="social-link" aria-label="Follow us on Facebook" rel="noopener noreferrer" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/newportkorfball" class="social-link" aria-label="Follow us on Twitter" rel="noopener noreferrer" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://instagram.com/newportkorfball" class="social-link" aria-label="Follow us on Instagram" rel="noopener noreferrer" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://youtube.com/@newportcenturionskorfball5878" class="social-link" aria-label="Subscribe to our YouTube channel" rel="noopener noreferrer" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                {%- for link in site.data.club.social %}
+                <a href="{{ link.url }}" class="social-link" aria-label="Follow us on {{ link.name }}" rel="noopener noreferrer" target="_blank"><i class="fab {{ link.icon }}" aria-hidden="true"></i></a>
+                {%- endfor %}
             </nav>
         </section>
     </div>
 
-</main>
+</div>
