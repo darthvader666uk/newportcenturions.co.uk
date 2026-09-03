@@ -1,0 +1,36 @@
+{%- comment -%}
+  Click-to-load facade for third-party iframes (YouTube, Google Maps).
+
+  Both embeds previously loaded on page view, which set third-party cookies
+  before the visitor had consented to anything — the same PECR/UK GDPR problem
+  the analytics banner solves. They also cost ~600KB (YouTube) and ~1MB (Maps)
+  on pages that mostly don't need them.
+
+  Nothing is requested from the third party until the visitor clicks.
+
+  Parameters:
+    type   - "youtube" | "map"        (required)
+    src    - full iframe src          (required)
+    title  - accessible iframe title  (required)
+    label  - button text              (optional)
+    ratio  - aspect-ratio CSS value   (optional, default 16 / 9)
+{%- endcomment -%}
+{%- assign ratio = include.ratio | default: '16 / 9' -%}
+{%- if include.type == 'youtube' -%}
+  {%- assign default_label = 'Load video' -%}
+  {%- assign provider = 'YouTube' -%}
+  {%- assign icon = 'fa-brands fa-youtube' -%}
+{%- else -%}
+  {%- assign default_label = 'Load map' -%}
+  {%- assign provider = 'Google Maps' -%}
+  {%- assign icon = 'fa-solid fa-location-dot' -%}
+{%- endif -%}
+{%- assign label = include.label | default: default_label -%}
+
+<div class="embed-facade" data-embed-src="{{ include.src }}" data-embed-title="{{ include.title | escape }}" style="aspect-ratio: {{ ratio }};">
+  <button type="button" class="embed-facade-btn">
+    <span class="embed-facade-icon" aria-hidden="true"><i class="{{ icon }}"></i></span>
+    <span class="embed-facade-label">{{ label }}</span>
+    <span class="embed-facade-note">Loads from {{ provider }}. They may set cookies &mdash; see our <span class="embed-facade-link">privacy policy</span>.</span>
+  </button>
+</div>

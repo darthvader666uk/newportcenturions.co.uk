@@ -63,7 +63,7 @@
 
     <!-- Critical CSS -->
     <style>
-        {% include_relative assets/css/critical.min.css %}
+        {% include critical.min.css %}
     </style>
 
     <!-- Preload Font Awesome CSS with font-display: swap -->
@@ -133,7 +133,15 @@
           "publisher": {
             "@id": "{{ site.url }}/#organization"
           },
-          "inLanguage": "en-GB"
+          "inLanguage": "en-GB",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "{{ site.url }}/search/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
         }{% if page.url == '/' %},
         {
           "@type": "WebPage",
@@ -222,9 +230,6 @@
     </script>
     {% endif %}
 
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="{{ '/feed.xml' | relative_url }}">
-
     <!-- DNS Prefetch: only for origins we actually fetch from.
          Social domains are link targets, never fetched; analytics is
          consent-gated; Google Fonts is used on /testimonials/ only, which
@@ -250,9 +255,9 @@
         <a href="#main-content" class="skip-link">Skip to main content</a>
         <div class="site-wrapper">
             <header class="site-header">
-              <div class="wrapper" style="display: flex; align-items: center; gap: 0;">
-                <a class="site-logo" href="{{ "/" | relative_url }}" style="height: 45px; width: 45px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; margin-right: 0.5rem; background: transparent;">
-                  <img src="{{ site.baseurl }}/images/newport-centurions-korfball-club-400.webp" alt="{{ site.title }} Logo" loading="lazy" style="width: 45px; height: 45px; object-fit: cover; display: block; flex-shrink: 0;">
+              <div class="wrapper">
+                <a class="site-logo" href="{{ "/" | relative_url }}">
+                  <img src="{{ site.baseurl }}/images/newport-centurions-korfball-club-400.webp" alt="{{ site.title }} Logo" width="45" height="45" loading="lazy">
                 </a>
                 {% include navigation.html %}
               </div>
@@ -260,11 +265,21 @@
 
             {% include announcement.html %}
 
+            {%- if page.breadcrumb %}
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <ol>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li aria-current="page">{{ page.breadcrumb }}</li>
+              </ol>
+            </nav>
+            {%- endif %}
+
             <main id="main-content" class="page-content" aria-label="Content">
                 {{ content }}
             </main>
             {% include footer.html %}
         </div>
         {% include consent.html %}
+        {% include embed-facade-script.html %}
     </body>
 </html>

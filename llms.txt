@@ -3,6 +3,10 @@ layout: null
 sitemap: false
 ---
 {%- assign club = site.data.club -%}
+{%- assign beginner_dates = '' -%}
+{%- for e in club.season.events -%}
+{%- if e.beginner -%}{%- capture d %}{{ e.date | date: "%-d %b %Y" }}{% endcapture -%}{%- assign beginner_dates = beginner_dates | append: d | append: '|' -%}{%- endif -%}
+{%- endfor -%}
 # {{ club.name }}
 
 > Mixed-gender korfball club in Newport, Wales. {{ club.awards_short }}. Beginners welcome, {{ club.free_sessions_text | downcase }}.
@@ -12,7 +16,7 @@ sitemap: false
 - Location: {{ club.venue.name }}, {{ club.venue.street }}, {{ club.venue.locality }} {{ club.venue.postcode }}, {{ club.venue.region }}
 - Training: {% for t in club.training %}{{ t.day }}s {{ t.display }}{% unless forloop.last %}, {% endunless %}{% endfor %}
 - Season {{ club.season.label }} started: {{ club.season.start_date | date: "%-d %B %Y" }}
-- Beginner sessions: {% for s in club.season.beginner_sessions %}{{ s.date | date: "%-d %b %Y" }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+- Beginner sessions: {{ beginner_dates | split: '|' | join: ', ' }}
 - Founded: {{ club.founded }}
 - Members: {{ club.members }} across {{ club.teams }} competitive teams
 - Minimum age: {{ club.min_age }}
@@ -24,6 +28,7 @@ sitemap: false
 - [/faq/](https://newportcenturions.co.uk/faq/) - Comprehensive FAQ about korfball and joining
 - [/join-us/](https://newportcenturions.co.uk/join-us/) - How to join, step-by-step process, beginner sessions
 - [/events/](https://newportcenturions.co.uk/events/) - Upcoming events and training dates
+- [/fixtures/](https://newportcenturions.co.uk/fixtures/) - Match fixtures and recent results
 - [/glossary/](https://newportcenturions.co.uk/glossary/) - Korfball terminology and definitions
 - [/testimonials/](https://newportcenturions.co.uk/testimonials/) - Member stories and experiences
 - [/sponsors/](https://newportcenturions.co.uk/sponsors/) - Club sponsors and sponsorship opportunities

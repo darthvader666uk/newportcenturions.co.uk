@@ -24,8 +24,7 @@ bundle install
 - **Images**: WebP with `srcset`
 - **PWA**: Web app manifest + service worker
 
-Plugins are limited to the GitHub Pages whitelist: `jekyll-seo-tag`, `jekyll-sitemap`,
-`jekyll-feed`.
+Plugins are limited to the GitHub Pages whitelist: `jekyll-seo-tag` and `jekyll-sitemap`.
 
 ## Project Structure
 
@@ -34,6 +33,7 @@ Plugins are limited to the GitHub Pages whitelist: `jekyll-seo-tag`, `jekyll-sit
 ├── _config.yml                 # Site config + navigation menu
 ├── _data/
 │   ├── club.yml                # ← Single source of truth for club facts
+│   ├── fixtures.yml            # GENERATED from Google Calendar - do not edit
 │   └── sponsors.yml            # Sponsor entries
 ├── _layouts/
 │   └── default.html            # The only layout; every page uses it
@@ -42,9 +42,13 @@ Plugins are limited to the GitHub Pages whitelist: `jekyll-seo-tag`, `jekyll-sit
 │   ├── footer.html
 │   ├── announcement.html       # Announcement bar (auto-filters past dates)
 │   ├── consent.html            # Cookie banner + gated analytics loader
+│   ├── embed-facade.html       # Click-to-load wrapper for YouTube / Maps
+│   ├── training.html           # Renders training times from club.yml
+│   ├── critical.css/.min.css   # Inlined into <head> by the layout
 │   ├── ai-*.html               # JSON-LD structured data blocks
 ├── assets/
-│   ├── css/                    # styles.css + critical.css (+ .min versions)
+│   ├── css/                    # styles.css, fonts.css (+ .min versions)
+│   ├── fonts/                  # Self-hosted subset woff2
 │   ├── favicon/
 │   └── images/
 ├── images/                     # Logo variants
@@ -56,8 +60,7 @@ Plugins are limited to the GitHub Pages whitelist: `jekyll-seo-tag`, `jekyll-sit
 └── .well-known/security.txt
 ```
 
-`sitemap.xml` and `feed.xml` are **generated** by `jekyll-sitemap` / `jekyll-feed` — there
-are no source files for them.
+`sitemap.xml` is **generated** by `jekyll-sitemap` — there is no source file for it.
 
 ## Editing club information
 
@@ -68,11 +71,19 @@ announcement bar.
 
 Do not hardcode these facts into individual pages.
 
-### Beginner session dates
+### Season events
 
-`season.beginner_sessions` in `club.yml` drives the announcement bar. Dates in the past are
-filtered out **at build time**, so the bar never advertises a date that has already passed —
-but this only re-evaluates when the site rebuilds (i.e. on push).
+`season.events` in `club.yml` drives the `/events/` page (cards, `Event` schema and the
+screen-reader list) **and** the announcement bar. Entries marked `beginner: true` also
+appear in the bar. Add a date once and it shows up in all four places.
+
+Past dates are filtered twice, deliberately:
+
+1. **At build time** — so crawlers and AI scrapers only ever see live dates.
+2. **In the browser** — so a date that passes between rebuilds is hidden anyway.
+
+A nightly `scheduled-rebuild.yml` workflow keeps the build-time pass current without
+needing a push.
 
 ## Pages
 
@@ -83,12 +94,14 @@ but this only re-evaluates when the site rebuilds (i.e. on push).
 | What is Korfball? | `/what-is-korfball/` |
 | Join Us | `/join-us/` |
 | Events | `/events/` |
+| Fixtures & Results | `/fixtures/` |
 | FAQ | `/faq/` |
 | Glossary | `/glossary/` |
 | Testimonials | `/testimonials/` |
 | Sponsors | `/sponsors/` |
 | Support Us | `/support/` |
 | Contact | `/contact/` |
+| Search | `/search/` |
 | Privacy Policy | `/privacy/` |
 | Thank You (form redirect, noindex) | `/thank-you/` |
 | Team Store (external) | rcs-teamwear.com |
@@ -111,6 +124,55 @@ The choice is stored in an `nc_consent` cookie for 6 months and can be changed f
 To disable analytics entirely, blank out `analytics_id` at the top of
 `_includes/consent.html`.
 
+## Fixtures
+
+`/fixtures/` renders from `_data/fixtures.yml`, which is **generated** — never
+edit it by hand. The `sync-fixtures.yml` workflow pulls the club's Google
+Calendar nightly, converts it to YAML and commits only if something changed.
+To change a fixture, edit the calendar.
+
+Because the fixtures end up as static HTML, they are indexable by Google, get
+`SportsEvent` schema, match the site theme and load no third-party code.
+
+The club calendar is **private and stays private** — because the sync turns it into
+committed data, visitors never need access to it.
+
+**One-off setup** (until this is done the page shows an empty state and the
+workflow exits cleanly):
+
+1. Google Calendar → the fixtures calendar → *Settings and sharing*
+2. Scroll to *Integrate calendar* and copy the **Secret address in iCal format**
+   (it ends in `.ics`)
+3. Repo → Settings → Secrets and variables → Actions → **Secrets** tab →
+   *New repository secret*, named `FIXTURES_ICS_URL`
+4. Run *Sync Fixtures* once from the Actions tab to confirm
+
+> It must be a **secret**, not a variable. This repo is public, and only secrets
+> are masked in workflow logs. The sync script never prints the URL either.
+
+If you ever hit *Reset* on the secret address in Google Calendar, the old URL stops
+working — update the secret with the new one. The workflow will fail with a message
+telling you exactly that.
+
+Recurring calendar entries are expanded into individual dates. Home/away is
+inferred from whether the event location matches the club venue.
+
+## Search
+
+`/search/` is client-side: `search.json` is generated at build time from every
+page, and the page filters it in the browser. No index to maintain and no
+third-party service.
+
+## Third-party embeds
+
+The Google Map on `/contact/` and the YouTube video on `/what-is-korfball/` use
+a **click-to-load facade** (`_includes/embed-facade.html`). Nothing is requested
+from Google or YouTube until the visitor clicks, which keeps them out of the
+consent problem and saves ~1.5MB of payload.
+
+Fonts are self-hosted in `assets/fonts/` (subset) rather than loaded from
+Google Fonts.
+
 ## Service Worker
 
 `sw.js` is **network-first for HTML** and stale-while-revalidate for assets. This matters:
@@ -124,14 +186,20 @@ Bump `CACHE_VERSION` in `sw.js` when changing the precache list.
 - JSON-LD: Organization, WebSite, SportsTeam, SportsActivityLocation, Event, FAQPage,
   HowTo, BreadcrumbList
 - `llms.txt` provides a plain-text summary for AI crawlers
-- Generated `sitemap.xml` and Atom `feed.xml`
+- Generated `sitemap.xml`
 
 ## Deployment
 
 Pushing to `master` deploys automatically via GitHub Pages.
 
-The `.github/workflows/minify-all-css.yml` workflow minifies `assets/css/*.css` on push and
-commits the `.min.css` files back.
+Workflows:
+
+| Workflow | What it does |
+|---|---|
+| `build-check.yml` | Builds the site, validates all JSON-LD, runs htmlproofer on internal links and images. Runs on PRs and pushes. |
+| `minify-all-css.yml` | Minifies `assets/css/*.css` and `_includes/*.css`, commits the `.min.css` files back. |
+| `sync-fixtures.yml` | Pulls the Google Calendar into `_data/fixtures.yml` nightly, commits on change. |
+| `scheduled-rebuild.yml` | Nightly Pages rebuild so build-time date filtering stays current without a push. |
 
 ### A note on security headers
 

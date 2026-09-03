@@ -1,0 +1,12 @@
+{%- comment -%}
+  Renders the training schedule from _data/club.yml so it is never hardcoded.
+
+  Usage:
+    {% include training.html %}                          -> Tuesdays 6:00 PM to 8:00 PM and Thursdays 8:00 PM to 9:00 PM
+    {% include training.html format="short" %}           -> Tuesdays 6–8pm and Thursdays 8–9pm
+    {% include training.html format="short" separator=" · " %}
+{%- endcomment -%}
+{%- assign sep = include.separator | default: ' and ' -%}
+{%- for t in site.data.club.training -%}
+{{ t.day }}s {% if include.format == 'short' %}{{ t.display_short }}{% else %}{{ t.display }}{% endif %}{%- unless forloop.last -%}{{ sep }}{%- endunless -%}
+{%- endfor -%}

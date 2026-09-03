@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contact Newport Centurions Korfball Club
+title: "Contact Us"
 description: Get in touch with Newport Centurions Korfball Club. Contact us about training sessions, joining the club, or general inquiries.
 permalink: /contact/
 breadcrumb: "Contact"
@@ -15,25 +15,26 @@ breadcrumb: "Contact"
   <div class="contact-cards">
     <div class="contact-card">
       <span class="contact-icon">✉</span>
-      <h3>Email</h3>
+      <h2>Email</h2>
       <a href="mailto:Newportkorfball@gmail.com">Newportkorfball@gmail.com</a>
     </div>
     <div class="contact-card">
       <span class="contact-icon">📍</span>
-      <h3>Training</h3>
-      <p>John Frost School, Duffryn, NP10 8YD</p>
-      <p class="contact-small">Tuesdays 6–8pm · Thursdays 8–9pm</p>
+      <h2>Training</h2>
+      <p>{{ site.data.club.venue.short }}</p>
+      <p class="contact-small">{% include training.html format="short" separator=" · " %}</p>
     </div>
     <div class="contact-card">
       <span class="contact-icon">⏱</span>
-      <h3>Response Time</h3>
+      <h2>Response Time</h2>
       <p>We aim to reply within 48 hours</p>
     </div>
   </div>
 
   <!-- Map -->
   <div class="contact-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.5!2d-3.010415!3d51.558437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4871e3fdc41354f7%3A0x2ec24eba9bb77527!2sThe%20John%20Frost%20School!5e0!3m2!1sen!2suk!4v1" width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="The John Frost School, Duffryn, Newport NP10 8YD"></iframe>
+    {% include embed-facade.html type="map" ratio="16 / 9" label="Show map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.5!2d-3.010415!3d51.558437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4871e3fdc41354f7%3A0x2ec24eba9bb77527!2sThe%20John%20Frost%20School!5e0!3m2!1sen!2suk!4v1" title="The John Frost School, Duffryn, Newport NP10 8YD" %}
+    <p class="contact-map-link"><a href="{{ site.data.club.venue.maps_url }}" target="_blank" rel="noopener noreferrer">Open in Google Maps &rarr;</a></p>
   </div>
 
   <!-- Form -->

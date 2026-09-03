@@ -5,21 +5,8 @@
   "@type": "Article",
   "headline": "{{ page.title | default: site.title }}",
   "description": "{{ page.description | default: site.description }}",
-  "author": {
-    "@type": "Organization",
-    "name": "Newport Centurions Korfball Club",
-    "url": "https://newportcenturions.co.uk"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Newport Centurions Korfball Club",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://newportcenturions.co.uk/images/newport-centurions-korfball-club.webp",
-      "width": 400,
-      "height": 400
-    }
-  },
+  "author": { "@id": "{{ site.url }}/#organization" },
+  "publisher": { "@id": "{{ site.url }}/#organization" },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ page.url | absolute_url }}"
@@ -57,7 +44,7 @@
     {
       "@type": "Event",
       "name": "Training Sessions",
-      "description": "Regular korfball training sessions held on Tuesdays 6:00-8:00 PM and Thursdays 8:00-9:00 PM at John Frost School, Newport"
+      "description": "Regular korfball training sessions held on {% include training.html %} at {{ site.data.club.venue.name }}, {{ site.data.club.venue.locality }}"
     }
   ],
   "isAccessibleForFree": true,

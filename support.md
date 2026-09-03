@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Support Newport Centurions KC
+title: "Support the Club"
 description: Find out how you can support Newport Centurions Korfball Club through volunteering, sponsorship, or donations. Help us grow korfball in Newport.
 permalink: /support/
 breadcrumb: "Support"
@@ -12,9 +12,11 @@ breadcrumb: "Support"
         <p>Did you know that whenever you buy anything online – from your weekly shop to your annual holiday – you could be raising free donations for Newport Centurion Korfball with easyfundraising?</p>
         <p>There are over 8,000 retailers on board ready to make a donation – including eBay, Argos, John Lewis & Partners, ASOS, Booking.com and M&S – and it won’t cost you a penny extra to help us raise funds.</p>
 
-        <h3>How it Works:</h3>
     <h2>How Your Support Helps Korfball Training in Newport</h2>
-    <p>Your donations and sponsorship help us run korfball training sessions at John Frost School, Newport, and support our mixed gender team sport. We welcome men and women, male and female players, and encourage everyone to try beginner korfball in Newport.</p>
+
+
+        <h3>How it Works:</h3>
+    <p>Your donations and sponsorship help us run korfball training sessions at {{ site.data.club.venue.name }}, {{ site.data.club.venue.locality }}, and support our mixed gender team sport. We welcome men and women, male and female players, and encourage everyone to try beginner korfball in Newport.</p>
         <ol class="steps-list">
             <li>Go to <a href="https://www.easyfundraising.org.uk/support-a-good-cause/step-1/?char=360907&invite=eekd2u&referral-campaign=s2s&utm_campaign=web-referral" rel="noopener noreferrer" target="_blank" class="ef-link">easyfundraising.org.uk/causes/newport-centurion-korfball/</a> and join for free.</li>
             <li>Every time you shop online, go to easyfundraising first to find the site you want and start shopping.</li>

@@ -1,30 +1,80 @@
 {%- comment -%}
-  Announcement bar. Beginner-session dates come from _data/club.yml and are
-  filtered to upcoming ones at build time, so a passed date drops off on the
-  next rebuild instead of sitting there advertising a date in the past.
+  Announcement bar. Beginner-session dates come from _data/club.yml.
 
-  Falls back to an evergreen message once the intake has finished.
+  Filtered twice, deliberately:
+    1. At BUILD time  — past dates never reach the HTML, so crawlers and AI
+                        scrapers only ever see live dates.
+    2. At RUNTIME     — a date that passes between rebuilds is hidden in the
+                        browser, so the bar can't advertise yesterday.
+
+  Falls back to an evergreen message once every date has gone.
 {%- endcomment -%}
+{%- assign club = site.data.club -%}
 {%- assign today = 'now' | date: '%Y-%m-%d' -%}
 {%- assign upcoming = '' -%}
-{%- for session in site.data.club.season.beginner_sessions -%}
-  {%- assign session_date = session.date | date: '%Y-%m-%d' -%}
-  {%- if session_date >= today -%}
-    {%- capture label %}{{ session.date | date: '%-d %b' }}{% endcapture -%}
-    {%- assign upcoming = upcoming | append: label | append: '|' -%}
+{%- for event in club.season.events -%}
+  {%- if event.beginner -%}
+    {%- assign event_date = event.date | date: '%Y-%m-%d' -%}
+    {%- if event_date >= today -%}
+      {%- assign upcoming = upcoming | append: event_date | append: '|' -%}
+    {%- endif -%}
   {%- endif -%}
 {%- endfor -%}
 {%- assign upcoming_list = upcoming | split: '|' -%}
 
-<div class="announcement-bar">
+<div class="announcement-bar" id="announcement-bar">
   <a href="/join-us/">
-    {%- if upcoming_list.size > 0 -%}
-      <span class="announce-next">Beginners welcome!</span>
-      Next sessions: {{ upcoming_list | join: ', ' }}
-    {%- else -%}
-      <span class="announce-next">Beginners welcome!</span>
-      Training {% for t in site.data.club.training %}{{ t.day }}s{% unless forloop.last %} &amp; {% endunless %}{% endfor %} &mdash; {{ site.data.club.free_sessions_text | downcase }}
-    {%- endif -%}
+    <span class="announce-next">Beginners welcome!</span>
+    {%- if upcoming_list.size > 0 %}
+    <span class="announce-dates" data-announce-dates>Next sessions:
+      {%- for date in upcoming_list %}
+      <span class="announce-date" data-date="{{ date }}">{{ date | date: '%-d %b' }}</span>{% unless forloop.last %}<span class="announce-sep">,</span>{% endunless %}
+      {%- endfor %}
+    </span>
+    {%- endif %}
+    <span class="announce-fallback" {% if upcoming_list.size > 0 %}hidden{% endif %} data-announce-fallback>
+      Training {% for t in club.training %}{{ t.day }}s{% unless forloop.last %} &amp; {% endunless %}{% endfor %} &mdash; {{ club.free_sessions_text | downcase }}
+    </span>
     <span class="announce-cta">Join Free &rarr;</span>
   </a>
 </div>
+
+<script>
+// Hide beginner dates that have passed since the last rebuild.
+(function () {
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  var dates = document.querySelectorAll('.announce-date[data-date]');
+  var remaining = 0;
+
+  dates.forEach(function (el) {
+    var when = new Date(el.getAttribute('data-date') + 'T23:59:59');
+    if (when < today) {
+      el.hidden = true;
+      var sep = el.nextElementSibling;
+      if (sep && sep.classList.contains('announce-sep')) { sep.hidden = true; }
+    } else {
+      remaining++;
+    }
+  });
+
+  if (dates.length && remaining === 0) {
+    var list = document.querySelector('[data-announce-dates]');
+    var fallback = document.querySelector('[data-announce-fallback]');
+    if (list) { list.hidden = true; }
+    if (fallback) { fallback.hidden = false; }
+  }
+
+  // Drop a dangling comma if the last visible date was removed.
+  var seps = document.querySelectorAll('.announce-sep:not([hidden])');
+  var lastVisible = null;
+  document.querySelectorAll('.announce-date').forEach(function (el) {
+    if (!el.hidden) { lastVisible = el; }
+  });
+  if (lastVisible) {
+    var trailing = lastVisible.nextElementSibling;
+    if (trailing && trailing.classList.contains('announce-sep')) { trailing.hidden = true; }
+  }
+})();
+</script>

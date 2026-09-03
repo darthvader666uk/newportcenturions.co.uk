@@ -21,7 +21,10 @@ jobs:
         run: npm install -g clean-css-cli
       - name: Find and minify all CSS files
         run: |
-          for f in assets/css/*.css; do
+          # critical.css lives in _includes/ because it is inlined into <head>
+          # rather than served as a URL.
+          for f in assets/css/*.css _includes/*.css; do
+            [ -e "$f" ] || continue
             if [[ $f != *.min.css ]]; then
               minf="${f%.css}.min.css"
               cleancss -o "$minf" "$f"
@@ -31,6 +34,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add assets/css/*.min.css
+          git add assets/css/*.min.css _includes/*.min.css
           git commit -m 'Auto-minify all CSS files [skip ci]' || echo 'No changes to commit'
           git push

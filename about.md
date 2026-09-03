@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About Newport Centurions Korfball Club
+title: "About Us"
 description: Newport Centurions — Welsh League Champions 3 times. Mixed-gender korfball for all ages & abilities. Beginners welcome, first 2 sessions free.
 type: AboutPage # Hint for jekyll-seo-tag
 permalink: /about/
@@ -16,15 +16,15 @@ keywords: about korfball, about newport centurions, korfball club newport, welsh
   <!-- Mission cards -->
   <div class="mission-cards">
     <div class="mission-card">
-      <h3>Mixed-Gender Sport</h3>
+      <h2>Mixed-Gender Sport</h2>
       <p>4 men + 4 women per team. True equality on court — no other team sport does it like korfball.</p>
     </div>
     <div class="mission-card">
-      <h3>Inclusive &amp; Welcoming</h3>
+      <h2>Inclusive &amp; Welcoming</h2>
       <p>Every player was a beginner once. We teach you everything. No experience needed, no judgement.</p>
     </div>
     <div class="mission-card">
-      <h3>Competitive Spirit</h3>
+      <h2>Competitive Spirit</h2>
       <p>3 teams competing across Welsh League divisions and the Western Regional League.</p>
     </div>
   </div>
@@ -35,35 +35,35 @@ keywords: about korfball, about newport centurions, korfball club newport, welsh
     <div class="timeline-item">
       <span class="timeline-year">2019</span>
       <div class="timeline-content">
-        <h4>Club Founded</h4>
+        <h3>Club Founded</h3>
         <p>Newport Centurions Korfball Club established in Newport, Wales.</p>
       </div>
     </div>
     <div class="timeline-item">
       <span class="timeline-year">2022</span>
       <div class="timeline-content">
-        <h4>First Welsh League Title</h4>
+        <h3>First Welsh League Title</h3>
         <p>Crowned Welsh League Champions for the first time.</p>
       </div>
     </div>
     <div class="timeline-item">
       <span class="timeline-year">2023</span>
       <div class="timeline-content">
-        <h4>Back-to-Back Champions</h4>
+        <h3>Back-to-Back Champions</h3>
         <p>Defended the title — Welsh League Champions 2022/23.</p>
       </div>
     </div>
     <div class="timeline-item">
       <span class="timeline-year">2025</span>
       <div class="timeline-content">
-        <h4>Third Title &amp; Regional Move</h4>
+        <h3>Third Title &amp; Regional Move</h3>
         <p>Won Welsh League again. 1st team promoted to Western Regional League.</p>
       </div>
     </div>
     <div class="timeline-item">
       <span class="timeline-year">Now</span>
       <div class="timeline-content">
-        <h4>30+ Members, 3 Teams</h4>
+        <h3>30+ Members, 3 Teams</h3>
         <p>Growing every season. Beginners always welcome.</p>
       </div>
     </div>
@@ -73,15 +73,15 @@ keywords: about korfball, about newport centurions, korfball club newport, welsh
   <h2>Our Teams</h2>
   <div class="team-cards">
     <div class="team-card">
-      <h4>1st Team</h4>
+      <h3>1st Team</h3>
       <p>Western Regional League</p>
     </div>
     <div class="team-card">
-      <h4>2nd Team</h4>
+      <h3>2nd Team</h3>
       <p>Welsh League — Top Division</p>
     </div>
     <div class="team-card">
-      <h4>3rd Team</h4>
+      <h3>3rd Team</h3>
       <p>Welsh League — Development</p>
     </div>
   </div>

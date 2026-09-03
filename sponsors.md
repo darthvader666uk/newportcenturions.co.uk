@@ -1,5 +1,5 @@
 ---
-title: Sponsors – Newport Centurions KC
+title: "Sponsors & Partners"
 description: "Meet our valued sponsors supporting Newport Centurions Korfball Club. Discover sponsorship opportunities for sports partnerships in South Wales korfball."
 layout: default
 permalink: /sponsors/
@@ -163,7 +163,7 @@ target_audience: "local-businesses,sponsors,korfball-community"
   },
   "parentOrganization": {
     "@type": "Organization",
-    "@id": "https://newportcenturions.co.uk#organization",
+    "@id": "https://newportcenturions.co.uk/#organization",
     "name": "Newport Centurions Korfball Club"
   },
   "sponsor": {

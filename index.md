@@ -6,8 +6,6 @@ seo_title: false
 keywords: korfball, newport korfball, welsh korfball, mixed gender sport, korfball club, korfball training, korfball wales, join korfball, korfball beginners, korfball south wales
 ---
 
-{% include ai-answer-snippets.html %}
-
 <div class="modern-container" itemscope itemtype="https://schema.org/SportsTeam">
 
     <!-- Hero: Bold headline + stats strip -->

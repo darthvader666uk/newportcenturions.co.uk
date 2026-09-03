@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Korfball FAQ – Newport Centurions
+title: "Korfball FAQ"
 description: Frequently asked questions about korfball, mixed-gender sports, Newport Centurions club, training, and how to join our team.
 permalink: /faq/
 breadcrumb: "FAQ"
@@ -425,11 +425,11 @@ type: FAQPage
       </div>
     </div>
 
-    <div class="cta-section" style="background: linear-gradient(135deg, rgba(251, 179, 4, 0.1) 0%, rgba(251, 132, 4, 0.05) 100%); padding: 2rem; border-radius: 8px; color: white; text-align: center; margin-top: 3rem; border-left: 4px solid var(--logo-primary-orange, #fbb304);">
-      <h2 style="color: var(--logo-primary-orange, #fbb304); margin-top: 0;">Still have questions?</h2>
-      <p style="color: rgba(255, 255, 255, 0.8);">Don't worry! Our friendly team is always happy to help.</p>
-      <a href="/contact/" class="modern-button" style="background: var(--logo-primary-orange, #fbb304); color: #000; font-weight: bold; text-decoration: none;">Contact Us Today</a>
-      <p style="margin-top: 1rem; font-size: 0.95em; color: rgba(255, 255, 255, 0.7);">Or just turn up to a training session - that's the best way to experience Newport Centurions!</p>
+    <div class="page-cta page-cta--center">
+      <h2>Still have questions?</h2>
+      <p>Don't worry! Our friendly team is always happy to help.</p>
+      <a href="/contact/" class="modern-button">Contact Us Today</a>
+      <p class="page-cta-note">Or just turn up to a training session &mdash; that's the best way to experience {{ site.data.club.short_name }}!</p>
     </div>
 
   </div>

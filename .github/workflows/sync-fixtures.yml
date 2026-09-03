@@ -1,0 +1,67 @@
+name: Sync Fixtures
+
+# Pulls the club's Google Calendar into _data/fixtures.yml so /fixtures/ can be
+# rendered as static HTML — indexable, fast, themed, and with no third-party
+# code on the page.
+#
+# The calendar is PRIVATE and stays that way. Because this job turns it into
+# committed data, visitors never need access to it: they only ever see the
+# generated HTML.
+#
+# SETUP (one-off):
+#   1. Google Calendar → the fixtures calendar → Settings and sharing
+#   2. Scroll to "Integrate calendar" and copy the
+#      **Secret address in iCal format** (ends in .ics)
+#   3. Repo → Settings → Secrets and variables → Actions → Secrets tab →
+#      New repository secret, named FIXTURES_ICS_URL
+#   4. Run this workflow once from the Actions tab to confirm it works
+#
+# It must be a SECRET, not a variable. This repo is public, and only secrets
+# are masked in workflow logs.
+#
+# If you ever hit "Reset" on the secret address in Google Calendar, the old URL
+# stops working — update the secret with the new one.
+#
+# Until the secret exists the job exits cleanly without writing anything, so
+# the site keeps building and /fixtures/ shows its empty state.
+
+on:
+  schedule:
+    # 03:30 UTC daily, before the scheduled site rebuild at 04:15.
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install --quiet icalendar recurring-ical-events pyyaml
+
+      - name: Sync fixtures from Google Calendar
+        env:
+          # Secret only — a repository variable would not be masked in logs.
+          FIXTURES_ICS_URL: ${{ secrets.FIXTURES_ICS_URL }}
+        run: python3 .github/scripts/sync-fixtures.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- _data/fixtures.yml; then
+            echo "No fixture changes."
+            exit 0
+          fi
+          git config user.name 'github-actions'
+          git config user.email 'github-actions@github.com'
+          git add _data/fixtures.yml
+          git commit -m 'Update fixtures from Google Calendar [skip ci]'
+          git push

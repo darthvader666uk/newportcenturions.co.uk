@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Events – Newport Centurions KC
+title: "Training & Events"
 description: Upcoming events, training sessions, and beginner dates for Newport Centurions Korfball Club. Find out when and where we train in Newport, Wales.
 permalink: /events/
 breadcrumb: "Events"
@@ -80,13 +80,6 @@ breadcrumb: "Events"
       {% for t in club.training %}{{ t.day }}s {{ t.display }}{% unless forloop.last %} and {% endunless %}{% endfor %}
       all season. <a href="/contact/">Get in touch</a> and come along.</p>
 
-  <!-- Crawlable event list for AI search engines -->
-  <div class="sr-only">
-    <h2>Upcoming {{ club.short_name }} Events</h2>
-    {%- for event in club.season.events %}
-    <p>{{ event.date | date: '%B %-d, %Y' }} - {{ event.title }} - {{ event.tag }} - {{ event.time_display }} at {{ venue.name }}, {{ venue.street }}, {{ venue.locality }} {{ venue.postcode }}. {{ event.description }}{% if event.beginner %} {{ club.free_sessions_text }}.{% endif %}</p>
-    {%- endfor %}
-  </div>
   </div>
 
   <div class="events-cta">

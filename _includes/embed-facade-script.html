@@ -1,0 +1,28 @@
+{%- comment -%}
+  Activates any .embed-facade on the page. Loaded once from the layout.
+{%- endcomment -%}
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.embed-facade-btn');
+    if (!btn) { return; }
+
+    var wrap = btn.closest('.embed-facade');
+    if (!wrap || wrap.dataset.loaded) { return; }
+
+    var iframe = document.createElement('iframe');
+    iframe.src = wrap.dataset.embedSrc;
+    iframe.title = wrap.dataset.embedTitle || '';
+    iframe.loading = 'lazy';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.setAttribute('allow',
+      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+
+    wrap.dataset.loaded = 'true';
+    wrap.innerHTML = '';
+    wrap.appendChild(iframe);
+    iframe.focus();
+  });
+})();
+</script>

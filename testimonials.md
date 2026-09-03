@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Member Testimonials – Newport Centurions
+title: "Member Testimonials"
 description: Real stories from Newport Centurions members. Find out why players love our mixed-gender korfball club in Newport, South Wales. Beginner-friendly and welcoming.
 permalink: /testimonials/
 breadcrumb: "Testimonials"
@@ -12,9 +12,12 @@ include_testimonial_schema: true
 {% include ai-testimonials-schema.html %}
 {% endif %}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<!-- Self-hosted fonts (see assets/css/fonts.css). Previously loaded from
+     fonts.googleapis.com, which exposed visitor IPs to Google and blocked
+     rendering on a third-party round trip. Only this page uses them. -->
+<link rel="preload" href="{{ '/assets/fonts/poppins-600-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/rubik-distressed-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
 
 <style>
   main.page-content { max-width: 1500px !important; }

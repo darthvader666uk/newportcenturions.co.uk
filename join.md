@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Join Newport Centurions Korfball Club
+title: "Join Us"
 description: Become a part of Newport Centurions Korfball Club! Learn about our mixed-gender sport, training sessions in Newport, and how to join our friendly team.
 permalink: /join-us/
 breadcrumb: "Join Us"
@@ -27,17 +27,17 @@ include_howto_schema: true
   <div class="join-steps">
     <div class="join-step">
       <span class="step-number">1</span>
-      <h3 class="step-title">Show Up</h3>
-      <p class="step-desc">Come to a training session at John Frost School. No kit, no commitment — just you.</p>
+      <h2 class="step-title">Show Up</h2>
+      <p class="step-desc">Come to a training session at {{ site.data.club.venue.name }}. No kit, no commitment — just you.</p>
     </div>
     <div class="join-step">
       <span class="step-number">2</span>
-      <h3 class="step-title">Try It Out</h3>
+      <h2 class="step-title">Try It Out</h2>
       <p class="step-desc">Your first 2 sessions are free. Learn the basics, meet the team, see if you like it.</p>
     </div>
     <div class="join-step">
       <span class="step-number">3</span>
-      <h3 class="step-title">Join the Club</h3>
+      <h2 class="step-title">Join the Club</h2>
       <p class="step-desc">If you enjoy it, complete membership and become a Centurion. That's it.</p>
     </div>
   </div>
@@ -47,11 +47,11 @@ include_howto_schema: true
     <h2>Training Sessions</h2>
     <div class="training-detail">
       <span class="training-label">When</span>
-      <span class="training-value">Tuesdays 6–8pm &amp; Thursdays 8–9pm</span>
+      <span class="training-value">{% include training.html format="short" separator=" &amp; " %}</span>
     </div>
     <div class="training-detail">
       <span class="training-label">Where</span>
-      <span class="training-value">John Frost School, Newport</span>
+      <span class="training-value">{{ site.data.club.venue.name }}, {{ site.data.club.venue.locality }}</span>
     </div>
     <div class="training-detail">
       <span class="training-label">Bring</span>

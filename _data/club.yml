@@ -42,11 +42,13 @@ training:
     start: "18:00"
     end: "20:00"
     display: "6:00 PM to 8:00 PM"
+    display_short: "6–8pm"
   - day: Thursday
     schema_day: Thursday
     start: "20:00"
     end: "21:00"
     display: "8:00 PM to 9:00 PM"
+    display_short: "8–9pm"
 
 # --- Season -----------------------------------------------------------------
 # `events` drives /events/ (cards + Event schema + screen-reader list) and the

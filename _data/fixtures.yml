@@ -1,0 +1,12 @@
+# GENERATED FILE - DO NOT EDIT BY HAND.
+#
+# Written by .github/workflows/sync-fixtures.yml from the club's Google
+# Calendar. To change a fixture, edit the calendar; the next sync picks
+# it up. Edits made here will be overwritten.
+#
+# Currently empty because FIXTURES_ICS_URL has not been configured yet --
+# see the setup notes at the top of .github/workflows/sync-fixtures.yml.
+
+generated: null
+source: Google Calendar
+fixtures: []

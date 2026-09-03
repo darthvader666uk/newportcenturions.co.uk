@@ -1,6 +1,72 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Search results page and its index are for visitors, not crawlers --
+# thin/duplicate content with nothing unique to rank.
+Disallow: /search/
+Disallow: /search.json
+
+# ---------------------------------------------------------------------------
+# AI assistants and answer engines
+#
+# Explicitly allowed. This is a small amateur sports club: being quotable by
+# ChatGPT, Claude, Perplexity and Google's AI surfaces is how people find a
+# sport they have never heard of. See /llms.txt for a plain-text summary.
+#
+# To opt out of any of these later, change its Allow to Disallow.
+# ---------------------------------------------------------------------------
+
+# OpenAI
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+Allow: /
+
+# Google (Gemini / AI Overviews grounding)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+
+# Microsoft Copilot
+User-agent: bingbot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (feeds many downstream models)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+User-agent: FacebookBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Sitemap
 Sitemap: https://newportcenturions.co.uk/sitemap.xml
-Sitemap: https://newportcenturions.co.uk/feed.xml

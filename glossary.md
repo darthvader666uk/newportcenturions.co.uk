@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Korfball Glossary - Terms & Definitions
+title: "Korfball Glossary"
 description: Learn korfball terminology and sport-specific definitions. Understand key terms used in mixed-gender korfball, from shooting to defending.
 keywords: korfball glossary, korfball terms, korfball definitions, sports terminology, mixed-gender sport
 permalink: /glossary/
@@ -92,7 +92,7 @@ breadcrumb: "Glossary"
     {
       "@type": "Definition",
       "term": "Training Session",
-      "description": "A scheduled time for team members to practice korfball skills, improve fitness, and work on team tactics. Newport Centurions holds training on Tuesdays and Thursdays."
+      "description": "A scheduled time for team members to practice korfball skills, improve fitness, and work on team tactics. Newport Centurions holds training on {% for t in site.data.club.training %}{{ t.day }}s{% unless forloop.last %} and {% endunless %}{% endfor %}."
     }
   ]
 }
@@ -199,8 +199,8 @@ breadcrumb: "Glossary"
 
         <div class="glossary-item" itemscope itemtype="https://schema.org/Definition">
           <h3 itemprop="term">Training Session</h3>
-          <p itemprop="description">A scheduled time for team members to practice korfball skills, improve fitness, and work on team tactics. Newport Centurions holds training on Tuesdays and Thursdays.</p>
-          <p class="definition-note"><strong>Newport times:</strong> Tuesdays 6-8 PM, Thursdays 8-9 PM</p>
+          <p itemprop="description">A scheduled time for team members to practice korfball skills, improve fitness, and work on team tactics. Newport Centurions holds training on {% for t in site.data.club.training %}{{ t.day }}s{% unless forloop.last %} and {% endunless %}{% endfor %}.</p>
+          <p class="definition-note"><strong>Newport times:</strong> {% include training.html format="short" separator=", " %}</p>
         </div>
 
         <div class="glossary-item" itemscope itemtype="https://schema.org/Definition">
@@ -217,10 +217,10 @@ breadcrumb: "Glossary"
       </section>
     </div>
 
-    <div class="glossary-cta" style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(251, 179, 4, 0.1) 0%, rgba(251, 132, 4, 0.05) 100%); border-radius: 8px; border-left: 4px solid var(--logo-primary-orange, #fbb304);">
+    <div class="page-cta">
       <h3>Ready to Play?</h3>
-      <p>Now that you understand korfball terminology, why not <a href="/join-us/">join Newport Centurions</a> and experience this amazing mixed-gender sport?</p>
-      <a href="/join-us/" class="btn-primary" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: var(--logo-primary-orange, #fbb304); color: #000; text-decoration: none; border-radius: 4px; font-weight: 600;">Join Our Training Sessions</a>
+      <p>Now that you understand korfball terminology, why not <a href="/join-us/">join {{ site.data.club.short_name }}</a> and experience this amazing mixed-gender sport?</p>
+      <a href="/join-us/" class="modern-button">Join Our Training Sessions</a>
     </div>
 
   <div class="related-pages">

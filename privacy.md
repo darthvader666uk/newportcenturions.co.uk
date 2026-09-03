@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Privacy Policy – Newport Centurions KC
+title: "Privacy Policy"
 description: How Newport Centurions Korfball Club collects, uses and protects your personal data, including our use of cookies and analytics.
 permalink: /privacy/
 breadcrumb: "Privacy Policy"
@@ -68,8 +68,11 @@ robots: "index, follow"
       <li><strong>FormSubmit</strong> — delivers contact form submissions to our email.</li>
       <li><strong>Google Analytics</strong> — only if you consent.</li>
       <li><strong>Cloudflare (cdnjs)</strong> — serves the icon font used on this site.</li>
-      <li><strong>Google Fonts</strong> — serves web fonts on our testimonials page. Google receives your IP address when those fonts load.</li>
     </ul>
+
+    <h2>Embedded content</h2>
+    <p>Our <a href="/contact/">contact page</a> has a Google Map and our <a href="/what-is-korfball/">what is korfball</a> page has a YouTube video. Neither loads automatically &mdash; each shows a placeholder until you click it. Nothing is requested from Google or YouTube, and no cookies are set by them, unless you choose to load the embed.</p>
+    <p>If you do load one, that provider receives your IP address and may set its own cookies under its own privacy policy. The video uses YouTube's no-cookie domain, which reduces (but does not eliminate) tracking.</p>
 
     <h2>Young people</h2>
     <p>Our playing membership is open to those aged {{ site.data.club.min_age }} and over. We do not knowingly collect data from children under 13 through this website. If you believe a child has sent us their details, contact us and we will delete them.</p>
