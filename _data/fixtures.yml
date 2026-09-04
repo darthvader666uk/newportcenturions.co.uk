@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-09-04T15:16:03Z'
+generated: '2026-09-04T15:37:03Z'
 source: Google Calendar
 categories:
 - key: game
@@ -487,6 +487,40 @@ fixtures:
   home_slug: null
   away_slug: null
   id: e27
+- title: Newport 3 V Cardiff Uni 2
+  date: 2026-11-14
+  date_iso: '2026-11-14'
+  start_time: '11:30'
+  end_time: '12:30'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: 'Match Start: 12:10pm'
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 3
+  away_team: Cardiff Uni 2
+  home_slug: newport
+  away_slug: cardiff-uni
+  id: e28
+- title: Newport 2 V Raptors 4
+  date: 2026-11-14
+  date_iso: '2026-11-14'
+  start_time: '13:40'
+  end_time: '15:40'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 2
+  away_team: Raptors 4
+  home_slug: newport
+  away_slug: raptors
+  id: e29
 - title: University of Exeter 1 V Newport Centurions
   date: 2026-11-15
   date_iso: '2026-11-15'
@@ -504,7 +538,7 @@ fixtures:
   away_team: Newport Centurions
   home_slug: university-of-exeter
   away_slug: newport
-  id: e28
+  id: e30
 - title: Committee meeting (Exact time tbc)
   date: 2026-11-19
   date_iso: '2026-11-19'
@@ -521,7 +555,59 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e29
+  id: e31
+- title: Newport 2 V Swansea Roar 1
+  date: 2026-11-22
+  date_iso: '2026-11-22'
+  start_time: '11:10'
+  end_time: '13:10'
+  location: Pontardawe Leisure Centre, Parc Ynysderw, Ffordd Parc Ynysderw, Pontardawe,
+    Swansea SA8 4EG, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 2
+  away_team: Swansea Roar 1
+  home_slug: newport
+  away_slug: swansea-roar
+  id: e32
+- title: Newport 2 V RCT Comets 1
+  date: 2026-11-29
+  date_iso: '2026-11-29'
+  start_time: '12:40'
+  end_time: '14:40'
+  location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 2
+  away_team: RCT Comets 1
+  home_slug: newport
+  away_slug: rct-comets
+  id: e33
+- title: Raptors 5 V Newport 3
+  date: 2026-11-29
+  date_iso: '2026-11-29'
+  start_time: '14:10'
+  end_time: '15:40'
+  location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Raptors 5
+  away_team: Newport 3
+  home_slug: raptors
+  away_slug: newport
+  id: e34
 - title: Bristol City 1 V Newport Centurions
   date: 2026-12-06
   date_iso: '2026-12-06'
@@ -538,7 +624,7 @@ fixtures:
   away_team: Newport Centurions
   home_slug: bristol-city
   away_slug: newport
-  id: e30
+  id: e35
 - title: Ice Hockey
   date: 2026-12-06
   date_iso: '2026-12-06'
@@ -555,7 +641,58 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e31
+  id: e36
+- title: Raptors 5 V Newport 3
+  date: 2027-01-16
+  date_iso: '2027-01-16'
+  start_time: '10:10'
+  end_time: '11:40'
+  location: Caerphilly Leisure Centre, Virginia Cl, Caerphilly CF83 3SW, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Raptors 5
+  away_team: Newport 3
+  home_slug: raptors
+  away_slug: newport
+  id: e37
+- title: Newport 2 V Raptors 3
+  date: 2027-01-16
+  date_iso: '2027-01-16'
+  start_time: '13:00'
+  end_time: '14:30'
+  location: Caerphilly Leisure Centre, Virginia Cl, Caerphilly CF83 3SW, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 2
+  away_team: Raptors 3
+  home_slug: newport
+  away_slug: raptors
+  id: e38
+- title: RCT Comets 2 V Newport 3
+  date: 2027-01-16
+  date_iso: '2027-01-16'
+  start_time: '14:00'
+  end_time: '16:00'
+  location: Caerphilly Leisure Centre, Virginia Cl, Caerphilly CF83 3SW, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: RCT Comets 2
+  away_team: Newport 3
+  home_slug: rct-comets
+  away_slug: newport
+  id: e39
 - title: Newport Centurions V Exeter City 1
   date: 2027-01-24
   date_iso: '2027-01-24'
@@ -572,7 +709,148 @@ fixtures:
   away_team: Exeter City 1
   home_slug: newport
   away_slug: exeter-city
-  id: e32
+  id: e40
+- title: Cardiff City 1 V Newport 2
+  date: 2027-02-07
+  date_iso: '2027-02-07'
+  start_time: '10:00'
+  end_time: '11:30'
+  location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Cardiff City 1
+  away_team: Newport 2
+  home_slug: cardiff-city
+  away_slug: newport
+  id: e41
+- title: RCT Comets 2 V Newport 3
+  date: 2027-02-07
+  date_iso: '2027-02-07'
+  start_time: '14:00'
+  end_time: '16:00'
+  location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: RCT Comets 2
+  away_team: Newport 3
+  home_slug: rct-comets
+  away_slug: newport
+  id: e42
+- title: Newport 2 V Cardiff Uni 1
+  date: 2027-02-13
+  date_iso: '2027-02-13'
+  start_time: '09:00'
+  end_time: '11:00'
+  location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+    3UX, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 2
+  away_team: Cardiff Uni 1
+  home_slug: newport
+  away_slug: cardiff-uni
+  id: e43
+- title: Cardiff City 2 V Newport 2
+  date: 2027-02-21
+  date_iso: '2027-02-21'
+  start_time: '12:00'
+  end_time: '13:30'
+  location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+    3UX, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Cardiff City 2
+  away_team: Newport 2
+  home_slug: cardiff-city
+  away_slug: newport
+  id: e44
+- title: Newport 3 V Raptors 5
+  date: 2027-02-27
+  date_iso: '2027-02-27'
+  start_time: '12:00'
+  end_time: '13:30'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: 'Start: 11:30 to setup'
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 3
+  away_team: Raptors 5
+  home_slug: newport
+  away_slug: raptors
+  id: e45
+- title: Cardiff Uni 2 V Newport 3
+  date: 2027-03-06
+  date_iso: '2027-03-06'
+  start_time: '09:00'
+  end_time: '11:00'
+  location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+    3UX, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Cardiff Uni 2
+  away_team: Newport 3
+  home_slug: cardiff-uni
+  away_slug: newport
+  id: e46
+- title: Cardiff Uni 1 V Newport 2
+  date: 2027-03-06
+  date_iso: '2027-03-06'
+  start_time: '11:00'
+  end_time: '12:30'
+  location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+    3UX, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Cardiff Uni 1
+  away_team: Newport 2
+  home_slug: cardiff-uni
+  away_slug: newport
+  id: e47
+- title: Newport 3 V Swansea Roar 2
+  date: 2027-03-06
+  date_iso: '2027-03-06'
+  start_time: '12:00'
+  end_time: '14:00'
+  location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+    3UX, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 3
+  away_team: Swansea Roar 2
+  home_slug: newport
+  away_slug: swansea-roar
+  id: e48
 - title: Newport Centurions V Bristol City 1
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -589,7 +867,24 @@ fixtures:
   away_team: Bristol City 1
   home_slug: newport
   away_slug: bristol-city
-  id: e33
+  id: e49
+- title: Swansea Roar 1 V Newport 2
+  date: 2027-03-13
+  date_iso: '2027-03-13'
+  start_time: '10:00'
+  end_time: '12:00'
+  location: Neath Port Talbot Leisure Centre, Water St, Neath SA11 3EP, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Swansea Roar 1
+  away_team: Newport 2
+  home_slug: swansea-roar
+  away_slug: newport
+  id: e50
 - title: Newport Centurions V Bristol Thunder 3
   date: 2027-03-20
   date_iso: '2027-03-20'
@@ -606,7 +901,7 @@ fixtures:
   away_team: Bristol Thunder 3
   home_slug: newport
   away_slug: bristol-thunder
-  id: e34
+  id: e51
 - title: Newport Centurions V University of Exeter 1
   date: 2027-04-11
   date_iso: '2027-04-11'
@@ -623,7 +918,25 @@ fixtures:
   away_team: University of Exeter 1
   home_slug: newport
   away_slug: university-of-exeter
-  id: e35
+  id: e52
+- title: Raptors 3 V Newport 2
+  date: 2027-04-25
+  date_iso: '2027-04-25'
+  start_time: '10:00'
+  end_time: '11:30'
+  location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+    3UX, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Raptors 3
+  away_team: Newport 2
+  home_slug: raptors
+  away_slug: newport
+  id: e53
 months:
 - key: '2026-09'
   label: September 2026
@@ -929,6 +1242,42 @@ months:
     home_slug: null
     away_slug: null
   - id: e28
+    title: Newport 3 V Cardiff Uni 2
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2026-11-14'
+    day: 14
+    weekday: Sat
+    month_abbr: Nov
+    time: '11:30'
+    end_time: '12:30'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: Newport 3
+    away_team: Cardiff Uni 2
+    home_slug: newport
+    away_slug: cardiff-uni
+  - id: e29
+    title: Newport 2 V Raptors 4
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2026-11-14'
+    day: 14
+    weekday: Sat
+    month_abbr: Nov
+    time: '13:40'
+    end_time: '15:40'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: Newport 2
+    away_team: Raptors 4
+    home_slug: newport
+    away_slug: raptors
+  - id: e30
     title: University of Exeter 1 V Newport Centurions
     category: game
     beginner: false
@@ -947,7 +1296,7 @@ months:
     away_team: Newport Centurions
     home_slug: university-of-exeter
     away_slug: newport
-  - id: e29
+  - id: e31
     title: Committee meeting (Exact time tbc)
     category: club
     beginner: false
@@ -965,10 +1314,65 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
+  - id: e32
+    title: Newport 2 V Swansea Roar 1
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2026-11-22'
+    day: 22
+    weekday: Sun
+    month_abbr: Nov
+    time: '11:10'
+    end_time: '13:10'
+    all_day: false
+    location: Pontardawe Leisure Centre, Parc Ynysderw, Ffordd Parc Ynysderw, Pontardawe,
+      Swansea SA8 4EG, UK
+    home_team: Newport 2
+    away_team: Swansea Roar 1
+    home_slug: newport
+    away_slug: swansea-roar
+  - id: e33
+    title: Newport 2 V RCT Comets 1
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2026-11-29'
+    day: 29
+    weekday: Sun
+    month_abbr: Nov
+    time: '12:40'
+    end_time: '14:40'
+    all_day: false
+    location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+    home_team: Newport 2
+    away_team: RCT Comets 1
+    home_slug: newport
+    away_slug: rct-comets
+  - id: e34
+    title: Raptors 5 V Newport 3
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2026-11-29'
+    day: 29
+    weekday: Sun
+    month_abbr: Nov
+    time: '14:10'
+    end_time: '15:40'
+    all_day: false
+    location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+    home_team: Raptors 5
+    away_team: Newport 3
+    home_slug: raptors
+    away_slug: newport
 - key: '2026-12'
   label: December 2026
   events:
-  - id: e30
+  - id: e35
     title: Bristol City 1 V Newport Centurions
     category: game
     beginner: false
@@ -986,7 +1390,7 @@ months:
     away_team: Newport Centurions
     home_slug: bristol-city
     away_slug: newport
-  - id: e31
+  - id: e36
     title: Ice Hockey
     category: social
     beginner: false
@@ -1007,7 +1411,61 @@ months:
 - key: '2027-01'
   label: January 2027
   events:
-  - id: e32
+  - id: e37
+    title: Raptors 5 V Newport 3
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2027-01-16'
+    day: 16
+    weekday: Sat
+    month_abbr: Jan
+    time: '10:10'
+    end_time: '11:40'
+    all_day: false
+    location: Caerphilly Leisure Centre, Virginia Cl, Caerphilly CF83 3SW, UK
+    home_team: Raptors 5
+    away_team: Newport 3
+    home_slug: raptors
+    away_slug: newport
+  - id: e38
+    title: Newport 2 V Raptors 3
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2027-01-16'
+    day: 16
+    weekday: Sat
+    month_abbr: Jan
+    time: '13:00'
+    end_time: '14:30'
+    all_day: false
+    location: Caerphilly Leisure Centre, Virginia Cl, Caerphilly CF83 3SW, UK
+    home_team: Newport 2
+    away_team: Raptors 3
+    home_slug: newport
+    away_slug: raptors
+  - id: e39
+    title: RCT Comets 2 V Newport 3
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2027-01-16'
+    day: 16
+    weekday: Sat
+    month_abbr: Jan
+    time: '14:00'
+    end_time: '16:00'
+    all_day: false
+    location: Caerphilly Leisure Centre, Virginia Cl, Caerphilly CF83 3SW, UK
+    home_team: RCT Comets 2
+    away_team: Newport 3
+    home_slug: rct-comets
+    away_slug: newport
+  - id: e40
     title: Newport Centurions V Exeter City 1
     category: game
     beginner: false
@@ -1027,11 +1485,160 @@ months:
     away_slug: exeter-city
 - key: '2027-02'
   label: February 2027
-  events: []
+  events:
+  - id: e41
+    title: Cardiff City 1 V Newport 2
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2027-02-07'
+    day: 7
+    weekday: Sun
+    month_abbr: Feb
+    time: '10:00'
+    end_time: '11:30'
+    all_day: false
+    location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+    home_team: Cardiff City 1
+    away_team: Newport 2
+    home_slug: cardiff-city
+    away_slug: newport
+  - id: e42
+    title: RCT Comets 2 V Newport 3
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2027-02-07'
+    day: 7
+    weekday: Sun
+    month_abbr: Feb
+    time: '14:00'
+    end_time: '16:00'
+    all_day: false
+    location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+    home_team: RCT Comets 2
+    away_team: Newport 3
+    home_slug: rct-comets
+    away_slug: newport
+  - id: e43
+    title: Newport 2 V Cardiff Uni 1
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2027-02-13'
+    day: 13
+    weekday: Sat
+    month_abbr: Feb
+    time: '09:00'
+    end_time: '11:00'
+    all_day: false
+    location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+      3UX, UK
+    home_team: Newport 2
+    away_team: Cardiff Uni 1
+    home_slug: newport
+    away_slug: cardiff-uni
+  - id: e44
+    title: Cardiff City 2 V Newport 2
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2027-02-21'
+    day: 21
+    weekday: Sun
+    month_abbr: Feb
+    time: '12:00'
+    end_time: '13:30'
+    all_day: false
+    location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+      3UX, UK
+    home_team: Cardiff City 2
+    away_team: Newport 2
+    home_slug: cardiff-city
+    away_slug: newport
+  - id: e45
+    title: Newport 3 V Raptors 5
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2027-02-27'
+    day: 27
+    weekday: Sat
+    month_abbr: Feb
+    time: '12:00'
+    end_time: '13:30'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: Newport 3
+    away_team: Raptors 5
+    home_slug: newport
+    away_slug: raptors
 - key: '2027-03'
   label: March 2027
   events:
-  - id: e33
+  - id: e46
+    title: Cardiff Uni 2 V Newport 3
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2027-03-06'
+    day: 6
+    weekday: Sat
+    month_abbr: Mar
+    time: '09:00'
+    end_time: '11:00'
+    all_day: false
+    location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+      3UX, UK
+    home_team: Cardiff Uni 2
+    away_team: Newport 3
+    home_slug: cardiff-uni
+    away_slug: newport
+  - id: e47
+    title: Cardiff Uni 1 V Newport 2
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2027-03-06'
+    day: 6
+    weekday: Sat
+    month_abbr: Mar
+    time: '11:00'
+    end_time: '12:30'
+    all_day: false
+    location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+      3UX, UK
+    home_team: Cardiff Uni 1
+    away_team: Newport 2
+    home_slug: cardiff-uni
+    away_slug: newport
+  - id: e48
+    title: Newport 3 V Swansea Roar 2
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2027-03-06'
+    day: 6
+    weekday: Sat
+    month_abbr: Mar
+    time: '12:00'
+    end_time: '14:00'
+    all_day: false
+    location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+      3UX, UK
+    home_team: Newport 3
+    away_team: Swansea Roar 2
+    home_slug: newport
+    away_slug: swansea-roar
+  - id: e49
     title: Newport Centurions V Bristol City 1
     category: game
     beginner: false
@@ -1049,7 +1656,25 @@ months:
     away_team: Bristol City 1
     home_slug: newport
     away_slug: bristol-city
-  - id: e34
+  - id: e50
+    title: Swansea Roar 1 V Newport 2
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2027-03-13'
+    day: 13
+    weekday: Sat
+    month_abbr: Mar
+    time: '10:00'
+    end_time: '12:00'
+    all_day: false
+    location: Neath Port Talbot Leisure Centre, Water St, Neath SA11 3EP, UK
+    home_team: Swansea Roar 1
+    away_team: Newport 2
+    home_slug: swansea-roar
+    away_slug: newport
+  - id: e51
     title: Newport Centurions V Bristol Thunder 3
     category: game
     beginner: false
@@ -1070,7 +1695,7 @@ months:
 - key: '2027-04'
   label: April 2027
   events:
-  - id: e35
+  - id: e52
     title: Newport Centurions V University of Exeter 1
     category: game
     beginner: false
@@ -1088,6 +1713,25 @@ months:
     away_team: University of Exeter 1
     home_slug: newport
     away_slug: university-of-exeter
+  - id: e53
+    title: Raptors 3 V Newport 2
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2027-04-25'
+    day: 25
+    weekday: Sun
+    month_abbr: Apr
+    time: '10:00'
+    end_time: '11:30'
+    all_day: false
+    location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+      3UX, UK
+    home_team: Raptors 3
+    away_team: Newport 2
+    home_slug: raptors
+    away_slug: newport
 - key: '2027-05'
   label: May 2027
   events: []
