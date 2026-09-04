@@ -130,7 +130,14 @@ keywords: newport centurions events, korfball beginners newport, korfball traini
         <h2 class="fx-month-label">{{ month.label }}</h2>
 
         {%- if month.events.size == 0 %}
-        <p class="fx-empty">Nothing in the diary this month.</p>
+        {%- comment -%}
+          The season now spans September to May, so quiet months appear rather
+          than being skipped. "Nothing in the diary" on its own would be
+          misleading: weekly training carries on regardless, it is just not
+          entered in the calendar as a recurring event.
+        {%- endcomment -%}
+        <p class="fx-empty">Nothing in the diary this month yet. Training runs
+          {% include training.html format="short" separator=" and " %} as usual.</p>
         {%- else %}
         <ul class="fx-days">
           {%- for ev in month.events %}

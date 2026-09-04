@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-09-04T14:36:35Z'
+generated: '2026-09-04T14:48:57Z'
 source: Google Calendar
 categories:
 - key: game
@@ -492,7 +492,8 @@ fixtures:
   date_iso: '2026-11-15'
   start_time: '11:30'
   end_time: '13:30'
-  location: ''
+  location: St Peter's Church of England Aided School, Quarry Ln, Exeter EX2 5AP,
+    UK
   description: 'Match Start: 12pm'
   all_day: false
   category: game
@@ -521,6 +522,23 @@ fixtures:
   home_slug: null
   away_slug: null
   id: e29
+- title: Bristol City 1 V Newport Centurions
+  date: 2026-12-06
+  date_iso: '2026-12-06'
+  start_time: '11:00'
+  end_time: '13:00'
+  location: Russell Town Avenue, Russell Town Ave, Bristol BS5 9JH, UK
+  description: 'Match time: 11:20am'
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Bristol City 1
+  away_team: Newport Centurions
+  home_slug: bristol-city
+  away_slug: newport
+  id: e30
 - title: Ice Hockey
   date: 2026-12-06
   date_iso: '2026-12-06'
@@ -537,7 +555,58 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e30
+  id: e31
+- title: Newport Centurions V Exeter City 1
+  date: 2027-01-24
+  date_iso: '2027-01-24'
+  start_time: null
+  end_time: null
+  location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+  description: ''
+  all_day: true
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport Centurions
+  away_team: Exeter City 1
+  home_slug: newport
+  away_slug: exeter-city
+  id: e32
+- title: Newport Centurions V Bristol City 1
+  date: 2027-03-06
+  date_iso: '2027-03-06'
+  start_time: '12:00'
+  end_time: '14:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport Centurions
+  away_team: Bristol City 1
+  home_slug: newport
+  away_slug: bristol-city
+  id: e33
+- title: Newport Centurions V Bristol Thunder 3
+  date: 2027-03-20
+  date_iso: '2027-03-20'
+  start_time: null
+  end_time: null
+  location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+  description: ''
+  all_day: true
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport Centurions
+  away_team: Bristol Thunder 3
+  home_slug: newport
+  away_slug: bristol-thunder
+  id: e34
 months:
 - key: '2026-09'
   label: September 2026
@@ -855,7 +924,8 @@ months:
     time: '11:30'
     end_time: '13:30'
     all_day: false
-    location: ''
+    location: St Peter's Church of England Aided School, Quarry Ln, Exeter EX2 5AP,
+      UK
     home_team: University of Exeter 1
     away_team: Newport Centurions
     home_slug: university-of-exeter
@@ -882,6 +952,24 @@ months:
   label: December 2026
   events:
   - id: e30
+    title: Bristol City 1 V Newport Centurions
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2026-12-06'
+    day: 6
+    weekday: Sun
+    month_abbr: Dec
+    time: '11:00'
+    end_time: '13:00'
+    all_day: false
+    location: Russell Town Avenue, Russell Town Ave, Bristol BS5 9JH, UK
+    home_team: Bristol City 1
+    away_team: Newport Centurions
+    home_slug: bristol-city
+    away_slug: newport
+  - id: e31
     title: Ice Hockey
     category: social
     beginner: false
@@ -899,3 +987,72 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
+- key: '2027-01'
+  label: January 2027
+  events:
+  - id: e32
+    title: Newport Centurions V Exeter City 1
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2027-01-24'
+    day: 24
+    weekday: Sun
+    month_abbr: Jan
+    time: null
+    end_time: null
+    all_day: true
+    location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+    home_team: Newport Centurions
+    away_team: Exeter City 1
+    home_slug: newport
+    away_slug: exeter-city
+- key: '2027-02'
+  label: February 2027
+  events: []
+- key: '2027-03'
+  label: March 2027
+  events:
+  - id: e33
+    title: Newport Centurions V Bristol City 1
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2027-03-06'
+    day: 6
+    weekday: Sat
+    month_abbr: Mar
+    time: '12:00'
+    end_time: '14:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: Newport Centurions
+    away_team: Bristol City 1
+    home_slug: newport
+    away_slug: bristol-city
+  - id: e34
+    title: Newport Centurions V Bristol Thunder 3
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2027-03-20'
+    day: 20
+    weekday: Sat
+    month_abbr: Mar
+    time: null
+    end_time: null
+    all_day: true
+    location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+    home_team: Newport Centurions
+    away_team: Bristol Thunder 3
+    home_slug: newport
+    away_slug: bristol-thunder
+- key: '2027-04'
+  label: April 2027
+  events: []
+- key: '2027-05'
+  label: May 2027
+  events: []

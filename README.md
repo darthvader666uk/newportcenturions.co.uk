@@ -171,6 +171,18 @@ There is **one list**, used by everyone. The earlier month grid had a visually h
 agenda duplicated beneath it for screen readers and crawlers; the list replaced both, so
 there is no `aria-hidden` grid, no duplicated text and every card is in the tab order.
 
+### The season
+
+The pager covers the whole playing season, **September to May**, empty months included, so
+it walks the season in order rather than skipping the quiet ones and jumping December
+straight to March. A month with nothing in it says so, and points at training, which runs
+weekly whether or not it is entered in the calendar.
+
+The bounds are `season.first_month` and `season.last_month` in `club.yml` (9 and 5). They
+wrap the year end, and the sync works out which season today falls in: in February you get
+February to May, and over the summer it looks ahead to the next September. Months with
+events *outside* the season still appear on their own, up to 18 months out.
+
 **The page always opens on the current month**, and it works that out twice over. The sync
 drops months that have passed, so the data itself starts at the current one. The script then
 picks the month from the *browser's* clock, so even a page cached from last month opens on

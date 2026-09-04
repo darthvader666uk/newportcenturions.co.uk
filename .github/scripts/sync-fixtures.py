@@ -41,10 +41,49 @@ MONTHS_BACK = 4
 MONTHS_AHEAD = 12
 
 OUTPUT = "_data/fixtures.yml"
+CLUB = "_data/club.yml"
 PLACEHOLDER = "REPLACE_WITH_YOUR_ICS_URL"
 
-# Don't emit empty grids for months far in the future.
+# Don't emit months far in the future, however busy the calendar gets.
 MAX_MONTHS_AHEAD = 18
+
+# Fallback if club.yml says nothing: a September to May season.
+DEFAULT_SEASON = (9, 5)
+
+
+def season_months():
+    """(first, last) month numbers of the playing season, from club.yml."""
+    try:
+        club = yaml.safe_load(open(CLUB, encoding="utf-8")) or {}
+        season = club.get("season") or {}
+        first = int(season.get("first_month", DEFAULT_SEASON[0]))
+        last = int(season.get("last_month", DEFAULT_SEASON[1]))
+        if 1 <= first <= 12 and 1 <= last <= 12:
+            return first, last
+    except Exception:                                    # noqa: BLE001
+        pass
+    return DEFAULT_SEASON
+
+
+def season_span(today, first, last):
+    """First and last month of the season that today sits in, or the next one.
+
+    Returned as (year, month) pairs. A season that runs September to May wraps
+    the year end, so the two halves are handled separately: in October we are
+    in the season that ends next May, in February we are in the one that began
+    last September, and over the summer we look ahead to the next one.
+    """
+    if first <= last:
+        # A season inside one calendar year.
+        year = today.year if today.month <= last else today.year + 1
+        return (year, first), (year, last)
+
+    if today.month >= first:
+        return (today.year, first), (today.year + 1, last)
+    if today.month <= last:
+        return (today.year - 1, first), (today.year, last)
+    # Out of season: point at the one about to start.
+    return (today.year, first), (today.year + 1, last)
 
 # Category keys and their display labels (also the legend order).
 # The legend groups by colour, so "Games" covers the lot. What kind of game it
@@ -235,18 +274,29 @@ def categorise(title):
 
 
 def build_months(events, today):
-    """Events grouped by month, for the current month plus every later month
-    that has one, up to MAX_MONTHS_AHEAD."""
+    """Events grouped by month.
+
+    Covers the whole of the rest of the playing season, empty months included,
+    so the pager walks September through May rather than skipping the quiet
+    ones and jumping December straight to March. Beyond the season, only months
+    that actually have something in them appear, up to MAX_MONTHS_AHEAD.
+    """
     current = date(today.year, today.month, 1)
     horizon = current
     for _ in range(MAX_MONTHS_AHEAD):
         horizon = (horizon.replace(day=28) + timedelta(days=7)).replace(day=1)
     event_months = {(e["date"].year, e["date"].month) for e in events}
 
+    first_month, last_month = season_months()
+    (sy, sm), (ey, em) = season_span(today, first_month, last_month)
+    season_start = max(date(sy, sm, 1), current)
+    season_end = min(date(ey, em, 1), horizon)
+
     months = []
     y, m = current.year, current.month
     while date(y, m, 1) <= horizon:
-        if (y, m) == (current.year, current.month) or (y, m) in event_months:
+        in_season = season_start <= date(y, m, 1) <= season_end
+        if (y, m) == (current.year, current.month) or in_season or (y, m) in event_months:
             agenda = sorted(
                 (e for e in events if (e["date"].year, e["date"].month) == (y, m)),
                 key=lambda e: (e["date_iso"], e["start_time"] or ""),

@@ -61,6 +61,11 @@ training:
 season:
   label: "2026/27"
   start_date: 2026-08-18
+  # The playing season, as month numbers. /events/ shows every month between
+  # these two, empty ones included, so the pager walks the whole season rather
+  # than skipping the quiet months. 9 to 5 wraps the year end: September to May.
+  first_month: 9
+  last_month: 5
 
 # --- Competition ------------------------------------------------------------
 leagues:
