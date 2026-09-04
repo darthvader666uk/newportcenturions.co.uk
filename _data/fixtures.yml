@@ -3,10 +3,185 @@
 # Written by .github/workflows/sync-fixtures.yml from the club's Google
 # Calendar. To change a fixture, edit the calendar; the next sync picks
 # it up. Edits made here will be overwritten.
-#
-# Currently empty because FIXTURES_ICS_URL has not been configured yet --
-# see the setup notes at the top of .github/workflows/sync-fixtures.yml.
 
-generated: null
+generated: '2026-09-04T08:18:28Z'
 source: Google Calendar
-fixtures: []
+fixtures:
+- title: 🏴󠁧󠁢󠁷󠁬󠁳󠁿🏆Welsh Cup 2026!🏆🏴󠁧󠁢󠁷󠁬󠁳󠁿
+  date: 2026-05-09
+  date_iso: '2026-05-09'
+  start_time: '11:30'
+  end_time: '17:30'
+  location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+  description: Details TBC
+  all_day: false
+- title: Centurions AGM
+  date: 2026-05-19
+  date_iso: '2026-05-19'
+  start_time: '18:00'
+  end_time: '18:30'
+  location: ''
+  description: ''
+  all_day: false
+- title: Pembrokeshire
+  date: 2026-05-22
+  date_iso: '2026-05-22'
+  start_time: 08:00
+  end_time: 09:00
+  location: ''
+  description: ''
+  all_day: false
+- title: Last Korf of the season
+  date: 2026-06-02
+  date_iso: '2026-06-02'
+  start_time: '18:00'
+  end_time: '20:00'
+  location: ''
+  description: ''
+  all_day: false
+- title: Awards Night
+  date: 2026-06-05
+  date_iso: '2026-06-05'
+  start_time: '18:00'
+  end_time: '21:00'
+  location: The Potters, 22-24 Upper Dock St, Newport NP20 1DL, UK
+  description: ''
+  all_day: false
+- title: Inter area (invitation tournament)
+  date: 2026-06-06
+  date_iso: '2026-06-06'
+  start_time: 08:00
+  end_time: 09:00
+  location: ''
+  description: ''
+  all_day: false
+- title: Nitra? Tournament in Slovakia
+  date: 2026-07-10
+  date_iso: '2026-07-10'
+  start_time: null
+  end_time: null
+  location: ''
+  description: ''
+  all_day: true
+- title: Exeter tournament
+  date: 2026-07-18
+  date_iso: '2026-07-18'
+  start_time: '10:00'
+  end_time: '17:00'
+  location: ''
+  description: ''
+  all_day: false
+- title: WKA AGM https://teams.microsoft.com/meet/316554345715097?p=aOcLDz3PsM9aJTn1uB
+  date: 2026-08-10
+  date_iso: '2026-08-10'
+  start_time: '18:30'
+  end_time: '19:30'
+  location: ''
+  description: ''
+  all_day: false
+- title: Beach korf day. Timings/location tbc. Bring a picnic, beach games and any
+    family/friends you want
+  date: 2026-08-15
+  date_iso: '2026-08-15'
+  start_time: 07:00
+  end_time: 08:00
+  location: ''
+  description: ''
+  all_day: false
+- title: First korf session back
+  date: 2026-08-18
+  date_iso: '2026-08-18'
+  start_time: '18:00'
+  end_time: '20:00'
+  location: ''
+  description: ''
+  all_day: false
+- title: Committee meeting (Exact time tbc)
+  date: 2026-09-03
+  date_iso: '2026-09-03'
+  start_time: '19:00'
+  end_time: '20:00'
+  location: ''
+  description: ''
+  all_day: false
+- title: Beginners sessions
+  date: 2026-09-08
+  date_iso: '2026-09-08'
+  start_time: 08:00
+  end_time: 09:00
+  location: ''
+  description: ''
+  all_day: false
+- title: First Thursday session back
+  date: 2026-09-10
+  date_iso: '2026-09-10'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: ''
+  description: ''
+  all_day: false
+- title: Beginners sessions
+  date: 2026-09-15
+  date_iso: '2026-09-15'
+  start_time: 08:00
+  end_time: 09:00
+  location: ''
+  description: ''
+  all_day: false
+- title: Beginners sessions
+  date: 2026-09-22
+  date_iso: '2026-09-22'
+  start_time: 08:00
+  end_time: 09:00
+  location: ''
+  description: ''
+  all_day: false
+- title: Pub night in Cardiff
+  date: 2026-09-25
+  date_iso: '2026-09-25'
+  start_time: '18:00'
+  end_time: 00:30
+  location: ''
+  description: ''
+  all_day: false
+- title: Korf bowling social
+  date: 2026-10-03
+  date_iso: '2026-10-03'
+  start_time: '19:00'
+  end_time: '20:30'
+  location: Hollywood Bowl XL Cardiff St David’s, 3-6 Hills St, St Davids Centre,
+    Cardiff CF10 2LE, UK
+  description: ''
+  all_day: false
+- title: Cardiff Uni Beginners Tournament.
+  date: 2026-10-24
+  date_iso: '2026-10-24'
+  start_time: 09:00
+  end_time: '17:00'
+  location: ''
+  description: ''
+  all_day: false
+- title: Social - Ice hockey
+  date: 2026-11-13
+  date_iso: '2026-11-13'
+  start_time: '19:00'
+  end_time: '21:00'
+  location: Vindico Arena, Viola Arena, Olympian Dr, Cardiff CF11 0JS, UK
+  description: ''
+  all_day: false
+- title: Committee meeting (Exact time tbc)
+  date: 2026-11-19
+  date_iso: '2026-11-19'
+  start_time: '19:00'
+  end_time: '20:00'
+  location: ''
+  description: ''
+  all_day: false
+- title: Social - Ice Hockey
+  date: 2026-12-06
+  date_iso: '2026-12-06'
+  start_time: '17:00'
+  end_time: '19:00'
+  location: Vindico Arena, Viola Arena, Olympian Dr, Cardiff CF11 0JS, UK
+  description: ''
+  all_day: false
