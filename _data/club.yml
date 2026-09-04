@@ -15,6 +15,11 @@ short_name: Newport Centurions
 # assets/images/teams/<slug>.webp|png|svg and are picked up automatically.
 crest: /images/newport-centurions-korfball-club-400.webp
 crest_slug: newport
+# Clubs the calendar writes more than one way. The key is the slug as written
+# (lowercased, hyphenated, squad number stripped); the value is the crest file
+# to use. Saves keeping two copies of the same badge.
+crest_aliases:
+  raptors: cardiff-raptors
 founded: 2019
 email: Newportkorfball@gmail.com
 

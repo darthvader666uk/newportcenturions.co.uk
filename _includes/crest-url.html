@@ -7,7 +7,16 @@
 {%- endcomment -%}
 {%- assign club = site.data.club -%}
 {%- assign crest = '' -%}
-{%- if include.slug == club.crest_slug -%}
+{%- comment -%}
+  A club written more than one way in the calendar gets pointed at one file by
+  crest_aliases in club.yml, so "Raptors 4" finds the Cardiff Raptors badge
+  without a second copy of the image.
+{%- endcomment -%}
+{%- assign slug = include.slug -%}
+{%- if club.crest_aliases and club.crest_aliases[slug] -%}
+  {%- assign slug = club.crest_aliases[slug] -%}
+{%- endif -%}
+{%- if slug == club.crest_slug -%}
   {%- assign crest = club.crest -%}
 {%- else -%}
   {%- comment -%}
@@ -22,8 +31,17 @@
   {%- endif -%}
   {%- for ext in formats -%}
     {%- if crest == '' -%}
-      {%- assign candidate = '/assets/images/teams/' | append: include.slug | append: '.' | append: ext -%}
-      {%- if site.static_files | where: 'path', candidate | first -%}
+      {%- assign candidate = '/assets/images/teams/' | append: slug | append: '.' | append: ext -%}
+      {%- comment -%}
+        The lookup has to be assigned before it is tested. Liquid does not
+        evaluate filters inside an if condition: it tests the left-hand value
+        alone and ignores the rest of the pipeline. site.static_files is always
+        a non-empty array, so testing it directly matched on the first
+        extension every time and emitted an img pointing at a file that was
+        never there.
+      {%- endcomment -%}
+      {%- assign hit = site.static_files | where: 'path', candidate | first -%}
+      {%- if hit -%}
         {%- assign crest = candidate -%}
       {%- endif -%}
     {%- endif -%}
