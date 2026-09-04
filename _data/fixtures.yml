@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-09-04T13:57:41Z'
+generated: '2026-09-04T14:03:00Z'
 source: Google Calendar
 categories:
 - key: game
@@ -311,6 +311,23 @@ fixtures:
   home_slug: null
   away_slug: null
   id: e17
+- title: Cardiff Raptors 1 V Newport Centurions
+  date: 2026-09-27
+  date_iso: '2026-09-27'
+  start_time: '12:00'
+  end_time: '14:00'
+  location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Cardiff Raptors 1
+  away_team: Newport Centurions
+  home_slug: cardiff-raptors
+  away_slug: newport
+  id: e18
 - title: Newport 2 V Cardiff City 2
   date: 2026-10-03
   date_iso: '2026-10-03'
@@ -327,7 +344,7 @@ fixtures:
   away_team: Cardiff City 2
   home_slug: newport
   away_slug: cardiff-city
-  id: e18
+  id: e19
 - title: Korf bowling social
   date: 2026-10-03
   date_iso: '2026-10-03'
@@ -345,7 +362,7 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e19
+  id: e20
 - title: Exeter City 1 V Newport Centurions
   date: 2026-10-11
   date_iso: '2026-10-11'
@@ -363,7 +380,7 @@ fixtures:
   away_team: Newport Centurions
   home_slug: exeter-city
   away_slug: newport
-  id: e20
+  id: e21
 - title: Swansea Roar 2 V Newport 3
   date: 2026-10-11
   date_iso: '2026-10-11'
@@ -381,7 +398,7 @@ fixtures:
   away_team: Newport 3
   home_slug: swansea-roar
   away_slug: newport
-  id: e21
+  id: e22
 - title: Newport 2 V Cardiff City 1
   date: 2026-10-11
   date_iso: '2026-10-11'
@@ -399,7 +416,7 @@ fixtures:
   away_team: Cardiff City 1
   home_slug: newport
   away_slug: cardiff-city
-  id: e22
+  id: e23
 - title: Swansea Roar 2 V Newport 3
   date: 2026-10-18
   date_iso: '2026-10-18'
@@ -416,7 +433,7 @@ fixtures:
   away_team: Newport 3
   home_slug: swansea-roar
   away_slug: newport
-  id: e23
+  id: e24
 - title: Cardiff Uni Beginners Tournament.
   date: 2026-10-24
   date_iso: '2026-10-24'
@@ -434,7 +451,7 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e24
+  id: e25
 - title: Ice hockey
   date: 2026-11-13
   date_iso: '2026-11-13'
@@ -451,7 +468,7 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e25
+  id: e26
 - title: Committee meeting (Exact time tbc)
   date: 2026-11-19
   date_iso: '2026-11-19'
@@ -468,7 +485,7 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e26
+  id: e27
 - title: Ice Hockey
   date: 2026-12-06
   date_iso: '2026-12-06'
@@ -485,7 +502,7 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e27
+  id: e28
 months:
 - key: '2026-09'
   label: September 2026
@@ -598,10 +615,28 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
+  - id: e18
+    title: Cardiff Raptors 1 V Newport Centurions
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2026-09-27'
+    day: 27
+    weekday: Sun
+    month_abbr: Sep
+    time: '12:00'
+    end_time: '14:00'
+    all_day: false
+    location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
+    home_team: Cardiff Raptors 1
+    away_team: Newport Centurions
+    home_slug: cardiff-raptors
+    away_slug: newport
 - key: '2026-10'
   label: October 2026
   events:
-  - id: e18
+  - id: e19
     title: Newport 2 V Cardiff City 2
     category: game
     beginner: false
@@ -619,7 +654,7 @@ months:
     away_team: Cardiff City 2
     home_slug: newport
     away_slug: cardiff-city
-  - id: e19
+  - id: e20
     title: Korf bowling social
     category: social
     beginner: false
@@ -638,7 +673,7 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
-  - id: e20
+  - id: e21
     title: Exeter City 1 V Newport Centurions
     category: game
     beginner: false
@@ -657,7 +692,7 @@ months:
     away_team: Newport Centurions
     home_slug: exeter-city
     away_slug: newport
-  - id: e21
+  - id: e22
     title: Swansea Roar 2 V Newport 3
     category: game
     beginner: false
@@ -676,7 +711,7 @@ months:
     away_team: Newport 3
     home_slug: swansea-roar
     away_slug: newport
-  - id: e22
+  - id: e23
     title: Newport 2 V Cardiff City 1
     category: game
     beginner: false
@@ -695,7 +730,7 @@ months:
     away_team: Cardiff City 1
     home_slug: newport
     away_slug: cardiff-city
-  - id: e23
+  - id: e24
     title: Swansea Roar 2 V Newport 3
     category: game
     beginner: false
@@ -713,7 +748,7 @@ months:
     away_team: Newport 3
     home_slug: swansea-roar
     away_slug: newport
-  - id: e24
+  - id: e25
     title: Cardiff Uni Beginners Tournament.
     category: game
     beginner: false
@@ -735,7 +770,7 @@ months:
 - key: '2026-11'
   label: November 2026
   events:
-  - id: e25
+  - id: e26
     title: Ice hockey
     category: social
     beginner: false
@@ -753,7 +788,7 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
-  - id: e26
+  - id: e27
     title: Committee meeting (Exact time tbc)
     category: club
     beginner: false
@@ -774,7 +809,7 @@ months:
 - key: '2026-12'
   label: December 2026
   events:
-  - id: e27
+  - id: e28
     title: Ice Hockey
     category: social
     beginner: false
