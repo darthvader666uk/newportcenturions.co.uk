@@ -105,6 +105,9 @@ exclude:
   - "*:Zone.Identifier"
 
 # Navigation Menu - Organized with dropdowns
+# Extensions tried when looking for a team crest, in order of preference.
+crest_formats: [webp, png, svg, jpg, jpeg]
+
 navigation:
   - title: About
     url: null
@@ -129,8 +132,6 @@ navigation:
     url: /join-us/
   - title: Events
     url: /events/
-  - title: Fixtures
-    url: /fixtures/
   - title: Get Involved
     url: null
     submenu:

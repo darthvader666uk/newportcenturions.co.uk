@@ -1,6 +1,6 @@
 name: Sync Fixtures
 
-# Pulls the club's Google Calendar into _data/fixtures.yml so /fixtures/ can be
+# Pulls the club's Google Calendar into _data/fixtures.yml so /events/ can be
 # rendered as static HTML — indexable, fast, themed, and with no third-party
 # code on the page.
 #
@@ -23,12 +23,20 @@ name: Sync Fixtures
 # stops working — update the secret with the new one.
 #
 # Until the secret exists the job exits cleanly without writing anything, so
-# the site keeps building and /fixtures/ shows its empty state.
+# the site keeps building and /events/ shows its empty state.
+#
+# HOW OFTEN IT RUNS:
+#   Every half hour, so an edit made in Google Calendar is on the site within
+#   about 30 minutes without anyone having to do anything. Nothing is committed
+#   unless the calendar actually changed, so a quiet week produces no commits.
+#   Use "Run workflow" on the Actions tab when you want it now.
 
 on:
   schedule:
-    # 03:30 UTC daily, before the scheduled site rebuild at 04:15.
-    - cron: '30 3 * * *'
+    # Every 30 minutes. GitHub queues scheduled runs on a best-effort basis,
+    # so expect the odd one to land late or be skipped when Actions is busy.
+    # The next run picks it up, so the site is never more than an hour behind.
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 permissions:

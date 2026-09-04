@@ -1,0 +1,20 @@
+{%- comment -%}
+  A team's crest, or its initials if we do not have one.
+
+  Params:
+    slug  crest lookup key from the sync ("cardiff-city")
+    name  the team as written on the calendar ("Cardiff City 2")
+
+  Crests live in /assets/images/teams/<slug>.webp|png|svg|jpg|jpeg. Drop a file
+  in with the right name and it appears: there is no list to update. Squad
+  numbers are stripped from the slug, so Newport 1, 2 and 3 share one badge, as
+  do a visiting club's sides. Our own crest comes from club.yml, so the club
+  logo is not duplicated into the teams folder.
+{%- endcomment -%}
+{%- capture crest %}{% include crest-url.html slug=include.slug %}{% endcapture -%}
+{%- if crest != '' -%}
+<img class="fx-crest" src="{{ crest }}" alt="" width="30" height="30" loading="lazy" decoding="async">
+{%- else -%}
+{%- assign parts = include.slug | split: '-' -%}
+<span class="fx-crest fx-crest--mono" aria-hidden="true">{{ parts[0] | slice: 0 | upcase }}{% if parts[1] %}{{ parts[1] | slice: 0 | upcase }}{% endif %}</span>
+{%- endif -%}

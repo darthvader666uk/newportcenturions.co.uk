@@ -32,3 +32,13 @@ server.log
 .config
 /.vscode/CALIBER_LEARNINGS.md
 .graymatter
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local secrets (the calendar's private iCal URL). This repo is public:
+# never let these get committed.
+.env
+.env.*
+!.env.example

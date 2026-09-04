@@ -322,10 +322,18 @@ a:hover { color: var(--secondary-orange); }
 .page-content { padding: 2rem 1rem; max-width: 900px; margin: 0 auto; animation: fadeInUp 0.6s ease-out; }
 .page-content a { color: var(--primary-orange); text-decoration: underline; text-underline-offset: 2px; }
 .page-content a:hover { color: var(--secondary-orange); text-decoration: none; }
+/* Black text belongs to the orange-filled CTAs, not to every button that
+   happens to sit in page content. The bare `.page-content button` this used to
+   carry was blackening the click-to-load embed buttons and the calendar
+   controls, both of which set their own colour and sit on dark backgrounds.
+   Every other button on the site declares its own colour, so listing the CTA
+   classes explicitly changes nothing else. */
 .page-content a.modern-button,
 .page-content a.cta-button,
 .page-content a.button,
-.page-content button { text-decoration: none !important; color: #000 !important; }
+.page-content button.modern-button,
+.page-content button.cta-button,
+.page-content button.button { text-decoration: none !important; color: #000 !important; }
 
 /* Homepage overrides — inner <main> reclaims full width */
 .page-content > .modern-container {
@@ -930,7 +938,7 @@ a:hover { color: var(--secondary-orange); }
 }
 .event-card:hover { border-color: var(--border-subtle); }
 .event-highlight { border-left: 3px solid var(--primary-orange); }
-.event-beginner { border-left: 3px solid rgba(74, 222, 128, 0.5); }
+.event-beginner { border-left: 3px solid #fee3a8; }   /* calendar's training step */
 .event-date {
   text-align: center; min-width: 60px; flex-shrink: 0;
   background: rgba(255,255,255,0.05); border-radius: var(--radius-sm);
@@ -948,7 +956,8 @@ a:hover { color: var(--secondary-orange); }
   margin-top: 0.15rem;
 }
 .event-details { flex: 1; }
-.event-details h2 {
+.event-details h2,
+.event-details h3 {
   font-size: 1.1rem; margin: 0 0 0.3rem; color: var(--text-primary);
   background: none; -webkit-text-fill-color: var(--text-primary);
 }
@@ -960,7 +969,7 @@ a:hover { color: var(--secondary-orange); }
   margin-bottom: 0.3rem;
 }
 .tag-season { background: rgba(251,179,4,0.15); color: var(--primary-orange); }
-.tag-beginner { background: rgba(74,222,128,0.12); color: #4ade80; }
+.tag-beginner { background: rgba(254, 227, 168, 0.14); color: #fee3a8; }
 .events-cta {
   text-align: center; margin-top: 2rem; padding-top: 1.5rem;
   border-top: 1px solid rgba(255,255,255,0.08);
@@ -1714,113 +1723,6 @@ a:hover { color: var(--secondary-orange); }
 }
 
 /* ==========================================================================
-   Fixtures & results
-   ========================================================================== */
-
-.fixtures-section { margin: 2.5rem 0; }
-
-.fixture-list {
-  list-style: none;
-  margin: 1.25rem 0 0;
-  padding: 0;
-  display: grid;
-  gap: 0.9rem;
-}
-
-.fixture {
-  display: flex;
-  align-items: center;
-  gap: 1.1rem;
-  padding: 1rem 1.2rem;
-  background: var(--glass-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-}
-
-.fixture[hidden] { display: none; }
-
-.fixture-date {
-  flex-shrink: 0;
-  width: 62px;
-  text-align: center;
-  line-height: 1.1;
-}
-
-.fixture-month {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--primary-orange);
-}
-
-.fixture-day {
-  display: block;
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.fixture-year {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-}
-
-.fixture-details { min-width: 0; }
-
-.fixture-details h3 {
-  margin: 0.2rem 0 0.3rem;
-  font-size: 1.05rem;
-  line-height: 1.35;
-}
-
-.fixture-meta {
-  margin: 0;
-  font-size: 0.86rem;
-  color: var(--text-muted);
-}
-
-.fixture-tag {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.15rem 0.6rem;
-  border-radius: var(--radius-pill);
-}
-
-.tag-home {
-  background: rgba(251, 179, 4, 0.16);
-  color: var(--primary-orange);
-}
-
-.tag-away {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-secondary);
-}
-
-.fixture--past { opacity: 0.72; }
-
-.fixtures-empty,
-.fixtures-updated {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-.fixtures-updated {
-  margin-top: 2rem;
-  font-size: 0.82rem;
-}
-
-@media (max-width: 520px) {
-  .fixture { gap: 0.85rem; padding: 0.9rem 1rem; }
-  .fixture-date { width: 52px; }
-  .fixture-day { font-size: 1.45rem; }
-}
-
-/* ==========================================================================
    "At a glance" definition-list summary (/what-is-korfball/)
    ========================================================================== */
 
@@ -1896,3 +1798,363 @@ a:hover { color: var(--secondary-orange); }
 .breadcrumb a:hover { color: var(--primary-orange); }
 
 .breadcrumb [aria-current="page"] { color: var(--text-muted); }
+
+/* ==========================================================================
+   Club calendar (/calendar/) — driven by _data/fixtures.yml
+   ========================================================================== */
+
+/* Category colours: a five-step ramp along the brand's own hue band, from pale
+   gold through the primary orange down to a deep burnt orange. Games sit on
+   --primary-orange exactly; the rest are that colour walked lighter or darker.
+
+   The steps are spaced evenly in OKLab LIGHTNESS, not hue, which is what makes
+   them work for colour-blind visitors: red-green colour blindness flattens the
+   hue difference between gold and orange almost completely, but leaves
+   lightness alone. The previous palette put Socials and Club a hair apart in
+   lightness (1.06:1) and relied on orange-vs-grey to tell them apart, so under
+   deuteranopia they read as one colour. Every neighbouring pair here stays
+   near 1.4:1 or better under both red-green types.
+
+   If you restyle these, keep the lightness gaps. Swapping in a colour because
+   it looks nice next to its neighbour is how the ramp gets flattened again. */
+.cat-training{ --cat: #fee3a8; }                  /* pale gold, lightest */
+.cat-game    { --cat: var(--primary-orange); }    /* #fbb304 brand orange */
+.cat-social  { --cat: #e08c07; }                  /* mid orange */
+.cat-club    { --cat: #c26904; }                  /* deep orange */
+.cat-other   { --cat: #a24b03; }                  /* burnt orange, darkest */
+
+.cal-legend {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  margin: 1.5rem 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.cal-legend-item { display: flex; align-items: center; gap: 0.45rem; }
+.cal-dot { width: 0.75rem; height: 0.75rem; border-radius: 50%; background: var(--cat); flex-shrink: 0; }
+
+/* ==========================================================================
+   Fixture list
+   One list serves desktop, mobile and screen readers: there is no month grid
+   and no hidden duplicate. Games with two named sides render as a fixture card
+   with crests; everything else gets a single title line.
+   ========================================================================== */
+
+.fx-month { margin: 1.5rem 0 0; }
+.fx-month-label { font-size: 1.2rem; margin: 0 0 0.75rem; }
+/* The pager label replaces the per-month headings once paging is on. */
+.fx-list.is-paged .fx-month-label { display: none; }
+.fx-list.is-paged .fx-month { margin-top: 0; }
+.fx-empty { color: var(--text-muted); }
+
+.fx-days { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+/* Grid and flex children default to min-width:auto, so a long venue address
+   would stop the card shrinking and push the whole page sideways on a phone.
+   The ellipsis on .fx-where only works once these can go narrower than their
+   content. */
+.fx-item { --cat: var(--primary-orange); min-width: 0; }
+.fx-item.is-past { opacity: 0.5; }
+
+.fx-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  font: inherit;
+  color: var(--text-primary);
+  padding: 0.9rem 1.1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--cat);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  min-width: 0;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.fx-card:hover,
+.fx-card:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-hover);
+  border-left-color: var(--cat);
+}
+/* Beginner sessions keep the ring they had in the grid. */
+.fx-item.is-beginner .fx-card { box-shadow: 0 0 0 1px var(--primary-orange); }
+
+/* --- Date block --- */
+.fx-when {
+  flex-shrink: 0;
+  width: 3.4rem;
+  text-align: center;
+  line-height: 1.1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.3rem;
+}
+.fx-weekday,
+.fx-monthabbr {
+  display: block;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+.fx-daynum { display: block; font-size: 1.35rem; font-weight: 700; }
+
+/* --- Middle --- */
+.fx-body { flex: 1; min-width: 0; }
+.fx-title { display: block; font-weight: 600; }
+.fx-where {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fx-teams { display: grid; gap: 0.35rem; min-width: 0; }
+.fx-team { display: flex; align-items: center; gap: 0.6rem; min-width: 0; }
+.fx-team-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Rounded square, not a circle. Several korfball crests are square with a text
+   banner across the bottom (RCT Comets, Swansea Roar); a circular clip cuts the
+   club's own name off them. */
+.fx-crest {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 4px;
+}
+/* No crest on file: initials in the category colour, so a missing badge looks
+   deliberate rather than broken. Drop a file into assets/images/teams/ and it
+   is used instead, with no config change. */
+.fx-crest--mono {
+  display: grid;
+  border-radius: 4px;
+  place-items: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--cat);
+  background: color-mix(in srgb, var(--cat) 16%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--cat) 45%, transparent) inset;
+}
+
+/* --- Right --- */
+.fx-aside {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  text-align: right;
+}
+.fx-kickoff { font-size: 0.95rem; font-weight: 600; color: var(--text-secondary); }
+.fx-side,
+.fx-flag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.12rem 0.45rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+.fx-flag { background: rgba(251, 179, 4, 0.14); color: var(--primary-orange); }
+
+@media (max-width: 560px) {
+  .fx-card { gap: 0.75rem; padding: 0.75rem 0.85rem; }
+  .fx-when { width: 2.9rem; }
+  .fx-daynum { font-size: 1.15rem; }
+  .fx-where { font-size: 0.72rem; }
+  .fx-crest { width: 26px; height: 26px; }
+}
+
+/* Tournaments and cups get a trophy. Drawn as a mask rather than an emoji so
+   it takes the entry's own colour and renders the same on every platform. */
+.cal-trophy {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-right: 0.25em;
+  vertical-align: -0.1em;
+  flex-shrink: 0;
+  background: var(--cat, var(--primary-orange));
+  -webkit-mask: var(--trophy) center / contain no-repeat;
+  mask: var(--trophy) center / contain no-repeat;
+  --trophy: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17 4V2H7v2H2v3a5 5 0 0 0 4.1 4.9A6 6 0 0 0 11 15.9V19H7v2h10v-2h-4v-3.1a6 6 0 0 0 4.9-4A5 5 0 0 0 22 7V4h-5zM4 7V6h3v3.8A3 3 0 0 1 4 7zm16 0a3 3 0 0 1-3 2.8V6h3v1z'/%3E%3C/svg%3E");
+}
+.cal-trophy[hidden] { display: none; }
+.cal-dialog-cat .cal-trophy { margin: 0 0 0 0.35em; }
+
+/* Beginner sessions are how new players get in, so they are picked out of the
+   grid with a ring rather than another colour: a shape cue survives colour
+   blindness, and the five category colours are already spoken for. There is no
+   legend entry for it: the entries say "Beginners" in their own titles, so a
+   sixth legend row was just noise. */
+
+/* --- Month pager ------------------------------------------------------
+   Only one month is on screen at a time. The pager is hidden in the markup
+   and revealed by the script, so with JavaScript off every month stays
+   visible rather than the page collapsing to nothing. */
+/* An author `display` beats the browser's own [hidden] rule, so the attribute
+   has to be honoured explicitly or the pager shows up with no script to drive
+   it. Same reason the month sections are safe: they set no display at all. */
+.cal-pager[hidden] { display: none; }
+.cal-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 0.5rem;
+}
+.cal-pager-label {
+  font-size: 1.2rem;
+  margin: 0;
+  min-width: 11ch;
+  text-align: center;
+  color: var(--primary-orange);
+}
+.cal-pager-btn {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--primary-orange);
+  background: var(--glass-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cal-pager-btn:hover:not(:disabled) { border-color: var(--border-hover); }
+.cal-pager-btn:disabled { opacity: 0.3; cursor: default; }
+
+/* --- Event details ----------------------------------------------------- */
+/* Two shapes for the same dialog. On a phone it opens modal and centred,
+   which is the only thing that reads well at that width. On anything wider it
+   opens next to the entry you clicked, like a calendar app, so you keep sight
+   of the month behind it. The script picks, and positions the anchored one. */
+.cal-dialog {
+  max-width: 30rem;
+  width: calc(100vw - 2rem);
+  padding: 1.75rem;
+  color: var(--text-primary);
+  background: #141414;
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--cat, var(--primary-orange));
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-3);
+}
+.cal-dialog::backdrop { background: rgba(0, 0, 0, 0.7); }
+.cal-dialog h2 { margin: 0.35rem 0 0.75rem; font-size: 1.35rem; }
+
+/* A fixture opens showing both badges rather than the raw "A V B" title. */
+.cal-dialog-teams { display: grid; gap: 0.5rem; }
+.cal-dialog-team { display: flex; align-items: center; gap: 0.65rem; min-width: 0; }
+.cal-dialog-crest {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+}
+.cal-dialog-crest img { width: 34px; height: 34px; object-fit: contain; border-radius: 4px; }
+.cal-dialog-crest--mono {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cat);
+  background: color-mix(in srgb, var(--cat) 16%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--cat) 45%, transparent) inset;
+}
+.cal-dialog-teams [hidden],
+.cal-dialog h2 > [hidden] { display: none; }
+.cal-dialog-cat {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+.cal-dialog-line {
+  margin: 0 0 0.35rem;
+  color: var(--text-secondary);
+}
+.cal-dialog-desc {
+  margin: 0.9rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.cal-dialog-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--text-muted);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.cal-dialog-close:hover { color: var(--text-primary); }
+
+/* Anchored (non-modal) variant: positioned by the script against the chip. */
+.cal-dialog--anchored {
+  position: fixed;
+  margin: 0;
+  width: max-content;
+  max-width: min(22rem, calc(100vw - 2rem));
+  max-height: min(24rem, calc(100vh - 2rem));
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+}
+.cal-dialog--anchored h2 { font-size: 1.15rem; }
+
+.cal-dialog-where a {
+  color: var(--primary-orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.cal-dialog-where a:hover { color: var(--secondary-orange); }
+.cal-dialog-where a::before {
+  content: "";
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  margin-right: 0.35em;
+  vertical-align: -0.08em;
+  background: currentColor;
+  /* Map pin, so the link reads as a place rather than a web address. */
+  -webkit-mask: var(--pin) center / contain no-repeat;
+  mask: var(--pin) center / contain no-repeat;
+  --pin: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E");
+}
+
+/* Home / away pill on a fixture card. Both sit on the colour ramp so neither
+   reads as a warning next to the category colours. */
+.cal-side--home { background: rgba(254, 227, 168, 0.22); color: #fee3a8; }
+.cal-side--away { background: rgba(224, 140, 7, 0.22); color: #e08c07; }
+

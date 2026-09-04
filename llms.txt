@@ -3,9 +3,11 @@ layout: null
 sitemap: false
 ---
 {%- assign club = site.data.club -%}
+{%- assign today = 'now' | date: '%Y-%m-%d' -%}
 {%- assign beginner_dates = '' -%}
-{%- for e in club.season.events -%}
-{%- if e.beginner -%}{%- capture d %}{{ e.date | date: "%-d %b %Y" }}{% endcapture -%}{%- assign beginner_dates = beginner_dates | append: d | append: '|' -%}{%- endif -%}
+{%- comment -%} Beginner sessions come from the synced calendar, upcoming only. {%- endcomment -%}
+{%- for e in site.data.fixtures.fixtures -%}
+{%- if e.beginner and e.date_iso >= today -%}{%- capture d %}{{ e.date_iso | date: "%-d %b %Y" }}{% endcapture -%}{%- assign beginner_dates = beginner_dates | append: d | append: '|' -%}{%- endif -%}
 {%- endfor -%}
 # {{ club.name }}
 
@@ -16,7 +18,8 @@ sitemap: false
 - Location: {{ club.venue.name }}, {{ club.venue.street }}, {{ club.venue.locality }} {{ club.venue.postcode }}, {{ club.venue.region }}
 - Training: {% for t in club.training %}{{ t.day }}s {{ t.display }}{% unless forloop.last %}, {% endunless %}{% endfor %}
 - Season {{ club.season.label }} started: {{ club.season.start_date | date: "%-d %B %Y" }}
-- Beginner sessions: {{ beginner_dates | split: '|' | join: ', ' }}
+{% if beginner_dates != '' %}- Beginner sessions: {{ beginner_dates | split: '|' | join: ', ' }}
+{% endif %}
 - Founded: {{ club.founded }}
 - Members: {{ club.members }} across {{ club.teams }} competitive teams
 - Minimum age: {{ club.min_age }}
@@ -27,8 +30,7 @@ sitemap: false
 - [/what-is-korfball/](https://newportcenturions.co.uk/what-is-korfball/) - Sport definition, rules, history, and benefits
 - [/faq/](https://newportcenturions.co.uk/faq/) - Comprehensive FAQ about korfball and joining
 - [/join-us/](https://newportcenturions.co.uk/join-us/) - How to join, step-by-step process, beginner sessions
-- [/events/](https://newportcenturions.co.uk/events/) - Upcoming events and training dates
-- [/fixtures/](https://newportcenturions.co.uk/fixtures/) - Match fixtures and recent results
+- [/events/](https://newportcenturions.co.uk/events/) - Beginner sessions plus the full club calendar: training, games, tournaments and socials
 - [/glossary/](https://newportcenturions.co.uk/glossary/) - Korfball terminology and definitions
 - [/testimonials/](https://newportcenturions.co.uk/testimonials/) - Member stories and experiences
 - [/sponsors/](https://newportcenturions.co.uk/sponsors/) - Club sponsors and sponsorship opportunities

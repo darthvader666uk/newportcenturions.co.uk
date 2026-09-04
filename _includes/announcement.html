@@ -1,5 +1,8 @@
 {%- comment -%}
-  Announcement bar. Beginner-session dates come from _data/club.yml.
+  Announcement bar. Beginner-session dates come from _data/fixtures.yml, which
+  the sync-fixtures workflow generates from the club's Google Calendar. An event
+  counts as a beginner session if it is tagged [Beginners] or says "beginners"
+  in the title of a training session. There is no second, hand-kept list.
 
   Filtered twice, deliberately:
     1. At BUILD time  — past dates never reach the HTML, so crawlers and AI
@@ -12,11 +15,10 @@
 {%- assign club = site.data.club -%}
 {%- assign today = 'now' | date: '%Y-%m-%d' -%}
 {%- assign upcoming = '' -%}
-{%- for event in club.season.events -%}
+{%- for event in site.data.fixtures.fixtures -%}
   {%- if event.beginner -%}
-    {%- assign event_date = event.date | date: '%Y-%m-%d' -%}
-    {%- if event_date >= today -%}
-      {%- assign upcoming = upcoming | append: event_date | append: '|' -%}
+    {%- if event.date_iso >= today -%}
+      {%- assign upcoming = upcoming | append: event.date_iso | append: '|' -%}
     {%- endif -%}
   {%- endif -%}
 {%- endfor -%}

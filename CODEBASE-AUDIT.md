@@ -82,12 +82,47 @@ script never prints the URL and refuses anything that isn't a `.ics`.
 Error paths tested: unset URL (exits 0, no-op), non-`.ics` URL, and a real 401/403/404 —
 each gives an actionable message rather than a traceback.
 
-## In progress
+## Batch 5 — Calendar (live)
 
-- [ ] **`FIXTURES_ICS_URL`** — add the calendar's *Secret address in iCal format* as a
-      repository **secret** (Settings → Secrets and variables → Actions → Secrets), then run
-      *Sync Fixtures* from the Actions tab. `/fixtures/` populates itself from then on.
-      Full steps in the README.
+- [x] **`FIXTURES_ICS_URL`** added as a repo secret; *Sync Fixtures* ran and pulled 22 events.
+- [x] The calendar turned out to be the club's **full diary** (games, tournaments, training,
+      socials, AGMs), not a match-fixtures list. Reworked accordingly:
+    - `/fixtures/` renamed to **`/calendar/`** ("Club Calendar"); nav, llms.txt, README, sitemap updated.
+    - Rebuilt from a list into a **month-grid calendar** (desktop) with an agenda list (mobile +
+      screen-reader + crawler view). Colour-coded by category.
+    - Events **categorised** — game / training / social / club — via a `[Tag]` (or `#tag`) in the
+      calendar event title, falling back to keyword detection. Only "Pembrokeshire" needs a manual
+      tag; the other 21 classify correctly.
+    - Schema is now `SportsEvent` for games and `Event` for everything else (was mislabelling
+      socials/meetings as SportsEvent).
+    - Dropped the Home/Away framing (meaningless for socials and meetings).
+    - `/events/` kept as-is (curated beginners intake + announcement bar), per your call.
+      **Superseded:** `/calendar/` was folded into `/events/` before either shipped. Two
+      pages meant two lists of the same dates and the same three beginner sessions
+      emitted as `Event` schema twice under different names. `club.season.events` is gone;
+      the page, its beginner cards, the announcement bar and `llms.txt` all read the
+      synced calendar. `/calendar/` never went live, so no redirect was needed.
+      **Then superseded again:** the month grid was replaced by a fixture list, which also
+      removed the visually hidden agenda that used to duplicate it for screen readers. One
+      list now serves desktop, mobile and assistive tech, so there is no `aria-hidden` view
+      and no duplicated text. `build_months` no longer emits a week matrix.
+    - Images are now optimised by CI (`optimise-images.yml`). First pass took the repo's
+      images from 899KB to 525KB. Team crests are converted to 120px webp; everything else
+      keeps its filename and format, because `<img src>`, `manifest.json` and the JSON-LD
+      schema reference those paths literally.
+
+**Open, found while optimising images:** all three PWA icons are non-square and their real
+dimensions do not match what `manifest.json` declares (`android-chrome-512x512.png` is
+410x512, `192x192` is 154x192, `apple-touch-icon` is 144x180). Chrome wants a true 512x512
+for the install prompt. Fix is to pad each to a square canvas at the declared size, which
+changes how the icon sits on a home screen, so it was left alone pending a decision.
+    - **Home/away** for games: `[Home]`/`[Away]` tag (or `#home`/`#away`, or a leading
+      Home/Away word on a game) renders an H/A badge; ignored on non-games.
+    - Owner is tagging events `[Game]` / `[Training]` / `[Social]` / `[Club]` at source.
+
+  **Note:** the calendar's beginner-session entries show 08:00 with no location — looks like a
+  data slip in the calendar. `/events/` (now from the synced calendar) remains the authoritative beginners
+  info, so the marketing copy is unaffected either way.
 
 ## Parked
 

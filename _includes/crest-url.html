@@ -1,0 +1,32 @@
+{%- comment -%}
+  Resolves a team's crest to a URL, or an empty string if we do not have one.
+  Split out from team-crest.html so the fixture cards and the JSON payload that
+  feeds the details pop-up agree on where a crest lives.
+
+  Params: slug
+{%- endcomment -%}
+{%- assign club = site.data.club -%}
+{%- assign crest = '' -%}
+{%- if include.slug == club.crest_slug -%}
+  {%- assign crest = club.crest -%}
+{%- else -%}
+  {%- comment -%}
+    Falls back to a built-in list if site.crest_formats is missing. Jekyll does
+    not reload _config.yml while `--watch` is running, so a dev server started
+    before that key existed would otherwise loop over nothing and quietly show
+    initials for every team.
+  {%- endcomment -%}
+  {%- assign formats = site.crest_formats -%}
+  {%- if formats == nil or formats.size == 0 -%}
+    {%- assign formats = 'webp,png,svg,jpg,jpeg' | split: ',' -%}
+  {%- endif -%}
+  {%- for ext in formats -%}
+    {%- if crest == '' -%}
+      {%- assign candidate = '/assets/images/teams/' | append: include.slug | append: '.' | append: ext -%}
+      {%- if site.static_files | where: 'path', candidate | first -%}
+        {%- assign crest = candidate -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{{- crest -}}

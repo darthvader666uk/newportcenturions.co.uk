@@ -11,6 +11,10 @@
 
 name: Newport Centurions Korfball Club
 short_name: Newport Centurions
+# Club badge, used on fixture cards. Opponent crests go in
+# assets/images/teams/<slug>.webp|png|svg and are picked up automatically.
+crest: /images/newport-centurions-korfball-club-400.webp
+crest_slug: newport
 founded: 2019
 email: Newportkorfball@gmail.com
 
@@ -51,58 +55,12 @@ training:
     display_short: "8–9pm"
 
 # --- Season -----------------------------------------------------------------
-# `events` drives /events/ (cards + Event schema + screen-reader list) and the
-# announcement bar. Add a date here and it appears in all four places.
-#   beginner: true  -> also advertised in the announcement bar
-# Descriptions are plain text: Liquid is NOT rendered inside _data files.
+# Only the season label and start date live here now. Event dates come from the
+# club's Google Calendar via _data/fixtures.yml, so there is one list, not two.
+# To advertise a beginner session, tag it [Beginners] in Google Calendar.
 season:
   label: "2026/27"
   start_date: 2026-08-18
-  events:
-    - date: 2026-08-18
-      title: "First Session Back"
-      tag: "Season Start"
-      tag_class: tag-season
-      card_class: event-highlight
-      beginner: false
-      start_time: "18:00"
-      end_time: "20:00"
-      time_display: "Tuesdays 6–8pm & Thursdays 8–9pm"
-      description: "The 2026/27 season kicks off. Regular training resumes."
-      schema_description: "First korfball training session of the 2026/27 season. Regular training resumes. Beginners welcome."
-    - date: 2026-09-08
-      title: "Beginner Session"
-      tag: "Beginners Welcome"
-      tag_class: tag-beginner
-      card_class: event-beginner
-      beginner: true
-      start_time: "18:00"
-      end_time: "20:00"
-      time_display: "6:00 PM – 8:00 PM"
-      description: "Never played korfball? This is your chance. Turn up, give it a go — no experience needed."
-      schema_description: "Beginner-friendly korfball session. No experience needed. Turn up in sportswear."
-    - date: 2026-09-15
-      title: "Beginner Session"
-      tag: "Beginners Welcome"
-      tag_class: tag-beginner
-      card_class: event-beginner
-      beginner: true
-      start_time: "18:00"
-      end_time: "20:00"
-      time_display: "6:00 PM – 8:00 PM"
-      description: "Another chance to try korfball. Come and see if it's for you."
-      schema_description: "Beginner-friendly korfball session. No experience needed. Turn up in sportswear."
-    - date: 2026-09-22
-      title: "Beginner Session"
-      tag: "Beginners Welcome"
-      tag_class: tag-beginner
-      card_class: event-beginner
-      beginner: true
-      start_time: "18:00"
-      end_time: "20:00"
-      time_display: "6:00 PM – 8:00 PM"
-      description: "Last beginner session of the intake. Don't miss your chance to join this season."
-      schema_description: "Final beginner korfball session of the intake. No experience needed."
 
 # --- Competition ------------------------------------------------------------
 leagues:

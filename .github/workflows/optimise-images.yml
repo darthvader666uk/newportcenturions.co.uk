@@ -1,0 +1,65 @@
+name: Optimise Images
+
+# Converts and compresses images so nobody has to remember to. Drop a photo or
+# a crest in, push, and this shrinks it and commits the result back.
+#
+# WHAT IT CHANGES
+#   assets/images/teams/  crests become 120px webp with a lowercase filename.
+#                         They are looked up by slug with the extension tried
+#                         in turn, so renaming one cannot break a link.
+#   assets/favicon/       lossless PNG optimisation only, never resized:
+#                         manifest.json declares their sizes.
+#   everything else       capped at 1200px on the longest side and re-encoded
+#                         in the SAME format under the SAME name, because
+#                         <img src>, manifest.json and the JSON-LD schema all
+#                         reference those paths literally.
+#
+# It records each optimised file's hash in .github/image-manifest.json and
+# skips anything already done, so a lossy image is never re-encoded twice and
+# a quiet push produces no commit.
+#
+# The rules live in .github/scripts/optimise-images.py. Run it locally with
+# --check to see what it would do without writing anything.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '**.png'
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.webp'
+      - '.github/scripts/optimise-images.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  optimise:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow
+        run: pip install --quiet pillow
+
+      - name: Optimise
+        run: python3 .github/scripts/optimise-images.py
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "Every image was already optimised."
+            exit 0
+          fi
+          git config user.name 'github-actions'
+          git config user.email 'github-actions@github.com'
+          git add -A
+          git commit -m 'Optimise images [skip ci]'
+          git push

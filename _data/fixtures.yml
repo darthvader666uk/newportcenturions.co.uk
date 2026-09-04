@@ -1,11 +1,25 @@
 # GENERATED FILE - DO NOT EDIT BY HAND.
 #
 # Written by .github/workflows/sync-fixtures.yml from the club's Google
-# Calendar. To change a fixture, edit the calendar; the next sync picks
+# Calendar. To change an entry, edit the calendar; the next sync picks
 # it up. Edits made here will be overwritten.
+#
+# Category comes from a [Tag] or #tag in the event title (Game, Training,
+# Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-09-04T08:18:28Z'
+generated: '2026-09-04T13:32:31Z'
 source: Google Calendar
+categories:
+- key: game
+  label: Games
+- key: training
+  label: Training
+- key: social
+  label: Socials
+- key: club
+  label: Club & Meetings
+- key: other
+  label: Other
 fixtures:
 - title: 🏴󠁧󠁢󠁷󠁬󠁳󠁿🏆Welsh Cup 2026!🏆🏴󠁧󠁢󠁷󠁬󠁳󠁿
   date: 2026-05-09
@@ -15,6 +29,15 @@ fixtures:
   location: House of Sport, Clos Parc Morgannwg, Cardiff CF11 8AW, UK
   description: Details TBC
   all_day: false
+  category: game
+  side: null
+  beginner: false
+  trophy: true
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e1
 - title: Centurions AGM
   date: 2026-05-19
   date_iso: '2026-05-19'
@@ -23,14 +46,32 @@ fixtures:
   location: ''
   description: ''
   all_day: false
+  category: club
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e2
 - title: Pembrokeshire
   date: 2026-05-22
   date_iso: '2026-05-22'
-  start_time: 08:00
-  end_time: 09:00
+  start_time: '08:00'
+  end_time: '09:00'
   location: ''
   description: ''
   all_day: false
+  category: other
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e3
 - title: Last Korf of the season
   date: 2026-06-02
   date_iso: '2026-06-02'
@@ -39,6 +80,15 @@ fixtures:
   location: ''
   description: ''
   all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e4
 - title: Awards Night
   date: 2026-06-05
   date_iso: '2026-06-05'
@@ -47,14 +97,32 @@ fixtures:
   location: The Potters, 22-24 Upper Dock St, Newport NP20 1DL, UK
   description: ''
   all_day: false
+  category: social
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e5
 - title: Inter area (invitation tournament)
   date: 2026-06-06
   date_iso: '2026-06-06'
-  start_time: 08:00
-  end_time: 09:00
+  start_time: '08:00'
+  end_time: '09:00'
   location: ''
   description: ''
   all_day: false
+  category: game
+  side: null
+  beginner: false
+  trophy: true
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e6
 - title: Nitra? Tournament in Slovakia
   date: 2026-07-10
   date_iso: '2026-07-10'
@@ -63,6 +131,15 @@ fixtures:
   location: ''
   description: ''
   all_day: true
+  category: game
+  side: null
+  beginner: false
+  trophy: true
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e7
 - title: Exeter tournament
   date: 2026-07-18
   date_iso: '2026-07-18'
@@ -71,7 +148,16 @@ fixtures:
   location: ''
   description: ''
   all_day: false
-- title: WKA AGM https://teams.microsoft.com/meet/316554345715097?p=aOcLDz3PsM9aJTn1uB
+  category: game
+  side: null
+  beginner: false
+  trophy: true
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e8
+- title: 'WKA AGM https://teams.microsoft.com/meet/316554345715097?p=aOcLDz3PsM9aJTn1uB'
   date: 2026-08-10
   date_iso: '2026-08-10'
   start_time: '18:30'
@@ -79,15 +165,33 @@ fixtures:
   location: ''
   description: ''
   all_day: false
+  category: club
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e9
 - title: Beach korf day. Timings/location tbc. Bring a picnic, beach games and any
     family/friends you want
   date: 2026-08-15
   date_iso: '2026-08-15'
-  start_time: 07:00
-  end_time: 08:00
+  start_time: '07:00'
+  end_time: '08:00'
   location: ''
   description: ''
   all_day: false
+  category: social
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e10
 - title: First korf session back
   date: 2026-08-18
   date_iso: '2026-08-18'
@@ -96,6 +200,15 @@ fixtures:
   location: ''
   description: ''
   all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e11
 - title: Committee meeting (Exact time tbc)
   date: 2026-09-03
   date_iso: '2026-09-03'
@@ -104,14 +217,32 @@ fixtures:
   location: ''
   description: ''
   all_day: false
+  category: club
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e12
 - title: Beginners sessions
   date: 2026-09-08
   date_iso: '2026-09-08'
-  start_time: 08:00
-  end_time: 09:00
-  location: ''
+  start_time: '18:00'
+  end_time: '20:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
   description: ''
   all_day: false
+  category: training
+  side: null
+  beginner: true
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e13
 - title: First Thursday session back
   date: 2026-09-10
   date_iso: '2026-09-10'
@@ -120,30 +251,83 @@ fixtures:
   location: ''
   description: ''
   all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e14
 - title: Beginners sessions
   date: 2026-09-15
   date_iso: '2026-09-15'
-  start_time: 08:00
-  end_time: 09:00
-  location: ''
+  start_time: '18:00'
+  end_time: '20:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
   description: ''
   all_day: false
+  category: training
+  side: null
+  beginner: true
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e15
 - title: Beginners sessions
   date: 2026-09-22
   date_iso: '2026-09-22'
-  start_time: 08:00
-  end_time: 09:00
-  location: ''
+  start_time: '18:00'
+  end_time: '20:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
   description: ''
   all_day: false
+  category: training
+  side: null
+  beginner: true
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e16
 - title: Pub night in Cardiff
   date: 2026-09-25
   date_iso: '2026-09-25'
   start_time: '18:00'
-  end_time: 00:30
+  end_time: '00:30'
   location: ''
   description: ''
   all_day: false
+  category: social
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e17
+- title: Newport 2 V Cardiff City 2
+  date: 2026-10-03
+  date_iso: '2026-10-03'
+  start_time: '11:30'
+  end_time: '13:30'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 2
+  away_team: Cardiff City 2
+  home_slug: newport
+  away_slug: cardiff-city
+  id: e18
 - title: Korf bowling social
   date: 2026-10-03
   date_iso: '2026-10-03'
@@ -153,15 +337,105 @@ fixtures:
     Cardiff CF10 2LE, UK
   description: ''
   all_day: false
+  category: social
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e19
+- title: Newport Centurions V Exeter City 1
+  date: 2026-10-11
+  date_iso: '2026-10-11'
+  start_time: '11:30'
+  end_time: '13:30'
+  location: St Peter's Church of England Aided School, Quarry Ln, Exeter EX2 5AP,
+    UK
+  description: 'Match Start: 12pm'
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport Centurions
+  away_team: Exeter City 1
+  home_slug: newport
+  away_slug: exeter-city
+  id: e20
+- title: Swansea Roar 2 V Newport 3
+  date: 2026-10-11
+  date_iso: '2026-10-11'
+  start_time: '12:10'
+  end_time: '14:10'
+  location: Pontardawe Leisure Centre, Parc Ynysderw, Ffordd Parc Ynysderw, Pontardawe,
+    Swansea SA8 4EG, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Swansea Roar 2
+  away_team: Newport 3
+  home_slug: swansea-roar
+  away_slug: newport
+  id: e21
+- title: Newport 2 V Cardiff City 1
+  date: 2026-10-11
+  date_iso: '2026-10-11'
+  start_time: '13:40'
+  end_time: '15:40'
+  location: Pontardawe Leisure Centre, Parc Ynysderw, Ffordd Parc Ynysderw, Pontardawe,
+    Swansea SA8 4EG, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport 2
+  away_team: Cardiff City 1
+  home_slug: newport
+  away_slug: cardiff-city
+  id: e22
+- title: Swansea Roar 2 V Newport 3
+  date: 2026-10-18
+  date_iso: '2026-10-18'
+  start_time: '10:40'
+  end_time: '12:40'
+  location: Cardiff University, 12 Bevan Pl, Cardiff CF14 3UX, UK
+  description: ''
+  all_day: false
+  category: game
+  side: away
+  beginner: false
+  trophy: false
+  home_team: Swansea Roar 2
+  away_team: Newport 3
+  home_slug: swansea-roar
+  away_slug: newport
+  id: e23
 - title: Cardiff Uni Beginners Tournament.
   date: 2026-10-24
   date_iso: '2026-10-24'
-  start_time: 09:00
+  start_time: '09:00'
   end_time: '17:00'
-  location: ''
+  location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+    3UX, UK
   description: ''
   all_day: false
-- title: Social - Ice hockey
+  category: game
+  side: null
+  beginner: false
+  trophy: true
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e24
+- title: Ice hockey
   date: 2026-11-13
   date_iso: '2026-11-13'
   start_time: '19:00'
@@ -169,6 +443,15 @@ fixtures:
   location: Vindico Arena, Viola Arena, Olympian Dr, Cardiff CF11 0JS, UK
   description: ''
   all_day: false
+  category: social
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e25
 - title: Committee meeting (Exact time tbc)
   date: 2026-11-19
   date_iso: '2026-11-19'
@@ -177,7 +460,16 @@ fixtures:
   location: ''
   description: ''
   all_day: false
-- title: Social - Ice Hockey
+  category: club
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e26
+- title: Ice Hockey
   date: 2026-12-06
   date_iso: '2026-12-06'
   start_time: '17:00'
@@ -185,3 +477,318 @@ fixtures:
   location: Vindico Arena, Viola Arena, Olympian Dr, Cardiff CF11 0JS, UK
   description: ''
   all_day: false
+  category: social
+  side: null
+  beginner: false
+  trophy: false
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e27
+months:
+- key: '2026-09'
+  label: September 2026
+  events:
+  - id: e12
+    title: Committee meeting (Exact time tbc)
+    category: club
+    beginner: false
+    trophy: false
+    side: null
+    date_iso: '2026-09-03'
+    day: 3
+    weekday: Thu
+    month_abbr: Sep
+    time: '19:00'
+    end_time: '20:00'
+    all_day: false
+    location: ''
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e13
+    title: Beginners sessions
+    category: training
+    beginner: true
+    trophy: false
+    side: null
+    date_iso: '2026-09-08'
+    day: 8
+    weekday: Tue
+    month_abbr: Sep
+    time: '18:00'
+    end_time: '20:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e14
+    title: First Thursday session back
+    category: training
+    beginner: false
+    trophy: false
+    side: null
+    date_iso: '2026-09-10'
+    day: 10
+    weekday: Thu
+    month_abbr: Sep
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: ''
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e15
+    title: Beginners sessions
+    category: training
+    beginner: true
+    trophy: false
+    side: null
+    date_iso: '2026-09-15'
+    day: 15
+    weekday: Tue
+    month_abbr: Sep
+    time: '18:00'
+    end_time: '20:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e16
+    title: Beginners sessions
+    category: training
+    beginner: true
+    trophy: false
+    side: null
+    date_iso: '2026-09-22'
+    day: 22
+    weekday: Tue
+    month_abbr: Sep
+    time: '18:00'
+    end_time: '20:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e17
+    title: Pub night in Cardiff
+    category: social
+    beginner: false
+    trophy: false
+    side: null
+    date_iso: '2026-09-25'
+    day: 25
+    weekday: Fri
+    month_abbr: Sep
+    time: '18:00'
+    end_time: '00:30'
+    all_day: false
+    location: ''
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+- key: '2026-10'
+  label: October 2026
+  events:
+  - id: e18
+    title: Newport 2 V Cardiff City 2
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2026-10-03'
+    day: 3
+    weekday: Sat
+    month_abbr: Oct
+    time: '11:30'
+    end_time: '13:30'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: Newport 2
+    away_team: Cardiff City 2
+    home_slug: newport
+    away_slug: cardiff-city
+  - id: e19
+    title: Korf bowling social
+    category: social
+    beginner: false
+    trophy: false
+    side: null
+    date_iso: '2026-10-03'
+    day: 3
+    weekday: Sat
+    month_abbr: Oct
+    time: '19:00'
+    end_time: '20:30'
+    all_day: false
+    location: Hollywood Bowl XL Cardiff St David’s, 3-6 Hills St, St Davids Centre,
+      Cardiff CF10 2LE, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e20
+    title: Newport Centurions V Exeter City 1
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2026-10-11'
+    day: 11
+    weekday: Sun
+    month_abbr: Oct
+    time: '11:30'
+    end_time: '13:30'
+    all_day: false
+    location: St Peter's Church of England Aided School, Quarry Ln, Exeter EX2 5AP,
+      UK
+    home_team: Newport Centurions
+    away_team: Exeter City 1
+    home_slug: newport
+    away_slug: exeter-city
+  - id: e21
+    title: Swansea Roar 2 V Newport 3
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2026-10-11'
+    day: 11
+    weekday: Sun
+    month_abbr: Oct
+    time: '12:10'
+    end_time: '14:10'
+    all_day: false
+    location: Pontardawe Leisure Centre, Parc Ynysderw, Ffordd Parc Ynysderw, Pontardawe,
+      Swansea SA8 4EG, UK
+    home_team: Swansea Roar 2
+    away_team: Newport 3
+    home_slug: swansea-roar
+    away_slug: newport
+  - id: e22
+    title: Newport 2 V Cardiff City 1
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2026-10-11'
+    day: 11
+    weekday: Sun
+    month_abbr: Oct
+    time: '13:40'
+    end_time: '15:40'
+    all_day: false
+    location: Pontardawe Leisure Centre, Parc Ynysderw, Ffordd Parc Ynysderw, Pontardawe,
+      Swansea SA8 4EG, UK
+    home_team: Newport 2
+    away_team: Cardiff City 1
+    home_slug: newport
+    away_slug: cardiff-city
+  - id: e23
+    title: Swansea Roar 2 V Newport 3
+    category: game
+    beginner: false
+    trophy: false
+    side: away
+    date_iso: '2026-10-18'
+    day: 18
+    weekday: Sun
+    month_abbr: Oct
+    time: '10:40'
+    end_time: '12:40'
+    all_day: false
+    location: Cardiff University, 12 Bevan Pl, Cardiff CF14 3UX, UK
+    home_team: Swansea Roar 2
+    away_team: Newport 3
+    home_slug: swansea-roar
+    away_slug: newport
+  - id: e24
+    title: Cardiff Uni Beginners Tournament.
+    category: game
+    beginner: false
+    trophy: true
+    side: null
+    date_iso: '2026-10-24'
+    day: 24
+    weekday: Sat
+    month_abbr: Oct
+    time: '09:00'
+    end_time: '17:00'
+    all_day: false
+    location: Cardiff University Sports Training Village, 12 Bevan Pl, Cardiff CF14
+      3UX, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+- key: '2026-11'
+  label: November 2026
+  events:
+  - id: e25
+    title: Ice hockey
+    category: social
+    beginner: false
+    trophy: false
+    side: null
+    date_iso: '2026-11-13'
+    day: 13
+    weekday: Fri
+    month_abbr: Nov
+    time: '19:00'
+    end_time: '21:00'
+    all_day: false
+    location: Vindico Arena, Viola Arena, Olympian Dr, Cardiff CF11 0JS, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e26
+    title: Committee meeting (Exact time tbc)
+    category: club
+    beginner: false
+    trophy: false
+    side: null
+    date_iso: '2026-11-19'
+    day: 19
+    weekday: Thu
+    month_abbr: Nov
+    time: '19:00'
+    end_time: '20:00'
+    all_day: false
+    location: ''
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+- key: '2026-12'
+  label: December 2026
+  events:
+  - id: e27
+    title: Ice Hockey
+    category: social
+    beginner: false
+    trophy: false
+    side: null
+    date_iso: '2026-12-06'
+    day: 6
+    weekday: Sun
+    month_abbr: Dec
+    time: '17:00'
+    end_time: '19:00'
+    all_day: false
+    location: Vindico Arena, Viola Arena, Olympian Dr, Cardiff CF11 0JS, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
