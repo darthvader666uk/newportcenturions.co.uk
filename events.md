@@ -190,7 +190,12 @@ keywords: newport centurions events, korfball beginners newport, korfball traini
       </h2>
       <p class="cal-dialog-line" data-f="when"></p>
       <p class="cal-dialog-line cal-dialog-where" data-f="whereLine">
-        <a data-f="map" target="_blank" rel="noopener noreferrer"></a>
+        {%- comment -%}
+          The href is replaced with the event's own location when the pop-up
+          opens. It needs a real one in the markup regardless: an <a> with no
+          reference is invalid, and htmlproofer fails the build over it.
+        {%- endcomment -%}
+        <a data-f="map" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"></a>
       </p>
       <p class="cal-dialog-desc" data-f="desc"></p>
     </dialog>
