@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-09-04T13:32:31Z'
+generated: '2026-09-04T13:57:41Z'
 source: Google Calendar
 categories:
 - key: game
@@ -346,7 +346,7 @@ fixtures:
   home_slug: null
   away_slug: null
   id: e19
-- title: Newport Centurions V Exeter City 1
+- title: Exeter City 1 V Newport Centurions
   date: 2026-10-11
   date_iso: '2026-10-11'
   start_time: '11:30'
@@ -356,13 +356,13 @@ fixtures:
   description: 'Match Start: 12pm'
   all_day: false
   category: game
-  side: home
+  side: away
   beginner: false
   trophy: false
-  home_team: Newport Centurions
-  away_team: Exeter City 1
-  home_slug: newport
-  away_slug: exeter-city
+  home_team: Exeter City 1
+  away_team: Newport Centurions
+  home_slug: exeter-city
+  away_slug: newport
   id: e20
 - title: Swansea Roar 2 V Newport 3
   date: 2026-10-11
@@ -639,11 +639,11 @@ months:
     home_slug: null
     away_slug: null
   - id: e20
-    title: Newport Centurions V Exeter City 1
+    title: Exeter City 1 V Newport Centurions
     category: game
     beginner: false
     trophy: false
-    side: home
+    side: away
     date_iso: '2026-10-11'
     day: 11
     weekday: Sun
@@ -653,10 +653,10 @@ months:
     all_day: false
     location: St Peter's Church of England Aided School, Quarry Ln, Exeter EX2 5AP,
       UK
-    home_team: Newport Centurions
-    away_team: Exeter City 1
-    home_slug: newport
-    away_slug: exeter-city
+    home_team: Exeter City 1
+    away_team: Newport Centurions
+    home_slug: exeter-city
+    away_slug: newport
   - id: e21
     title: Swansea Roar 2 V Newport 3
     category: game
