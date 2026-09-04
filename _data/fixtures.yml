@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-09-04T14:48:57Z'
+generated: '2026-09-04T15:16:03Z'
 source: Google Calendar
 categories:
 - key: game
@@ -607,6 +607,23 @@ fixtures:
   home_slug: newport
   away_slug: bristol-thunder
   id: e34
+- title: Newport Centurions V University of Exeter 1
+  date: 2027-04-11
+  date_iso: '2027-04-11'
+  start_time: null
+  end_time: null
+  location: ''
+  description: <span><b><i>WRL Super Saturday</i></b></span>
+  all_day: true
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport Centurions
+  away_team: University of Exeter 1
+  home_slug: newport
+  away_slug: university-of-exeter
+  id: e35
 months:
 - key: '2026-09'
   label: September 2026
@@ -1052,7 +1069,25 @@ months:
     away_slug: bristol-thunder
 - key: '2027-04'
   label: April 2027
-  events: []
+  events:
+  - id: e35
+    title: Newport Centurions V University of Exeter 1
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2027-04-11'
+    day: 11
+    weekday: Sun
+    month_abbr: Apr
+    time: null
+    end_time: null
+    all_day: true
+    location: ''
+    home_team: Newport Centurions
+    away_team: University of Exeter 1
+    home_slug: newport
+    away_slug: university-of-exeter
 - key: '2027-05'
   label: May 2027
   events: []
