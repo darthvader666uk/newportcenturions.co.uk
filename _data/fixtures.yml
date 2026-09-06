@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-09-05T20:51:24Z'
+generated: '2026-09-06T04:56:23Z'
 source: Google Calendar
 categories:
 - key: game
@@ -832,6 +832,23 @@ fixtures:
   home_slug: cardiff-uni
   away_slug: newport
   id: e47
+- title: Newport Centurions V Bristol City 1
+  date: 2027-03-06
+  date_iso: '2027-03-06'
+  start_time: '12:00'
+  end_time: '14:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  home_team: Newport Centurions
+  away_team: Bristol City 1
+  home_slug: newport
+  away_slug: bristol-city
+  id: e48
 - title: Newport 3 V Swansea Roar 2
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -849,23 +866,6 @@ fixtures:
   away_team: Swansea Roar 2
   home_slug: newport
   away_slug: swansea-roar
-  id: e48
-- title: Newport Centurions V Bristol City 1
-  date: 2027-03-06
-  date_iso: '2027-03-06'
-  start_time: '12:00'
-  end_time: '14:00'
-  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
-  description: ''
-  all_day: false
-  category: game
-  side: home
-  beginner: false
-  trophy: false
-  home_team: Newport Centurions
-  away_team: Bristol City 1
-  home_slug: newport
-  away_slug: bristol-city
   id: e49
 - title: Swansea Roar 1 V Newport 2
   date: 2027-03-13
@@ -1618,6 +1618,24 @@ months:
     home_slug: cardiff-uni
     away_slug: newport
   - id: e48
+    title: Newport Centurions V Bristol City 1
+    category: game
+    beginner: false
+    trophy: false
+    side: home
+    date_iso: '2027-03-06'
+    day: 6
+    weekday: Sat
+    month_abbr: Mar
+    time: '12:00'
+    end_time: '14:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: Newport Centurions
+    away_team: Bristol City 1
+    home_slug: newport
+    away_slug: bristol-city
+  - id: e49
     title: Newport 3 V Swansea Roar 2
     category: game
     beginner: false
@@ -1636,24 +1654,6 @@ months:
     away_team: Swansea Roar 2
     home_slug: newport
     away_slug: swansea-roar
-  - id: e49
-    title: Newport Centurions V Bristol City 1
-    category: game
-    beginner: false
-    trophy: false
-    side: home
-    date_iso: '2027-03-06'
-    day: 6
-    weekday: Sat
-    month_abbr: Mar
-    time: '12:00'
-    end_time: '14:00'
-    all_day: false
-    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
-    home_team: Newport Centurions
-    away_team: Bristol City 1
-    home_slug: newport
-    away_slug: bristol-city
   - id: e50
     title: Swansea Roar 1 V Newport 2
     category: game
