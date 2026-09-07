@@ -91,6 +91,22 @@ The ring is a shape cue rather than a sixth colour: the five category colours ar
 spoken for, and a ring survives colour blindness where another orange would not. There is
 no legend row for it, because the entries say "Beginners" in their own titles.
 
+### Leagues
+
+Prefix a fixture with its league code and the sync strips the code from the title, shows it
+as a small pill on the card, and names the league in full in the details pop-up instead of
+the generic "League game".
+
+```
+[Game] WKL: Newport 2 V Cardiff City 2
+[Game] WRL: Exeter City 1 V Newport Centurions
+```
+
+The codes live in `league_codes` in `club.yml`. Only listed codes are recognised, and the
+code may come before or after the `[Game]` tag. An unrecognised prefix is deliberately left
+in the title rather than stripped, so a typo shows up on the page instead of being silently
+absorbed into the home team's name, which is what breaks the crest lookup.
+
 ### Trophies
 
 A game whose title contains **tournament** or **cup** gets a trophy icon on its card and in

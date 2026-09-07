@@ -51,6 +51,43 @@ MAX_MONTHS_AHEAD = 18
 DEFAULT_SEASON = (9, 5)
 
 
+def league_codes():
+    """{CODE: full name} for the leagues, from club.yml."""
+    try:
+        club = yaml.safe_load(open(CLUB, encoding="utf-8")) or {}
+        codes = club.get("league_codes") or {}
+        return {str(k).upper(): str(v) for k, v in codes.items()}
+    except Exception:                                    # noqa: BLE001
+        return {}
+
+
+LEAGUE_CODES = None
+
+
+def strip_league(title):
+    """Pull a leading league code off a title.
+
+    Fixtures are written "WKL: Newport 2 V Cardiff City 2". Left in place the
+    code becomes part of the home team's name, which breaks both the name and
+    the crest lookup, so it comes off here and is carried separately.
+
+    Only codes listed in club.yml are recognised. An unknown prefix is left
+    alone on purpose: a typo should be visible on the page rather than quietly
+    absorbed into a team name.
+    """
+    global LEAGUE_CODES
+    if LEAGUE_CODES is None:
+        LEAGUE_CODES = league_codes()
+
+    m = re.match(r"^([A-Za-z]{2,6})\s*:\s*", title)
+    if not m:
+        return None, title
+    code = m.group(1).upper()
+    if code not in LEAGUE_CODES:
+        return None, title
+    return code, title[m.end():].strip()
+
+
 def season_months():
     """(first, last) month numbers of the playing season, from club.yml."""
     try:
@@ -174,7 +211,7 @@ TROPHY_KEYWORDS = ("tournament", "cup")
 
 
 def categorise(title):
-    """Return (category, side, beginner, trophy, cleaned_title).
+    """Return (category, side, beginner, trophy, league, cleaned_title).
 
     Category and an optional home/away side are read from tags in the event
     title, e.g. "[Game] [Home] Cardiff Dragons" or "Pub night #social".
@@ -184,7 +221,9 @@ def categorise(title):
     "A v B" title. `beginner` marks a session aimed
     at newcomers, `trophy` marks a competition. All recognised tags are
     stripped from the title before display."""
-    t = title.strip()
+    # Tried before the [Tag] loop and again after it, because titles are
+    # written both ways round: "WKL: Newport 2 V ..." and "[Game] WKL: ...".
+    league, t = strip_league(title.strip())
     cat = None
     side = None
     beginner = False
@@ -205,6 +244,9 @@ def categorise(title):
         else:
             break  # unrecognised bracket -> leave it in the title
         t = t[m.end():].strip()
+
+    if league is None:
+        league, t = strip_league(t)
 
     # #hashtags anywhere, for category and/or side.
     for tag in re.findall(r"#(\w+)", t):
@@ -270,7 +312,7 @@ def categorise(title):
     low = t.lower()
     trophy = cat == "game" and any(k in low for k in TROPHY_KEYWORDS)
 
-    return cat, side, beginner, trophy, " ".join(t.split())
+    return cat, side, beginner, trophy, league, " ".join(t.split())
 
 
 def build_months(events, today):
@@ -308,6 +350,7 @@ def build_months(events, today):
                     {"id": e["id"], "title": e["title"], "category": e["category"],
                      "beginner": e.get("beginner", False),
                      "trophy": e.get("trophy", False),
+                     "league": e.get("league"),
                      "side": e.get("side"), "date_iso": e["date_iso"],
                      "day": e["date"].day, "weekday": e["date"].strftime("%a"),
                      "month_abbr": e["date"].strftime("%b"),
@@ -332,11 +375,12 @@ def build_payload(events, today=None):
     today = today or date.today()
 
     for e in events:
-        cat, side, beginner, trophy, clean_title = categorise(e["title"])
+        cat, side, beginner, trophy, league, clean_title = categorise(e["title"])
         e["category"] = cat
         e["side"] = side
         e["beginner"] = beginner
         e["trophy"] = trophy
+        e["league"] = league
         e["title"] = clean_title
 
         home, away = split_fixture(clean_title) if cat == "game" else (None, None)
@@ -445,6 +489,24 @@ def clean(text):
     return " ".join(str(text).split())
 
 
+def clean_html(text):
+    """Flatten a Google Calendar description to plain text.
+
+    Descriptions come through as HTML, so a note typed in bold arrives as
+    "<span><b><i>WRL Super Saturday</i></b></span><br>Match Start: 12pm". The
+    pop-up sets it with textContent, which would print those tags literally.
+    """
+    if text is None:
+        return ""
+    text = str(text)
+    text = re.sub(r"(?i)<br\s*/?>|</p>|</div>", " ", text)
+    text = re.sub(r"<[^>]+>", "", text)
+    for entity, char in (("&nbsp;", " "), ("&amp;", "&"), ("&lt;", "<"),
+                         ("&gt;", ">"), ("&quot;", '"'), ("&#39;", "'")):
+        text = text.replace(entity, char)
+    return " ".join(text.split())
+
+
 def main():
     url = os.environ.get("FIXTURES_ICS_URL", "").strip()
 
@@ -515,7 +577,7 @@ def main():
             "start_time": as_time(start_value),
             "end_time": as_time(end_value) if end_value is not None else None,
             "location": clean(event.get("LOCATION")),
-            "description": clean(event.get("DESCRIPTION"))[:400],
+            "description": clean_html(event.get("DESCRIPTION"))[:400],
             "all_day": not isinstance(start_value, datetime),
         })
 

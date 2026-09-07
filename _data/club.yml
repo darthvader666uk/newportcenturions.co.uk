@@ -77,6 +77,15 @@ leagues:
   - Welsh Korfball League
   - Western Regional League
 
+# League codes as they are written at the front of a calendar event title,
+# e.g. "WKL: Newport 2 V Cardiff City 2". The sync strips the code from the
+# displayed title and shows the league on the fixture instead. Add a code here
+# and it is recognised; anything not listed is left in the title untouched, so
+# a typo shows up rather than being silently swallowed.
+league_codes:
+  WKL: Welsh Korfball League
+  WRL: Western Regional League
+
 awards:
   - "Welsh League Champions 2022/2023"
   - "Welsh League Champions 2025"

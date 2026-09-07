@@ -99,7 +99,13 @@ keywords: newport centurions events, korfball beginners newport, korfball traini
       keep their category label.
     {%- endcomment -%}
     {%- if f.category == 'game' -%}
-      {%- if f.trophy %}{% assign kind = 'Tournament' %}{% else %}{% assign kind = 'League game' %}{% endif -%}
+      {%- if f.trophy -%}
+        {%- assign kind = 'Tournament' -%}
+      {%- elsif f.league and club.league_codes[f.league] -%}
+        {%- assign kind = club.league_codes[f.league] -%}
+      {%- else -%}
+        {%- assign kind = 'League game' -%}
+      {%- endif -%}
     {%- else -%}
       {%- assign kind = cat.label -%}
     {%- endif -%}
@@ -169,6 +175,7 @@ keywords: newport centurions events, korfball beginners newport, korfball traini
                 <span class="fx-kickoff">{{ ev.time }}</span>
                 {%- endif %}{% endunless %}
                 {%- if ev.all_day %}<span class="fx-kickoff">All day</span>{% endif %}
+                {%- if ev.league %}<span class="fx-league" title="{{ club.league_codes[ev.league] }}">{{ ev.league }}</span>{% endif %}
                 {%- if ev.side %}<span class="fx-side cal-side--{{ ev.side }}">{{ ev.side }}</span>{% endif %}
                 {%- if ev.beginner %}<span class="fx-flag">Beginners</span>{% endif %}
               </span>
