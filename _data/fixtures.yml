@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-09-07T15:04:52Z'
+generated: '2026-09-09T11:38:18Z'
 source: Google Calendar
 categories:
 - key: game
@@ -1117,6 +1117,25 @@ fixtures:
   home_slug: newport
   away_slug: university-of-exeter
   id: e60
+- title: Newport 3 V RCT Comets 2
+  date: 2027-04-18
+  date_iso: '2027-04-18'
+  start_time: '12:10'
+  end_time: '14:10'
+  location: Pontardawe Leisure Centre, Parc Ynysderw, Ffordd Parc Ynysderw, Pontardawe,
+    Swansea SA8 4EG, UK
+  description: ''
+  all_day: false
+  category: game
+  side: home
+  beginner: false
+  trophy: false
+  league: WKL
+  home_team: Newport 3
+  away_team: RCT Comets 2
+  home_slug: newport
+  away_slug: rct-comets
+  id: e61
 - title: Raptors 3 V Newport 2
   date: 2027-04-25
   date_iso: '2027-04-25'
@@ -1135,7 +1154,7 @@ fixtures:
   away_team: Newport 2
   home_slug: raptors
   away_slug: newport
-  id: e61
+  id: e62
 months:
 - key: '2026-09'
   label: September 2026
@@ -2109,6 +2128,26 @@ months:
     home_slug: newport
     away_slug: university-of-exeter
   - id: e61
+    title: Newport 3 V RCT Comets 2
+    category: game
+    beginner: false
+    trophy: false
+    league: WKL
+    side: home
+    date_iso: '2027-04-18'
+    day: 18
+    weekday: Sun
+    month_abbr: Apr
+    time: '12:10'
+    end_time: '14:10'
+    all_day: false
+    location: Pontardawe Leisure Centre, Parc Ynysderw, Ffordd Parc Ynysderw, Pontardawe,
+      Swansea SA8 4EG, UK
+    home_team: Newport 3
+    away_team: RCT Comets 2
+    home_slug: newport
+    away_slug: rct-comets
+  - id: e62
     title: Raptors 3 V Newport 2
     category: game
     beginner: false
