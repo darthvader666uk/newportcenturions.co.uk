@@ -17,14 +17,17 @@ bundle install
 
 ## Tech Stack
 
-- **Static site generator**: Jekyll 3.10.0 (GitHub Pages' built-in builder)
-- **Hosting**: GitHub Pages, custom domain via `CNAME`
+- **Static site generator**: Jekyll 3.10.0
+- **Hosting**: Cloudflare Pages, built in GitHub Actions and uploaded with `wrangler`
 - **CSS**: hand-written, minified in CI by `clean-css`
 - **Icons**: Font Awesome 6.7.2 (cdnjs)
 - **Images**: WebP with `srcset`
 - **PWA**: Web app manifest + service worker
 
-Plugins are limited to the GitHub Pages whitelist: `jekyll-seo-tag` and `jekyll-sitemap`.
+Plugins are `jekyll-seo-tag` and `jekyll-sitemap`. The `whitelist:` key in `_config.yml`
+and the Jekyll 3.10 pin are both leftovers from GitHub Pages' built-in builder. Now that we
+build the site ourselves neither constrains us, so a move to Jekyll 4 is available whenever
+someone wants to do it as its own change.
 
 ## Project Structure
 
@@ -381,25 +384,77 @@ Bump `CACHE_VERSION` in `sw.js` when changing the precache list.
 
 ## Deployment
 
-Pushing to `master` deploys automatically via GitHub Pages.
+Pushing to `master` builds the site in GitHub Actions and uploads `_site` straight to
+Cloudflare Pages with `wrangler`. Nothing is uploaded unless the build, the JSON-LD
+validation and htmlproofer all pass, so a broken commit stops at CI rather than on the
+live site.
+
+Cloudflare's own Git integration is deliberately NOT connected. The free plan allows 500
+Cloudflare-run builds a month and `sync-fixtures.yml` commits to `master` on its own
+schedule, which would eat into that for no benefit. Direct uploads do not count against
+the cap and they let us gate the deploy on the checks above.
+
+Two repository secrets are required, both set up in `deploy.yml`'s header comment:
+`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
 
 Workflows:
 
 | Workflow | What it does |
 |---|---|
-| `build-check.yml` | Builds the site, validates all JSON-LD, runs htmlproofer on internal links and images. Runs on PRs and pushes. |
+| `deploy.yml` | Builds, validates, and uploads to Cloudflare Pages. Runs on pushes to `master`, daily at 04:15 UTC, and on demand. |
+| `build-check.yml` | The same build and checks, on pull requests only. `deploy.yml` covers `master`. |
 | `minify-all-css.yml` | Minifies `assets/css/*.css` and `_includes/*.css`, commits the `.min.css` files back. |
 | `sync-fixtures.yml` | Pulls the Google Calendar into `_data/fixtures.yml` every 30 minutes, commits on change. Also runs on demand. |
 | `optimise-images.yml` | Converts and compresses any image that lands in the repo, commits the result back. |
-| `scheduled-rebuild.yml` | Nightly Pages rebuild so build-time date filtering stays current without a push. |
 
-### A note on security headers
+### Response headers and caching
 
-GitHub Pages serves static files only and **cannot set custom HTTP response headers** —
-no CSP, `X-Frame-Options`, or `Referrer-Policy`. HTTPS and HSTS come from the repository's
-"Enforce HTTPS" setting. A previous `.htaccess` in this repo was inert (GitHub Pages is not
-Apache) and has been removed. Moving to a host that supports a `_headers` file
-(Cloudflare Pages, Netlify) is the only way to add them.
+Both live in `_headers`, which Cloudflare Pages reads at the edge. That file is commented
+in full, but two things are worth repeating because they are easy to get wrong:
+
+- Jekyll skips underscore-prefixed files, so `_headers` only reaches `_site` because
+  `_config.yml` lists it under `include:`. Losing it is silent, so `deploy.yml` fails the
+  build if the file is not there.
+- A splat in `_headers` matches greedily to the end of the path. There is no `/*.html`
+  rule, and there does not need to be: Cloudflare Pages already serves HTML as
+  `max-age=0, must-revalidate`, which is what date-filtered pages need.
+
+No asset filename is content-hashed. `styles.min.css` keeps that name forever and
+`optimise-images.yml` rewrites photos in place under the same path, so nothing except
+fonts gets a long `immutable` cache.
+
+The CSP ships as `Content-Security-Policy-Report-Only` until it has been watched on a real
+page with cookies accepted. Analytics is injected at runtime after consent, so `connect-src`
+and `img-src` are the entries most likely to need a correction.
+
+HSTS is not in `_headers`. The Cloudflare zone already sends it, and duplicating it here
+would just mean two headers saying the same thing.
+
+A previous `.htaccess` in this repo was inert (neither host is Apache) and has been removed.
+The `ssl:` and `enforce_ssl:` keys that used to sit near the top of `_config.yml` were the
+same kind of thing. Jekyll has no such settings and never read them, so they have gone too.
+Real HSTS now comes from the Cloudflare zone.
+
+### Cutover to Cloudflare Pages
+
+Do these in order. The site stays up on GitHub Pages until step 4.
+
+1. Create the Pages project and add the two secrets, per the comment at the top of
+   `.github/workflows/deploy.yml`.
+2. Run **Deploy** from the Actions tab. It publishes to `newportcenturions.pages.dev`.
+3. Check that URL properly: the announcement bar, `/events/`, the fixtures, the service
+   worker, and `curl -I` on a stylesheet to confirm the `_headers` rules are being applied.
+4. Pages project, Custom domains, add `newportcenturions.co.uk`. The domain is already on
+   Cloudflare nameservers, so Cloudflare updates the DNS record itself and the old GitHub
+   Pages A records go away. Add `www` at the same time if it is in use.
+5. Confirm HSTS is still on the response (`curl -I https://newportcenturions.co.uk`). It
+   comes from the zone rather than from the origin, so it should be unaffected, but check.
+6. Repo Settings, Pages, set the source to None.
+7. Delete `CNAME`. It only ever meant anything to GitHub Pages.
+
+Traffic reached the site through Cloudflare AND Fastly before this, because the zone was
+proxying in front of GitHub Pages. That is why GitHub could not issue its own certificate
+and `"https_enforced"` was `false` on the Pages API. The cutover removes the second hop.
 
 ## Development Requirements
 

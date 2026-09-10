@@ -4,14 +4,6 @@ tagline: Welsh League Champions
 description: Join Newport Centurions Korfball Club - South Wales' premier mixed-gender korfball team. Welsh League Champions 2022/2023 & 2025. Weekly training sessions at John Frost School, Newport.
 url: "https://newportcenturions.co.uk"
 
-# SSL Settings
-enforce_ssl: newportcenturions.co.uk
-ssl:
-  enabled: true
-  hsts: true
-  hsts_subdomains: true
-  hsts_preload: true
-
 # SEO Settings
 lang: en_GB
 locale: en_GB
@@ -103,6 +95,12 @@ exclude:
   - CODEBASE-AUDIT.md
   - "*.Identifier"
   - "*:Zone.Identifier"
+
+# Jekyll skips underscore-prefixed files, so the Cloudflare Pages control files
+# have to be named here or they never reach _site.
+include:
+  - _headers
+  - _redirects
 
 # Navigation Menu - Organized with dropdowns
 # Extensions tried when looking for a team crest, in order of preference.

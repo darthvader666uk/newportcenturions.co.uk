@@ -1,0 +1,115 @@
+name: Deploy
+
+# Builds the site and uploads it straight to Cloudflare Pages.
+#
+# WHY NOT CONNECT CLOUDFLARE TO THE REPO
+#   Cloudflare's own Git integration is capped at 500 builds a month on the free
+#   plan, and Sync Fixtures commits back to master on its own schedule. A direct
+#   upload with wrangler does not count against that cap, and it means nothing
+#   ships until the checks below have passed.
+#
+# SETUP (one-off):
+#   1. Cloudflare dashboard -> Workers & Pages -> Create -> Pages ->
+#      "Upload assets". Name the project `newportcenturions` (this must match
+#      PROJECT_NAME below) and set its production branch to `master`.
+#   2. My Profile -> API Tokens -> Create Token -> "Edit Cloudflare Workers"
+#      template, or a custom token with Account / Cloudflare Pages / Edit.
+#   3. Repo -> Settings -> Secrets and variables -> Actions:
+#        CLOUDFLARE_API_TOKEN   the token from step 2
+#        CLOUDFLARE_ACCOUNT_ID  the ID on the right of any zone's overview page
+#   4. Run this workflow from the Actions tab and check the *.pages.dev URL.
+#   5. Only then move the custom domain: Pages project -> Custom domains ->
+#      add newportcenturions.co.uk. Cloudflare rewrites the DNS record itself.
+#      See the cutover notes in README.md.
+#
+# The daily schedule replaces the old Scheduled Rebuild job. Date-sensitive
+# content (the announcement bar, llms.txt, the Event schema) is filtered at
+# BUILD time, so without a rebuild a passed date lingers in the served HTML.
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    # 04:15 UTC daily, quiet and well before UK morning traffic.
+    - cron: '15 4 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  PROJECT_NAME: newportcenturions
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build --trace
+
+      - name: Confirm the Cloudflare control files survived the build
+        run: |
+          # Jekyll drops underscore-prefixed files unless _config.yml lists them
+          # under include:. Losing _headers is silent otherwise: the site works,
+          # the caching and security headers just quietly stop existing.
+          if [ ! -f _site/_headers ]; then
+            echo "::error::_site/_headers is missing. Check the include: block in _config.yml"
+            exit 1
+          fi
+          echo "_headers present."
+
+      - name: Validate JSON-LD structured data
+        run: |
+          python3 - <<'PY'
+          import json, re, glob, sys
+          bad = 0
+          total = 0
+          for path in glob.glob('_site/**/*.html', recursive=True):
+              html = open(path, encoding='utf-8').read()
+              for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', html, re.S):
+                  total += 1
+                  try:
+                      json.loads(m.group(1))
+                  except Exception as e:
+                      bad += 1
+                      print(f"::error file={path}::Invalid JSON-LD: {e}")
+          print(f"Checked {total} JSON-LD blocks, {bad} invalid")
+          sys.exit(1 if bad else 0)
+          PY
+
+      - name: Check for broken internal links and images
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: ./_site
+          arguments: >-
+            --disable-external
+            --allow-hash-href
+            --ignore-urls "/^#/"
+            --no-enforce-https
+
+      - name: Deploy to Cloudflare Pages
+        id: pages
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # --commit-dirty because setup-ruby leaves gems in vendor/. That is
+          # gitignored now, but wrangler refusing a deploy over untracked build
+          # artefacts is not a useful failure, so do not rely on it.
+          command: pages deploy _site --project-name=${{ env.PROJECT_NAME }} --branch=master --commit-dirty=true
+
+      - name: Note where it went
+        run: |
+          echo "Deployed to ${{ steps.pages.outputs.deployment-url }}" >> "$GITHUB_STEP_SUMMARY"

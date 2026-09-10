@@ -1,12 +1,13 @@
 name: Build Check
 
 # Verifies the site actually builds and that no internal links, images or
-# scripts are broken, before GitHub Pages publishes it. Runs on PRs and on
-# pushes to master.
+# scripts are broken, before a change reaches master.
+#
+# Pull requests only. Deploy runs the identical checks on master and refuses to
+# upload if any of them fail, so running this on push as well would just build
+# the site twice for the same answer.
 
 on:
-  push:
-    branches: [master]
   pull_request:
     branches: [master]
 

@@ -1,6 +1,10 @@
 _site/
 *.gem
 
+# ruby/setup-ruby installs gems here in CI (BUNDLE_PATH=vendor/bundle).
+# Untracked files there make wrangler treat the workspace as dirty on deploy.
+vendor/
+
 # Jekyll specific
 .jekyll-cache/
 .jekyll-metadata

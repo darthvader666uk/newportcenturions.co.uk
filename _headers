@@ -1,0 +1,80 @@
+# Cloudflare Pages response headers.
+#
+# GitHub Pages served every file with a flat `cache-control: max-age=600` and
+# gave us no way to change it. This file is that missing control.
+#
+# Jekyll ignores anything starting with an underscore, so `_headers` is listed
+# under `include:` in _config.yml. If it stops appearing in _site, that is why.
+# The Deploy workflow fails the build rather than ship without it.
+#
+# SYNTAX, because it bites: a path pattern starts at column 0, its headers are
+# indented under it, and a splat matches greedily to the END of the path. There
+# is no `/*.html`. Comments live on their own unindented line, never inside a
+# block. Limit is 100 rules.
+#
+# CACHING NOTE: none of our asset filenames are content-hashed. styles.min.css
+# keeps that name forever and the image workflow rewrites photos in place under
+# the same path. So no `immutable` and no one-year max-age on anything a build
+# can change, or an update would take a year to reach a returning visitor.
+# Fonts are the one exception: those files never change under the same name.
+#
+# HTML is deliberately absent below. Cloudflare Pages already serves it as
+# `public, max-age=0, must-revalidate`, which is exactly what we want: the
+# announcement bar and the Event schema are filtered at BUILD time, so a page
+# cached in a browser would show a date that has already passed.
+#
+# HSTS is also deliberately absent. The zone already sends it
+# (max-age=31536000; includeSubDomains; preload) from the Cloudflare dashboard,
+# and setting it here as well would just duplicate the header.
+
+# The CSP is Report-Only for now. Analytics only loads after consent and is
+# injected at runtime, so connect-src and img-src are the parts most likely to
+# be wrong. Watch the browser console on a page where you have accepted
+# cookies, then rename the header to Content-Security-Policy once it is quiet.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' data: https://cdnjs.cloudflare.com; img-src 'self' data: https://www.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'
+
+# Stylesheets. An hour in the browser, a day of stale-while-revalidate on top,
+# so a CSS change is live within the hour without a cold fetch every visit.
+/assets/css/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# Fonts are the only genuinely immutable assets we serve.
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Photos and crests. A week is long enough to be worth having and short enough
+# that the image optimisation workflow's rewrite lands in reasonable time.
+/images/*
+  Cache-Control: public, max-age=604800
+
+/assets/images/*
+  Cache-Control: public, max-age=604800
+
+/assets/favicon/*
+  Cache-Control: public, max-age=604800
+
+# The service worker decides how everything else is cached, so it must never be
+# served stale.
+/sw.js
+  Cache-Control: no-cache
+
+/manifest.json
+  Cache-Control: public, max-age=3600
+
+/search.json
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/feed.xml
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Cache-Control: public, max-age=3600
