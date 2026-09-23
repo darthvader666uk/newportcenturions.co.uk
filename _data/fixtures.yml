@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-09-21T02:39:33Z'
+generated: '2026-09-23T09:47:09Z'
 source: Google Calendar
 categories:
 - key: game
@@ -310,6 +310,24 @@ fixtures:
   home_slug: cardiff-raptors
   away_slug: newport
   id: e16
+- title: All Club
+  date: 2026-10-01
+  date_iso: '2026-10-01'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: ''
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e17
 - title: Newport 2 V Cardiff City 2
   date: 2026-10-03
   date_iso: '2026-10-03'
@@ -327,7 +345,7 @@ fixtures:
   away_team: Cardiff City 2
   home_slug: newport
   away_slug: cardiff-city
-  id: e17
+  id: e18
 - title: Korf bowling social
   date: 2026-10-03
   date_iso: '2026-10-03'
@@ -346,7 +364,7 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e18
+  id: e19
 - title: Bristol Thunder 3 V Newport Centurions
   date: 2026-10-04
   date_iso: '2026-10-04'
@@ -365,7 +383,25 @@ fixtures:
   away_team: Newport Centurions
   home_slug: bristol-thunder
   away_slug: newport
-  id: e19
+  id: e20
+- title: First Team
+  date: 2026-10-08
+  date_iso: '2026-10-08'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: With Jimmy
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e21
 - title: Exeter City 1 V Newport Centurions
   date: 2026-10-11
   date_iso: '2026-10-11'
@@ -384,7 +420,7 @@ fixtures:
   away_team: Newport Centurions
   home_slug: exeter-city
   away_slug: newport
-  id: e20
+  id: e22
 - title: Swansea Roar 2 V Newport 3
   date: 2026-10-11
   date_iso: '2026-10-11'
@@ -403,7 +439,7 @@ fixtures:
   away_team: Newport 3
   home_slug: swansea-roar
   away_slug: newport
-  id: e21
+  id: e23
 - title: Newport 2 V Cardiff City 1
   date: 2026-10-11
   date_iso: '2026-10-11'
@@ -422,7 +458,25 @@ fixtures:
   away_team: Cardiff City 1
   home_slug: newport
   away_slug: cardiff-city
-  id: e22
+  id: e24
+- title: Third Team
+  date: 2026-10-15
+  date_iso: '2026-10-15'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: With James
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e25
 - title: Swansea Roar 2 V Newport 3
   date: 2026-10-18
   date_iso: '2026-10-18'
@@ -440,7 +494,25 @@ fixtures:
   away_team: Newport 3
   home_slug: swansea-roar
   away_slug: newport
-  id: e23
+  id: e26
+- title: Second Team
+  date: 2026-10-22
+  date_iso: '2026-10-22'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: With Katie
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e27
 - title: Cardiff Uni Beginners Tournament.
   date: 2026-10-24
   date_iso: '2026-10-24'
@@ -459,7 +531,43 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e24
+  id: e28
+- title: All Club
+  date: 2026-10-29
+  date_iso: '2026-10-29'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: ''
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e29
+- title: First Team
+  date: 2026-11-05
+  date_iso: '2026-11-05'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: With Jimmy
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e30
 - title: Exeter City 2 V Newport Centurions
   date: 2026-11-08
   date_iso: '2026-11-08'
@@ -478,7 +586,25 @@ fixtures:
   away_team: Newport Centurions
   home_slug: exeter-city
   away_slug: newport
-  id: e25
+  id: e31
+- title: Third Team
+  date: 2026-11-12
+  date_iso: '2026-11-12'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: With James
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e32
 - title: Ice hockey
   date: 2026-11-13
   date_iso: '2026-11-13'
@@ -496,7 +622,7 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e26
+  id: e33
 - title: Newport 3 V Cardiff Uni 2
   date: 2026-11-14
   date_iso: '2026-11-14'
@@ -514,7 +640,7 @@ fixtures:
   away_team: Cardiff Uni 2
   home_slug: newport
   away_slug: cardiff-uni
-  id: e27
+  id: e34
 - title: Newport 2 V Raptors 4
   date: 2026-11-14
   date_iso: '2026-11-14'
@@ -532,7 +658,7 @@ fixtures:
   away_team: Raptors 4
   home_slug: newport
   away_slug: raptors
-  id: e28
+  id: e35
 - title: University of Exeter 1 V Newport Centurions
   date: 2026-11-15
   date_iso: '2026-11-15'
@@ -551,7 +677,7 @@ fixtures:
   away_team: Newport Centurions
   home_slug: university-of-exeter
   away_slug: newport
-  id: e29
+  id: e36
 - title: Committee meeting (Exact time tbc)
   date: 2026-11-19
   date_iso: '2026-11-19'
@@ -569,7 +695,25 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e30
+  id: e37
+- title: Second Team
+  date: 2026-11-19
+  date_iso: '2026-11-19'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: With Katie
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e38
 - title: Newport 2 V Swansea Roar 1
   date: 2026-11-22
   date_iso: '2026-11-22'
@@ -588,7 +732,25 @@ fixtures:
   away_team: Swansea Roar 1
   home_slug: newport
   away_slug: swansea-roar
-  id: e31
+  id: e39
+- title: First Team
+  date: 2026-11-26
+  date_iso: '2026-11-26'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: With Jimmy
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e40
 - title: Newport Centurions V Cardiff Raptors 2
   date: 2026-11-28
   date_iso: '2026-11-28'
@@ -606,7 +768,7 @@ fixtures:
   away_team: Cardiff Raptors 2
   home_slug: newport
   away_slug: cardiff-raptors
-  id: e32
+  id: e41
 - title: Newport 2 V RCT Comets 1
   date: 2026-11-29
   date_iso: '2026-11-29'
@@ -624,7 +786,7 @@ fixtures:
   away_team: RCT Comets 1
   home_slug: newport
   away_slug: rct-comets
-  id: e33
+  id: e42
 - title: Raptors 5 V Newport 3
   date: 2026-11-29
   date_iso: '2026-11-29'
@@ -642,7 +804,25 @@ fixtures:
   away_team: Newport 3
   home_slug: raptors
   away_slug: newport
-  id: e34
+  id: e43
+- title: Second Team
+  date: 2026-12-03
+  date_iso: '2026-12-03'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: With Katie
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e44
 - title: Bristol City 1 V Newport Centurions
   date: 2026-12-05
   date_iso: '2026-12-05'
@@ -661,7 +841,7 @@ fixtures:
   away_team: Newport Centurions
   home_slug: bristol-city
   away_slug: newport
-  id: e35
+  id: e45
 - title: Ice Hockey
   date: 2026-12-06
   date_iso: '2026-12-06'
@@ -679,7 +859,43 @@ fixtures:
   away_team: null
   home_slug: null
   away_slug: null
-  id: e36
+  id: e46
+- title: Third Team
+  date: 2026-12-10
+  date_iso: '2026-12-10'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: With James
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e47
+- title: All Club
+  date: 2026-12-17
+  date_iso: '2026-12-17'
+  start_time: '20:00'
+  end_time: '21:00'
+  location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+  description: ''
+  all_day: false
+  category: training
+  side: null
+  beginner: false
+  trophy: false
+  league: null
+  home_team: null
+  away_team: null
+  home_slug: null
+  away_slug: null
+  id: e48
 - title: Raptors 5 V Newport 3
   date: 2027-01-16
   date_iso: '2027-01-16'
@@ -697,7 +913,7 @@ fixtures:
   away_team: Newport 3
   home_slug: raptors
   away_slug: newport
-  id: e37
+  id: e49
 - title: Newport Centurions V Bristol Thunder 2
   date: 2027-01-16
   date_iso: '2027-01-16'
@@ -715,7 +931,7 @@ fixtures:
   away_team: Bristol Thunder 2
   home_slug: newport
   away_slug: bristol-thunder
-  id: e38
+  id: e50
 - title: Newport 2 V Raptors 3
   date: 2027-01-16
   date_iso: '2027-01-16'
@@ -733,7 +949,7 @@ fixtures:
   away_team: Raptors 3
   home_slug: newport
   away_slug: raptors
-  id: e39
+  id: e51
 - title: RCT Comets 2 V Newport 3
   date: 2027-01-16
   date_iso: '2027-01-16'
@@ -751,7 +967,7 @@ fixtures:
   away_team: Newport 3
   home_slug: rct-comets
   away_slug: newport
-  id: e40
+  id: e52
 - title: Newport Centurions V Exeter City 1
   date: 2027-01-23
   date_iso: '2027-01-23'
@@ -769,7 +985,7 @@ fixtures:
   away_team: Exeter City 1
   home_slug: newport
   away_slug: exeter-city
-  id: e41
+  id: e53
 - title: Newport Centurions V Cardiff Raptors 1
   date: 2027-01-30
   date_iso: '2027-01-30'
@@ -787,7 +1003,7 @@ fixtures:
   away_team: Cardiff Raptors 1
   home_slug: newport
   away_slug: cardiff-raptors
-  id: e42
+  id: e54
 - title: RCT Comets 1 V Newport 2
   date: 2027-01-31
   date_iso: '2027-01-31'
@@ -805,7 +1021,7 @@ fixtures:
   away_team: Newport 2
   home_slug: rct-comets
   away_slug: newport
-  id: e43
+  id: e55
 - title: Cardiff Raptors 2 V Newport Centurions
   date: 2027-02-06
   date_iso: '2027-02-06'
@@ -823,7 +1039,7 @@ fixtures:
   away_team: Newport Centurions
   home_slug: cardiff-raptors
   away_slug: newport
-  id: e44
+  id: e56
 - title: Cardiff City 1 V Newport 2
   date: 2027-02-07
   date_iso: '2027-02-07'
@@ -841,7 +1057,7 @@ fixtures:
   away_team: Newport 2
   home_slug: cardiff-city
   away_slug: newport
-  id: e45
+  id: e57
 - title: RCT Comets 2 V Newport 3
   date: 2027-02-07
   date_iso: '2027-02-07'
@@ -859,7 +1075,7 @@ fixtures:
   away_team: Newport 3
   home_slug: rct-comets
   away_slug: newport
-  id: e46
+  id: e58
 - title: Newport 2 V Cardiff Uni 1
   date: 2027-02-13
   date_iso: '2027-02-13'
@@ -878,7 +1094,7 @@ fixtures:
   away_team: Cardiff Uni 1
   home_slug: newport
   away_slug: cardiff-uni
-  id: e47
+  id: e59
 - title: Cardiff City 2 V Newport 2
   date: 2027-02-21
   date_iso: '2027-02-21'
@@ -897,7 +1113,7 @@ fixtures:
   away_team: Newport 2
   home_slug: cardiff-city
   away_slug: newport
-  id: e48
+  id: e60
 - title: Bristol Thunder 2 V Newport Centurions
   date: 2027-02-27
   date_iso: '2027-02-27'
@@ -915,7 +1131,7 @@ fixtures:
   away_team: Newport Centurions
   home_slug: bristol-thunder
   away_slug: newport
-  id: e49
+  id: e61
 - title: Newport 3 V Raptors 5
   date: 2027-02-27
   date_iso: '2027-02-27'
@@ -933,7 +1149,7 @@ fixtures:
   away_team: Raptors 5
   home_slug: newport
   away_slug: raptors
-  id: e50
+  id: e62
 - title: Cardiff Uni 2 V Newport 3
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -952,7 +1168,7 @@ fixtures:
   away_team: Newport 3
   home_slug: cardiff-uni
   away_slug: newport
-  id: e51
+  id: e63
 - title: Cardiff Uni 1 V Newport 2
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -971,7 +1187,7 @@ fixtures:
   away_team: Newport 2
   home_slug: cardiff-uni
   away_slug: newport
-  id: e52
+  id: e64
 - title: Newport Centurions V Bristol City 1
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -989,7 +1205,7 @@ fixtures:
   away_team: Bristol City 1
   home_slug: newport
   away_slug: bristol-city
-  id: e53
+  id: e65
 - title: Newport 3 V Swansea Roar 2
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -1008,7 +1224,7 @@ fixtures:
   away_team: Swansea Roar 2
   home_slug: newport
   away_slug: swansea-roar
-  id: e54
+  id: e66
 - title: Swansea Roar 1 V Newport 2
   date: 2027-03-13
   date_iso: '2027-03-13'
@@ -1026,7 +1242,7 @@ fixtures:
   away_team: Newport 2
   home_slug: swansea-roar
   away_slug: newport
-  id: e55
+  id: e67
 - title: Newport Centurions V Exeter City 2
   date: 2027-03-13
   date_iso: '2027-03-13'
@@ -1044,7 +1260,7 @@ fixtures:
   away_team: Exeter City 2
   home_slug: newport
   away_slug: exeter-city
-  id: e56
+  id: e68
 - title: Newport Centurions V Bristol Thunder 3
   date: 2027-03-20
   date_iso: '2027-03-20'
@@ -1062,7 +1278,7 @@ fixtures:
   away_team: Bristol Thunder 3
   home_slug: newport
   away_slug: bristol-thunder
-  id: e57
+  id: e69
 - title: Newport Centurions V University of Exeter 1
   date: 2027-04-11
   date_iso: '2027-04-11'
@@ -1080,7 +1296,7 @@ fixtures:
   away_team: University of Exeter 1
   home_slug: newport
   away_slug: university-of-exeter
-  id: e58
+  id: e70
 - title: Newport 3 V RCT Comets 2
   date: 2027-04-18
   date_iso: '2027-04-18'
@@ -1099,7 +1315,7 @@ fixtures:
   away_team: RCT Comets 2
   home_slug: newport
   away_slug: rct-comets
-  id: e59
+  id: e71
 - title: Raptors 3 V Newport 2
   date: 2027-04-25
   date_iso: '2027-04-25'
@@ -1118,7 +1334,7 @@ fixtures:
   away_team: Newport 2
   home_slug: raptors
   away_slug: newport
-  id: e60
+  id: e72
 months:
 - key: '2026-09'
   label: September 2026
@@ -1261,6 +1477,25 @@ months:
   label: October 2026
   events:
   - id: e17
+    title: All Club
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-10-01'
+    day: 1
+    weekday: Thu
+    month_abbr: Oct
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e18
     title: Newport 2 V Cardiff City 2
     category: game
     beginner: false
@@ -1279,7 +1514,7 @@ months:
     away_team: Cardiff City 2
     home_slug: newport
     away_slug: cardiff-city
-  - id: e18
+  - id: e19
     title: Korf bowling social
     category: social
     beginner: false
@@ -1299,7 +1534,7 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
-  - id: e19
+  - id: e20
     title: Bristol Thunder 3 V Newport Centurions
     category: game
     beginner: false
@@ -1319,7 +1554,26 @@ months:
     away_team: Newport Centurions
     home_slug: bristol-thunder
     away_slug: newport
-  - id: e20
+  - id: e21
+    title: First Team
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-10-08'
+    day: 8
+    weekday: Thu
+    month_abbr: Oct
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e22
     title: Exeter City 1 V Newport Centurions
     category: game
     beginner: false
@@ -1339,7 +1593,7 @@ months:
     away_team: Newport Centurions
     home_slug: exeter-city
     away_slug: newport
-  - id: e21
+  - id: e23
     title: Swansea Roar 2 V Newport 3
     category: game
     beginner: false
@@ -1359,7 +1613,7 @@ months:
     away_team: Newport 3
     home_slug: swansea-roar
     away_slug: newport
-  - id: e22
+  - id: e24
     title: Newport 2 V Cardiff City 1
     category: game
     beginner: false
@@ -1379,7 +1633,26 @@ months:
     away_team: Cardiff City 1
     home_slug: newport
     away_slug: cardiff-city
-  - id: e23
+  - id: e25
+    title: Third Team
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-10-15'
+    day: 15
+    weekday: Thu
+    month_abbr: Oct
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e26
     title: Swansea Roar 2 V Newport 3
     category: game
     beginner: false
@@ -1398,7 +1671,26 @@ months:
     away_team: Newport 3
     home_slug: swansea-roar
     away_slug: newport
-  - id: e24
+  - id: e27
+    title: Second Team
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-10-22'
+    day: 22
+    weekday: Thu
+    month_abbr: Oct
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e28
     title: Cardiff Uni Beginners Tournament.
     category: game
     beginner: false
@@ -1418,10 +1710,48 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
+  - id: e29
+    title: All Club
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-10-29'
+    day: 29
+    weekday: Thu
+    month_abbr: Oct
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
 - key: '2026-11'
   label: November 2026
   events:
-  - id: e25
+  - id: e30
+    title: First Team
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-11-05'
+    day: 5
+    weekday: Thu
+    month_abbr: Nov
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e31
     title: Exeter City 2 V Newport Centurions
     category: game
     beginner: false
@@ -1441,7 +1771,26 @@ months:
     away_team: Newport Centurions
     home_slug: exeter-city
     away_slug: newport
-  - id: e26
+  - id: e32
+    title: Third Team
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-11-12'
+    day: 12
+    weekday: Thu
+    month_abbr: Nov
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e33
     title: Ice hockey
     category: social
     beginner: false
@@ -1460,7 +1809,7 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
-  - id: e27
+  - id: e34
     title: Newport 3 V Cardiff Uni 2
     category: game
     beginner: false
@@ -1479,7 +1828,7 @@ months:
     away_team: Cardiff Uni 2
     home_slug: newport
     away_slug: cardiff-uni
-  - id: e28
+  - id: e35
     title: Newport 2 V Raptors 4
     category: game
     beginner: false
@@ -1498,7 +1847,7 @@ months:
     away_team: Raptors 4
     home_slug: newport
     away_slug: raptors
-  - id: e29
+  - id: e36
     title: University of Exeter 1 V Newport Centurions
     category: game
     beginner: false
@@ -1518,7 +1867,7 @@ months:
     away_team: Newport Centurions
     home_slug: university-of-exeter
     away_slug: newport
-  - id: e30
+  - id: e37
     title: Committee meeting (Exact time tbc)
     category: club
     beginner: false
@@ -1537,7 +1886,26 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
-  - id: e31
+  - id: e38
+    title: Second Team
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-11-19'
+    day: 19
+    weekday: Thu
+    month_abbr: Nov
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e39
     title: Newport 2 V Swansea Roar 1
     category: game
     beginner: false
@@ -1557,7 +1925,26 @@ months:
     away_team: Swansea Roar 1
     home_slug: newport
     away_slug: swansea-roar
-  - id: e32
+  - id: e40
+    title: First Team
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-11-26'
+    day: 26
+    weekday: Thu
+    month_abbr: Nov
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e41
     title: Newport Centurions V Cardiff Raptors 2
     category: game
     beginner: false
@@ -1576,7 +1963,7 @@ months:
     away_team: Cardiff Raptors 2
     home_slug: newport
     away_slug: cardiff-raptors
-  - id: e33
+  - id: e42
     title: Newport 2 V RCT Comets 1
     category: game
     beginner: false
@@ -1595,7 +1982,7 @@ months:
     away_team: RCT Comets 1
     home_slug: newport
     away_slug: rct-comets
-  - id: e34
+  - id: e43
     title: Raptors 5 V Newport 3
     category: game
     beginner: false
@@ -1617,7 +2004,26 @@ months:
 - key: '2026-12'
   label: December 2026
   events:
-  - id: e35
+  - id: e44
+    title: Second Team
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-12-03'
+    day: 3
+    weekday: Thu
+    month_abbr: Dec
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e45
     title: Bristol City 1 V Newport Centurions
     category: game
     beginner: false
@@ -1637,7 +2043,7 @@ months:
     away_team: Newport Centurions
     home_slug: bristol-city
     away_slug: newport
-  - id: e36
+  - id: e46
     title: Ice Hockey
     category: social
     beginner: false
@@ -1656,10 +2062,48 @@ months:
     away_team: null
     home_slug: null
     away_slug: null
+  - id: e47
+    title: Third Team
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-12-10'
+    day: 10
+    weekday: Thu
+    month_abbr: Dec
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
+  - id: e48
+    title: All Club
+    category: training
+    beginner: false
+    trophy: false
+    league: null
+    side: null
+    date_iso: '2026-12-17'
+    day: 17
+    weekday: Thu
+    month_abbr: Dec
+    time: '20:00'
+    end_time: '21:00'
+    all_day: false
+    location: The John Frost School, Lighthouse Rd, Duffryn, Newport NP10 8YD, UK
+    home_team: null
+    away_team: null
+    home_slug: null
+    away_slug: null
 - key: '2027-01'
   label: January 2027
   events:
-  - id: e37
+  - id: e49
     title: Raptors 5 V Newport 3
     category: game
     beginner: false
@@ -1678,7 +2122,7 @@ months:
     away_team: Newport 3
     home_slug: raptors
     away_slug: newport
-  - id: e38
+  - id: e50
     title: Newport Centurions V Bristol Thunder 2
     category: game
     beginner: false
@@ -1697,7 +2141,7 @@ months:
     away_team: Bristol Thunder 2
     home_slug: newport
     away_slug: bristol-thunder
-  - id: e39
+  - id: e51
     title: Newport 2 V Raptors 3
     category: game
     beginner: false
@@ -1716,7 +2160,7 @@ months:
     away_team: Raptors 3
     home_slug: newport
     away_slug: raptors
-  - id: e40
+  - id: e52
     title: RCT Comets 2 V Newport 3
     category: game
     beginner: false
@@ -1735,7 +2179,7 @@ months:
     away_team: Newport 3
     home_slug: rct-comets
     away_slug: newport
-  - id: e41
+  - id: e53
     title: Newport Centurions V Exeter City 1
     category: game
     beginner: false
@@ -1754,7 +2198,7 @@ months:
     away_team: Exeter City 1
     home_slug: newport
     away_slug: exeter-city
-  - id: e42
+  - id: e54
     title: Newport Centurions V Cardiff Raptors 1
     category: game
     beginner: false
@@ -1773,7 +2217,7 @@ months:
     away_team: Cardiff Raptors 1
     home_slug: newport
     away_slug: cardiff-raptors
-  - id: e43
+  - id: e55
     title: RCT Comets 1 V Newport 2
     category: game
     beginner: false
@@ -1795,7 +2239,7 @@ months:
 - key: '2027-02'
   label: February 2027
   events:
-  - id: e44
+  - id: e56
     title: Cardiff Raptors 2 V Newport Centurions
     category: game
     beginner: false
@@ -1814,7 +2258,7 @@ months:
     away_team: Newport Centurions
     home_slug: cardiff-raptors
     away_slug: newport
-  - id: e45
+  - id: e57
     title: Cardiff City 1 V Newport 2
     category: game
     beginner: false
@@ -1833,7 +2277,7 @@ months:
     away_team: Newport 2
     home_slug: cardiff-city
     away_slug: newport
-  - id: e46
+  - id: e58
     title: RCT Comets 2 V Newport 3
     category: game
     beginner: false
@@ -1852,7 +2296,7 @@ months:
     away_team: Newport 3
     home_slug: rct-comets
     away_slug: newport
-  - id: e47
+  - id: e59
     title: Newport 2 V Cardiff Uni 1
     category: game
     beginner: false
@@ -1872,7 +2316,7 @@ months:
     away_team: Cardiff Uni 1
     home_slug: newport
     away_slug: cardiff-uni
-  - id: e48
+  - id: e60
     title: Cardiff City 2 V Newport 2
     category: game
     beginner: false
@@ -1892,7 +2336,7 @@ months:
     away_team: Newport 2
     home_slug: cardiff-city
     away_slug: newport
-  - id: e49
+  - id: e61
     title: Bristol Thunder 2 V Newport Centurions
     category: game
     beginner: false
@@ -1911,7 +2355,7 @@ months:
     away_team: Newport Centurions
     home_slug: bristol-thunder
     away_slug: newport
-  - id: e50
+  - id: e62
     title: Newport 3 V Raptors 5
     category: game
     beginner: false
@@ -1933,7 +2377,7 @@ months:
 - key: '2027-03'
   label: March 2027
   events:
-  - id: e51
+  - id: e63
     title: Cardiff Uni 2 V Newport 3
     category: game
     beginner: false
@@ -1953,7 +2397,7 @@ months:
     away_team: Newport 3
     home_slug: cardiff-uni
     away_slug: newport
-  - id: e52
+  - id: e64
     title: Cardiff Uni 1 V Newport 2
     category: game
     beginner: false
@@ -1973,7 +2417,7 @@ months:
     away_team: Newport 2
     home_slug: cardiff-uni
     away_slug: newport
-  - id: e53
+  - id: e65
     title: Newport Centurions V Bristol City 1
     category: game
     beginner: false
@@ -1992,7 +2436,7 @@ months:
     away_team: Bristol City 1
     home_slug: newport
     away_slug: bristol-city
-  - id: e54
+  - id: e66
     title: Newport 3 V Swansea Roar 2
     category: game
     beginner: false
@@ -2012,7 +2456,7 @@ months:
     away_team: Swansea Roar 2
     home_slug: newport
     away_slug: swansea-roar
-  - id: e55
+  - id: e67
     title: Swansea Roar 1 V Newport 2
     category: game
     beginner: false
@@ -2031,7 +2475,7 @@ months:
     away_team: Newport 2
     home_slug: swansea-roar
     away_slug: newport
-  - id: e56
+  - id: e68
     title: Newport Centurions V Exeter City 2
     category: game
     beginner: false
@@ -2050,7 +2494,7 @@ months:
     away_team: Exeter City 2
     home_slug: newport
     away_slug: exeter-city
-  - id: e57
+  - id: e69
     title: Newport Centurions V Bristol Thunder 3
     category: game
     beginner: false
@@ -2072,7 +2516,7 @@ months:
 - key: '2027-04'
   label: April 2027
   events:
-  - id: e58
+  - id: e70
     title: Newport Centurions V University of Exeter 1
     category: game
     beginner: false
@@ -2091,7 +2535,7 @@ months:
     away_team: University of Exeter 1
     home_slug: newport
     away_slug: university-of-exeter
-  - id: e59
+  - id: e71
     title: Newport 3 V RCT Comets 2
     category: game
     beginner: false
@@ -2111,7 +2555,7 @@ months:
     away_team: RCT Comets 2
     home_slug: newport
     away_slug: rct-comets
-  - id: e60
+  - id: e72
     title: Raptors 3 V Newport 2
     category: game
     beginner: false
