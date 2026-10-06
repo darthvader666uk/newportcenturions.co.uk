@@ -1,0 +1,27 @@
+---
+layout: null
+sitemap: false
+---
+{%- comment -%}
+  Games from the club calendar (_data/fixtures.yml, written by sync-fixtures.yml),
+  published so the match scorer app can load 2nd and 3rd team fixtures.
+  GitHub Pages serves it with Access-Control-Allow-Origin: *, so a browser app can read it.
+{%- endcomment -%}
+{%- assign games = site.data.fixtures.fixtures | where: "category", "game" -%}
+{
+  "generated": {{ site.data.fixtures.generated | jsonify }},
+  "games": [
+  {%- for g in games %}
+    {
+      "date": {{ g.date_iso | jsonify }},
+      "time": {{ g.start_time | jsonify }},
+      "title": {{ g.title | jsonify }},
+      "league": {{ g.league | jsonify }},
+      "side": {{ g.side | jsonify }},
+      "home_team": {{ g.home_team | jsonify }},
+      "away_team": {{ g.away_team | jsonify }},
+      "location": {{ g.location | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {%- endfor %}
+  ]
+}
