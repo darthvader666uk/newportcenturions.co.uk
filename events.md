@@ -109,7 +109,7 @@ keywords: newport centurions events, korfball beginners newport, korfball traini
     {%- else -%}
       {%- assign kind = cat.label -%}
     {%- endif -%}
-    "catLabel":{{ kind | jsonify }},"trophy":{{ f.trophy | jsonify }},"homeTeam":{{ f.home_team | jsonify }},"awayTeam":{{ f.away_team | jsonify }},"homeSlug":{{ f.home_slug | jsonify }},"awaySlug":{{ f.away_slug | jsonify }},"homeCrest":{{ home_crest | jsonify }},"awayCrest":{{ away_crest | jsonify }},"when":{{ f.date_iso | date: "%A %-d %B %Y" | jsonify }},"time":{{ f.start_time | jsonify }},"endTime":{{ f.end_time | jsonify }},"allDay":{{ f.all_day | jsonify }},"side":{{ f.side | jsonify }},"where":{{ f.location | jsonify }},"desc":{{ f.description | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+    "catLabel":{{ kind | jsonify }},"trophy":{{ f.trophy | jsonify }},"homeTeam":{{ f.home_team | jsonify }},"awayTeam":{{ f.away_team | jsonify }},"homeScore":{{ f.home_score | jsonify }},"awayScore":{{ f.away_score | jsonify }},"homeSlug":{{ f.home_slug | jsonify }},"awaySlug":{{ f.away_slug | jsonify }},"homeCrest":{{ home_crest | jsonify }},"awayCrest":{{ away_crest | jsonify }},"when":{{ f.date_iso | date: "%A %-d %B %Y" | jsonify }},"time":{{ f.start_time | jsonify }},"endTime":{{ f.end_time | jsonify }},"allDay":{{ f.all_day | jsonify }},"side":{{ f.side | jsonify }},"where":{{ f.location | jsonify }},"desc":{{ f.description | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
     </script>
 
     {%- comment -%}
@@ -159,8 +159,8 @@ keywords: newport centurions events, korfball beginners newport, korfball traini
               <span class="fx-body">
                 {%- if ev.home_team and ev.away_team %}
                 <span class="fx-teams">
-                  <span class="fx-team">{% include team-crest.html slug=ev.home_slug name=ev.home_team %}<span class="fx-team-name">{{ ev.home_team }}</span></span>
-                  <span class="fx-team">{% include team-crest.html slug=ev.away_slug name=ev.away_team %}<span class="fx-team-name">{{ ev.away_team }}</span></span>
+                  <span class="fx-team">{% include team-crest.html slug=ev.home_slug name=ev.home_team %}<span class="fx-team-name">{{ ev.home_team }}</span>{% unless ev.home_score == nil %}<span class="fx-score">{{ ev.home_score }}</span>{% endunless %}</span>
+                  <span class="fx-team">{% include team-crest.html slug=ev.away_slug name=ev.away_team %}<span class="fx-team-name">{{ ev.away_team }}</span>{% unless ev.away_score == nil %}<span class="fx-score">{{ ev.away_score }}</span>{% endunless %}</span>
                 </span>
                 {%- else %}
                 <span class="fx-title">{% if ev.trophy %}<span class="cal-trophy" aria-hidden="true"></span>{% endif %}{{ ev.title }}</span>
@@ -197,8 +197,8 @@ keywords: newport centurions events, korfball beginners newport, korfball traini
       <p class="cal-dialog-cat"><span class="cal-dot" aria-hidden="true"></span><span data-f="catLabel"></span><span class="cal-trophy" data-f="trophy" aria-hidden="true"></span></p>
       <h2 id="cal-detail-title">
         <span class="cal-dialog-teams" data-f="teams" hidden>
-          <span class="cal-dialog-team"><span class="cal-dialog-crest" data-f="homeCrest"></span><span data-f="homeTeam"></span></span>
-          <span class="cal-dialog-team"><span class="cal-dialog-crest" data-f="awayCrest"></span><span data-f="awayTeam"></span></span>
+          <span class="cal-dialog-team"><span class="cal-dialog-crest" data-f="homeCrest"></span><span data-f="homeTeam"></span><span class="fx-score" data-f="homeScore"></span></span>
+          <span class="cal-dialog-team"><span class="cal-dialog-crest" data-f="awayCrest"></span><span data-f="awayTeam"></span><span class="fx-score" data-f="awayScore"></span></span>
         </span>
         <span data-f="title"></span>
       </h2>
@@ -389,6 +389,8 @@ keywords: newport centurions events, korfball beginners newport, korfball traini
     if (fixture) {
       field('homeTeam').textContent = e.homeTeam;
       field('awayTeam').textContent = e.awayTeam;
+      field('homeScore').textContent = e.homeScore == null ? '' : e.homeScore;
+      field('awayScore').textContent = e.awayScore == null ? '' : e.awayScore;
       badge(field('homeCrest'), e.homeCrest, e.homeSlug);
       badge(field('awayCrest'), e.awayCrest, e.awaySlug);
     }

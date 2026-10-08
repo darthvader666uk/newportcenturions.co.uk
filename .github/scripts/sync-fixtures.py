@@ -21,6 +21,7 @@ Exits 0 and writes nothing if the URL is unset, so the workflow is harmless
 until the secret is added.
 """
 
+import json
 import os
 import re
 import sys
@@ -49,6 +50,12 @@ MAX_MONTHS_AHEAD = 18
 
 # Fallback if club.yml says nothing: a September to May season.
 DEFAULT_SEASON = (9, 5)
+
+# Results come from League Republic's JSON API, one feed per team as
+# <seasonID>/<teamID> from its team page URL. Update these each season. Only
+# the 1st Team's league (England Korfball) has the API: WKL returns "League is
+# not authorised to access webservices", so the 2nd and 3rd stay score-less.
+LEAGUE_REPUBLIC_TEAMS = ["755804346/223520713"]
 
 
 def league_codes():
@@ -150,6 +157,11 @@ TAG_SYNONYMS = {
 # so it catches v, V, vs and versus with or without a full stop, but not "v2"
 # or a word that merely starts with v.
 VERSUS_RE = re.compile(r"\bv(?:s|ersus)?\.?\s", re.I)
+
+# A result typed into a game's calendar description, e.g. "Score: 12-8", in the
+# same order as the teams in the title. This is how WKL games get scores, as
+# League Republic won't serve them (see LEAGUE_REPUBLIC_TEAMS).
+SCORE_RE = re.compile(r"\bscore\s*:?\s*(\d+)\s*[-–]\s*(\d+)", re.I)
 
 # Whoever is named first in a fixture is at home, so "Newport 2 V Cardiff City 2"
 # is a home game and reversing it makes it away. These are the words that mean
@@ -321,7 +333,8 @@ def build_months(events, today):
     Covers the whole of the rest of the playing season, empty months included,
     so the pager walks September through May rather than skipping the quiet
     ones and jumping December straight to March. Beyond the season, only months
-    that actually have something in them appear, up to MAX_MONTHS_AHEAD.
+    that actually have something in them appear, up to MAX_MONTHS_AHEAD. The
+    same goes for past months, so the pager can go back to earlier results.
     """
     current = date(today.year, today.month, 1)
     horizon = current
@@ -335,7 +348,7 @@ def build_months(events, today):
     season_end = min(date(ey, em, 1), horizon)
 
     months = []
-    y, m = current.year, current.month
+    y, m = min(event_months | {(current.year, current.month)})
     while date(y, m, 1) <= horizon:
         in_season = season_start <= date(y, m, 1) <= season_end
         if (y, m) == (current.year, current.month) or in_season or (y, m) in event_months:
@@ -357,7 +370,8 @@ def build_months(events, today):
                      "time": e["start_time"], "end_time": e["end_time"],
                      "all_day": e["all_day"], "location": e["location"],
                      "home_team": e.get("home_team"), "away_team": e.get("away_team"),
-                     "home_slug": e.get("home_slug"), "away_slug": e.get("away_slug")}
+                     "home_slug": e.get("home_slug"), "away_slug": e.get("away_slug"),
+                     "home_score": e.get("home_score"), "away_score": e.get("away_score")}
                     for e in agenda
                 ],
             })
@@ -369,9 +383,12 @@ def build_months(events, today):
     return months
 
 
-def build_payload(events, today=None):
+def build_payload(events, today=None, results=()):
     """Categorise, deduplicate, sort and assemble the full data file from a list
-    of raw event dicts. Shared by the live sync and local testing."""
+    of raw event dicts. Shared by the live sync and local testing.
+
+    `results` are (date_iso, home_slug, away_slug, home_score, away_score)
+    tuples, put on the game with the same date and the same two clubs."""
     today = today or date.today()
 
     for e in events:
@@ -388,6 +405,21 @@ def build_payload(events, today=None):
         e["away_team"] = away
         e["home_slug"] = team_slug(home) if home else None
         e["away_slug"] = team_slug(away) if away else None
+        e["home_score"] = e["away_score"] = None
+        score = SCORE_RE.search(e.get("description", "")) if home else None
+        if score:
+            e["home_score"], e["away_score"] = int(score.group(1)), int(score.group(2))
+            # Shown on the card, so it would only repeat itself in the pop-up.
+            e["description"] = " ".join(SCORE_RE.sub(" ", e["description"]).split())
+        # League Republic wins over a typed score if both exist.
+        for day, h, a, hs, aws in results:
+            if cat != "game" or day != e["date_iso"]:
+                continue
+            # The calendar may list the sides the other way round to the league.
+            if (h, a) == (e["home_slug"], e["away_slug"]):
+                e["home_score"], e["away_score"] = hs, aws
+            elif (a, h) == (e["home_slug"], e["away_slug"]):
+                e["home_score"], e["away_score"] = aws, hs
 
     seen = set()
     unique = []
@@ -468,6 +500,36 @@ def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": "newportcenturions.co.uk fixtures sync"})
     with urllib.request.urlopen(req, timeout=60) as resp:
         return resp.read()
+
+
+def fetch_results():
+    """Finished League Republic games, in the shape build_payload wants.
+
+    If the API is down, the scores already in the data file are kept, so a
+    blip doesn't strip results off the site and commit that.
+    """
+    results = []
+    try:
+        for team in LEAGUE_REPUBLIC_TEAMS:
+            data = json.loads(fetch(f"https://api.leaguerepublic.com/json/getFixturesForTeam/{team}.json"))
+            if not isinstance(data, list):
+                raise ValueError(data.get("error", "unexpected reply") if isinstance(data, dict) else "unexpected reply")
+            for f in data:
+                hs, aws = f.get("homeScore"), f.get("roadScore")
+                if not (f.get("result") and str(hs).isdigit() and str(aws).isdigit()):
+                    continue
+                d = f["fixtureDate"][:8]
+                results.append((f"{d[:4]}-{d[4:6]}-{d[6:]}", team_slug(f["homeTeamName"]),
+                                team_slug(f["roadTeamName"]), int(hs), int(aws)))
+        print(f"League Republic: {len(results)} results.")
+        return results
+    except Exception as exc:
+        print(f"League Republic fetch failed ({exc}); keeping the scores already on file.")
+        if not os.path.exists(OUTPUT):
+            return []
+        old = yaml.safe_load(open(OUTPUT, encoding="utf-8")) or {}
+        return [(f["date_iso"], f["home_slug"], f["away_slug"], f["home_score"], f["away_score"])
+                for f in old.get("fixtures", []) if f.get("home_score") is not None]
 
 
 def as_date(value):
@@ -581,7 +643,7 @@ def main():
             "all_day": not isinstance(start_value, datetime),
         })
 
-    payload = build_payload(fixtures, today)
+    payload = build_payload(fixtures, today, fetch_results())
     written = write_payload(payload)
 
     verb = "Wrote" if written else "Checked"

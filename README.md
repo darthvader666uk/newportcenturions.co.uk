@@ -273,6 +273,11 @@ To override it, add `[Home]` or `[Away]`, e.g. `[Game] [Home] Cardiff Dragons`.
 `#home`/`#away`, or a plain leading `Home`/`Away`, also work and beat the running order.
 A **Home** / **Away** pill then shows on the fixture card. It's ignored on non-games.
 
+**Scores:** 1st Team results come from League Republic automatically. WKL doesn't allow
+that, so for 2nd and 3rd Team games type the result into the event description as
+`Score: 12-8`, in the same order as the teams in the title. It shows on the card and in
+the pop-up within half an hour.
+
 The club calendar is **private and stays private** — because the sync turns it into
 committed data, visitors never need access to it.
 

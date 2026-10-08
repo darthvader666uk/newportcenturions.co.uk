@@ -1925,6 +1925,12 @@ a:hover { color: var(--secondary-orange); }
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* Final score from League Republic, lined up on the right like a scoreboard. */
+.fx-score {
+  margin-left: auto;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
 /* Rounded square, not a circle. Several korfball crests are square with a text
    banner across the bottom (RCT Comets, Swansea Roar); a circular clip cuts the
    club's own name off them. */
