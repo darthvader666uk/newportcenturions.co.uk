@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-10-08T08:53:43Z'
+generated: '2026-10-09T01:36:03Z'
 source: Google Calendar
 categories:
 - key: game
@@ -21,26 +21,6 @@ categories:
 - key: other
   label: Other
 fixtures:
-- title: Inter area (invitation tournament)
-  date: 2026-06-06
-  date_iso: '2026-06-06'
-  start_time: '08:00'
-  end_time: '09:00'
-  location: ''
-  description: ''
-  all_day: false
-  category: game
-  side: null
-  beginner: false
-  trophy: true
-  league: null
-  home_team: null
-  away_team: null
-  home_slug: null
-  away_slug: null
-  home_score: null
-  away_score: null
-  id: e1
 - title: Nitra? Tournament in Slovakia
   date: 2026-07-10
   date_iso: '2026-07-10'
@@ -60,7 +40,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e2
+  id: e1
 - title: Exeter tournament
   date: 2026-07-18
   date_iso: '2026-07-18'
@@ -80,7 +60,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e3
+  id: e2
 - title: 'WKA AGM https://teams.microsoft.com/meet/316554345715097?p=aOcLDz3PsM9aJTn1uB'
   date: 2026-08-10
   date_iso: '2026-08-10'
@@ -100,7 +80,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e4
+  id: e3
 - title: Beach korf day. Timings/location tbc. Bring a picnic, beach games and any
     family/friends you want
   date: 2026-08-15
@@ -121,7 +101,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e5
+  id: e4
 - title: First korf session back
   date: 2026-08-18
   date_iso: '2026-08-18'
@@ -141,7 +121,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e6
+  id: e5
 - title: Committee meeting (Exact time tbc)
   date: 2026-09-03
   date_iso: '2026-09-03'
@@ -161,7 +141,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e7
+  id: e6
 - title: Beginners sessions
   date: 2026-09-08
   date_iso: '2026-09-08'
@@ -181,7 +161,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e8
+  id: e7
 - title: First Thursday session back
   date: 2026-09-10
   date_iso: '2026-09-10'
@@ -201,7 +181,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e9
+  id: e8
 - title: Beginners sessions
   date: 2026-09-15
   date_iso: '2026-09-15'
@@ -221,7 +201,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e10
+  id: e9
 - title: Beginners sessions
   date: 2026-09-22
   date_iso: '2026-09-22'
@@ -241,7 +221,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e11
+  id: e10
 - title: Pub night in Cardiff
   date: 2026-09-25
   date_iso: '2026-09-25'
@@ -261,7 +241,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e12
+  id: e11
 - title: Cardiff Raptors 1 V Newport Centurions 1
   date: 2026-09-27
   date_iso: '2026-09-27'
@@ -281,7 +261,7 @@ fixtures:
   away_slug: newport
   home_score: 29
   away_score: 5
-  id: e13
+  id: e12
 - title: All Club
   date: 2026-10-01
   date_iso: '2026-10-01'
@@ -301,7 +281,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e14
+  id: e13
 - title: Newport 2 V Cardiff City 2
   date: 2026-10-03
   date_iso: '2026-10-03'
@@ -321,7 +301,7 @@ fixtures:
   away_slug: cardiff-city
   home_score: 10
   away_score: 0
-  id: e15
+  id: e14
 - title: Korf bowling social
   date: 2026-10-03
   date_iso: '2026-10-03'
@@ -342,7 +322,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e16
+  id: e15
 - title: Bristol Thunder 3 V Newport Centurions
   date: 2026-10-04
   date_iso: '2026-10-04'
@@ -363,7 +343,7 @@ fixtures:
   away_slug: newport
   home_score: 14
   away_score: 15
-  id: e17
+  id: e16
 - title: First Team
   date: 2026-10-08
   date_iso: '2026-10-08'
@@ -383,7 +363,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e18
+  id: e17
 - title: Exeter City 1 V Newport Centurions
   date: 2026-10-11
   date_iso: '2026-10-11'
@@ -404,7 +384,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e19
+  id: e18
 - title: Swansea Roar 2 V Newport 3
   date: 2026-10-11
   date_iso: '2026-10-11'
@@ -425,7 +405,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e20
+  id: e19
 - title: Newport 2 V Cardiff City 1
   date: 2026-10-11
   date_iso: '2026-10-11'
@@ -446,7 +426,7 @@ fixtures:
   away_slug: cardiff-city
   home_score: null
   away_score: null
-  id: e21
+  id: e20
 - title: Third Team
   date: 2026-10-15
   date_iso: '2026-10-15'
@@ -466,7 +446,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e22
+  id: e21
 - title: Social - Pumpkin picking
   date: 2026-10-17
   date_iso: '2026-10-17'
@@ -487,7 +467,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e23
+  id: e22
 - title: Swansea Roar 2 V Newport 3
   date: 2026-10-18
   date_iso: '2026-10-18'
@@ -507,7 +487,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e24
+  id: e23
 - title: Second Team
   date: 2026-10-22
   date_iso: '2026-10-22'
@@ -527,7 +507,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e25
+  id: e24
 - title: Cardiff Uni Beginners Tournament.
   date: 2026-10-24
   date_iso: '2026-10-24'
@@ -548,7 +528,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e26
+  id: e25
 - title: All Club
   date: 2026-10-29
   date_iso: '2026-10-29'
@@ -568,7 +548,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e27
+  id: e26
 - title: First Team
   date: 2026-11-05
   date_iso: '2026-11-05'
@@ -588,7 +568,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e28
+  id: e27
 - title: Exeter City 2 V Newport Centurions
   date: 2026-11-08
   date_iso: '2026-11-08'
@@ -609,7 +589,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e29
+  id: e28
 - title: Third Team
   date: 2026-11-12
   date_iso: '2026-11-12'
@@ -629,7 +609,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e30
+  id: e29
 - title: Ice hockey
   date: 2026-11-13
   date_iso: '2026-11-13'
@@ -649,7 +629,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e31
+  id: e30
 - title: Newport 3 V Cardiff Uni 2
   date: 2026-11-14
   date_iso: '2026-11-14'
@@ -669,7 +649,7 @@ fixtures:
   away_slug: cardiff-uni
   home_score: null
   away_score: null
-  id: e32
+  id: e31
 - title: Newport 2 V Raptors 4
   date: 2026-11-14
   date_iso: '2026-11-14'
@@ -689,7 +669,7 @@ fixtures:
   away_slug: raptors
   home_score: null
   away_score: null
-  id: e33
+  id: e32
 - title: University of Exeter 1 V Newport Centurions
   date: 2026-11-15
   date_iso: '2026-11-15'
@@ -710,7 +690,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e34
+  id: e33
 - title: Committee meeting (Exact time tbc)
   date: 2026-11-19
   date_iso: '2026-11-19'
@@ -730,7 +710,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e35
+  id: e34
 - title: Second Team
   date: 2026-11-19
   date_iso: '2026-11-19'
@@ -750,7 +730,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e36
+  id: e35
 - title: Newport 2 V Swansea Roar 1
   date: 2026-11-22
   date_iso: '2026-11-22'
@@ -771,7 +751,7 @@ fixtures:
   away_slug: swansea-roar
   home_score: null
   away_score: null
-  id: e37
+  id: e36
 - title: First Team
   date: 2026-11-26
   date_iso: '2026-11-26'
@@ -791,7 +771,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e38
+  id: e37
 - title: Newport Centurions V Cardiff Raptors 2
   date: 2026-11-28
   date_iso: '2026-11-28'
@@ -811,7 +791,7 @@ fixtures:
   away_slug: cardiff-raptors
   home_score: null
   away_score: null
-  id: e39
+  id: e38
 - title: Newport 2 V RCT Comets 1
   date: 2026-11-29
   date_iso: '2026-11-29'
@@ -831,7 +811,7 @@ fixtures:
   away_slug: rct-comets
   home_score: null
   away_score: null
-  id: e40
+  id: e39
 - title: Raptors 5 V Newport 3
   date: 2026-11-29
   date_iso: '2026-11-29'
@@ -851,7 +831,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e41
+  id: e40
 - title: Second Team
   date: 2026-12-03
   date_iso: '2026-12-03'
@@ -871,7 +851,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e42
+  id: e41
 - title: Bristol City 1 V Newport Centurions
   date: 2026-12-05
   date_iso: '2026-12-05'
@@ -892,7 +872,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e43
+  id: e42
 - title: Ice Hockey
   date: 2026-12-06
   date_iso: '2026-12-06'
@@ -912,7 +892,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e44
+  id: e43
 - title: Third Team
   date: 2026-12-10
   date_iso: '2026-12-10'
@@ -932,7 +912,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e45
+  id: e44
 - title: All Club
   date: 2026-12-17
   date_iso: '2026-12-17'
@@ -952,7 +932,7 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e46
+  id: e45
 - title: Raptors 5 V Newport 3
   date: 2027-01-16
   date_iso: '2027-01-16'
@@ -972,7 +952,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e47
+  id: e46
 - title: Newport Centurions V Bristol Thunder 2
   date: 2027-01-16
   date_iso: '2027-01-16'
@@ -992,7 +972,7 @@ fixtures:
   away_slug: bristol-thunder
   home_score: null
   away_score: null
-  id: e48
+  id: e47
 - title: Newport 2 V Raptors 3
   date: 2027-01-16
   date_iso: '2027-01-16'
@@ -1012,7 +992,7 @@ fixtures:
   away_slug: raptors
   home_score: null
   away_score: null
-  id: e49
+  id: e48
 - title: RCT Comets 2 V Newport 3
   date: 2027-01-16
   date_iso: '2027-01-16'
@@ -1032,7 +1012,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e50
+  id: e49
 - title: Newport Centurions V Exeter City 1
   date: 2027-01-23
   date_iso: '2027-01-23'
@@ -1052,7 +1032,7 @@ fixtures:
   away_slug: exeter-city
   home_score: null
   away_score: null
-  id: e51
+  id: e50
 - title: Newport Centurions V Cardiff Raptors 1
   date: 2027-01-30
   date_iso: '2027-01-30'
@@ -1072,7 +1052,7 @@ fixtures:
   away_slug: cardiff-raptors
   home_score: null
   away_score: null
-  id: e52
+  id: e51
 - title: RCT Comets 1 V Newport 2
   date: 2027-01-31
   date_iso: '2027-01-31'
@@ -1092,7 +1072,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e53
+  id: e52
 - title: Cardiff Raptors 2 V Newport Centurions
   date: 2027-02-06
   date_iso: '2027-02-06'
@@ -1112,7 +1092,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e54
+  id: e53
 - title: Cardiff City 1 V Newport 2
   date: 2027-02-07
   date_iso: '2027-02-07'
@@ -1132,7 +1112,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e55
+  id: e54
 - title: RCT Comets 2 V Newport 3
   date: 2027-02-07
   date_iso: '2027-02-07'
@@ -1152,7 +1132,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e56
+  id: e55
 - title: Newport 2 V Cardiff Uni 1
   date: 2027-02-13
   date_iso: '2027-02-13'
@@ -1173,7 +1153,7 @@ fixtures:
   away_slug: cardiff-uni
   home_score: null
   away_score: null
-  id: e57
+  id: e56
 - title: Cardiff City 2 V Newport 2
   date: 2027-02-21
   date_iso: '2027-02-21'
@@ -1194,7 +1174,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e58
+  id: e57
 - title: Bristol Thunder 2 V Newport Centurions
   date: 2027-02-27
   date_iso: '2027-02-27'
@@ -1214,7 +1194,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e59
+  id: e58
 - title: Newport 3 V Raptors 5
   date: 2027-02-27
   date_iso: '2027-02-27'
@@ -1234,7 +1214,7 @@ fixtures:
   away_slug: raptors
   home_score: null
   away_score: null
-  id: e60
+  id: e59
 - title: Cardiff Uni 2 V Newport 3
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -1255,7 +1235,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e61
+  id: e60
 - title: Cardiff Uni 1 V Newport 2
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -1276,7 +1256,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e62
+  id: e61
 - title: Newport Centurions V Bristol City 1
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -1296,7 +1276,7 @@ fixtures:
   away_slug: bristol-city
   home_score: null
   away_score: null
-  id: e63
+  id: e62
 - title: Newport 3 V Swansea Roar 2
   date: 2027-03-06
   date_iso: '2027-03-06'
@@ -1317,7 +1297,7 @@ fixtures:
   away_slug: swansea-roar
   home_score: null
   away_score: null
-  id: e64
+  id: e63
 - title: Swansea Roar 1 V Newport 2
   date: 2027-03-13
   date_iso: '2027-03-13'
@@ -1337,7 +1317,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e65
+  id: e64
 - title: Newport Centurions V Exeter City 2
   date: 2027-03-13
   date_iso: '2027-03-13'
@@ -1357,7 +1337,7 @@ fixtures:
   away_slug: exeter-city
   home_score: null
   away_score: null
-  id: e66
+  id: e65
 - title: Newport Centurions V Bristol Thunder 3
   date: 2027-03-20
   date_iso: '2027-03-20'
@@ -1377,7 +1357,7 @@ fixtures:
   away_slug: bristol-thunder
   home_score: null
   away_score: null
-  id: e67
+  id: e66
 - title: Newport Centurions V University of Exeter 1
   date: 2027-04-11
   date_iso: '2027-04-11'
@@ -1397,7 +1377,7 @@ fixtures:
   away_slug: university-of-exeter
   home_score: null
   away_score: null
-  id: e68
+  id: e67
 - title: Newport 3 V RCT Comets 2
   date: 2027-04-18
   date_iso: '2027-04-18'
@@ -1418,7 +1398,7 @@ fixtures:
   away_slug: rct-comets
   home_score: null
   away_score: null
-  id: e69
+  id: e68
 - title: Raptors 3 V Newport 2
   date: 2027-04-25
   date_iso: '2027-04-25'
@@ -1439,7 +1419,7 @@ fixtures:
   away_slug: newport
   home_score: null
   away_score: null
-  id: e70
+  id: e69
 - title: Welsh Cup 2027!!
   date: 2027-05-22
   date_iso: '2027-05-22'
@@ -1459,36 +1439,12 @@ fixtures:
   away_slug: null
   home_score: null
   away_score: null
-  id: e71
+  id: e70
 months:
-- key: '2026-06'
-  label: June 2026
-  events:
-  - id: e1
-    title: Inter area (invitation tournament)
-    category: game
-    beginner: false
-    trophy: true
-    league: null
-    side: null
-    date_iso: '2026-06-06'
-    day: 6
-    weekday: Sat
-    month_abbr: Jun
-    time: '08:00'
-    end_time: '09:00'
-    all_day: false
-    location: ''
-    home_team: null
-    away_team: null
-    home_slug: null
-    away_slug: null
-    home_score: null
-    away_score: null
 - key: '2026-07'
   label: July 2026
   events:
-  - id: e2
+  - id: e1
     title: Nitra? Tournament in Slovakia
     category: game
     beginner: false
@@ -1509,7 +1465,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e3
+  - id: e2
     title: Exeter tournament
     category: game
     beginner: false
@@ -1533,7 +1489,7 @@ months:
 - key: '2026-08'
   label: August 2026
   events:
-  - id: e4
+  - id: e3
     title: 'WKA AGM https://teams.microsoft.com/meet/316554345715097?p=aOcLDz3PsM9aJTn1uB'
     category: club
     beginner: false
@@ -1554,7 +1510,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e5
+  - id: e4
     title: Beach korf day. Timings/location tbc. Bring a picnic, beach games and any
       family/friends you want
     category: social
@@ -1576,7 +1532,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e6
+  - id: e5
     title: First korf session back
     category: training
     beginner: false
@@ -1600,7 +1556,7 @@ months:
 - key: '2026-09'
   label: September 2026
   events:
-  - id: e7
+  - id: e6
     title: Committee meeting (Exact time tbc)
     category: club
     beginner: false
@@ -1621,7 +1577,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e8
+  - id: e7
     title: Beginners sessions
     category: training
     beginner: true
@@ -1642,7 +1598,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e9
+  - id: e8
     title: First Thursday session back
     category: training
     beginner: false
@@ -1663,7 +1619,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e10
+  - id: e9
     title: Beginners sessions
     category: training
     beginner: true
@@ -1684,7 +1640,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e11
+  - id: e10
     title: Beginners sessions
     category: training
     beginner: true
@@ -1705,7 +1661,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e12
+  - id: e11
     title: Pub night in Cardiff
     category: social
     beginner: false
@@ -1726,7 +1682,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e13
+  - id: e12
     title: Cardiff Raptors 1 V Newport Centurions 1
     category: game
     beginner: false
@@ -1751,7 +1707,7 @@ months:
 - key: '2026-10'
   label: October 2026
   events:
-  - id: e14
+  - id: e13
     title: All Club
     category: training
     beginner: false
@@ -1772,7 +1728,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e15
+  - id: e14
     title: Newport 2 V Cardiff City 2
     category: game
     beginner: false
@@ -1793,7 +1749,7 @@ months:
     away_slug: cardiff-city
     home_score: 10
     away_score: 0
-  - id: e16
+  - id: e15
     title: Korf bowling social
     category: social
     beginner: false
@@ -1815,7 +1771,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e17
+  - id: e16
     title: Bristol Thunder 3 V Newport Centurions
     category: game
     beginner: false
@@ -1837,7 +1793,7 @@ months:
     away_slug: newport
     home_score: 14
     away_score: 15
-  - id: e18
+  - id: e17
     title: First Team
     category: training
     beginner: false
@@ -1858,7 +1814,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e19
+  - id: e18
     title: Exeter City 1 V Newport Centurions
     category: game
     beginner: false
@@ -1880,7 +1836,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e20
+  - id: e19
     title: Swansea Roar 2 V Newport 3
     category: game
     beginner: false
@@ -1902,7 +1858,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e21
+  - id: e20
     title: Newport 2 V Cardiff City 1
     category: game
     beginner: false
@@ -1924,7 +1880,7 @@ months:
     away_slug: cardiff-city
     home_score: null
     away_score: null
-  - id: e22
+  - id: e21
     title: Third Team
     category: training
     beginner: false
@@ -1945,7 +1901,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e23
+  - id: e22
     title: Social - Pumpkin picking
     category: social
     beginner: false
@@ -1966,7 +1922,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e24
+  - id: e23
     title: Swansea Roar 2 V Newport 3
     category: game
     beginner: false
@@ -1987,7 +1943,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e25
+  - id: e24
     title: Second Team
     category: training
     beginner: false
@@ -2008,7 +1964,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e26
+  - id: e25
     title: Cardiff Uni Beginners Tournament.
     category: game
     beginner: false
@@ -2030,7 +1986,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e27
+  - id: e26
     title: All Club
     category: training
     beginner: false
@@ -2054,7 +2010,7 @@ months:
 - key: '2026-11'
   label: November 2026
   events:
-  - id: e28
+  - id: e27
     title: First Team
     category: training
     beginner: false
@@ -2075,7 +2031,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e29
+  - id: e28
     title: Exeter City 2 V Newport Centurions
     category: game
     beginner: false
@@ -2097,7 +2053,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e30
+  - id: e29
     title: Third Team
     category: training
     beginner: false
@@ -2118,7 +2074,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e31
+  - id: e30
     title: Ice hockey
     category: social
     beginner: false
@@ -2139,7 +2095,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e32
+  - id: e31
     title: Newport 3 V Cardiff Uni 2
     category: game
     beginner: false
@@ -2160,7 +2116,7 @@ months:
     away_slug: cardiff-uni
     home_score: null
     away_score: null
-  - id: e33
+  - id: e32
     title: Newport 2 V Raptors 4
     category: game
     beginner: false
@@ -2181,7 +2137,7 @@ months:
     away_slug: raptors
     home_score: null
     away_score: null
-  - id: e34
+  - id: e33
     title: University of Exeter 1 V Newport Centurions
     category: game
     beginner: false
@@ -2203,7 +2159,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e35
+  - id: e34
     title: Committee meeting (Exact time tbc)
     category: club
     beginner: false
@@ -2224,7 +2180,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e36
+  - id: e35
     title: Second Team
     category: training
     beginner: false
@@ -2245,7 +2201,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e37
+  - id: e36
     title: Newport 2 V Swansea Roar 1
     category: game
     beginner: false
@@ -2267,7 +2223,7 @@ months:
     away_slug: swansea-roar
     home_score: null
     away_score: null
-  - id: e38
+  - id: e37
     title: First Team
     category: training
     beginner: false
@@ -2288,7 +2244,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e39
+  - id: e38
     title: Newport Centurions V Cardiff Raptors 2
     category: game
     beginner: false
@@ -2309,7 +2265,7 @@ months:
     away_slug: cardiff-raptors
     home_score: null
     away_score: null
-  - id: e40
+  - id: e39
     title: Newport 2 V RCT Comets 1
     category: game
     beginner: false
@@ -2330,7 +2286,7 @@ months:
     away_slug: rct-comets
     home_score: null
     away_score: null
-  - id: e41
+  - id: e40
     title: Raptors 5 V Newport 3
     category: game
     beginner: false
@@ -2354,7 +2310,7 @@ months:
 - key: '2026-12'
   label: December 2026
   events:
-  - id: e42
+  - id: e41
     title: Second Team
     category: training
     beginner: false
@@ -2375,7 +2331,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e43
+  - id: e42
     title: Bristol City 1 V Newport Centurions
     category: game
     beginner: false
@@ -2397,7 +2353,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e44
+  - id: e43
     title: Ice Hockey
     category: social
     beginner: false
@@ -2418,7 +2374,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e45
+  - id: e44
     title: Third Team
     category: training
     beginner: false
@@ -2439,7 +2395,7 @@ months:
     away_slug: null
     home_score: null
     away_score: null
-  - id: e46
+  - id: e45
     title: All Club
     category: training
     beginner: false
@@ -2463,7 +2419,7 @@ months:
 - key: '2027-01'
   label: January 2027
   events:
-  - id: e47
+  - id: e46
     title: Raptors 5 V Newport 3
     category: game
     beginner: false
@@ -2484,7 +2440,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e48
+  - id: e47
     title: Newport Centurions V Bristol Thunder 2
     category: game
     beginner: false
@@ -2505,7 +2461,7 @@ months:
     away_slug: bristol-thunder
     home_score: null
     away_score: null
-  - id: e49
+  - id: e48
     title: Newport 2 V Raptors 3
     category: game
     beginner: false
@@ -2526,7 +2482,7 @@ months:
     away_slug: raptors
     home_score: null
     away_score: null
-  - id: e50
+  - id: e49
     title: RCT Comets 2 V Newport 3
     category: game
     beginner: false
@@ -2547,7 +2503,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e51
+  - id: e50
     title: Newport Centurions V Exeter City 1
     category: game
     beginner: false
@@ -2568,7 +2524,7 @@ months:
     away_slug: exeter-city
     home_score: null
     away_score: null
-  - id: e52
+  - id: e51
     title: Newport Centurions V Cardiff Raptors 1
     category: game
     beginner: false
@@ -2589,7 +2545,7 @@ months:
     away_slug: cardiff-raptors
     home_score: null
     away_score: null
-  - id: e53
+  - id: e52
     title: RCT Comets 1 V Newport 2
     category: game
     beginner: false
@@ -2613,7 +2569,7 @@ months:
 - key: '2027-02'
   label: February 2027
   events:
-  - id: e54
+  - id: e53
     title: Cardiff Raptors 2 V Newport Centurions
     category: game
     beginner: false
@@ -2634,7 +2590,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e55
+  - id: e54
     title: Cardiff City 1 V Newport 2
     category: game
     beginner: false
@@ -2655,7 +2611,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e56
+  - id: e55
     title: RCT Comets 2 V Newport 3
     category: game
     beginner: false
@@ -2676,7 +2632,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e57
+  - id: e56
     title: Newport 2 V Cardiff Uni 1
     category: game
     beginner: false
@@ -2698,7 +2654,7 @@ months:
     away_slug: cardiff-uni
     home_score: null
     away_score: null
-  - id: e58
+  - id: e57
     title: Cardiff City 2 V Newport 2
     category: game
     beginner: false
@@ -2720,7 +2676,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e59
+  - id: e58
     title: Bristol Thunder 2 V Newport Centurions
     category: game
     beginner: false
@@ -2741,7 +2697,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e60
+  - id: e59
     title: Newport 3 V Raptors 5
     category: game
     beginner: false
@@ -2765,7 +2721,7 @@ months:
 - key: '2027-03'
   label: March 2027
   events:
-  - id: e61
+  - id: e60
     title: Cardiff Uni 2 V Newport 3
     category: game
     beginner: false
@@ -2787,7 +2743,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e62
+  - id: e61
     title: Cardiff Uni 1 V Newport 2
     category: game
     beginner: false
@@ -2809,7 +2765,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e63
+  - id: e62
     title: Newport Centurions V Bristol City 1
     category: game
     beginner: false
@@ -2830,7 +2786,7 @@ months:
     away_slug: bristol-city
     home_score: null
     away_score: null
-  - id: e64
+  - id: e63
     title: Newport 3 V Swansea Roar 2
     category: game
     beginner: false
@@ -2852,7 +2808,7 @@ months:
     away_slug: swansea-roar
     home_score: null
     away_score: null
-  - id: e65
+  - id: e64
     title: Swansea Roar 1 V Newport 2
     category: game
     beginner: false
@@ -2873,7 +2829,7 @@ months:
     away_slug: newport
     home_score: null
     away_score: null
-  - id: e66
+  - id: e65
     title: Newport Centurions V Exeter City 2
     category: game
     beginner: false
@@ -2894,7 +2850,7 @@ months:
     away_slug: exeter-city
     home_score: null
     away_score: null
-  - id: e67
+  - id: e66
     title: Newport Centurions V Bristol Thunder 3
     category: game
     beginner: false
@@ -2918,7 +2874,7 @@ months:
 - key: '2027-04'
   label: April 2027
   events:
-  - id: e68
+  - id: e67
     title: Newport Centurions V University of Exeter 1
     category: game
     beginner: false
@@ -2939,7 +2895,7 @@ months:
     away_slug: university-of-exeter
     home_score: null
     away_score: null
-  - id: e69
+  - id: e68
     title: Newport 3 V RCT Comets 2
     category: game
     beginner: false
@@ -2961,7 +2917,7 @@ months:
     away_slug: rct-comets
     home_score: null
     away_score: null
-  - id: e70
+  - id: e69
     title: Raptors 3 V Newport 2
     category: game
     beginner: false
@@ -2986,7 +2942,7 @@ months:
 - key: '2027-05'
   label: May 2027
   events:
-  - id: e71
+  - id: e70
     title: Welsh Cup 2027!!
     category: game
     beginner: false
