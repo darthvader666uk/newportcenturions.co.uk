@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-10-26T11:59:52Z'
+generated: '2026-10-26T18:32:11Z'
 source: Google Calendar
 categories:
 - key: game
@@ -572,8 +572,8 @@ fixtures:
 - title: Exeter City 2 V Newport Centurions
   date: 2026-11-08
   date_iso: '2026-11-08'
-  start_time: '01:40'
-  end_time: '03:40'
+  start_time: '13:40'
+  end_time: '15:40'
   location: St Peter's Church of England Aided School, Quarry Ln, Exeter EX2 5AP,
     UK
   description: 'Match Start: 2:10pm'
@@ -2083,8 +2083,8 @@ months:
     day: 8
     weekday: Sun
     month_abbr: Nov
-    time: '01:40'
-    end_time: '03:40'
+    time: '13:40'
+    end_time: '15:40'
     all_day: false
     location: St Peter's Church of England Aided School, Quarry Ln, Exeter EX2 5AP,
       UK
