@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-10-26T18:32:11Z'
+generated: '2026-10-30T16:06:28Z'
 source: Google Calendar
 categories:
 - key: game
@@ -934,13 +934,13 @@ fixtures:
   home_score: null
   away_score: null
   id: e45
-- title: Festive dinner placeholder
+- title: Centurions Festive dinner
   date: 2026-12-11
   date_iso: '2026-12-11'
-  start_time: '18:00'
-  end_time: '23:00'
+  start_time: '18:30'
+  end_time: '23:30'
   location: ''
-  description: ''
+  description: See the group chat for details
   all_day: false
   category: social
   side: null
@@ -2459,7 +2459,7 @@ months:
     home_score: null
     away_score: null
   - id: e46
-    title: Festive dinner placeholder
+    title: Centurions Festive dinner
     category: social
     beginner: false
     trophy: false
@@ -2469,8 +2469,8 @@ months:
     day: 11
     weekday: Fri
     month_abbr: Dec
-    time: '18:00'
-    end_time: '23:00'
+    time: '18:30'
+    end_time: '23:30'
     all_day: false
     location: ''
     home_team: null
