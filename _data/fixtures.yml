@@ -7,7 +7,7 @@
 # Category comes from a [Tag] or #tag in the event title (Game, Training,
 # Social, Club), falling back to keyword detection. See the script header.
 
-generated: '2026-11-02T16:44:16Z'
+generated: '2026-11-08T16:54:32Z'
 source: Google Calendar
 categories:
 - key: game
@@ -586,8 +586,8 @@ fixtures:
   away_team: Newport Centurions
   home_slug: exeter-city
   away_slug: newport
-  home_score: null
-  away_score: null
+  home_score: 16
+  away_score: 26
   id: e28
 - title: Third Team
   date: 2026-11-12
@@ -2070,8 +2070,8 @@ months:
     away_team: Newport Centurions
     home_slug: exeter-city
     away_slug: newport
-    home_score: null
-    away_score: null
+    home_score: 16
+    away_score: 26
   - id: e29
     title: Third Team
     category: training
